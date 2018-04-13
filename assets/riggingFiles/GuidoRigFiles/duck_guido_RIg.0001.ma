@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: duck_guido_RIg.ma
-//Last modified: Fri, Apr 13, 2018 12:17:15 PM
+//Name: duck_guido_RIg.0001.ma
+//Last modified: Fri, Apr 13, 2018 12:17:23 PM
 //Codeset: 1252
 file -rdi 1 -ns "duck_base" -rfn "duck_baseRN" -op "v=0;" -typ "mayaAscii" "/Users/diana/Documents/GuidoNSalvator//assets/duck_base.ma";
 file -rdi 1 -ns "fedora" -rfn "fedoraRN" -op "v=0;" -typ "mayaAscii" "/Users/diana/Documents/GuidoNSalvator//assets/fedora.ma";
@@ -20,8 +20,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "0169E2C8-C447-70B8-0F5D-AE9E5FC72771";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -13.677160137232029 7.3217661813598207 24.992851917400273 ;
-	setAttr ".r" -type "double3" 350.06164727622769 -391.80000000008221 0 ;
+	setAttr ".t" -type "double3" 4.1861580944702173 15.214264496957462 26.908059566701279 ;
+	setAttr ".r" -type "double3" 334.46164727622039 -355.80000000007414 -1.9931994584563916e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "6194E4AA-4847-984F-AC64-5DBC2440ABB7";
 	setAttr -k off ".v" no;
@@ -502,4 +502,4 @@ connectAttr "duck_base1.msg" "duck_baseRN.asn[0]";
 connectAttr "fedora1.msg" "fedoraRN.asn[0]";
 connectAttr "layerManager.dli[1]" "GEO_Layer.id";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of duck_guido_RIg.ma
+// End of duck_guido_RIg.0001.ma
