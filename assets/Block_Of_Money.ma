@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Block_Of_Money.ma
-//Last modified: Tue, Apr 10, 2018 01:52:54 PM
+//Last modified: Fri, Apr 13, 2018 12:31:41 PM
 //Codeset: 1252
 requires maya "2018";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "706A7C5A-4820-55A7-791B-A29AE0EE172E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 4.2769146732759538 10.730645442725082 -2.547640680250947 ;
-	setAttr ".r" -type "double3" -65.138352762791527 -597.79999999994334 0 ;
+	setAttr ".t" -type "double3" -0.32488645539814665 4.0018872861560757 0.10768580254085705 ;
+	setAttr ".r" -type "double3" -84.338352771002064 -808.99999999974352 -3.6448322379810972e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "BE4A3DAA-47C0-C951-D26F-FB91BD45A4EC";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 11.821341486792942;
+	setAttr ".coi" 4.0166419938250577;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -441,19 +441,19 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C3AE179F-4389-CA97-62D0-3ABF3516F27E";
+	rename -uid "09955CB1-4AE8-2470-B678-7DA164F4BD13";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "206774A9-43FC-1A4E-9DD4-5393FD6850D6";
+	rename -uid "11D67847-45E4-1B17-6959-D19BECAE79D8";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "440E2672-46A3-296A-C74F-7A84B4F28894";
+	rename -uid "35BF472D-4EEB-4988-2A8A-78B45F791A05";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "E2618F8D-43F2-AFAB-BAAA-F28550003FF3";
+	rename -uid "CFBEF758-4D5E-1965-F74C-CB8135D72D67";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "70D93DDE-4063-061A-6F48-6282335F2F93";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "36810F87-4195-4398-3F88-FB968BE76AC6";
+	rename -uid "D0818B11-4788-C51D-0C5D-88A2E66773C2";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "2453C82E-4799-285E-9349-1EB01531D099";
 	setAttr ".g" yes;
@@ -523,6 +523,7 @@ createNode lambert -n "money1";
 createNode shadingEngine -n "lambert3SG";
 	rename -uid "EE45AAA1-44A5-5D65-DA26-199F4CCE0BF4";
 	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo2";
 	rename -uid "90D69619-45FC-1608-62D8-F2A4F541689A";
@@ -533,13 +534,13 @@ createNode file -n "file1";
 createNode place2dTexture -n "place2dTexture2";
 	rename -uid "582B57BD-4B47-A5D3-B9D9-608C34D92DB6";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "809C5119-4C78-3282-91B8-0BA90C6CA507";
+	rename -uid "1A9D1E64-4E42-9C28-D410-41BE20D12FCF";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -330.95236780151544 -309.52379722443891 ;
 	setAttr ".tgi[0].vh" -type "double2" 317.85713022663526 323.80951094248991 ;
 	setAttr -s 8 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" 54.285713195800781;
-	setAttr ".tgi[0].ni[0].y" 150;
+	setAttr ".tgi[0].ni[0].x" 361.42855834960938;
+	setAttr ".tgi[0].ni[0].y" 127.14286041259766;
 	setAttr ".tgi[0].ni[0].nvs" 1923;
 	setAttr ".tgi[0].ni[1].x" 361.42855834960938;
 	setAttr ".tgi[0].ni[1].y" 127.14286041259766;
@@ -547,20 +548,20 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[2].x" -560;
 	setAttr ".tgi[0].ni[2].y" 127.14286041259766;
 	setAttr ".tgi[0].ni[2].nvs" 1923;
-	setAttr ".tgi[0].ni[3].x" -252.85714721679688;
+	setAttr ".tgi[0].ni[3].x" 54.285713195800781;
 	setAttr ".tgi[0].ni[3].y" 150;
 	setAttr ".tgi[0].ni[3].nvs" 1923;
-	setAttr ".tgi[0].ni[4].x" 54.285713195800781;
+	setAttr ".tgi[0].ni[4].x" -252.85714721679688;
 	setAttr ".tgi[0].ni[4].y" 150;
 	setAttr ".tgi[0].ni[4].nvs" 1923;
-	setAttr ".tgi[0].ni[5].x" -252.85714721679688;
+	setAttr ".tgi[0].ni[5].x" 54.285713195800781;
 	setAttr ".tgi[0].ni[5].y" 150;
 	setAttr ".tgi[0].ni[5].nvs" 1923;
 	setAttr ".tgi[0].ni[6].x" -560;
 	setAttr ".tgi[0].ni[6].y" 127.14286041259766;
 	setAttr ".tgi[0].ni[6].nvs" 1923;
-	setAttr ".tgi[0].ni[7].x" 361.42855834960938;
-	setAttr ".tgi[0].ni[7].y" 127.14286041259766;
+	setAttr ".tgi[0].ni[7].x" -252.85714721679688;
+	setAttr ".tgi[0].ni[7].y" 150;
 	setAttr ".tgi[0].ni[7].nvs" 1923;
 select -ne :time1;
 	setAttr ".o" 1;
@@ -592,8 +593,6 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -655,21 +654,21 @@ connectAttr "place2dTexture2.vt3" "file1.vt3";
 connectAttr "place2dTexture2.vc1" "file1.vc1";
 connectAttr "place2dTexture2.o" "file1.uv";
 connectAttr "place2dTexture2.ofs" "file1.fs";
-connectAttr "money.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr "lambert3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
-connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "place2dTexture2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
-connectAttr "psdFileTex1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr "money.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
-connectAttr "money1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+connectAttr "psdFileTex1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
 		;
-connectAttr "file1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+connectAttr "money1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
-connectAttr "place2dTexture2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
-connectAttr "lambert3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+connectAttr "file1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
 		;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
