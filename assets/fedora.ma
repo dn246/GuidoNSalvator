@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: fedora.ma
-//Last modified: Fri, Apr 13, 2018 12:37:36 PM
+//Last modified: Fri, Apr 13, 2018 12:39:43 PM
 //Codeset: 1252
 requires maya "2018";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "2.0.1";
@@ -16,8 +16,8 @@ fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "208A6350-435C-CF47-FEBF-55AF8085A9C8";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2.6691688930427295 5.2055203887497825 -4.2596615716616171 ;
-	setAttr ".r" -type "double3" -44.738352787810584 4178.1999999766704 0 ;
+	setAttr ".t" -type "double3" -2.0668645147645783 0.70643546846744698 -6.8433394970676851 ;
+	setAttr ".r" -type "double3" -2.7383527876968139 4160.599999976449 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E079101B-4A75-BBDF-E12A-0F8E7FCCEDA1";
 	setAttr -k off ".v" no;
@@ -3849,7 +3849,7 @@ createNode file -n "file1";
 createNode place2dTexture -n "place2dTexture2";
 	rename -uid "C9275138-4EE2-D759-6ED5-F68178D14AAE";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "6A708184-4D6C-322B-B12B-89A0DE8B1C11";
+	rename -uid "AC9DA772-4CE3-FDF0-004B-F2B43F03A0ED";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -177.17395464967873 -238.09522863418377 ;
 	setAttr ".tgi[0].vh" -type "double2" 304.5549019689671 232.14284791832915 ;
