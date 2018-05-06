@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff08 scene
 //Name: duck_guido_RIG.orient.0013.ma
-//Last modified: Sun, May 06, 2018 04:34:57 PM
+//Last modified: Sun, May 06, 2018 04:36:30 PM
 //Codeset: 1252
 file -rdi 1 -ns "duck_base" -rfn "duck_baseRN" -op "v=0;" -typ "mayaAscii" "/Users/diana/Documents/GuidoNSalvator//assets/duck_base.ma";
 file -rdi 1 -ns "fedora" -rfn "fedoraRN" -op "v=0;" -typ "mayaAscii" "/Users/diana/Documents/GuidoNSalvator//assets/fedora.ma";
@@ -20,8 +20,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "0169E2C8-C447-70B8-0F5D-AE9E5FC72771";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -12.126274870113731 9.5236110757239825 6.2332172069608331 ;
-	setAttr ".r" -type "double3" 342.86164725961947 2453.3999999970888 -4.0042447119047738e-15 ;
+	setAttr ".t" -type "double3" -11.6429540056278 10.000315118983185 6.8829382540647686 ;
+	setAttr ".r" -type "double3" 340.46164725961944 2457.3999999970883 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "6194E4AA-4847-984F-AC64-5DBC2440ABB7";
 	setAttr -k off ".v" no;
@@ -1199,7 +1199,7 @@ createNode nurbsCurve -n "head_CTRLShape" -p "|head_CTRL|head_CTRL";
 		0.5 -0.56286215312564547 0.50475341083231162
 		;
 createNode fosterParent -n "duck_baseRNfosterParent1";
-	rename -uid "6A25C072-47BA-4AC6-F952-5BB41B72C11A";
+	rename -uid "83578273-44B0-4DEB-7BD0-DD9B6E6B6435";
 createNode mesh -n "l_duck_wingShapeDeformed" -p "duck_baseRNfosterParent1";
 	rename -uid "9933F488-4F13-20B2-0C2D-2586ACADAD58";
 	setAttr -k off ".v";
@@ -1298,7 +1298,7 @@ createNode mesh -n "duck_wings_folded1ShapeDeformed" -p "duck_baseRNfosterParent
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode fosterParent -n "fedoraRNfosterParent1";
-	rename -uid "9CCC24CD-4B14-D4AA-9368-E388675CCB5D";
+	rename -uid "FF2953D5-4163-15D5-9F14-DB8D56490779";
 createNode mesh -n "fedora_GEOShapeDeformed" -p "fedoraRNfosterParent1";
 	rename -uid "24D1BF5F-42AC-29CF-C69B-BCA67E3D49DE";
 	setAttr -k off ".v";
