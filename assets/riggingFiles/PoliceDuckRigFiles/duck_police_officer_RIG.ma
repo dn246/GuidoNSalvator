@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff08 scene
 //Name: duck_police_officer_RIG.ma
-//Last modified: Mon, May 07, 2018 06:46:18 PM
+//Last modified: Mon, May 07, 2018 06:47:03 PM
 //Codeset: 1252
 file -rdi 1 -ns "duck_base" -rfn "duck_baseRN" -op "v=0;" -typ "mayaAscii" "/Users/diana/Documents/GuidoNSalvator//assets/duck_base.ma";
 file -rdi 1 -ns "police_hat" -rfn "police_hatRN" -op "v=0;" -typ "mayaAscii"
@@ -201,6 +201,7 @@ createNode transform -n "RIG" -p "PoliceDuck";
 	rename -uid "E2D3C058-4C1C-8ED7-A094-DEA42CD8EEA8";
 createNode transform -n "JOINTs" -p "RIG";
 	rename -uid "E0D0BA2C-40C5-E76C-1140-EC86BC779648";
+	setAttr ".v" no;
 createNode joint -n "root" -p "JOINTs";
 	rename -uid "23C9A95D-4EF5-59E5-1A87-A2867B6F262C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -2584,7 +2585,7 @@ createNode transform -n "duck_base1" -p "GEO";
 	setAttr ".rp" -type "double3" -2.6226043701171875e-06 5.0166320838034153 0.48407173156738281 ;
 	setAttr ".sp" -type "double3" -2.6226043701171875e-06 5.0166320838034153 0.48407173156738281 ;
 createNode fosterParent -n "police_hatRNfosterParent1";
-	rename -uid "142CEEA4-4371-0490-A37D-E7BB4C56E7B8";
+	rename -uid "DC9649E7-4D54-CEAC-662A-B3AF4590B976";
 createNode mesh -n "pCubeShape1Deformed" -p "police_hatRNfosterParent1";
 	rename -uid "678C8A42-4414-F3A4-8991-A38A4F2CC6D1";
 	setAttr -k off ".v";
