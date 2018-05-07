@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff08 scene
 //Name: duck_police_officer_RIG.ma
-//Last modified: Mon, May 07, 2018 06:50:14 PM
+//Last modified: Mon, May 07, 2018 07:10:15 PM
 //Codeset: 1252
 file -rdi 1 -ns "duck_base" -rfn "duck_baseRN" -op "v=0;" -typ "mayaAscii" "/Users/diana/Documents/GuidoNSalvator//assets/duck_base.ma";
 file -rdi 1 -ns "police_hat" -rfn "police_hatRN" -op "v=0;" -typ "mayaAscii"
@@ -20,8 +20,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "0169E2C8-C447-70B8-0F5D-AE9E5FC72771";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 22.315059341900849 10.509096548901699 4.5679867488289005 ;
-	setAttr ".r" -type "double3" 350.66164724629573 6916.9999999899801 -3.5347185728150338e-15 ;
+	setAttr ".t" -type "double3" 15.7872407733378 10.293418610148819 15.495453623192759 ;
+	setAttr ".r" -type "double3" 351.2616472463003 6880.9999999898337 -5.2678453479320073e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "6194E4AA-4847-984F-AC64-5DBC2440ABB7";
 	setAttr -k off ".v" no;
@@ -82,119 +82,6 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".tp" -type "double3" 0 8.6897063255310059 3.762112102396336 ;
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
-createNode fosterParent -n "duck_baseRNfosterParent1";
-	rename -uid "83578273-44B0-4DEB-7BD0-DD9B6E6B6435";
-createNode mesh -n "duck_eyesShapeDeformed" -p "duck_baseRNfosterParent1";
-	rename -uid "0043B844-4E7B-C793-D007-B3A268C30DB6";
-	setAttr -k off ".v";
-	setAttr -s 4 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "polySurface2ShapeDeformed" -p "duck_baseRNfosterParent1";
-	rename -uid "8DBA7B54-417F-2F7F-EBCC-31B3A028466F";
-	setAttr -k off ".v";
-	setAttr -s 6 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "l_duck_wingShapeDeformed" -p "duck_baseRNfosterParent1";
-	rename -uid "9933F488-4F13-20B2-0C2D-2586ACADAD58";
-	setAttr -k off ".v";
-	setAttr -s 6 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.51459679007530212 0.33115324378013611 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".dr" 1;
-createNode mesh -n "r__duck_wingShapeDeformed" -p "duck_baseRNfosterParent1";
-	rename -uid "50F63ED1-48E8-021A-98E4-F8915DFD46B9";
-	setAttr -k off ".v";
-	setAttr -s 6 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.51488812267780304 0.50715193152427673 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "l_legShapeDeformed" -p "duck_baseRNfosterParent1";
-	rename -uid "766A1F7C-49AD-0933-63F4-B0BFC61B5F97";
-	setAttr -k off ".v";
-	setAttr -s 6 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.43573175370693207 0.51113384962081909 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "r_legShapeDeformed" -p "duck_baseRNfosterParent1";
-	rename -uid "00340151-4D3F-58F4-8C80-8786CA34C7FD";
-	setAttr -k off ".v";
-	setAttr -s 6 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "duck_beakShapeDeformed" -p "duck_baseRNfosterParent1";
-	rename -uid "B20D73F0-4E86-0E81-38C0-CEBCCE50782C";
-	setAttr -k off ".v";
-	setAttr -s 4 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr -s 2 ".clst";
-	setAttr ".clst[0].clsn" -type "string" "SculptFreezeColorTemp";
-	setAttr ".clst[1].clsn" -type "string" "SculptMaskColorTemp";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".vcs" 2;
-createNode mesh -n "duck_bodyShapeDeformed" -p "duck_baseRNfosterParent1";
-	rename -uid "850BC1DF-490B-B4EE-CED3-0DA36CF8E736";
-	setAttr -k off ".v";
-	setAttr -s 8 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.68189340829849243 0.50715969502925873 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr -s 2 ".clst";
-	setAttr ".clst[0].clsn" -type "string" "SculptFreezeColorTemp";
-	setAttr ".clst[1].clsn" -type "string" "SculptMaskColorTemp";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "duck_wings_folded1ShapeDeformed" -p "duck_baseRNfosterParent1";
-	rename -uid "84073293-4DC4-D32B-7A0A-73B0730F4091";
-	setAttr -k off ".v";
-	setAttr -s 6 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "PoliceDuck";
 	rename -uid "83411BA7-434B-BA8D-905B-6A8BFE7E0A51";
 createNode transform -n "RIG" -p "PoliceDuck";
@@ -2582,8 +2469,110 @@ createNode transform -n "duck_base1" -p "GEO";
 	rename -uid "1D45F06D-144D-604A-97C9-039F1DB15450";
 	setAttr ".rp" -type "double3" -2.6226043701171875e-06 5.0166320838034153 0.48407173156738281 ;
 	setAttr ".sp" -type "double3" -2.6226043701171875e-06 5.0166320838034153 0.48407173156738281 ;
+createNode fosterParent -n "duck_baseRNfosterParent1";
+	rename -uid "01AA1069-43DD-9531-4813-FC8D3F74AE81";
+createNode mesh -n "polySurface2ShapeDeformed" -p "duck_baseRNfosterParent1";
+	rename -uid "8DBA7B54-417F-2F7F-EBCC-31B3A028466F";
+	setAttr -k off ".v";
+	setAttr -s 6 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "l_duck_wingShapeDeformed" -p "duck_baseRNfosterParent1";
+	rename -uid "9933F488-4F13-20B2-0C2D-2586ACADAD58";
+	setAttr -k off ".v";
+	setAttr -s 6 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.51459679007530212 0.33115324378013611 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dr" 1;
+createNode mesh -n "r__duck_wingShapeDeformed" -p "duck_baseRNfosterParent1";
+	rename -uid "50F63ED1-48E8-021A-98E4-F8915DFD46B9";
+	setAttr -k off ".v";
+	setAttr -s 6 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.51488812267780304 0.50715193152427673 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "l_legShapeDeformed" -p "duck_baseRNfosterParent1";
+	rename -uid "766A1F7C-49AD-0933-63F4-B0BFC61B5F97";
+	setAttr -k off ".v";
+	setAttr -s 6 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.43573175370693207 0.51113384962081909 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "r_legShapeDeformed" -p "duck_baseRNfosterParent1";
+	rename -uid "00340151-4D3F-58F4-8C80-8786CA34C7FD";
+	setAttr -k off ".v";
+	setAttr -s 6 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "duck_beakShapeDeformed" -p "duck_baseRNfosterParent1";
+	rename -uid "B20D73F0-4E86-0E81-38C0-CEBCCE50782C";
+	setAttr -k off ".v";
+	setAttr -s 4 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr -s 2 ".clst";
+	setAttr ".clst[0].clsn" -type "string" "SculptFreezeColorTemp";
+	setAttr ".clst[1].clsn" -type "string" "SculptMaskColorTemp";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".vcs" 2;
+createNode mesh -n "duck_bodyShapeDeformed" -p "duck_baseRNfosterParent1";
+	rename -uid "850BC1DF-490B-B4EE-CED3-0DA36CF8E736";
+	setAttr -k off ".v";
+	setAttr -s 8 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.68189340829849243 0.50715969502925873 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr -s 2 ".clst";
+	setAttr ".clst[0].clsn" -type "string" "SculptFreezeColorTemp";
+	setAttr ".clst[1].clsn" -type "string" "SculptMaskColorTemp";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "duck_wings_folded1ShapeDeformed" -p "duck_baseRNfosterParent1";
+	rename -uid "84073293-4DC4-D32B-7A0A-73B0730F4091";
+	setAttr -k off ".v";
+	setAttr -s 6 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 createNode fosterParent -n "police_hatRNfosterParent1";
-	rename -uid "CCA5A1C0-4A1C-BEB3-8A06-F4906C77C583";
+	rename -uid "953639D8-4F4D-932D-4E9D-2687602217DF";
 createNode mesh -n "police_hatShapeDeformed" -p "police_hatRNfosterParent1";
 	rename -uid "EF4CACA6-4E4A-2843-EC30-4CBCF545A325";
 	setAttr -k off ".v";
@@ -2611,27 +2600,27 @@ createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	setAttr ".output_mode" 0;
 	setAttr ".ai_translator" -type "string" "maya";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "F84E8C67-45FC-423D-289A-62B7800D892C";
+	rename -uid "2B6248B7-4FEF-8A69-A195-E9AD11A984DE";
 	setAttr -s 6 ".lnk";
 	setAttr -s 6 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "CC4DBF06-43DB-A1F0-BABF-2781EFC6ECED";
+	rename -uid "1DE2E93A-4A62-D195-1368-C28F8F792280";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 createNode displayLayer -n "defaultLayer";
 	rename -uid "89222895-EF46-23FF-E68B-C5B7DABA61C8";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "E8C034AA-49A3-B025-92C5-05BB2338A507";
+	rename -uid "79D4CD4F-4A0B-1345-7AED-07A49C43C527";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "09FF77FC-8B4D-7196-E512-608E1C75952A";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "B1D78D1D-4158-8E95-92B6-5599E11A7CD4";
+	rename -uid "86EBA131-45CF-8EFB-7ADB-8490A0852636";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "4BEF4A37-4261-A17E-AA3D-0FB7498A2BFF";
+	rename -uid "3630A322-403A-5BA3-A516-EBBB28CD89D6";
 createNode reference -n "duck_baseRN";
 	rename -uid "BADAE2B3-0649-31EF-BB33-2D84A04A05DC";
-	setAttr -s 15 ".phl";
+	setAttr -s 14 ".phl";
 	setAttr ".phl[4]" 0;
 	setAttr ".phl[5]" 0;
 	setAttr ".phl[6]" 0;
@@ -2646,7 +2635,6 @@ createNode reference -n "duck_baseRN";
 	setAttr ".phl[15]" 0;
 	setAttr ".phl[16]" 0;
 	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"duck_baseRN"
 		"duck_baseRN" 13
@@ -2676,7 +2664,7 @@ createNode reference -n "duck_baseRN";
 		
 		8 "|GEO|duck_base1|duck_base:duck_base_model|duck_base:duck_eyes" "scaleZ"
 		
-		"duck_baseRN" 111
+		"duck_baseRN" 110
 		0 "|duck_baseRNfosterParent1|duck_wings_folded1ShapeDeformed" "|PoliceDuck|GEO|duck_base1|duck_base:duck_base_model|duck_base:duck_wings_folded1" 
 		"-s -r "
 		0 "|duck_baseRNfosterParent1|duck_bodyShapeDeformed" "|PoliceDuck|GEO|duck_base1|duck_base:duck_base_model|duck_base:duck_body" 
@@ -2751,11 +2739,9 @@ createNode reference -n "duck_baseRN";
 		""
 		5 4 "duck_baseRN" "duck_base:lambert2SG.dagSetMembers" "duck_baseRN.placeHolderList[14]" 
 		""
-		5 4 "duck_baseRN" "duck_base:lambert2SG.dagSetMembers" "duck_baseRN.placeHolderList[15]" 
-		""
 		5 0 "duck_baseRN" "duck_base:groupId78.message" "duck_base:lambert2SG.groupNodes" 
-		"duck_baseRN.placeHolderList[16]" "duck_baseRN.placeHolderList[17]" ""
-		5 3 "duck_baseRN" "duck_base:groupId78.groupId" "duck_baseRN.placeHolderList[18]" 
+		"duck_baseRN.placeHolderList[15]" "duck_baseRN.placeHolderList[16]" ""
+		5 3 "duck_baseRN" "duck_base:groupId78.groupId" "duck_baseRN.placeHolderList[17]" 
 		""
 		8 "|PoliceDuck|GEO|duck_base1|duck_base:duck_base_model|duck_base:duck_wings_folded1" 
 		"translateX"
@@ -2910,7 +2896,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 857\n            -height 679\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1723\n            -height 1447\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1503\n            -height 1447\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
 		+ "            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n"
 		+ "            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
@@ -2938,8 +2924,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
 		+ "                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1723\\n    -height 1447\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1723\\n    -height 1447\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1503\\n    -height 1447\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1503\\n    -height 1447\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -8689,936 +8675,6 @@ createNode groupParts -n "groupParts6";
 	rename -uid "A7CCF23A-4966-9E35-1ED7-A58578D4A4BE";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:2111]";
-createNode skinCluster -n "skinCluster4";
-	rename -uid "63CED12A-4F38-3828-63BB-778C250CCA4B";
-	setAttr ".skm" 1;
-	setAttr -s 764 ".wl";
-	setAttr ".wl[0:499].w"
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1;
-	setAttr ".wl[500:763].w"
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1;
-	setAttr -s 38 ".pm";
-	setAttr ".pm[0]" -type "matrix" 0.01863517100035373 -0.1021071964743563 0.99459883914568037 0
-		 0.98375061167217226 0.1795403409672246 -3.2612801348363973e-16 0 -0.17857061470582136 0.97843721637799541 0.10379378194316456 0
-		 -2.3294605110677953 0.24741272539665171 0.016191311353531038 1;
-	setAttr ".pm[1]" -type "matrix" -0.044031851640286883 0.10851153655707281 -0.99311955094799698 0
-		 0.92661824458466469 0.37600349573220049 -3.0565355398273895e-15 0 0.37341642283643939 -0.92024269496214373 -0.11710489966200882 0
-		 -1.8336177923781598 -1.4577691596190161 -0.025050845925889555 1;
-	setAttr ".pm[2]" -type "matrix" 0.03562622600770067 -0.024049534319150721 -0.99907576885813842 0
-		 0.55950213087706946 0.82882891210672616 1.6618650899857812e-15 0 0.8280628826148817 -0.55898502158377505 0.042983811842597065 0
-		 -1.6991304600878072 -2.8990215614405788 0.0091950110617394307 1;
-	setAttr ".pm[3]" -type "matrix" -0.041308386197129288 0.053490227294828691 -0.99771359257741732 0
-		 0.79146373529517267 0.61121612847880002 8.6220574124217513e-16 0 0.60981863938584369 -0.78965412673608892 -0.067583926981669248 0
-		 -3.9200476795690253 -1.7611845807672639 0.12056904989602549 1;
-	setAttr ".pm[4]" -type "matrix" 0.048094737986099818 -0.16865896249238799 -0.98450040657637106 0
-		 0.96166470139538718 0.27422801113329215 9.7144514654701197e-17 0 0.26997758845535569 -0.94675928951390342 0.17538229514680329 0
-		 -5.4690708756403001 0.26679408215987055 -0.31288026071894409 1;
-	setAttr ".pm[5]" -type "matrix" -0.046521848324449472 0.09522313415795125 0.99436827802862549 0
-		 0.89850229273692661 0.43896882571144702 -2.1783081813664168e-15 0 -0.43649667533093955 0.89344217763358946 -0.105979845491425 0
-		 -4.6943355689089765 -4.6005573765453924 0.16806813797258863 1;
-	setAttr ".pm[6]" -type "matrix" 4.5036793958125164e-15 -3.0025071899070122e-14 -1.0000000000000002 0
-		 0.99245567979813598 0.12260392993872529 9.0477743999665202e-16 0 0.12260392993872522 -0.9924556797981362 3.0595327639290769e-14 0
-		 -7.3923760831322625 0.68468109403248589 -5.3763254582174909e-14 1;
-	setAttr ".pm[7]" -type "matrix" 1.0345835647098016e-14 -2.8543856701711362e-14 -1.0000000000000002 0
-		 0.94868276605266799 0.31622936200590113 9.0477743999665794e-16 0 0.31622936200590113 -0.9486827660526681 3.0595327639290769e-14 0
-		 -8.5701185794277759 -1.0284503583289515 -5.5057721790807512e-14 1;
-	setAttr ".pm[8]" -type "matrix" 1.0000000000000002 5.7786049485777321e-16 3.0280504911937926e-14 1.657500977815574e-61
-		 -7.3824398630288111e-16 1.0000000000000009 2.1094237467877714e-15 -2.7755575615628926e-17
-		 -3.0595327639290763e-14 -2.1649348980190738e-15 1 -1.5407439555097841e-33 5.4342521669459063e-14 -10.238800000000005 -2.3288700000000162 1.0000000000000004;
-	setAttr ".pm[9]" -type "matrix" 1.0000000000000002 5.7786049485777311e-16 3.0280504911937926e-14 0
-		 -7.3824398630288663e-16 1.0000000000000004 2.2759572004815441e-15 0 -3.0595327639290769e-14 -2.2759572004815894e-15 1.0000000000000002 0
-		 5.3745828974205294e-14 -8.7032200000000035 -4.9305881350320151 1;
-	setAttr ".pm[10]" -type "matrix" 1.0000000000000002 5.7786049485777311e-16 3.0280504911937926e-14 0
-		 -7.3824398630287963e-16 1.0000000000000002 2.0539125955565124e-15 0 -3.0595327639290763e-14 -2.2204460492503312e-15 1 0
-		 5.3657041721451117e-14 -8.4747272923323198 -4.7406397778211913 1;
-	setAttr ".pm[11]" -type "matrix" 0.562197326708745 3.2487162541963312e-16 1.7023618912882523e-14 0
-		 -4.0789054522006415e-16 0.56219732670874512 1.2242803465169878e-15 0 -1.720036639583293e-14 -1.2281624823302831e-15 0.56219732670874512 0
-		 -0.28644086071496605 -5.2391219400882711 -1.5793607882353196 1;
-	setAttr ".pm[12]" -type "matrix" 1.0000000000000002 5.7786049485777311e-16 3.0280504911937926e-14 0
-		 -7.382439863028815e-16 1.0000000000000004 2.1094237467877706e-15 0 -3.0595327639290763e-14 -2.2204460492503312e-15 1 0
-		 0.50883513805687564 -9.3190089870393127 -2.8092641377029031 1;
-	setAttr ".pm[13]" -type "matrix" 0.58444470133327719 -0.47855826553334196 0.65529106324836828 0
-		 0.63353609746629758 0.77371313366594352 6.9026092224627998e-16 2.8628579313986847e-17
-		 -0.50700730200918354 0.4151505429149116 0.75537647727925905 -2.6127964019678229e-19
-		 -1.4943738190546567 -2.7110736049572561 -2.4574868089631603 0.99999999999999989;
-	setAttr ".pm[14]" -type "matrix" 0.97263366838322596 0.088657040497830922 -0.21476423421406921 5.7777898331617076e-34
-		 -0.090775195977710346 0.99587140926688333 -4.9960036108132074e-16 5.5740776554792684e-17
-		 0.21387756058688814 0.019495265449785387 0.97666592225921578 4.7541548878778569e-18
-		 -2.0210347259340153 -4.2966545040047324 -0.88767355373546253 0.99999999999999978;
-	setAttr ".pm[15]" -type "matrix" 0.7000309902127998 0.1503270609437142 0.69811058399777293 2.3111159332646827e-33
-		 -0.20995694193175893 0.97771063333414976 5.5511151231257673e-17 2.8554874404772227e-17
-		 -0.68255014121773616 -0.14657316334636653 0.71598995279982036 -1.7718278957786484e-18
-		 -1.6616119356004218 -4.217781120996845 -5.433859002687055 0.99999999999999989;
-	setAttr ".pm[16]" -type "matrix" 1.0000000000000004 -8.7519490416815084e-16 -8.2114458952158764e-16 -1.6250409437360553e-48
-		 6.2821429380669131e-16 1.0000000000000004 -6.5225602696728114e-16 2.8554874404772234e-17
-		 5.6823737895046229e-16 7.0346894852841584e-16 1.0000000000000009 -1.7718278957786499e-18
-		 -7.6388394225497134 -3.1606021373505184 -0.14120917751750428 1.0000000000000002;
-	setAttr ".pm[17]" -type "matrix" 1.0000000000000004 -9.3070605539940877e-16 -8.4890016513721656e-16 1.6342920546120476e-33
-		 6.3299603757986581e-16 1.0000000000000004 -6.2450045135165213e-16 2.8554874404772227e-17
-		 5.6794067209447411e-16 7.0346894852841584e-16 1.0000000000000009 -1.7718278957786499e-18
-		 -7.4713813659884396 -3.053394895594403 0.6577033737500696 1.0000000000000002;
-	setAttr ".pm[18]" -type "matrix" 1.0000000000000004 -8.7519490416815064e-16 -8.2114458952158764e-16 -2.3199597683600252e-48
-		 6.5543282844847613e-16 1.0000000000000007 -6.2450045135165243e-16 2.8554874404772227e-17
-		 5.665484708405225e-16 7.0346894852841574e-16 1.0000000000000009 -1.7718278957786492e-18
-		 -6.6856384294038342 -3.2409144405216099 0.86896194663075144 0.99999999999999967;
-	setAttr ".pm[19]" -type "matrix" -0.58444644542408208 0.47856217806690804 0.65528665037143363 2.5456098655127179e-32
-		 0.63353806635035437 0.77371152148914923 7.7157619489690061e-16 2.8628579313986847e-17
-		 -0.50700283127040957 0.4151490373815182 -0.7553803054389141 -2.6127964019678186e-19
-		 -1.4329419510981873 -2.7613738037619755 2.3885901403296637 0.99999999999999989;
-	setAttr ".pm[20]" -type "matrix" -0.97263354781878042 -0.0886591199785772 -0.21476392178873213 -1.5407439555097887e-33
-		 -0.090777318755032393 0.99587121577021609 7.4940054162198017e-16 5.5740776554792684e-17
-		 0.21387720789532405 0.019495692985296936 -0.97666599096002282 4.7541548878778577e-18
-		 -1.9187677136571675 -4.2873420988047553 0.91025450025980548 0.99999999999999978;
-	setAttr ".pm[21]" -type "matrix" -0.71898739416136537 -0.15366504817553045 0.67782311852448873 2.7755575615628926e-17
-		 -0.20900410816081014 0.97791476252887433 9.7144514654701158e-16 2.8554874404772221e-17
-		 -0.66285323398845619 -0.14166781637798928 -0.73522501317197986 -1.7718278957786476e-18
-		 -1.7377108234803511 -4.2315433404460157 5.2902998052932872 1;
-	setAttr ".pm[22]" -type "matrix" 1.0000000000000002 -1.094069691427509e-15 5.4228604751151759e-15 -2.3820643708033399e-35
-		 -8.9344630692983345e-16 -1 2.1763772754712692e-15 2.8554874404772227e-17 5.1486645434058457e-15 -1.9284846682179282e-15 -1 -1.7718278957786476e-18
-		 7.5987509796202479 3.1605999999999934 0.18999723471518892 1.0000000000000002;
-	setAttr ".pm[23]" -type "matrix" 1.0000000000000002 -1.094069691427509e-15 5.4363045820539962e-15 -8.552847072295028e-50
-		 -8.9915686747413835e-16 -1 2.1486216998556403e-15 2.8554874404772221e-17 5.1490188832754432e-15 -1.9284846682179282e-15 -1 -1.7718278957786499e-18
-		 7.3987654898101258 3.0533899999999941 -0.60891476528481125 1.0000000000000002;
-	setAttr ".pm[24]" -type "matrix" 1.0000000000000002 -1.094069691427509e-15 5.3807934308227383e-15 -2.5658541216885071e-49
-		 -9.2252233576542604e-16 -1 2.1486216998556403e-15 2.8554874404772221e-17 5.1504687088964417e-15 -1.9284846682179282e-15 -1 -1.7718278957786468e-18
-		 6.5804999999999989 3.2409099999999929 -0.86896199999999968 0.99999999999999967;
-	setAttr ".pm[25]" -type "matrix" 0.027022459933108013 -0.00015105936546786934 0.99963481524016184 0
-		 0.005590053815132421 0.99998437552711028 1.4322039647990392e-15 0 -0.99961919647309105 0.0055880124126724291 0.027022882151397486 0
-		 -1.5939099155402321 -3.0893239078332968 0.042620259789763214 1;
-	setAttr ".pm[26]" -type "matrix" 1.0000000000000007 4.4586724214563027e-17 -5.2041704279304025e-16 0
-		 -1.9561016158863578e-16 1 6.0428033772635912e-14 -6.1951854967403552e-17 4.3825008656139545e-16 -6.0028407308946431e-14 1.0000000000000009 -3.718542035834335e-18
-		 -0.052568699999997547 -3.1090604075120942 3.5218213204825228 1.0000000000000002;
-	setAttr ".pm[27]" -type "matrix" 1.0000000000000007 4.4586724214563021e-17 -5.2041704279304025e-16 0
-		 -1.8913891061642609e-16 1.0000000000000007 5.9981521909543116e-14 -6.1951854967403564e-17
-		 4.4061976289812093e-16 -5.9861873855252645e-14 1.0000000000000007 -3.7185420358343442e-18
-		 -0.052568699999997713 -2.3595315559214134 3.2448215275034094 1.0000000000000002;
-	setAttr ".pm[28]" -type "matrix" 1.0000000000000007 4.4586724214563021e-17 -5.2041704279304025e-16 0
-		 -1.8290289369867402e-16 1.0000000000000009 5.9224811741313391e-14 0 4.4148712463610924e-16 -5.9806362704021374e-14 1.0000000000000004 0
-		 -0.052568699999997741 -1.7457869165754294 3.1579196316668487 1;
-	setAttr ".pm[29]" -type "matrix" 0.23662323082654843 0.95924938124237236 -0.15443468269573457 0
-		 -0.97089723499141078 0.23949646988219706 -4.3129071104934388e-17 0 0.036986561333005964 0.14994020641606401 0.98800300039051936 0
-		 2.1937527999473434 -0.48970021284300758 0.65993562595786548 1;
-	setAttr ".pm[30]" -type "matrix" 1.0321264007506926e-16 0.98800300039051925 -0.15443468269573457 0
-		 -1.0000000000000007 -1.2103887175439744e-16 1.2426683751296305e-16 0 4.1803469592754655e-16 0.15443468269573418 0.98800300039051936 0
-		 1.1066026171446437 -0.23140738728795826 0.65993562595786526 1;
-	setAttr ".pm[31]" -type "matrix" 0.26266820392956736 0.009684406299574887 -0.96483761686567782 0
-		 -0.036844317711590059 0.99932101761764658 5.2562121322097255e-16 0 0.96418250912199355 0.0355487836958919 0.26284667218924473 0
-		 0.50913250485138239 -0.028746640332393075 0.48091270520891444 1;
-	setAttr ".pm[32]" -type "matrix" 0.3398099540894417 5.6734381839346906e-16 -0.94049412284273848 0
-		 -1.381630923095358e-15 1.0000000000000007 4.138209592278458e-16 0 0.94049412284273859 7.7621151836509442e-16 0.3398099540894422 0
-		 -0.7073865992814703 -0.0040348137177989435 0.42524339379906417 1;
-	setAttr ".pm[33]" -type "matrix" 1.0000000000000002 5.6734381839346896e-16 -1.1102230246251642e-16 0
-		 -8.5868812060852e-16 1.0000000000000007 -1.1587952819525087e-15 0 -2.7755575615629007e-16 7.7621151836509442e-16 1.0000000000000007 0
-		 -0.97912122426768677 -0.0040348137177992514 -1.4585045470587661 1;
-	setAttr ".pm[34]" -type "matrix" 1.3063523206087654e-16 0.98800300039051925 -0.15443468269573454 0
-		 -1.0000000000000007 -9.784597368363593e-17 9.2920752232996223e-17 0 4.2232111944078348e-16 0.15443468269573407 0.98800300039051869 0
-		 1.1066000000000025 0.41705909375695099 0.55857382110392562 1;
-	setAttr ".pm[35]" -type "matrix" -0.26266838984452928 -0.0096844224764784069 -0.96483756608964 0
-		 -0.036844353130247837 0.99932101631178294 -1.3659976652354479e-15 0 0.96418245712048567 0.035548815998334912 -0.26284685857399992 0
-		 0.51038153019671961 -0.028700609916253363 -0.47632433397228441 1;
-	setAttr ".pm[36]" -type "matrix" -0.33981114173522775 -1.9135442931805601e-15 -0.9404936937335634 0
-		 -1.1705831828428131e-15 1.0000000000000007 -1.2795115676869506e-15 0 0.9404936937335634 4.2398936765819297e-16 -0.33981114173522736 0
-		 -0.7057711785568036 -0.0040348100000030494 -0.42077002514234174 1;
-	setAttr ".pm[37]" -type "matrix" 1.0000000000000002 1.7210229690450499e-15 5.5511151231257624e-17 0
-		 1.4086284441910843e-15 -1.0000000000000007 1.3329345429108158e-16 0 -3.3306690738754731e-16 1.0835096825070883e-16 -1.0000000000000002 0
-		 0.97436546514769007 0.0040348100000026973 1.4584999999999986 1;
-	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr -s 38 ".ma";
-	setAttr -s 38 ".dpf[0:37]"  4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-		4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4;
-	setAttr -s 38 ".lw";
-	setAttr -s 38 ".lw";
-	setAttr ".mi" 1;
-	setAttr ".bm" 3;
-	setAttr ".ucm" yes;
-	setAttr -s 38 ".ifcl";
-	setAttr -s 38 ".ifcl";
-createNode tweak -n "tweak4";
-	rename -uid "B80748A3-467C-1262-688D-388E5C2FC384";
-createNode objectSet -n "skinCluster4Set";
-	rename -uid "25788A8D-453B-F4BD-BE5E-8B9063D21026";
-	setAttr ".ihi" 0;
-	setAttr ".vo" yes;
-createNode groupId -n "skinCluster4GroupId";
-	rename -uid "5BB7A5A9-429D-8D66-E2B8-BAB4E6934309";
-	setAttr ".ihi" 0;
-createNode groupParts -n "skinCluster4GroupParts";
-	rename -uid "259E3DA1-47CA-737D-BA42-EEBEC4DEFBFE";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "vtx[*]";
-createNode objectSet -n "tweakSet4";
-	rename -uid "BB2E4E96-41F3-5DCB-09A1-25B247AD7456";
-	setAttr ".ihi" 0;
-	setAttr ".vo" yes;
-createNode groupId -n "groupId10";
-	rename -uid "11A6191A-4A7F-8B49-846B-DAB04D957D3E";
-	setAttr ".ihi" 0;
-createNode groupParts -n "groupParts10";
-	rename -uid "BF8932C3-4DED-9A12-59A3-D5BFA7BC538E";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "vtx[*]";
 createNode skinCluster -n "skinCluster5";
 	rename -uid "67952ACE-417F-3927-976F-45957EF3E1F4";
 	setAttr ".skm" 1;
@@ -14895,47 +13951,6 @@ createNode animCurveTU -n "r_wing_elbow_CTRL_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "l_foot_CTRL_visibility";
-	rename -uid "ECD851C2-48EE-768D-786D-E38803ECDF9F";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "l_foot_CTRL_translateX";
-	rename -uid "762BDA52-4BE3-A2B7-716F-8CB7043E72F0";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "l_foot_CTRL_translateY";
-	rename -uid "45F5D1F7-44DC-68CF-101E-7BA895AB948D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "l_foot_CTRL_translateZ";
-	rename -uid "5122364E-4C47-D7A1-3A79-EC810A83969E";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "l_foot_CTRL_rotateX";
-	rename -uid "BDFD605C-4D6B-3C12-9F84-748BD40F1E88";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "l_foot_CTRL_rotateY";
-	rename -uid "4CEC33EE-4555-0A0D-3E5E-89A3FF146872";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "l_foot_CTRL_rotateZ";
-	rename -uid "43D2E698-4D80-1560-679E-2C93A90D5D44";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTU -n "l_foot_CTRL_ToeBend";
-	rename -uid "9D4698DC-44FC-BC4B-8022-589EA8F57FA2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 5 50;
 createNode animCurveTA -n "top_beak_CTRL_rotateX";
 	rename -uid "DA4903B2-409F-D0A3-005B-5CBE6774991C";
 	setAttr ".tan" 18;
@@ -15038,7 +14053,7 @@ createNode reference -n "police_hatRN";
 		9 "|police_hat:pCube1" "rotateX"
 		9 "|police_hat:pCube1" "rotateY"
 		9 "|police_hat:pCube1" "rotateZ"
-		"police_hatRN" 378
+		"police_hatRN" 39
 		0 "|police_hat:police_hat" "|PoliceDuck|GEO|duck_base1" "-s -r "
 		0 "|police_hatRNfosterParent1|police_hatShapeDeformed" "|PoliceDuck|GEO|duck_base1|police_hat:police_hat" 
 		"-s -r "
@@ -15056,940 +14071,29 @@ createNode reference -n "police_hatRN";
 		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
 		"pnts" " -s 333"
 		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[0]" " -type \"float3\" -0.12626243000000001 9.76908970000000032 2.65705869999999988"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[1]" " -type \"float3\" 4.6636107000000006e-08 9.77053259999999923 2.70456960000000013"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[2]" " -type \"float3\" 0.12626251999999999 9.76908970000000032 2.65705869999999988"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[3]" " -type \"float3\" -0.13379769 9.81233789999999928 2.55758909999999995"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[4]" " -type \"float3\" 0 9.81863689999999956 2.59426930000000011"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[5]" " -type \"float3\" 0.13379769 9.81233789999999928 2.5575888"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[6]" " -type \"float3\" -0.11486161 10.028687 2.6107895000000001"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[7]" " -type \"float3\" 0 10.045221 2.6542062999999998"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[8]" " -type \"float3\" 0.11486162 10.028687 2.6107895000000001"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[9]" " -type \"float3\" -0.22512287 9.95659449999999957 2.47094730000000018"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[10]" " -type \"float3\" 4.4050593999999997e-06 9.97771840000000054 2.47490120000000013"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[11]" " -type \"float3\" 0.22512582 9.95662309999999984 2.47093179999999979"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[12]" " -type \"float3\" -0.13717256 9.88466550000000055 2.30566139999999997"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[13]" " -type \"float3\" 2.9332869000000003e-06 9.87009809999999987 2.25782820000000006"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[14]" " -type \"float3\" 0.13717778 9.884716 2.30563349999999989"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[15]" " -type \"float3\" -0.10588744 9.77978710000000007 2.31979040000000003"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[16]" " -type \"float3\" 0 9.77170279999999991 2.2777232999999999"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[17]" " -type \"float3\" 0.10588744 9.77978710000000007 2.31979040000000003"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[18]" " -type \"float3\" -0.16747197999999999 9.8047904999999993 2.4733284000000002"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[19]" " -type \"float3\" 0.167472 9.8047904999999993 2.4733284000000002"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[20]" " -type \"float3\" 0.16869735999999999 9.860465 2.46144909999999983"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[21]" " -type \"float3\" 0.12936106 9.88241580000000042 2.5533068000000001"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[22]" " -type \"float3\" 0 9.88326449999999923 2.59066060000000009"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[23]" " -type \"float3\" -0.12936106 9.88241580000000042 2.5533068000000001"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[24]" " -type \"float3\" -0.16869734 9.860465 2.46144909999999983"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[25]" " -type \"float3\" -0.11474062 9.81302359999999929 2.30984590000000001"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[26]" " -type \"float3\" 0 9.80230519999999927 2.26359110000000019"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[27]" " -type \"float3\" 0.11474062 9.81302359999999929 2.30984590000000001"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[28]" " -type \"float3\" 4.6636107000000006e-08 9.81573960000000056 2.58599569999999979"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[29]" " -type \"float3\" -0.12521837999999999 9.80948449999999994 2.55556509999999992"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[30]" " -type \"float3\" 0.12521845000000001 9.80948449999999994 2.55556509999999992"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[31]" " -type \"float3\" 0.16309071 9.78331179999999989 2.55387"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[32]" " -type \"float3\" -0.16309066 9.78331179999999989 2.55387"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[33]" " -type \"float3\" 5.2605570000000002e-10 9.89715859999999914 2.60237259999999981"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[34]" " -type \"float3\" -0.12802942 9.89582820000000041 2.56050729999999982"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[35]" " -type \"float3\" -0.17634864 9.86938669999999973 2.46620969999999984"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[36]" " -type \"float3\" -0.11843979 9.814703 2.3020185999999998"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[37]" " -type \"float3\" 0 9.80277820000000055 2.25228859999999997"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[38]" " -type \"float3\" 0.11843979 9.814703 2.3020185999999998"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[39]" " -type \"float3\" 0.17634864 9.86938669999999973 2.46620969999999984"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[40]" " -type \"float3\" 0.12802941000000001 9.89582820000000041 2.56050729999999982"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[41]" " -type \"float3\" 0.17985689999999999 9.96696 2.47092439999999991"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[42]" " -type \"float3\" 2.1042230000000001e-09 10.038063 2.62980340000000012"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[43]" " -type \"float3\" -0.17984484000000001 9.96684740000000069 2.47098679999999993"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[44]" " -type \"float3\" 0.11303154 10.01959 2.58937859999999986"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[45]" " -type \"float3\" -0.11303154 10.01959 2.58937859999999986"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[46]" " -type \"float3\" 1.1735251e-05 9.90457439999999956 2.32208509999999979"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[47]" " -type \"float3\" 0.11412625 9.90618710000000036 2.33580759999999987"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[48]" " -type \"float3\" -0.11408550000000001 9.90573690000000084 2.33605770000000001"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[49]" " -type \"float3\" 0 10.022714 2.65201710000000013"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[50]" " -type \"float3\" -0.10473285 10.01684 2.6164594000000001"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[51]" " -type \"float3\" -0.22525887 9.93856620000000035 2.47017050000000005"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[52]" " -type \"float3\" -0.13664559000000001 9.86430550000000039 2.29273009999999999"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[53]" " -type \"float3\" 0 9.85117529999999952 2.24356009999999984"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[54]" " -type \"float3\" 0.13664559000000001 9.86430550000000039 2.29273009999999999"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[55]" " -type \"float3\" 0.22525888999999999 9.93856620000000035 2.47017050000000005"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[56]" " -type \"float3\" 0.10473285 10.01684 2.6164594000000001"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[57]" " -type \"float3\" -0.10648959 9.92168140000000065 2.58386110000000002"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[58]" " -type \"float3\" -0.18854055 9.88316820000000007 2.46729639999999995"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[59]" " -type \"float3\" -0.1210808 9.82407090000000061 2.298641"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[60]" " -type \"float3\" -1.3151394000000002e-10 9.81184479999999937 2.24970289999999995"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[61]" " -type \"float3\" 0.1210808 9.82407090000000061 2.298641"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[62]" " -type \"float3\" 0.18854053000000001 9.88316820000000007 2.46729639999999995"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[63]" " -type \"float3\" 0.10648959 9.92168140000000065 2.58386110000000002"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[64]" " -type \"float3\" 0 9.92172719999999941 2.61272340000000014"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[65]" " -type \"float3\" 5.2605570000000002e-10 9.80279920000000082 2.255794"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[66]" " -type \"float3\" -0.12570239999999999 9.77766130000000011 2.6470988000000002"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[67]" " -type \"float3\" 0 9.78047180000000083 2.68743920000000003"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[68]" " -type \"float3\" 0.12570239999999999 9.77766130000000011 2.6470988000000002"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[69]" " -type \"float3\" 0.15773965000000001 9.78863810000000001 2.56328010000000006"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[70]" " -type \"float3\" -0.15773965000000001 9.78863810000000001 2.56328010000000006"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[71]" " -type \"float3\" -0.15567406 9.78862479999999913 2.54973859999999997"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[72]" " -type \"float3\" -0.12371021 9.77504629999999963 2.64644529999999989"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[73]" " -type \"float3\" 4.6636107000000006e-08 9.77660750000000078 2.68737169999999992"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[74]" " -type \"float3\" 0.12371031 9.77504629999999963 2.64644529999999989"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[75]" " -type \"float3\" 0.15567408999999999 9.78862190000000076 2.54972030000000016"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[76]" " -type \"float3\" 0.16652322999999999 9.81707860000000032 2.45791670000000018"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[77]" " -type \"float3\" 0.12817634999999999 9.83258909999999986 2.54754540000000018"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[78]" " -type \"float3\" 0 9.83279319999999935 2.58416839999999981"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[79]" " -type \"float3\" -0.12817634999999999 9.83258909999999986 2.54754540000000018"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[80]" " -type \"float3\" -0.16652322999999999 9.81707860000000032 2.45791670000000018"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[81]" " -type \"float3\" -0.11387365000000001 9.7844142999999999 2.3109548000000002"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[82]" " -type \"float3\" 0 9.77466109999999944 2.2659085000000001"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[83]" " -type \"float3\" 0.11387365000000001 9.7844142999999999 2.3109548000000002"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[84]" " -type \"float3\" 0.16652322 9.85192870000000021 2.45999429999999997"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[85]" " -type \"float3\" 0.12817634999999999 9.87235450000000014 2.5494943000000001"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[86]" " -type \"float3\" 0 9.873065 2.58620070000000002"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[87]" " -type \"float3\" -0.12817634999999999 9.87235450000000014 2.5494943000000001"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[88]" " -type \"float3\" -0.16652322999999999 9.85192870000000021 2.45999429999999997"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[89]" " -type \"float3\" -0.11387366 9.80798339999999946 2.31239630000000007"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[90]" " -type \"float3\" 0 9.79749490000000023 2.26730510000000018"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[91]" " -type \"float3\" 0.11387365000000001 9.80798339999999946 2.31239630000000007"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[92]" " -type \"float3\" 0.12625468000000001 9.77228739999999974 2.65618610000000022"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[93]" " -type \"float3\" 0.14626908 9.778594 2.59667059999999994"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[94]" " -type \"float3\" -0.16606373999999999 9.7965908000000006 2.52029680000000011"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[95]" " -type \"float3\" -0.16301483 9.79399390000000025 2.51479890000000017"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[96]" " -type \"float3\" -0.16963257000000001 9.79177759999999964 2.51680990000000016"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[97]" " -type \"float3\" -0.070621401 9.89800830000000076 2.58650180000000018"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[98]" " -type \"float3\" 0 9.90164380000000044 2.6049323000000002"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[99]" " -type \"float3\" -0.12837261 9.89962009999999992 2.5624239000000002"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[100]" " -type \"float3\" -0.16745941 9.8869877000000006 2.52626319999999982"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[101]" " -type \"float3\" -0.17504433 9.90363980000000055 2.53379509999999986"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[102]" " -type \"float3\" -0.17812842000000001 9.87197880000000083 2.466727"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[103]" " -type \"float3\" -0.16120513 9.83970170000000088 2.3807151000000002"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[104]" " -type \"float3\" -0.17164119 9.85014439999999958 2.3795052000000001"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[105]" " -type \"float3\" -0.11909354 9.81609820000000077 2.3009681999999998"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[106]" " -type \"float3\" -0.064500428999999998 9.81290049999999958 2.25967550000000017"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[107]" " -type \"float3\" 0 9.80405140000000053 2.25092030000000021"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[108]" " -type \"float3\" -0.063232972999999998 9.80412480000000031 2.26235890000000017"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[109]" " -type \"float3\" 0.064500428999999998 9.81290049999999958 2.25967550000000017"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[110]" " -type \"float3\" 0.11909354 9.81609820000000077 2.3009681999999998"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[111]" " -type \"float3\" 0.063232972999999998 9.80412480000000031 2.26235890000000017"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[112]" " -type \"float3\" 0.16120514 9.83970170000000088 2.3807151000000002"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[113]" " -type \"float3\" 0.17164119 9.85014439999999958 2.3795052000000001"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[114]" " -type \"float3\" 0.17812842000000001 9.87197880000000083 2.466727"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[115]" " -type \"float3\" 0.16745941 9.8869877000000006 2.52626319999999982"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[116]" " -type \"float3\" 0.17504433 9.90363980000000055 2.53379509999999986"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[117]" " -type \"float3\" 0.12837261 9.89962009999999992 2.5624239000000002"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[118]" " -type \"float3\" 0.070621401 9.89800830000000076 2.58650180000000018"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[119]" " -type \"float3\" 0.20066990000000001 9.90314580000000078 2.364619"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[120]" " -type \"float3\" 0.080952211999999996 9.87237449999999939 2.27221250000000019"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[121]" " -type \"float3\" -0.080940828000000006 9.872262 2.27227520000000016"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[122]" " -type \"float3\" -0.20065814000000001 9.90303330000000059 2.3646815000000001"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[123]" " -type \"float3\" 1.0521115000000001e-09 10.043598 2.66047169999999999"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[124]" " -type \"float3\" -0.10435212000000001 10.029602 2.62396340000000006"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[125]" " -type \"float3\" -0.20961484 9.96769910000000081 2.54677869999999995"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[126]" " -type \"float3\" -0.23323421 9.95277120000000082 2.47079320000000013"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[127]" " -type \"float3\" -0.20797476000000001 9.89255909999999972 2.37533189999999994"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[128]" " -type \"float3\" -0.14305216000000001 9.87302490000000077 2.29124"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[129]" " -type \"float3\" -5.2605575000000003e-10 9.85969919999999966 2.24222870000000007"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[130]" " -type \"float3\" -0.069232485999999996 9.85098269999999943 2.25283269999999991"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[131]" " -type \"float3\" 0.14305216000000001 9.87302490000000077 2.29124"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[132]" " -type \"float3\" 0.069232485999999996 9.85098269999999943 2.25283269999999991"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[133]" " -type \"float3\" 0.20797476000000001 9.89255909999999972 2.37533189999999994"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[134]" " -type \"float3\" 0.23323421 9.95277120000000082 2.47079320000000013"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[135]" " -type \"float3\" 0.20961484 9.96769910000000081 2.54677869999999995"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[136]" " -type \"float3\" 0.10435212000000001 10.029602 2.62396340000000006"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[137]" " -type \"float3\" -0.10561666 9.96900750000000002 2.60276940000000012"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[138]" " -type \"float3\" -0.20869873 9.90877530000000029 2.46872449999999999"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[139]" " -type \"float3\" -0.12912773999999999 9.8440638000000007 2.29618909999999987"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[140]" " -type \"float3\" 0 9.8313884999999992 2.24665049999999988"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[141]" " -type \"float3\" 0.12912773999999999 9.8440638000000007 2.29618909999999987"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[142]" " -type \"float3\" 0.20869873 9.90877530000000029 2.46872449999999999"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[143]" " -type \"float3\" 0.10561666 9.96900750000000002 2.60276940000000012"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[144]" " -type \"float3\" 1.0521115000000001e-09 9.97208690000000075 2.63225959999999981"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[145]" " -type \"float3\" 0 9.77387910000000026 2.70294949999999989"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[146]" " -type \"float3\" -0.12625468000000001 9.77228739999999974 2.65618610000000022"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[147]" " -type \"float3\" 0.15437619 9.79557130000000065 2.553932"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[148]" " -type \"float3\" -0.16234855000000001 9.78627679999999955 2.55428770000000016"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[149]" " -type \"float3\" -0.14669351 9.79464049999999986 2.55178519999999986"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[150]" " -type \"float3\" -0.12182054 9.79148389999999935 2.60852890000000004"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[151]" " -type \"float3\" 4.6110053000000001e-08 9.795536 2.63630910000000007"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[152]" " -type \"float3\" 0.12182063999999999 9.79148389999999935 2.60852890000000004"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[153]" " -type \"float3\" 0.14669356 9.79464049999999986 2.55178519999999986"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[154]" " -type \"float3\" 0.16652322 9.83464619999999989 2.45896410000000021"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[155]" " -type \"float3\" 0.15967535999999999 9.86571029999999993 2.51316309999999987"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[156]" " -type \"float3\" 0.12817634999999999 9.85263819999999946 2.54847530000000022"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[157]" " -type \"float3\" 0.070606007999999998 9.87370969999999915 2.57565949999999999"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[158]" " -type \"float3\" 0 9.85309409999999986 2.58519290000000002"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[159]" " -type \"float3\" -0.070606007999999998 9.87370969999999915 2.57565949999999999"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[160]" " -type \"float3\" -0.12817634999999999 9.85263819999999946 2.54847530000000022"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[161]" " -type \"float3\" -0.15967534 9.86571029999999993 2.51316309999999987"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[162]" " -type \"float3\" -0.16652322 9.83464619999999989 2.45896410000000021"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[163]" " -type \"float3\" -0.15026286 9.82911589999999968 2.38331679999999979"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[164]" " -type \"float3\" -0.11387366 9.79629519999999943 2.31168150000000017"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[165]" " -type \"float3\" -0.061070878000000002 9.7989645000000003 2.27649830000000009"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[166]" " -type \"float3\" 0 9.786171 2.26661249999999992"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[167]" " -type \"float3\" 0.061070878000000002 9.7989645000000003 2.27649830000000009"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[168]" " -type \"float3\" 0.11387366 9.79629519999999943 2.31168150000000017"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[169]" " -type \"float3\" 0.15026287999999999 9.82911589999999968 2.38331679999999979"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[170]" " -type \"float3\" 0.16652322 9.85968689999999981 2.46045680000000022"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[171]" " -type \"float3\" 0.12817634999999999 9.88120559999999948 2.54995159999999998"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[172]" " -type \"float3\" 0 9.88203050000000083 2.586653"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[173]" " -type \"float3\" -0.12817634999999999 9.88120559999999948 2.54995159999999998"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[174]" " -type \"float3\" -0.16652322 9.85968689999999981 2.46045680000000022"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[175]" " -type \"float3\" -0.11387366 9.81323150000000055 2.31271719999999981"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[176]" " -type \"float3\" 0 9.80257890000000032 2.267616"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[177]" " -type \"float3\" 0.11387366 9.81323150000000055 2.31271719999999981"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[178]" " -type \"float3\" -0.070606007999999998 9.77884859999999989 2.67105769999999998"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[179]" " -type \"float3\" 0 9.80047420000000002 2.63486149999999997"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[180]" " -type \"float3\" -0.070606007999999998 9.81691840000000049 2.58402989999999999"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[181]" " -type \"float3\" -0.12868528000000001 9.79613969999999945 2.60567450000000012"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[182]" " -type \"float3\" 0.070606007999999998 9.77884859999999989 2.67105769999999998"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[183]" " -type \"float3\" 0.12868528000000001 9.79613969999999945 2.60567450000000012"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[184]" " -type \"float3\" 0.070606007999999998 9.81691840000000049 2.58402989999999999"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[185]" " -type \"float3\" 0 9.82281019999999927 2.58415129999999982"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[186]" " -type \"float3\" -0.070606007999999998 9.83343789999999984 2.57362719999999978"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[187]" " -type \"float3\" -0.12817634999999999 9.8226823999999997 2.54834890000000014"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[188]" " -type \"float3\" 0.12817634999999999 9.8226823999999997 2.54834890000000014"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[189]" " -type \"float3\" 0.070606007999999998 9.83343789999999984 2.57362719999999978"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[190]" " -type \"float3\" -0.20100583 9.99249080000000056 2.56059290000000006"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[191]" " -type \"float3\" 0.20100583 9.99249080000000056 2.56059290000000006"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[192]" " -type \"float3\" -0.061070878000000002 9.77656939999999963 2.27512859999999995"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[193]" " -type \"float3\" 0 9.7690172000000004 2.26556319999999989"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[194]" " -type \"float3\" -0.061581489000000003 9.77376369999999994 2.28788949999999991"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[195]" " -type \"float3\" -0.11387366 9.77858920000000076 2.31059839999999994"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[196]" " -type \"float3\" 0.061070878000000002 9.77656939999999963 2.27512859999999995"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[197]" " -type \"float3\" 0.11387366 9.77858920000000076 2.31059839999999994"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[198]" " -type \"float3\" 0.061581489000000003 9.77376369999999994 2.28788949999999991"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[199]" " -type \"float3\" -0.13572044999999999 9.78932569999999913 2.37860439999999995"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[200]" " -type \"float3\" 0.13572049 9.78932569999999913 2.37860439999999995"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[201]" " -type \"float3\" -0.15970831999999999 9.78357220000000005 2.5547023000000002"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[202]" " -type \"float3\" -0.14626903999999999 9.778594 2.59667059999999994"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[203]" " -type \"float3\" -0.12530257 9.76976870000000019 2.65530320000000009"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[204]" " -type \"float3\" -0.15248726000000001 9.77487950000000083 2.60396789999999978"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[205]" " -type \"float3\" 0.069714448999999998 9.77484420000000043 2.67105939999999986"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[206]" " -type \"float3\" 0.12530266000000001 9.76976870000000019 2.65530320000000009"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[207]" " -type \"float3\" 0.070512578000000006 9.76850409999999947 2.683677"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[208]" " -type \"float3\" 4.6636107000000006e-08 9.77078440000000015 2.70273329999999978"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[209]" " -type \"float3\" 0.16606376 9.7965908000000006 2.52029680000000011"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[210]" " -type \"float3\" 0.16234855000000001 9.78627679999999955 2.55428770000000016"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[211]" " -type \"float3\" 0.16963260999999999 9.79177759999999964 2.51680990000000016"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[212]" " -type \"float3\" 0.15014023000000001 9.80031870000000005 2.38155269999999986"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[213]" " -type \"float3\" 0.16652322 9.808465 2.4574031999999999"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[214]" " -type \"float3\" 0.15960509000000001 9.80746940000000045 2.51450009999999979"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[215]" " -type \"float3\" 0.15967535999999999 9.82748989999999978 2.51104070000000013"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[216]" " -type \"float3\" -0.15437619 9.79557130000000065 2.553932"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[217]" " -type \"float3\" -0.14977958999999999 9.7819900999999998 2.5981071"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[218]" " -type \"float3\" -0.16652322 9.808465 2.4574031999999999"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[219]" " -type \"float3\" -0.15014021 9.80031870000000005 2.38155269999999986"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[220]" " -type \"float3\" -0.15960509000000001 9.80746940000000045 2.51450009999999979"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[221]" " -type \"float3\" -0.15967534 9.82748989999999978 2.51104070000000013"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[222]" " -type \"float3\" 0.16163917999999999 9.87529469999999954 2.51606109999999994"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[223]" " -type \"float3\" 0.070506282000000003 9.88391780000000075 2.5799139000000002"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[224]" " -type \"float3\" -0.070506282000000003 9.88391780000000075 2.5799139000000002"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[225]" " -type \"float3\" -0.16163917999999999 9.87529469999999954 2.51606109999999994"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[226]" " -type \"float3\" -0.15323168000000001 9.83533480000000004 2.38268490000000011"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[227]" " -type \"float3\" -0.060759309999999997 9.80364040000000081 2.27300909999999989"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[228]" " -type \"float3\" 0.060759309999999997 9.80364040000000081 2.27300909999999989"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[229]" " -type \"float3\" 0.15323168000000001 9.83533480000000004 2.38268490000000011"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[230]" " -type \"float3\" 4.716216e-08 9.81918330000000061 2.57651379999999985"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[231]" " -type \"float3\" -0.070835977999999994 9.81407070000000026 2.578505"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[232]" " -type \"float3\" -0.12974994000000001 9.81585789999999925 2.54565239999999982"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[233]" " -type \"float3\" 0.12975004000000001 9.81585789999999925 2.54565239999999982"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[234]" " -type \"float3\" 0.070836067000000003 9.81407070000000026 2.578505"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[235]" " -type \"float3\" 0.15970836999999999 9.78357220000000005 2.5547023000000002"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[236]" " -type \"float3\" 0.16301486000000001 9.79399390000000025 2.51479890000000017"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[237]" " -type \"float3\" -0.069714351999999993 9.77484420000000043 2.67105939999999986"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[238]" " -type \"float3\" -0.070512481000000002 9.76850409999999947 2.683677"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[239]" " -type \"float3\" 0.15248730999999999 9.77487950000000083 2.60396789999999978"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[240]" " -type \"float3\" 0.14977958999999999 9.7819900999999998 2.5981071"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[241]" " -type \"float3\" -0.070606007999999998 9.79859259999999921 2.623719"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[242]" " -type \"float3\" 0.070606007999999998 9.79859259999999921 2.623719"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[243]" " -type \"float3\" -0.070606007999999998 9.82344439999999963 2.573782"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[244]" " -type \"float3\" 0.070606007999999998 9.82344439999999963 2.573782"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[245]" " -type \"float3\" -0.061070878000000002 9.77103329999999914 2.27479"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[246]" " -type \"float3\" 0.061070878000000002 9.77103329999999914 2.27479"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[247]" " -type \"float3\" -0.15004998 9.77547930000000065 2.60262230000000017"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[248]" " -type \"float3\" 0.070232138 9.76895709999999973 2.68185969999999996"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[249]" " -type \"float3\" 0.16879925000000001 9.7943592000000006 2.51964159999999993"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[250]" " -type \"float3\" 0.15014021 9.79319 2.38111659999999992"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[251]" " -type \"float3\" 0.15967534 9.81804370000000048 2.51051620000000009"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[252]" " -type \"float3\" -0.14555240999999999 9.79048440000000042 2.5868266000000002"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[253]" " -type \"float3\" -0.15014021 9.79319 2.38111659999999992"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[254]" " -type \"float3\" -0.15967534 9.81804370000000048 2.51051620000000009"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[255]" " -type \"float3\" -0.078514680000000003 9.81839560000000056 2.56584019999999979"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[256]" " -type \"float3\" 0.078514776999999994 9.81839560000000056 2.56584019999999979"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[257]" " -type \"float3\" 0.16580343 9.79136090000000081 2.52216670000000009"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[258]" " -type \"float3\" -0.070232049000000005 9.76895709999999973 2.68185969999999996"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[259]" " -type \"float3\" 0.15198866999999999 9.77774909999999942 2.60279460000000018"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[260]" " -type \"float3\" 0.15005001000000001 9.77547930000000065 2.60262230000000017"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[261]" " -type \"float3\" -0.16056632000000001 9.80131150000000062 2.52422689999999994"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[262]" " -type \"float3\" -0.16580343 9.79136090000000081 2.52216670000000009"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[263]" " -type \"float3\" -0.070744082 9.90225509999999964 2.58883049999999981"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[264]" " -type \"float3\" -0.16834146999999999 9.89032169999999944 2.52775570000000016"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[265]" " -type \"float3\" -0.16305560999999999 9.84143730000000083 2.38033219999999979"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[266]" " -type \"float3\" -0.063562699 9.80535320000000077 2.26103159999999992"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[267]" " -type \"float3\" 0.063562699 9.80535320000000077 2.26103159999999992"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[268]" " -type \"float3\" 0.16305560999999999 9.84143730000000083 2.38033219999999979"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[269]" " -type \"float3\" 0.16834146999999999 9.89032169999999944 2.52775570000000016"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[270]" " -type \"float3\" 0.070744082 9.90225509999999964 2.58883049999999981"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[271]" " -type \"float3\" -0.21640433000000001 9.98394389999999987 2.55021930000000019"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[272]" " -type \"float3\" -0.21592715000000001 9.903759 2.3744272999999998"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[273]" " -type \"float3\" -0.070258029 9.8592367000000003 2.25134970000000001"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[274]" " -type \"float3\" 0.070258029 9.8592367000000003 2.25134970000000001"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[275]" " -type \"float3\" 0.21592715000000001 9.903759 2.3744272999999998"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[276]" " -type \"float3\" 0.21640433000000001 9.98394389999999987 2.55021930000000019"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[277]" " -type \"float3\" -0.19492192999999999 9.93353459999999977 2.53879119999999991"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[278]" " -type \"float3\" -0.19356781000000001 9.86921689999999963 2.37743139999999986"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[279]" " -type \"float3\" -0.066851825000000004 9.83182329999999993 2.25627520000000015"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[280]" " -type \"float3\" 0.066851825000000004 9.83182329999999993 2.25627520000000015"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[281]" " -type \"float3\" 0.19356783 9.86921689999999963 2.37743139999999986"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[282]" " -type \"float3\" 0.19492196000000001 9.93353459999999977 2.53879119999999991"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[283]" " -type \"float3\" -0.070606007999999998 9.77179240000000071 2.68217019999999984"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[284]" " -type \"float3\" 0.070606007999999998 9.77179240000000071 2.68217019999999984"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[285]" " -type \"float3\" 0.14555240999999999 9.79048440000000042 2.5868266000000002"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[286]" " -type \"float3\" -0.15198866999999999 9.77774909999999942 2.60279460000000018"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[287]" " -type \"float3\" 0.16056632000000001 9.80131150000000062 2.52422689999999994"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[288]" " -type \"float3\" -0.16879925000000001 9.7943592000000006 2.51964159999999993"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[289]" " -type \"float3\" -0.15554403999999999 9.79873749999999966 2.51866149999999989"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[290]" " -type \"float3\" -0.14273659999999999 9.7867450999999992 2.5873387000000001"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[291]" " -type \"float3\" -0.068909108999999996 9.793478 2.62595389999999984"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[292]" " -type \"float3\" 0.068909198000000005 9.793478 2.62595389999999984"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[293]" " -type \"float3\" 0.14273664 9.7867450999999992 2.5873387000000001"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[294]" " -type \"float3\" 0.15554409 9.79873749999999966 2.51866149999999989"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[295]" " -type \"float3\" 0.15967534 9.846756 2.51211049999999991"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[296]" " -type \"float3\" 0.070606007999999998 9.85373880000000035 2.57465169999999999"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[297]" " -type \"float3\" -0.070606007999999998 9.85373880000000035 2.57465169999999999"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[298]" " -type \"float3\" -0.15967534 9.846756 2.51211049999999991"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[299]" " -type \"float3\" -0.15014021 9.81485840000000032 2.382442"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[300]" " -type \"float3\" -0.061070878000000002 9.787858 2.27581910000000009"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[301]" " -type \"float3\" 0.061070878000000002 9.787858 2.27581910000000009"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[302]" " -type \"float3\" 0.15014021 9.81485840000000032 2.382442"
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[303]" " -type \"float3\" 0.15967534 9.87421890000000069 2.51363540000000008"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[304]" " -type \"float3\" 0.070606007999999998 9.88267519999999955 2.57608939999999986"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[305]" " -type \"float3\" -0.070606007999999998 9.88267519999999955 2.57608939999999986"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[306]" " -type \"float3\" -0.15967534 9.87421890000000069 2.51363540000000008"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[307]" " -type \"float3\" -0.15122473 9.83517739999999918 2.38370969999999982"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[308]" " -type \"float3\" -0.061070878000000002 9.80395030000000034 2.27680330000000009"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[309]" " -type \"float3\" 0.061070878000000002 9.80395030000000034 2.27680330000000009"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[310]" " -type \"float3\" 0.15122473 9.83517739999999918 2.38370969999999982"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[311]" " -type \"float3\" -0.15474795999999999 9.8035306999999996 2.47056960000000014"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[312]" " -type \"float3\" 0.15474799 9.8035306999999996 2.47056960000000014"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[313]" " -type \"float3\" -0.10508714 9.86435129999999916 2.31533049999999996"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[314]" " -type \"float3\" -0.058732464999999998 9.8535137000000006 2.28494190000000019"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[315]" " -type \"float3\" -0.071887760999999994 9.884531 2.36575790000000019"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[316]" " -type \"float3\" -0.13698636 9.88108440000000066 2.37149859999999979"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[317]" " -type \"float3\" 9.2059754000000001e-10 9.85193920000000034 2.2789581000000001"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[318]" " -type \"float3\" 4.7999502999999997e-08 9.884799 2.36184880000000019"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[319]" " -type \"float3\" 4.5612985000000005e-08 9.91436670000000042 2.44577219999999995"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[320]" " -type \"float3\" -0.078993811999999997 9.90874290000000002 2.4447331000000001"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[321]" " -type \"float3\" -0.15364468000000001 9.90889549999999986 2.45807619999999982"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[322]" " -type \"float3\" 0.058732472000000001 9.8535137000000006 2.28494190000000019"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[323]" " -type \"float3\" 0.071887813999999994 9.884531 2.36575790000000019"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[324]" " -type \"float3\" 0.10507807 9.86435129999999916 2.31533049999999996"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[325]" " -type \"float3\" 0.13696282000000001 9.88108730000000079 2.37149859999999979"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[326]" " -type \"float3\" 0.078993909000000001 9.90874290000000002 2.4447331000000001"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[327]" " -type \"float3\" -0.12417702 9.93321989999999921 2.52389740000000007"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[328]" " -type \"float3\" -0.074173555000000002 9.93485360000000028 2.54492660000000015"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[329]" " -type \"float3\" 4.5452481e-08 9.93524359999999973 2.55636840000000021"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[330]" " -type \"float3\" 0.074173643999999997 9.93485360000000028 2.54492660000000015"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[331]" " -type \"float3\" 0.15364474 9.90889549999999986 2.45807619999999982"
-		
-		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
-		"pnts[332]" " -type \"float3\" 0.12417712 9.93321989999999921 2.52389740000000007"
-		
+		"pt[0:165]" (" -type \"float3\" -0.12626243000000001 9.76908970000000032 2.65705869999999988 4.6636107000000006e-08 9.77053259999999923 2.70456960000000013 0.12626251999999999 9.76908970000000032 2.65705869999999988 -0.13379769 9.81233789999999928 2.55758909999999995 0 9.81863689999999956 2.59426930000000011 0.13379769 9.81233789999999928 2.5575888 -0.11486161 10.028687 2.6107895000000001 0 10.045221 2.6542062999999998 0.11486162 10.028687 2.6107895000000001 -0.22512287 9.95659449999999957 2.47094730000000018 4.4050593999999997e-06 9.97771840000000054 2.47490120000000013 0.22512582 9.95662309999999984 2.47093179999999979 -0.13717256 9.88466550000000055 2.30566139999999997 2.9332869000000003e-06 9.87009809999999987 2.25782820000000006 0.13717778 9.884716 2.30563349999999989 -0.10588744 9.77978710000000007 2.31979040000000003 0 9.77170279999999991 2.2777232999999999 0.10588744 9.77978710000000007 2.31979040000000003 -0.16747197999999999 9.8047904999999993 2.4733284000000002 0.167472 9.8047904999999993 2.4733284000000002 0.1686"
+		+ "9735999999999 9.860465 2.46144909999999983 0.12936106 9.88241580000000042 2.5533068000000001 0 9.88326449999999923 2.59066060000000009 -0.12936106 9.88241580000000042 2.5533068000000001 -0.16869734 9.860465 2.46144909999999983 -0.11474062 9.81302359999999929 2.30984590000000001 0 9.80230519999999927 2.26359110000000019 0.11474062 9.81302359999999929 2.30984590000000001 4.6636107000000006e-08 9.81573960000000056 2.58599569999999979 -0.12521837999999999 9.80948449999999994 2.55556509999999992 0.12521845000000001 9.80948449999999994 2.55556509999999992 0.16309071 9.78331179999999989 2.55387 -0.16309066 9.78331179999999989 2.55387 5.2605570000000002e-10 9.89715859999999914 2.60237259999999981 -0.12802942 9.89582820000000041 2.56050729999999982 -0.17634864 9.86938669999999973 2.46620969999999984 -0.11843979 9.814703 2.3020185999999998 0 9.80277820000000055 2.25228859999999997 0.11843979 9.814703 2.3020185999999998 0.17634864 9.86938669999999973 2.46620969999999984 0.12802941000000001 9.89582820000000041 2.56050729"
+		+ "999999982 0.17985689999999999 9.96696 2.47092439999999991 2.1042230000000001e-09 10.038063 2.62980340000000012 -0.17984484000000001 9.96684740000000069 2.47098679999999993 0.11303154 10.01959 2.58937859999999986 -0.11303154 10.01959 2.58937859999999986 1.1735251e-05 9.90457439999999956 2.32208509999999979 0.11412625 9.90618710000000036 2.33580759999999987 -0.11408550000000001 9.90573690000000084 2.33605770000000001 0 10.022714 2.65201710000000013 -0.10473285 10.01684 2.6164594000000001 -0.22525887 9.93856620000000035 2.47017050000000005 -0.13664559000000001 9.86430550000000039 2.29273009999999999 0 9.85117529999999952 2.24356009999999984 0.13664559000000001 9.86430550000000039 2.29273009999999999 0.22525888999999999 9.93856620000000035 2.47017050000000005 0.10473285 10.01684 2.6164594000000001 -0.10648959 9.92168140000000065 2.58386110000000002 -0.18854055 9.88316820000000007 2.46729639999999995 -0.1210808 9.82407090000000061 2.298641 -1.3151394000000002e-10 9.81184479999999937 2.24970289999999995 0.1210808 9"
+		+ ".82407090000000061 2.298641 0.18854053000000001 9.88316820000000007 2.46729639999999995 0.10648959 9.92168140000000065 2.58386110000000002 0 9.92172719999999941 2.61272340000000014 5.2605570000000002e-10 9.80279920000000082 2.255794 -0.12570239999999999 9.77766130000000011 2.6470988000000002 0 9.78047180000000083 2.68743920000000003 0.12570239999999999 9.77766130000000011 2.6470988000000002 0.15773965000000001 9.78863810000000001 2.56328010000000006 -0.15773965000000001 9.78863810000000001 2.56328010000000006 -0.15567406 9.78862479999999913 2.54973859999999997 -0.12371021 9.77504629999999963 2.64644529999999989 4.6636107000000006e-08 9.77660750000000078 2.68737169999999992 0.12371031 9.77504629999999963 2.64644529999999989 0.15567408999999999 9.78862190000000076 2.54972030000000016 0.16652322999999999 9.81707860000000032 2.45791670000000018 0.12817634999999999 9.83258909999999986 2.54754540000000018 0 9.83279319999999935 2.58416839999999981 -0.12817634999999999 9.83258909999999986 2.54754540000000018 -0.16652"
+		+ "322999999999 9.81707860000000032 2.45791670000000018 -0.11387365000000001 9.7844142999999999 2.3109548000000002 0 9.77466109999999944 2.2659085000000001 0.11387365000000001 9.7844142999999999 2.3109548000000002 0.16652322 9.85192870000000021 2.45999429999999997 0.12817634999999999 9.87235450000000014 2.5494943000000001 0 9.873065 2.58620070000000002 -0.12817634999999999 9.87235450000000014 2.5494943000000001 -0.16652322999999999 9.85192870000000021 2.45999429999999997 -0.11387366 9.80798339999999946 2.31239630000000007 0 9.79749490000000023 2.26730510000000018 0.11387365000000001 9.80798339999999946 2.31239630000000007 0.12625468000000001 9.77228739999999974 2.65618610000000022 0.14626908 9.778594 2.59667059999999994 -0.16606373999999999 9.7965908000000006 2.52029680000000011 -0.16301483 9.79399390000000025 2.51479890000000017 -0.16963257000000001 9.79177759999999964 2.51680990000000016 -0.070621401 9.89800830000000076 2.58650180000000018 0 9.90164380000000044 2.6049323000000002 -0.12837261 9.8996200999999999"
+		+ "2 2.5624239000000002 -0.16745941 9.8869877000000006 2.52626319999999982 -0.17504433 9.90363980000000055 2.53379509999999986 -0.17812842000000001 9.87197880000000083 2.466727 -0.16120513 9.83970170000000088 2.3807151000000002 -0.17164119 9.85014439999999958 2.3795052000000001 -0.11909354 9.81609820000000077 2.3009681999999998 -0.064500428999999998 9.81290049999999958 2.25967550000000017 0 9.80405140000000053 2.25092030000000021 -0.063232972999999998 9.80412480000000031 2.26235890000000017 0.064500428999999998 9.81290049999999958 2.25967550000000017 0.11909354 9.81609820000000077 2.3009681999999998 0.063232972999999998 9.80412480000000031 2.26235890000000017 0.16120514 9.83970170000000088 2.3807151000000002 0.17164119 9.85014439999999958 2.3795052000000001 0.17812842000000001 9.87197880000000083 2.466727 0.16745941 9.8869877000000006 2.52626319999999982 0.17504433 9.90363980000000055 2.53379509999999986 0.12837261 9.89962009999999992 2.5624239000000002 0.070621401 9.89800830000000076 2.58650180000000018 0.20066"
+		+ "990000000001 9.90314580000000078 2.364619 0.080952211999999996 9.87237449999999939 2.27221250000000019 -0.080940828000000006 9.872262 2.27227520000000016 -0.20065814000000001 9.90303330000000059 2.3646815000000001 1.0521115000000001e-09 10.043598 2.66047169999999999 -0.10435212000000001 10.029602 2.62396340000000006 -0.20961484 9.96769910000000081 2.54677869999999995 -0.23323421 9.95277120000000082 2.47079320000000013 -0.20797476000000001 9.89255909999999972 2.37533189999999994 -0.14305216000000001 9.87302490000000077 2.29124 -5.2605575000000003e-10 9.85969919999999966 2.24222870000000007 -0.069232485999999996 9.85098269999999943 2.25283269999999991 0.14305216000000001 9.87302490000000077 2.29124 0.069232485999999996 9.85098269999999943 2.25283269999999991 0.20797476000000001 9.89255909999999972 2.37533189999999994 0.23323421 9.95277120000000082 2.47079320000000013 0.20961484 9.96769910000000081 2.54677869999999995 0.10435212000000001 10.029602 2.62396340000000006 -0.10561666 9.96900750000000002 2.60276940000"
+		+ "000012 -0.20869873 9.90877530000000029 2.46872449999999999 -0.12912773999999999 9.8440638000000007 2.29618909999999987 0 9.8313884999999992 2.24665049999999988 0.12912773999999999 9.8440638000000007 2.29618909999999987 0.20869873 9.90877530000000029 2.46872449999999999 0.10561666 9.96900750000000002 2.60276940000000012 1.0521115000000001e-09 9.97208690000000075 2.63225959999999981 0 9.77387910000000026 2.70294949999999989 -0.12625468000000001 9.77228739999999974 2.65618610000000022 0.15437619 9.79557130000000065 2.553932 -0.16234855000000001 9.78627679999999955 2.55428770000000016 -0.14669351 9.79464049999999986 2.55178519999999986 -0.12182054 9.79148389999999935 2.60852890000000004 4.6110053000000001e-08 9.795536 2.63630910000000007 0.12182063999999999 9.79148389999999935 2.60852890000000004 0.14669356 9.79464049999999986 2.55178519999999986 0.16652322 9.83464619999999989 2.45896410000000021 0.15967535999999999 9.86571029999999993 2.51316309999999987 0.12817634999999999 9.85263819999999946 2.5484753000000002"
+		+ "2 0.070606007999999998 9.87370969999999915 2.57565949999999999 0 9.85309409999999986 2.58519290000000002 -0.070606007999999998 9.87370969999999915 2.57565949999999999 -0.12817634999999999 9.85263819999999946 2.54847530000000022 -0.15967534 9.86571029999999993 2.51316309999999987 -0.16652322 9.83464619999999989 2.45896410000000021 -0.15026286 9.82911589999999968 2.38331679999999979 -0.11387366 9.79629519999999943 2.31168150000000017 -0.061070878000000002 9.7989645000000003 2.27649830000000009"
+		)
+		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pt[166:331]" (" 0 9.786171 2.26661249999999992 0.061070878000000002 9.7989645000000003 2.27649830000000009 0.11387366 9.79629519999999943 2.31168150000000017 0.15026287999999999 9.82911589999999968 2.38331679999999979 0.16652322 9.85968689999999981 2.46045680000000022 0.12817634999999999 9.88120559999999948 2.54995159999999998 0 9.88203050000000083 2.586653 -0.12817634999999999 9.88120559999999948 2.54995159999999998 -0.16652322 9.85968689999999981 2.46045680000000022 -0.11387366 9.81323150000000055 2.31271719999999981 0 9.80257890000000032 2.267616 0.11387366 9.81323150000000055 2.31271719999999981 -0.070606007999999998 9.77884859999999989 2.67105769999999998 0 9.80047420000000002 2.63486149999999997 -0.070606007999999998 9.81691840000000049 2.58402989999999999 -0.12868528000000001 9.79613969999999945 2.60567450000000012 0.070606007999999998 9.77884859999999989 2.67105769999999998 0.12868528000000001 9.79613969999999945 2.60567450000000012 0.070606007999999998 9.81691840000000049 2.58402989999999999 0 9.82281019999999927 2"
+		+ ".58415129999999982 -0.070606007999999998 9.83343789999999984 2.57362719999999978 -0.12817634999999999 9.8226823999999997 2.54834890000000014 0.12817634999999999 9.8226823999999997 2.54834890000000014 0.070606007999999998 9.83343789999999984 2.57362719999999978 -0.20100583 9.99249080000000056 2.56059290000000006 0.20100583 9.99249080000000056 2.56059290000000006 -0.061070878000000002 9.77656939999999963 2.27512859999999995 0 9.7690172000000004 2.26556319999999989 -0.061581489000000003 9.77376369999999994 2.28788949999999991 -0.11387366 9.77858920000000076 2.31059839999999994 0.061070878000000002 9.77656939999999963 2.27512859999999995 0.11387366 9.77858920000000076 2.31059839999999994 0.061581489000000003 9.77376369999999994 2.28788949999999991 -0.13572044999999999 9.78932569999999913 2.37860439999999995 0.13572049 9.78932569999999913 2.37860439999999995 -0.15970831999999999 9.78357220000000005 2.5547023000000002 -0.14626903999999999 9.778594 2.59667059999999994 -0.12530257 9.76976870000000019 2.65530320000000"
+		+ "009 -0.15248726000000001 9.77487950000000083 2.60396789999999978 0.069714448999999998 9.77484420000000043 2.67105939999999986 0.12530266000000001 9.76976870000000019 2.65530320000000009 0.070512578000000006 9.76850409999999947 2.683677 4.6636107000000006e-08 9.77078440000000015 2.70273329999999978 0.16606376 9.7965908000000006 2.52029680000000011 0.16234855000000001 9.78627679999999955 2.55428770000000016 0.16963260999999999 9.79177759999999964 2.51680990000000016 0.15014023000000001 9.80031870000000005 2.38155269999999986 0.16652322 9.808465 2.4574031999999999 0.15960509000000001 9.80746940000000045 2.51450009999999979 0.15967535999999999 9.82748989999999978 2.51104070000000013 -0.15437619 9.79557130000000065 2.553932 -0.14977958999999999 9.7819900999999998 2.5981071 -0.16652322 9.808465 2.4574031999999999 -0.15014021 9.80031870000000005 2.38155269999999986 -0.15960509000000001 9.80746940000000045 2.51450009999999979 -0.15967534 9.82748989999999978 2.51104070000000013 0.16163917999999999 9.87529469999999954 "
+		+ "2.51606109999999994 0.070506282000000003 9.88391780000000075 2.5799139000000002 -0.070506282000000003 9.88391780000000075 2.5799139000000002 -0.16163917999999999 9.87529469999999954 2.51606109999999994 -0.15323168000000001 9.83533480000000004 2.38268490000000011 -0.060759309999999997 9.80364040000000081 2.27300909999999989 0.060759309999999997 9.80364040000000081 2.27300909999999989 0.15323168000000001 9.83533480000000004 2.38268490000000011 4.716216e-08 9.81918330000000061 2.57651379999999985 -0.070835977999999994 9.81407070000000026 2.578505 -0.12974994000000001 9.81585789999999925 2.54565239999999982 0.12975004000000001 9.81585789999999925 2.54565239999999982 0.070836067000000003 9.81407070000000026 2.578505 0.15970836999999999 9.78357220000000005 2.5547023000000002 0.16301486000000001 9.79399390000000025 2.51479890000000017 -0.069714351999999993 9.77484420000000043 2.67105939999999986 -0.070512481000000002 9.76850409999999947 2.683677 0.15248730999999999 9.77487950000000083 2.60396789999999978 0.149779589"
+		+ "99999999 9.7819900999999998 2.5981071 -0.070606007999999998 9.79859259999999921 2.623719 0.070606007999999998 9.79859259999999921 2.623719 -0.070606007999999998 9.82344439999999963 2.573782 0.070606007999999998 9.82344439999999963 2.573782 -0.061070878000000002 9.77103329999999914 2.27479 0.061070878000000002 9.77103329999999914 2.27479 -0.15004998 9.77547930000000065 2.60262230000000017 0.070232138 9.76895709999999973 2.68185969999999996 0.16879925000000001 9.7943592000000006 2.51964159999999993 0.15014021 9.79319 2.38111659999999992 0.15967534 9.81804370000000048 2.51051620000000009 -0.14555240999999999 9.79048440000000042 2.5868266000000002 -0.15014021 9.79319 2.38111659999999992 -0.15967534 9.81804370000000048 2.51051620000000009 -0.078514680000000003 9.81839560000000056 2.56584019999999979 0.078514776999999994 9.81839560000000056 2.56584019999999979 0.16580343 9.79136090000000081 2.52216670000000009 -0.070232049000000005 9.76895709999999973 2.68185969999999996 0.15198866999999999 9.77774909999999942 2.60"
+		+ "279460000000018 0.15005001000000001 9.77547930000000065 2.60262230000000017 -0.16056632000000001 9.80131150000000062 2.52422689999999994 -0.16580343 9.79136090000000081 2.52216670000000009 -0.070744082 9.90225509999999964 2.58883049999999981 -0.16834146999999999 9.89032169999999944 2.52775570000000016 -0.16305560999999999 9.84143730000000083 2.38033219999999979 -0.063562699 9.80535320000000077 2.26103159999999992 0.063562699 9.80535320000000077 2.26103159999999992 0.16305560999999999 9.84143730000000083 2.38033219999999979 0.16834146999999999 9.89032169999999944 2.52775570000000016 0.070744082 9.90225509999999964 2.58883049999999981 -0.21640433000000001 9.98394389999999987 2.55021930000000019 -0.21592715000000001 9.903759 2.3744272999999998 -0.070258029 9.8592367000000003 2.25134970000000001 0.070258029 9.8592367000000003 2.25134970000000001 0.21592715000000001 9.903759 2.3744272999999998 0.21640433000000001 9.98394389999999987 2.55021930000000019 -0.19492192999999999 9.93353459999999977 2.53879119999999991 -"
+		+ "0.19356781000000001 9.86921689999999963 2.37743139999999986 -0.066851825000000004 9.83182329999999993 2.25627520000000015 0.066851825000000004 9.83182329999999993 2.25627520000000015 0.19356783 9.86921689999999963 2.37743139999999986 0.19492196000000001 9.93353459999999977 2.53879119999999991 -0.070606007999999998 9.77179240000000071 2.68217019999999984 0.070606007999999998 9.77179240000000071 2.68217019999999984 0.14555240999999999 9.79048440000000042 2.5868266000000002 -0.15198866999999999 9.77774909999999942 2.60279460000000018 0.16056632000000001 9.80131150000000062 2.52422689999999994 -0.16879925000000001 9.7943592000000006 2.51964159999999993 -0.15554403999999999 9.79873749999999966 2.51866149999999989 -0.14273659999999999 9.7867450999999992 2.5873387000000001 -0.068909108999999996 9.793478 2.62595389999999984 0.068909198000000005 9.793478 2.62595389999999984 0.14273664 9.7867450999999992 2.5873387000000001 0.15554409 9.79873749999999966 2.51866149999999989 0.15967534 9.846756 2.51211049999999991 0.0706"
+		+ "06007999999998 9.85373880000000035 2.57465169999999999 -0.070606007999999998 9.85373880000000035 2.57465169999999999 -0.15967534 9.846756 2.51211049999999991 -0.15014021 9.81485840000000032 2.382442 -0.061070878000000002 9.787858 2.27581910000000009 0.061070878000000002 9.787858 2.27581910000000009 0.15014021 9.81485840000000032 2.382442 0.15967534 9.87421890000000069 2.51363540000000008 0.070606007999999998 9.88267519999999955 2.57608939999999986 -0.070606007999999998 9.88267519999999955 2.57608939999999986 -0.15967534 9.87421890000000069 2.51363540000000008 -0.15122473 9.83517739999999918 2.38370969999999982 -0.061070878000000002 9.80395030000000034 2.27680330000000009 0.061070878000000002 9.80395030000000034 2.27680330000000009 0.15122473 9.83517739999999918 2.38370969999999982 -0.15474795999999999 9.8035306999999996 2.47056960000000014 0.15474799 9.8035306999999996 2.47056960000000014 -0.10508714 9.86435129999999916 2.31533049999999996 -0.058732464999999998 9.8535137000000006 2.28494190000000019 -0.071887"
+		+ "760999999994 9.884531 2.36575790000000019 -0.13698636 9.88108440000000066 2.37149859999999979 9.2059754000000001e-10 9.85193920000000034 2.2789581000000001 4.7999502999999997e-08 9.884799 2.36184880000000019 4.5612985000000005e-08 9.91436670000000042 2.44577219999999995 -0.078993811999999997 9.90874290000000002 2.4447331000000001 -0.15364468000000001 9.90889549999999986 2.45807619999999982 0.058732472000000001 9.8535137000000006 2.28494190000000019 0.071887813999999994 9.884531 2.36575790000000019 0.10507807 9.86435129999999916 2.31533049999999996 0.13696282000000001 9.88108730000000079 2.37149859999999979 0.078993909000000001 9.90874290000000002 2.4447331000000001 -0.12417702 9.93321989999999921 2.52389740000000007 -0.074173555000000002 9.93485360000000028 2.54492660000000015 4.5452481e-08 9.93524359999999973 2.55636840000000021 0.074173643999999997 9.93485360000000028 2.54492660000000015 0.15364474 9.90889549999999986 2.45807619999999982"
+		)
+		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[332]" " 0.12417712 9.93321989999999921 2.52389740000000007"
 		2 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape" 
 		"vertexColorSource" " 2"
 		5 3 "police_hatRN" "|PoliceDuck|GEO|duck_base1|police_hat:police_hat|police_hat:police_hatShape.worldMesh" 
@@ -16030,16 +14134,7 @@ createNode reference -n "police_hatRN";
 		8 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat" "scaleZ"
 		8 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat" "rotateX"
 		8 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat" "rotateY"
-		8 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat" "rotateZ"
-		9 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat" "translateY"
-		9 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat" "translateZ"
-		9 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat" "translateX"
-		9 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat" "scaleX"
-		9 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat" "scaleY"
-		9 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat" "scaleZ"
-		9 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat" "rotateX"
-		9 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat" "rotateY"
-		9 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat" "rotateZ";
+		8 "|PoliceDuck|GEO|duck_base1|police_hat:police_hat" "rotateZ";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode transformGeometry -n "transformGeometry1";
@@ -16374,148 +14469,147 @@ createNode dagPose -n "bindPose4";
 createNode skinCluster -n "skinCluster12";
 	rename -uid "ADB5BB5C-497C-AED2-177E-278A70CA7560";
 	setAttr ".skm" 1;
-	setAttr -s 333 ".wl";
 	setAttr -s 47 ".pm";
-	setAttr ".pm[0]" -type "matrix" 0.018635171000353772 -0.10210719647435636 0.99459883914568015 -0
-		 0.98375061167217204 0.17954034096722452 -1.52655665885959e-16 0 -0.17857061470582106 0.97843721637799519 0.10379378194316485 -0
+	setAttr ".pm[0]" -type "matrix" 0.018635171000353772 -0.10210719647435636 0.99459883914568015 0
+		 0.98375061167217204 0.17954034096722452 -1.52655665885959e-16 0 -0.17857061470582106 0.97843721637799519 0.10379378194316485 0
 		 -2.3294605110677944 0.24741272539665177 0.016191311353530875 1;
-	setAttr ".pm[1]" -type "matrix" -0.044031851640286883 0.10851153655707287 -0.99311955094799675 -0
-		 0.92661824458466446 0.37600349573220021 -3.2474023470285829e-15 -0 0.37341642283643967 -0.92024269496214328 -0.1171048996620091 -0
+	setAttr ".pm[1]" -type "matrix" -0.044031851640286883 0.10851153655707287 -0.99311955094799675 0
+		 0.92661824458466446 0.37600349573220021 -3.2474023470285829e-15 0 0.37341642283643967 -0.92024269496214328 -0.1171048996620091 0
 		 -1.86910635077876 -1.4577691596190159 -0.025050845925889326 1;
-	setAttr ".pm[2]" -type "matrix" 0.022298772870656562 -0.025670122464623205 -0.99942173757684194 -0
-		 0.6049260347494434 0.79625129418684504 -0.0069547816708678632 -0 0.79596938208123214 -0.60442114565791416 0.033283952151095843 -0
+	setAttr ".pm[2]" -type "matrix" 0.022298772870656562 -0.025670122464623205 -0.99942173757684194 0
+		 0.6049260347494434 0.79625129418684504 -0.0069547816708678632 0 0.79596938208123214 -0.60442114565791416 0.033283952151095843 0
 		 -1.8583230822148191 -2.7994934276406691 0.030442618618246431 1;
-	setAttr ".pm[3]" -type "matrix" -0.026809585743133409 0.051450778528410207 -0.99831561317105599 -0
-		 0.75335872902867851 0.65746803791561492 0.01365300390702882 -0 0.65706306509236689 -0.75172375012913584 -0.056387338855567598 -0
+	setAttr ".pm[3]" -type "matrix" -0.026809585743133409 0.051450778528410207 -0.99831561317105599 0
+		 0.75335872902867851 0.65746803791561492 0.01365300390702882 0 0.65706306509236689 -0.75172375012913584 -0.056387338855567598 0
 		 -3.8290929009159766 -2.0712515851497622 0.029041022754618194 1;
-	setAttr ".pm[4]" -type "matrix" 0.048094737986099166 -0.16865896249238674 -0.98450040657637117 -0
-		 0.96166470139538718 0.27422801113329204 -3.0531133177191805e-16 -0 0.26997758845535619 -0.94675928951390331 0.17538229514680159 -0
+	setAttr ".pm[4]" -type "matrix" 0.048094737986099166 -0.16865896249238674 -0.98450040657637117 0
+		 0.96166470139538718 0.27422801113329204 -3.0531133177191805e-16 0 0.26997758845535619 -0.94675928951390331 0.17538229514680159 0
 		 -5.4902824267124446 0.27359399385002026 -0.31631495879421845 1;
-	setAttr ".pm[5]" -type "matrix" -0.046521848324449097 0.095223134157949862 0.99436827802862549 -0
+	setAttr ".pm[5]" -type "matrix" -0.046521848324449097 0.095223134157949862 0.99436827802862549 0
 		 0.89850229273692628 0.43896882571144702 -1.7763568394002501e-15 0 -0.43649667533093928 0.89344217763358968 -0.10597984549142327 0
 		 -4.7054719018141249 -4.6199839337900324 0.17062876519941256 1;
-	setAttr ".pm[6]" -type "matrix" 4.0568165544821682e-15 -2.8681947296708125e-14 -0.99999999999999978 -0
-		 0.99245567979813598 0.1226039299387252 4.9605152357391211e-16 -0 0.12260392993872564 -0.99245567979813587 2.8866841445420719e-14 -0
+	setAttr ".pm[6]" -type "matrix" 4.0568165544821682e-15 -2.8681947296708125e-14 -0.99999999999999978 0
+		 0.99245567979813598 0.1226039299387252 4.9605152357391211e-16 0 0.12260392993872564 -0.99245567979813587 2.8866841445420719e-14 0
 		 -7.412335205951079 0.69507938335895669 -0.0012144316098347697 1;
-	setAttr ".pm[7]" -type "matrix" 9.6424682689692091e-15 -2.7315465710285541e-14 -0.99999999999999978 -0
-		 0.94868276605266777 0.31622936200590118 4.9605152357391251e-16 -0 0.31622936200590157 -0.94868276605266755 2.8866841445420726e-14 -0
+	setAttr ".pm[7]" -type "matrix" 9.6424682689692091e-15 -2.7315465710285541e-14 -0.99999999999999978 0
+		 0.94868276605266777 0.31622936200590118 4.9605152357391251e-16 0 0.31622936200590157 -0.94868276605266755 2.8866841445420726e-14 0
 		 -8.5917384274636674 -1.0221995043458287 -0.0012144316098360644 1;
-	setAttr ".pm[8]" -type "matrix" 0.99999999999999978 2.9904128453571014e-16 2.8892726131156467e-14 -0
-		 -3.2951806988013838e-16 1 2.0539125955565254e-15 0 -2.8866841445420726e-14 -1.6098233857064857e-15 1 -0
+	setAttr ".pm[8]" -type "matrix" 0.99999999999999978 2.9904128453571014e-16 2.8892726131156467e-14 0
+		 -3.2951806988013838e-16 1 2.0539125955565254e-15 0 -2.8866841445420726e-14 -1.6098233857064857e-15 1 0
 		 0.001214431609835346 -10.257333673669256 -2.3416369081979718 1;
-	setAttr ".pm[9]" -type "matrix" 0.99999999999999978 2.9904128453571014e-16 2.8892726131156467e-14 -0
-		 -3.2951806988013838e-16 1 2.0539125955565254e-15 0 -2.8866841445420726e-14 -1.6098233857064857e-15 1 -0
+	setAttr ".pm[9]" -type "matrix" 0.99999999999999978 2.9904128453571014e-16 2.8892726131156467e-14 0
+		 -3.2951806988013838e-16 1 2.0539125955565254e-15 0 -2.8866841445420726e-14 -1.6098233857064857e-15 1 0
 		 -0.58077880665130843 -9.3375426607085643 -2.8220310459008595 1;
-	setAttr ".pm[10]" -type "matrix" 0.99999999999999978 2.9904128453571014e-16 2.8892726131156467e-14 -0
-		 -3.2951806988013838e-16 1 2.0539125955565254e-15 0 -2.8866841445420726e-14 -1.6098233857064857e-15 1 -0
+	setAttr ".pm[10]" -type "matrix" 0.99999999999999978 2.9904128453571014e-16 2.8892726131156467e-14 0
+		 -3.2951806988013838e-16 1 2.0539125955565254e-15 0 -2.8866841445420726e-14 -1.6098233857064857e-15 1 0
 		 0.58501525442561453 -9.3375426607085661 -2.822031045900856 1;
-	setAttr ".pm[11]" -type "matrix" 9.6424682689692091e-15 -2.7315465710285541e-14 -0.99999999999999978 -0
-		 0.94868276605266777 0.31622936200590118 4.9605152357391251e-16 -0 0.31622936200590157 -0.94868276605266755 2.8866841445420726e-14 -0
+	setAttr ".pm[11]" -type "matrix" 9.6424682689692091e-15 -2.7315465710285541e-14 -0.99999999999999978 0
+		 0.94868276605266777 0.31622936200590118 4.9605152357391251e-16 0 0.31622936200590157 -0.94868276605266755 2.8866841445420726e-14 0
 		 -9.3497992206228506 0.34952195750174114 -0.0012144316098891303 1;
 	setAttr ".pm[12]" -type "matrix" -1.2858868641136192e-16 2.8967142182783406e-14 -0.99999999999999978 0
-		 -0.99991344614169964 0.013156755870284418 4.9605152357391152e-16 0 0.01315675587028403 0.99991344614169952 2.8866841445420726e-14 -0
+		 -0.99991344614169964 0.013156755870284418 4.9605152357391152e-16 0 0.01315675587028403 0.99991344614169952 2.8866841445420726e-14 0
 		 8.7707442299662048 -3.6671062137076764 -0.0012144316098947519 1;
-	setAttr ".pm[13]" -type "matrix" 0.99999999999999978 7.317165606308225e-16 2.8960021768249446e-14 -0
-		 -7.1809612849894303e-16 1 1.99666672084929e-15 0 -2.8866841445420726e-14 -1.5508427875232864e-15 0.99999999999999978 -0
+	setAttr ".pm[13]" -type "matrix" 0.99999999999999978 7.317165606308225e-16 2.8960021768249446e-14 0
+		 -7.1809612849894303e-16 1 1.99666672084929e-15 0 -2.8866841445420726e-14 -1.5508427875232864e-15 0.99999999999999978 0
 		 0.0012144316098235543 -8.736325676607704 -4.4675935733037564 1;
-	setAttr ".pm[14]" -type "matrix" 0.99999999999999978 2.9904128453577107e-16 2.8892726131156467e-14 -0
-		 -3.2951806988013898e-16 1 -5.5511151231272162e-17 0 -2.8866841445420726e-14 4.9960036108131177e-16 1 -0
+	setAttr ".pm[14]" -type "matrix" 0.99999999999999978 2.9904128453577107e-16 2.8892726131156467e-14 0
+		 -3.2951806988013898e-16 1 -5.5511151231272162e-17 0 -2.8866841445420726e-14 4.9960036108131177e-16 1 0
 		 0.0012144316098933385 -8.483839822639748 -3.5557941720235182 1;
-	setAttr ".pm[15]" -type "matrix" 0.99999999999999978 2.9904128453577107e-16 2.8892726131156467e-14 -0
-		 -3.2951806988013898e-16 1 -5.5511151231272162e-17 0 -2.8866841445420726e-14 4.9960036108131177e-16 1 -0
+	setAttr ".pm[15]" -type "matrix" 0.99999999999999978 2.9904128453577107e-16 2.8892726131156467e-14 0
+		 -3.2951806988013898e-16 1 -5.5511151231272162e-17 0 -2.8866841445420726e-14 4.9960036108131177e-16 1 0
 		 0.0012144316098346606 -8.4932609660015839 -4.3201347767369436 1;
-	setAttr ".pm[16]" -type "matrix" 0.58554230204754976 -0.46623669478901331 0.6631467084628202 -0
-		 0.65751082371933312 0.75164077721044686 -0.052111982560632285 0 -0.47415158884557151 0.46653990876096824 0.74667314423951814 -0
+	setAttr ".pm[16]" -type "matrix" 0.58554230204754976 -0.46623669478901331 0.6631467084628202 0
+		 0.65751082371933312 0.75164077721044686 -0.052111982560632285 0 -0.47415158884557151 0.46653990876096824 0.74667314423951814 0
 		 -1.6827485469648518 -2.7087321107125941 -2.179455914981177 1;
-	setAttr ".pm[17]" -type "matrix" 0.9726336683832254 0.088657040497831421 -0.21476423421406951 -0
-		 -0.090775195977710402 0.99587140926688344 -1.1900203045200899e-15 0 0.21387756058688837 0.019495265449787091 0.976665922259216 -0
+	setAttr ".pm[17]" -type "matrix" 0.9726336683832254 0.088657040497831421 -0.21476423421406951 0
+		 -0.090775195977710402 0.99587140926688344 -1.1900203045200899e-15 0 0.21387756058688837 0.019495265449787091 0.976665922259216 0
 		 -1.9861246525280902 -4.317860529017616 -0.81660229787675098 1;
-	setAttr ".pm[18]" -type "matrix" 0.70003099021280013 0.15032706094371448 0.6981105839977727 -0
-		 -0.20995694193175823 0.97771063333414998 -3.4694469519536157e-16 0 -0.68255014121773616 -0.14657316334636517 0.71598995279982036 -0
+	setAttr ".pm[18]" -type "matrix" 0.70003099021280013 0.15032706094371448 0.6981105839977727 0
+		 -0.20995694193175823 0.97771063333414998 -3.4694469519536157e-16 0 -0.68255014121773616 -0.14657316334636517 0.71598995279982036 0
 		 -1.6969361742718345 -4.2502079053808384 -5.3673741626993712 1;
-	setAttr ".pm[19]" -type "matrix" -0.58774017307818738 -9.0719609140863041e-16 0.80904974442244437 -0
-		 6.0287858659676738e-16 1.0000000000000002 1.6729956301517735e-15 -0 -0.80904974442244459 2.3186761480786456e-15 -0.58774017307818782 -0
+	setAttr ".pm[19]" -type "matrix" -0.58774017307818738 -9.0719609140863041e-16 0.80904974442244437 0
+		 6.0287858659676738e-16 1.0000000000000002 1.6729956301517735e-15 0 -0.80904974442244459 2.3186761480786456e-15 -0.58774017307818782 0
 		 4.7240677438018883 -3.2591044466753809 -5.576062714723208 1;
-	setAttr ".pm[20]" -type "matrix" 1 -9.071960914086306e-16 -1.0547118733938979e-15 -0
-		 9.992007221626399e-16 1.0000000000000002 -1.4710455076283344e-15 0 7.7715611723761224e-16 2.3186761480786456e-15 1.0000000000000004 -0
+	setAttr ".pm[20]" -type "matrix" 1 -9.071960914086306e-16 -1.0547118733938979e-15 0
+		 9.992007221626399e-16 1.0000000000000002 -1.4710455076283344e-15 0 7.7715611723761224e-16 2.3186761480786456e-15 1.0000000000000004 0
 		 -7.622028337046876 -3.1848895801200627 -0.06474323961492652 1;
-	setAttr ".pm[21]" -type "matrix" -0.73831266871772583 -3.7420910776046637e-16 0.67445860007187186 -0
-		 2.6893904030221751e-16 1.0000000000000002 1.1318127507755961e-15 -0 -0.67445860007187208 1.8456910891971049e-15 -0.73831266871772627 -0
+	setAttr ".pm[21]" -type "matrix" -0.73831266871772583 -3.7420910776046637e-16 0.67445860007187186 0
+		 2.6893904030221751e-16 1.0000000000000002 1.1318127507755961e-15 0 -0.67445860007187208 1.8456910891971049e-15 -0.73831266871772627 0
 		 4.8947742910713572 -3.4436485830619725 -4.6881871080918467 1;
-	setAttr ".pm[22]" -type "matrix" 0.99999999999999978 -3.7420910776046632e-16 -1.3322676295501875e-15 -0
-		 5.6479974286368753e-16 1 -1.017019941140788e-15 0 1.1657341758564154e-15 1.8456910891971049e-15 1.0000000000000002 -0
+	setAttr ".pm[22]" -type "matrix" 0.99999999999999978 -3.7420910776046632e-16 -1.3322676295501875e-15 0
+		 5.6479974286368753e-16 1 -1.017019941140788e-15 0 1.1657341758564154e-15 1.8456910891971049e-15 1.0000000000000002 0
 		 -7.4545702804855951 -3.077682338363954 0.73416931165264687 1;
-	setAttr ".pm[23]" -type "matrix" 0.99999999999999989 -8.2000597750227007e-16 -1.998401444325281e-15 -0
-		 9.436895709313805e-16 1.0000000000000002 -1.4432899320127065e-15 0 1.7763568394002532e-15 2.3074248706709095e-15 1.0000000000000004 -0
+	setAttr ".pm[23]" -type "matrix" 0.99999999999999989 -8.2000597750227007e-16 -1.998401444325281e-15 0
+		 9.436895709313805e-16 1.0000000000000002 -1.4432899320127065e-15 0 1.7763568394002532e-15 2.3074248706709095e-15 1.0000000000000004 0
 		 -6.1911997181259144 -3.4286620379612369 0.69412219937840447 1;
-	setAttr ".pm[24]" -type "matrix" 0.99999999999999989 -8.2000597750227007e-16 -1.998401444325281e-15 -0
-		 9.436895709313805e-16 1.0000000000000002 -1.4432899320127065e-15 0 1.7763568394002532e-15 2.3074248706709095e-15 1.0000000000000004 -0
+	setAttr ".pm[24]" -type "matrix" 0.99999999999999989 -8.2000597750227007e-16 -1.998401444325281e-15 0
+		 9.436895709313805e-16 1.0000000000000002 -1.4432899320127065e-15 0 1.7763568394002532e-15 2.3074248706709095e-15 1.0000000000000004 0
 		 -6.6688273439009942 -3.2652018832911551 0.94542788453333826 1;
-	setAttr ".pm[25]" -type "matrix" -0.58322327557414633 0.49078095193967852 0.64729025022917308 -0
+	setAttr ".pm[25]" -type "matrix" -0.58322327557414633 0.49078095193967852 0.64729025022917308 0
 		 0.6687031379056122 0.74247606959607304 0.039565128994546422 0 -0.46117970920645518 0.45592032559467061 -0.76121608793160611 0
 		 -1.7042787664932868 -2.691099994062947 2.2035776461553858 1;
 	setAttr ".pm[26]" -type "matrix" -0.97263354781877975 -0.088659119978576631 -0.21476392178873221 0
-		 -0.090777318755031963 0.99587121577021531 1.8249290967275991e-15 0 0.21387720789532394 0.019495692985298865 -0.97666599096002249 -0
+		 -0.090777318755031963 0.99587121577021531 1.8249290967275991e-15 0 0.21387720789532394 0.019495692985298865 -0.97666599096002249 0
 		 -1.9224458745274733 -4.3525079885153808 0.87764060753043227 1;
-	setAttr ".pm[27]" -type "matrix" -0.71898739416136437 -0.15366504817552923 0.67782311852448762 -0
+	setAttr ".pm[27]" -type "matrix" -0.71898739416136437 -0.15366504817552923 0.67782311852448762 0
 		 -0.20900410816080886 0.97791476252887422 1.1796119636642272e-15 0 -0.66285323398845597 -0.14166781637798748 -0.73522501317197941 0
 		 -1.7557292732510477 -4.3014153506395996 5.2794819632027279 1;
-	setAttr ".pm[28]" -type "matrix" -0.71898739416136437 -0.15366504817552923 0.67782311852448762 -0
+	setAttr ".pm[28]" -type "matrix" -0.71898739416136437 -0.15366504817552923 0.67782311852448762 0
 		 -0.20900410816080886 0.97791476252887422 1.1796119636642272e-15 0 -0.66285323398845597 -0.14166781637798748 -0.73522501317197941 0
 		 -4.3186812880865091 -4.3014153506396005 5.2794819632027279 1;
-	setAttr ".pm[29]" -type "matrix" 0.99999999999999911 -1.7851672989623906e-15 5.3290705182007506e-15 -0
-		 -1.7208456881690068e-15 -0.99999999999999956 3.1641356201816851e-15 0 5.2180482157382239e-15 -3.771253943428806e-15 -0.99999999999999978 -0
+	setAttr ".pm[29]" -type "matrix" 0.99999999999999911 -1.7851672989623906e-15 5.3290705182007506e-15 0
+		 -1.7208456881690068e-15 -0.99999999999999956 3.1641356201816851e-15 0 5.2180482157382239e-15 -3.771253943428806e-15 -0.99999999999999978 0
 		 7.6149487913102991 3.2252098954430002 0.16035040152388347 1;
-	setAttr ".pm[30]" -type "matrix" -0.71898739416136437 -0.15366504817552923 0.67782311852448762 -0
+	setAttr ".pm[30]" -type "matrix" -0.71898739416136437 -0.15366504817552923 0.67782311852448762 0
 		 -0.20900410816080886 0.97791476252887422 1.1796119636642272e-15 0 -0.66285323398845597 -0.14166781637798748 -0.73522501317197941 0
 		 -4.2869473991888594 -4.494659517213667 4.4307216890592649 1;
-	setAttr ".pm[31]" -type "matrix" 0.99999999999999933 -1.84067845019365e-15 5.2735593669694951e-15 -0
-		 -1.7763568394002666e-15 -1 3.2196467714129437e-15 0 5.3845816694319982e-15 -3.7712539434288091e-15 -0.99999999999999978 -0
+	setAttr ".pm[31]" -type "matrix" 0.99999999999999933 -1.84067845019365e-15 5.2735593669694951e-15 0
+		 -1.7763568394002666e-15 -1 3.2196467714129437e-15 0 5.3845816694319982e-15 -3.7712539434288091e-15 -0.99999999999999978 0
 		 7.4151248304085753 3.1179529402311075 -0.63871051619036578 1;
-	setAttr ".pm[32]" -type "matrix" -0.71898739416136437 -0.15366504817552923 0.67782311852448762 -0
+	setAttr ".pm[32]" -type "matrix" -0.71898739416136437 -0.15366504817552923 0.67782311852448762 0
 		 -0.20900410816080886 0.97791476252887422 1.1796119636642272e-15 0 -0.66285323398845597 -0.14166781637798748 -0.73522501317197941 0
 		 -4.0216231527187389 -4.4940063707148754 3.6803509809209327 1;
-	setAttr ".pm[33]" -type "matrix" 0.99999999999999933 -1.8406784501936496e-15 5.3845816694320092e-15 -0
-		 -1.776356839400267e-15 -1 3.2196467714129429e-15 0 5.4956039718945123e-15 -3.7712539434288084e-15 -0.99999999999999956 -0
+	setAttr ".pm[33]" -type "matrix" 0.99999999999999933 -1.8406784501936496e-15 5.3845816694320092e-15 0
+		 -1.776356839400267e-15 -1 3.2196467714129429e-15 0 5.4956039718945123e-15 -3.7712539434288084e-15 -0.99999999999999956 0
 		 6.5857820588966298 3.2349778118104404 -0.88854531594566344 1;
-	setAttr ".pm[34]" -type "matrix" 0.027022459933108093 -0.00015105936546784944 0.99963481524016173 -0
-		 0.0055900538151324791 0.99998437552711006 1.6022339704990794e-15 0 -0.99961919647309116 0.0055880124126728775 0.027022882151397799 -0
+	setAttr ".pm[34]" -type "matrix" 0.027022459933108093 -0.00015105936546784944 0.99963481524016173 0
+		 0.0055900538151324791 0.99998437552711006 1.6022339704990794e-15 0 -0.99961919647309116 0.0055880124126728775 0.027022882151397799 0
 		 -1.5939099155402328 -3.0893239078332964 0.042620259789763068 1;
-	setAttr ".pm[35]" -type "matrix" 1.0000000000000002 6.6935509126113131e-17 -1.2663481374630662e-15 -0
-		 -1.9108904916327919e-17 1 5.9984123994757031e-14 0 1.4190038033490304e-15 -5.9580878858358115e-14 1.0000000000000004 -0
+	setAttr ".pm[35]" -type "matrix" 1.0000000000000002 6.6935509126113131e-17 -1.2663481374630662e-15 0
+		 -1.9108904916327919e-17 1 5.9984123994757031e-14 0 1.4190038033490304e-15 -5.9580878858358115e-14 1.0000000000000004 0
 		 -0.052568699999995368 -3.1090604075120942 3.5218213204825219 1;
-	setAttr ".pm[36]" -type "matrix" 1.0000000000000002 6.6935509126113131e-17 -1.2663481374630662e-15 -0
-		 -1.9108904916327919e-17 1 5.9984123994757031e-14 0 1.4190038033490304e-15 -5.9580878858358115e-14 1.0000000000000004 -0
+	setAttr ".pm[36]" -type "matrix" 1.0000000000000002 6.6935509126113131e-17 -1.2663481374630662e-15 0
+		 -1.9108904916327919e-17 1 5.9984123994757031e-14 0 1.4190038033490304e-15 -5.9580878858358115e-14 1.0000000000000004 0
 		 -0.052568699999995715 -2.3595315559214125 3.2448215275034098 1;
-	setAttr ".pm[37]" -type "matrix" 0.97437006478523547 6.7948297954725271e-17 0.22495105434386506 -0
-		 -1.3512973905088483e-14 1.0000000000000002 5.8444005342268931e-14 0 -0.22495105434386495 -5.9580904442756133e-14 0.97437006478523569 -0
+	setAttr ".pm[37]" -type "matrix" 0.97437006478523547 6.7948297954725271e-17 0.22495105434386506 0
+		 -1.3512973905088483e-14 1.0000000000000002 5.8444005342268931e-14 0 -0.22495105434386495 -5.9580904442756133e-14 0.97437006478523569 0
 		 -0.76159871830132297 -1.7457869165754289 3.0651569716033071 1;
-	setAttr ".pm[38]" -type "matrix" 0.23662323082654821 0.95924938124237191 -0.15443468269573413 -0
-		 -0.97089723499141012 0.23949646988219714 2.2898349882893844e-16 0 0.036986561333005721 0.14994020641606412 0.98800300039051892 -0
+	setAttr ".pm[38]" -type "matrix" 0.23662323082654821 0.95924938124237191 -0.15443468269573413 0
+		 -0.97089723499141012 0.23949646988219714 2.2898349882893844e-16 0 0.036986561333005721 0.14994020641606412 0.98800300039051892 0
 		 2.1937527999473421 -0.48970021284300758 0.65993562595786448 1;
-	setAttr ".pm[39]" -type "matrix" 0.010833394824092655 0.98627331865540835 -0.16476522225588741 -0
-		 -0.99993713975942411 0.0102089866636242 -0.0046360674114832422 0 -0.0028903436347944172 0.16480508942307764 0.98632191926060542 -0
+	setAttr ".pm[39]" -type "matrix" 0.010833394824092655 0.98627331865540835 -0.16476522225588741 0
+		 -0.99993713975942411 0.0102089866636242 -0.0046360674114832422 0 -0.0028903436347944172 0.16480508942307764 0.98632191926060542 0
 		 1.1011708332916905 -0.23574185039617623 0.66744463249821673 1;
-	setAttr ".pm[40]" -type "matrix" 0.25293894606021466 -0.001515060633293206 -0.96748105622654179 -0
-		 -0.036900771251797936 0.9992560332616659 -0.011212184050531197 0 0.96677826963940927 0.038536795163038061 0.25269486099165483 -0
+	setAttr ".pm[40]" -type "matrix" 0.25293894606021466 -0.001515060633293206 -0.96748105622654179 0
+		 -0.036900771251797936 0.9992560332616659 -0.011212184050531197 0 0.96677826963940927 0.038536795163038061 0.25269486099165483 0
 		 0.51401068262059069 -0.023131310637923976 0.48793755250683934 1;
-	setAttr ".pm[41]" -type "matrix" 0.32992089441454958 -0.01083339482409194 -0.94394641849274896 -0
-		 0.00084570836926690463 0.999937139759424 -0.011180398342457083 0 0.9440082034633267 0.002890343634795609 0.32990931740042601 -0
+	setAttr ".pm[41]" -type "matrix" 0.32992089441454958 -0.01083339482409194 -0.94394641849274896 0
+		 0.00084570836926690463 0.999937139759424 -0.011180398342457083 0 0.9440082034633267 0.002890343634795609 0.32990931740042601 0
 		 -0.70288799077314479 0.0013969701351541791 0.43265522698312625 1;
-	setAttr ".pm[42]" -type "matrix" 0.99988646285503824 -0.010833394824091944 -0.010473726931010206 -0
-		 0.010802479054255226 0.99993713975942422 -0.0030038268965175692 0 0.010505610192768933 0.0028903436347956098 0.99994063727210858 -0
+	setAttr ".pm[42]" -type "matrix" 0.99988646285503824 -0.010833394824091944 -0.010473726931010206 0
+		 0.010802479054255226 0.99993713975942422 -0.0030038268965175692 0 0.010505610192768933 0.0028903436347956098 0.99994063727210858 0
 		 -0.98456333786610728 0.001396970135153869 -1.4517550175017211 1;
-	setAttr ".pm[43]" -type "matrix" -0.012460827714085059 0.9897143196479633 -0.14251418615860095 -0
-		 -0.99991686898226129 -0.012805921294011006 -0.0015044947731276818 0 -0.0033140454720271442 0.14248359155909884 0.98979161606826571 -0
+	setAttr ".pm[43]" -type "matrix" -0.012460827714085059 0.9897143196479633 -0.14251418615860095 0
+		 -0.99991686898226129 -0.012805921294011006 -0.0015044947731276818 0 -0.0033140454720271442 0.14248359155909884 0.98979161606826571 0
 		 1.1004059801794714 0.42442243078366415 0.56522459283098336 1;
 	setAttr ".pm[44]" -type "matrix" -0.25147759478683923 0.0031974694370025388 -0.96785783848116114 0
-		 -0.03691901126723468 0.99923507621135421 0.012893761124611741 0 0.96715872840360406 0.038974846479340887 -0.25116718618210415 -0
+		 -0.03691901126723468 0.99923507621135421 0.012893761124611741 0 0.96715872840360406 0.038974846479340887 -0.25116718618210415 0
 		 0.51594424304254782 -0.022297287787994287 -0.48437859183928322 1;
-	setAttr ".pm[45]" -type "matrix" -0.32843490731291425 0.01246082771408265 -0.94444440780335892 -0
-		 0.00096244830397073169 0.99991686898226162 0.012858025430559035 -0 0.94452611681817444 0.0033140454720278273 -0.32841959708730811 -0
+	setAttr ".pm[45]" -type "matrix" -0.32843490731291425 0.01246082771408265 -0.94444440780335892 0
+		 0.00096244830397073169 0.99991686898226162 0.012858025430559035 0 0.94452611681817444 0.0033140454720278273 -0.32841959708730811 0
 		 -0.70064482666242878 0.0021592098205267161 -0.4292654364325284 1;
-	setAttr ".pm[46]" -type "matrix" 0.99984985046069341 -0.012460827714082835 -0.012041773391347134 -0
-		 -0.01241994248834017 -0.99991686898226162 0.0034641237415892869 0 -0.012083938195593908 -0.0033140454720272917 -0.99992149468860536 -0
+	setAttr ".pm[46]" -type "matrix" 0.99984985046069341 -0.012460827714082835 -0.012041773391347134 0
+		 -0.01241994248834017 -0.99991686898226162 0.0034641237415892869 0 -0.012083938195593908 -0.0033140454720272917 -0.99992149468860536 0
 		 0.98061335440161934 -0.0021592098205270647 1.4507918629614511 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 47 ".ma";
@@ -16585,7 +14679,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
+	setAttr -s 2 ".sol";
 connectAttr "duck_baseRN.phl[5]" "groupParts2.ig";
 connectAttr "duck_baseRN.phl[6]" "groupParts5.ig";
 connectAttr "duck_baseRN.phl[7]" "groupParts30.ig";
@@ -16595,10 +14689,9 @@ connectAttr "duck_baseRN.phl[10]" "groupParts18.ig";
 connectAttr "duck_baseRN.phl[11]" "groupParts21.ig";
 connectAttr "duck_baseRN.phl[12]" "groupParts32.ig";
 connectAttr "duck_baseRN.phl[13]" "polySurface2ShapeDeformed.iog.og[2].gco";
-connectAttr "duck_eyesShapeDeformed.iog" "duck_baseRN.phl[14]";
-connectAttr "polySurface2ShapeDeformed.iog.og[2]" "duck_baseRN.phl[15]";
-connectAttr "duck_baseRN.phl[16]" "duck_baseRN.phl[17]";
-connectAttr "duck_baseRN.phl[18]" "polySurface2ShapeDeformed.iog.og[2].gid";
+connectAttr "polySurface2ShapeDeformed.iog.og[2]" "duck_baseRN.phl[14]";
+connectAttr "duck_baseRN.phl[15]" "duck_baseRN.phl[16]";
+connectAttr "duck_baseRN.phl[17]" "polySurface2ShapeDeformed.iog.og[2].gid";
 connectAttr "police_hatRN.phl[20]" "groupParts34.ig";
 connectAttr "police_hatRN.phl[21]" "police_hatShapeDeformed.iog.og[2].gco";
 connectAttr "police_hatShapeDeformed.iog.og[2]" "police_hatRN.phl[22]";
@@ -16614,77 +14707,6 @@ connectAttr "police_hatRN.phl[35]" "police_hatRN.phl[36]";
 connectAttr "police_hatRN.phl[37]" "police_hatShapeDeformed.iog.og[2].gid";
 connectAttr "police_hatRN.phl[38]" "police_hatShapeDeformed.iog.og[3].gid";
 connectAttr "police_hatRN.phl[39]" "police_hatShapeDeformed.iog.og[4].gid";
-connectAttr "skinCluster4GroupId.id" "duck_eyesShapeDeformed.iog.og[0].gid";
-connectAttr "skinCluster4Set.mwc" "duck_eyesShapeDeformed.iog.og[0].gco";
-connectAttr "groupId10.id" "duck_eyesShapeDeformed.iog.og[1].gid";
-connectAttr "tweakSet4.mwc" "duck_eyesShapeDeformed.iog.og[1].gco";
-connectAttr "skinCluster4.og[0]" "duck_eyesShapeDeformed.i";
-connectAttr "tweak4.vl[0].vt[0]" "duck_eyesShapeDeformed.twl";
-connectAttr "skinCluster11GroupId.id" "polySurface2ShapeDeformed.iog.og[0].gid";
-connectAttr "skinCluster11Set.mwc" "polySurface2ShapeDeformed.iog.og[0].gco";
-connectAttr "groupId32.id" "polySurface2ShapeDeformed.iog.og[1].gid";
-connectAttr "tweakSet11.mwc" "polySurface2ShapeDeformed.iog.og[1].gco";
-connectAttr "skinCluster11.og[0]" "polySurface2ShapeDeformed.i";
-connectAttr "tweak11.vl[0].vt[0]" "polySurface2ShapeDeformed.twl";
-connectAttr "skinCluster8GroupId.id" "l_duck_wingShapeDeformed.iog.og[0].gid";
-connectAttr "skinCluster8Set.mwc" "l_duck_wingShapeDeformed.iog.og[0].gco";
-connectAttr "groupId21.id" "l_duck_wingShapeDeformed.iog.og[1].gid";
-connectAttr "tweakSet8.mwc" "l_duck_wingShapeDeformed.iog.og[1].gco";
-connectAttr "groupId22.id" "l_duck_wingShapeDeformed.iog.og[2].gid";
-connectAttr ":initialShadingGroup.mwc" "l_duck_wingShapeDeformed.iog.og[2].gco";
-connectAttr "groupParts22.og" "l_duck_wingShapeDeformed.i";
-connectAttr "tweak8.vl[0].vt[0]" "l_duck_wingShapeDeformed.twl";
-connectAttr "skinCluster7GroupId.id" "r__duck_wingShapeDeformed.iog.og[0].gid";
-connectAttr "skinCluster7Set.mwc" "r__duck_wingShapeDeformed.iog.og[0].gco";
-connectAttr "groupId18.id" "r__duck_wingShapeDeformed.iog.og[1].gid";
-connectAttr "tweakSet7.mwc" "r__duck_wingShapeDeformed.iog.og[1].gco";
-connectAttr "groupId19.id" "r__duck_wingShapeDeformed.iog.og[2].gid";
-connectAttr ":initialShadingGroup.mwc" "r__duck_wingShapeDeformed.iog.og[2].gco"
-		;
-connectAttr "groupParts19.og" "r__duck_wingShapeDeformed.i";
-connectAttr "tweak7.vl[0].vt[0]" "r__duck_wingShapeDeformed.twl";
-connectAttr "skinCluster6GroupId.id" "l_legShapeDeformed.iog.og[0].gid";
-connectAttr "skinCluster6Set.mwc" "l_legShapeDeformed.iog.og[0].gco";
-connectAttr "groupId15.id" "l_legShapeDeformed.iog.og[1].gid";
-connectAttr "tweakSet6.mwc" "l_legShapeDeformed.iog.og[1].gco";
-connectAttr "groupId16.id" "l_legShapeDeformed.iog.og[2].gid";
-connectAttr ":initialShadingGroup.mwc" "l_legShapeDeformed.iog.og[2].gco";
-connectAttr "groupParts16.og" "l_legShapeDeformed.i";
-connectAttr "tweak6.vl[0].vt[0]" "l_legShapeDeformed.twl";
-connectAttr "skinCluster5GroupId.id" "r_legShapeDeformed.iog.og[0].gid";
-connectAttr "skinCluster5Set.mwc" "r_legShapeDeformed.iog.og[0].gco";
-connectAttr "groupId12.id" "r_legShapeDeformed.iog.og[1].gid";
-connectAttr "tweakSet5.mwc" "r_legShapeDeformed.iog.og[1].gco";
-connectAttr "groupId13.id" "r_legShapeDeformed.iog.og[2].gid";
-connectAttr ":initialShadingGroup.mwc" "r_legShapeDeformed.iog.og[2].gco";
-connectAttr "groupParts13.og" "r_legShapeDeformed.i";
-connectAttr "tweak5.vl[0].vt[0]" "r_legShapeDeformed.twl";
-connectAttr "skinCluster10GroupId.id" "duck_beakShapeDeformed.iog.og[4].gid";
-connectAttr "skinCluster10Set.mwc" "duck_beakShapeDeformed.iog.og[4].gco";
-connectAttr "groupId30.id" "duck_beakShapeDeformed.iog.og[5].gid";
-connectAttr "tweakSet10.mwc" "duck_beakShapeDeformed.iog.og[5].gco";
-connectAttr "skinCluster10.og[0]" "duck_beakShapeDeformed.i";
-connectAttr "tweak10.vl[0].vt[0]" "duck_beakShapeDeformed.twl";
-connectAttr "skinCluster2GroupId.id" "duck_bodyShapeDeformed.iog.og[0].gid";
-connectAttr "skinCluster2Set.mwc" "duck_bodyShapeDeformed.iog.og[0].gco";
-connectAttr "groupId5.id" "duck_bodyShapeDeformed.iog.og[1].gid";
-connectAttr "tweakSet2.mwc" "duck_bodyShapeDeformed.iog.og[1].gco";
-connectAttr "groupId6.id" "duck_bodyShapeDeformed.iog.og[2].gid";
-connectAttr ":initialShadingGroup.mwc" "duck_bodyShapeDeformed.iog.og[2].gco";
-connectAttr "groupId28.id" "duck_bodyShapeDeformed.iog.og[6].gid";
-connectAttr "groupParts28.og" "duck_bodyShapeDeformed.i";
-connectAttr "tweak2.vl[0].vt[0]" "duck_bodyShapeDeformed.twl";
-connectAttr "skinCluster1GroupId.id" "duck_wings_folded1ShapeDeformed.iog.og[0].gid"
-		;
-connectAttr "skinCluster1Set.mwc" "duck_wings_folded1ShapeDeformed.iog.og[0].gco"
-		;
-connectAttr "groupId2.id" "duck_wings_folded1ShapeDeformed.iog.og[1].gid";
-connectAttr "tweakSet1.mwc" "duck_wings_folded1ShapeDeformed.iog.og[1].gco";
-connectAttr "groupId3.id" "duck_wings_folded1ShapeDeformed.iog.og[2].gid";
-connectAttr ":initialShadingGroup.mwc" "duck_wings_folded1ShapeDeformed.iog.og[2].gco"
-		;
-connectAttr "groupParts3.og" "duck_wings_folded1ShapeDeformed.i";
-connectAttr "tweak1.vl[0].vt[0]" "duck_wings_folded1ShapeDeformed.twl";
 connectAttr "root_parentConstraint1.ctx" "root.tx";
 connectAttr "root_parentConstraint1.cty" "root.ty";
 connectAttr "root_parentConstraint1.ctz" "root.tz";
@@ -17075,14 +15097,6 @@ connectAttr "r_wing_elbow_CTRL_scaleY.o" "|PoliceDuck|RIG|CTRLs|master_CTRL|whol
 		;
 connectAttr "r_wing_elbow_CTRL_scaleZ.o" "|PoliceDuck|RIG|CTRLs|master_CTRL|whole_body_sansFeet_CTRL_GRP|whole_body_sansFeet_CTRL|chest_CTRL_GRP|chest_CTRL|l_wing_shoulder_CTRL_GRP|l_wing_shoulder_CTRL|r_wing_elbow_CTRL_GRP|r_wing_elbow_CTRL.sz"
 		;
-connectAttr "l_foot_CTRL_ToeBend.o" "l_foot_CTRL.ToeBend";
-connectAttr "l_foot_CTRL_translateX.o" "l_foot_CTRL.tx";
-connectAttr "l_foot_CTRL_translateY.o" "l_foot_CTRL.ty";
-connectAttr "l_foot_CTRL_translateZ.o" "l_foot_CTRL.tz";
-connectAttr "l_foot_CTRL_rotateX.o" "l_foot_CTRL.rx";
-connectAttr "l_foot_CTRL_rotateY.o" "l_foot_CTRL.ry";
-connectAttr "l_foot_CTRL_rotateZ.o" "l_foot_CTRL.rz";
-connectAttr "l_foot_CTRL_visibility.o" "l_foot_CTRL.v";
 connectAttr "r_leg.msg" "r_foot_IK.hsj";
 connectAttr "effector1.hp" "r_foot_IK.hee";
 connectAttr "ikRPsolver.msg" "r_foot_IK.hsv";
@@ -17155,6 +15169,71 @@ connectAttr "spine2.msg" "spine_spline_IK.hsj";
 connectAttr "effector3.hp" "spine_spline_IK.hee";
 connectAttr "ikSplineSolver.msg" "spine_spline_IK.hsv";
 connectAttr "spine_spline_curveShape.ws" "spine_spline_IK.ic";
+connectAttr "skinCluster11GroupId.id" "polySurface2ShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster11Set.mwc" "polySurface2ShapeDeformed.iog.og[0].gco";
+connectAttr "groupId32.id" "polySurface2ShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet11.mwc" "polySurface2ShapeDeformed.iog.og[1].gco";
+connectAttr "skinCluster11.og[0]" "polySurface2ShapeDeformed.i";
+connectAttr "tweak11.vl[0].vt[0]" "polySurface2ShapeDeformed.twl";
+connectAttr "skinCluster8GroupId.id" "l_duck_wingShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster8Set.mwc" "l_duck_wingShapeDeformed.iog.og[0].gco";
+connectAttr "groupId21.id" "l_duck_wingShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet8.mwc" "l_duck_wingShapeDeformed.iog.og[1].gco";
+connectAttr "groupId22.id" "l_duck_wingShapeDeformed.iog.og[2].gid";
+connectAttr ":initialShadingGroup.mwc" "l_duck_wingShapeDeformed.iog.og[2].gco";
+connectAttr "groupParts22.og" "l_duck_wingShapeDeformed.i";
+connectAttr "tweak8.vl[0].vt[0]" "l_duck_wingShapeDeformed.twl";
+connectAttr "skinCluster7GroupId.id" "r__duck_wingShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster7Set.mwc" "r__duck_wingShapeDeformed.iog.og[0].gco";
+connectAttr "groupId18.id" "r__duck_wingShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet7.mwc" "r__duck_wingShapeDeformed.iog.og[1].gco";
+connectAttr "groupId19.id" "r__duck_wingShapeDeformed.iog.og[2].gid";
+connectAttr ":initialShadingGroup.mwc" "r__duck_wingShapeDeformed.iog.og[2].gco"
+		;
+connectAttr "groupParts19.og" "r__duck_wingShapeDeformed.i";
+connectAttr "tweak7.vl[0].vt[0]" "r__duck_wingShapeDeformed.twl";
+connectAttr "skinCluster6GroupId.id" "l_legShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster6Set.mwc" "l_legShapeDeformed.iog.og[0].gco";
+connectAttr "groupId15.id" "l_legShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet6.mwc" "l_legShapeDeformed.iog.og[1].gco";
+connectAttr "groupId16.id" "l_legShapeDeformed.iog.og[2].gid";
+connectAttr ":initialShadingGroup.mwc" "l_legShapeDeformed.iog.og[2].gco";
+connectAttr "groupParts16.og" "l_legShapeDeformed.i";
+connectAttr "tweak6.vl[0].vt[0]" "l_legShapeDeformed.twl";
+connectAttr "skinCluster5GroupId.id" "r_legShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster5Set.mwc" "r_legShapeDeformed.iog.og[0].gco";
+connectAttr "groupId12.id" "r_legShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet5.mwc" "r_legShapeDeformed.iog.og[1].gco";
+connectAttr "groupId13.id" "r_legShapeDeformed.iog.og[2].gid";
+connectAttr ":initialShadingGroup.mwc" "r_legShapeDeformed.iog.og[2].gco";
+connectAttr "groupParts13.og" "r_legShapeDeformed.i";
+connectAttr "tweak5.vl[0].vt[0]" "r_legShapeDeformed.twl";
+connectAttr "skinCluster10GroupId.id" "duck_beakShapeDeformed.iog.og[4].gid";
+connectAttr "skinCluster10Set.mwc" "duck_beakShapeDeformed.iog.og[4].gco";
+connectAttr "groupId30.id" "duck_beakShapeDeformed.iog.og[5].gid";
+connectAttr "tweakSet10.mwc" "duck_beakShapeDeformed.iog.og[5].gco";
+connectAttr "skinCluster10.og[0]" "duck_beakShapeDeformed.i";
+connectAttr "tweak10.vl[0].vt[0]" "duck_beakShapeDeformed.twl";
+connectAttr "skinCluster2GroupId.id" "duck_bodyShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster2Set.mwc" "duck_bodyShapeDeformed.iog.og[0].gco";
+connectAttr "groupId5.id" "duck_bodyShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet2.mwc" "duck_bodyShapeDeformed.iog.og[1].gco";
+connectAttr "groupId6.id" "duck_bodyShapeDeformed.iog.og[2].gid";
+connectAttr ":initialShadingGroup.mwc" "duck_bodyShapeDeformed.iog.og[2].gco";
+connectAttr "groupId28.id" "duck_bodyShapeDeformed.iog.og[6].gid";
+connectAttr "groupParts28.og" "duck_bodyShapeDeformed.i";
+connectAttr "tweak2.vl[0].vt[0]" "duck_bodyShapeDeformed.twl";
+connectAttr "skinCluster1GroupId.id" "duck_wings_folded1ShapeDeformed.iog.og[0].gid"
+		;
+connectAttr "skinCluster1Set.mwc" "duck_wings_folded1ShapeDeformed.iog.og[0].gco"
+		;
+connectAttr "groupId2.id" "duck_wings_folded1ShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet1.mwc" "duck_wings_folded1ShapeDeformed.iog.og[1].gco";
+connectAttr "groupId3.id" "duck_wings_folded1ShapeDeformed.iog.og[2].gid";
+connectAttr ":initialShadingGroup.mwc" "duck_wings_folded1ShapeDeformed.iog.og[2].gco"
+		;
+connectAttr "groupParts3.og" "duck_wings_folded1ShapeDeformed.i";
+connectAttr "tweak1.vl[0].vt[0]" "duck_wings_folded1ShapeDeformed.twl";
 connectAttr "skinCluster12GroupId.id" "police_hatShapeDeformed.iog.og[0].gid";
 connectAttr "skinCluster12Set.mwc" "police_hatShapeDeformed.iog.og[0].gco";
 connectAttr "groupId34.id" "police_hatShapeDeformed.iog.og[1].gid";
@@ -17564,137 +15643,6 @@ connectAttr "tweak2.msg" "tweakSet2.ub[0]";
 connectAttr "groupId5.id" "groupParts5.gi";
 connectAttr "skinCluster2.og[0]" "groupParts6.ig";
 connectAttr "groupId6.id" "groupParts6.gi";
-connectAttr "skinCluster4GroupParts.og" "skinCluster4.ip[0].ig";
-connectAttr "skinCluster4GroupId.id" "skinCluster4.ip[0].gi";
-connectAttr "root.wm" "skinCluster4.ma[0]";
-connectAttr "spine1.wm" "skinCluster4.ma[1]";
-connectAttr "spine2.wm" "skinCluster4.ma[2]";
-connectAttr "spine3.wm" "skinCluster4.ma[3]";
-connectAttr "spine4.wm" "skinCluster4.ma[4]";
-connectAttr "neck1.wm" "skinCluster4.ma[5]";
-connectAttr "neck2.wm" "skinCluster4.ma[6]";
-connectAttr "head.wm" "skinCluster4.ma[7]";
-connectAttr "head_top.wm" "skinCluster4.ma[8]";
-connectAttr "beak_top_end.wm" "skinCluster4.ma[9]";
-connectAttr "beak_bot_end.wm" "skinCluster4.ma[10]";
-connectAttr "l_eye.wm" "skinCluster4.ma[11]";
-connectAttr "r_eye.wm" "skinCluster4.ma[12]";
-connectAttr "l_breast.wm" "skinCluster4.ma[13]";
-connectAttr "l_shoulder.wm" "skinCluster4.ma[14]";
-connectAttr "l_wing.wm" "skinCluster4.ma[15]";
-connectAttr "l_finger1_tip.wm" "skinCluster4.ma[16]";
-connectAttr "l_finger2_tip.wm" "skinCluster4.ma[17]";
-connectAttr "l_finger3_tip.wm" "skinCluster4.ma[18]";
-connectAttr "r_breast.wm" "skinCluster4.ma[19]";
-connectAttr "r_shoulder.wm" "skinCluster4.ma[20]";
-connectAttr "r_wing.wm" "skinCluster4.ma[21]";
-connectAttr "r_finger1_tip.wm" "skinCluster4.ma[22]";
-connectAttr "r_finger2_tip.wm" "skinCluster4.ma[23]";
-connectAttr "r_finger3_tip.wm" "skinCluster4.ma[24]";
-connectAttr "butt.wm" "skinCluster4.ma[25]";
-connectAttr "top_tail.wm" "skinCluster4.ma[26]";
-connectAttr "mid_tail.wm" "skinCluster4.ma[27]";
-connectAttr "bot_tail.wm" "skinCluster4.ma[28]";
-connectAttr "pelvis.wm" "skinCluster4.ma[29]";
-connectAttr "l_leg.wm" "skinCluster4.ma[30]";
-connectAttr "l_foot.wm" "skinCluster4.ma[31]";
-connectAttr "l_phalanges.wm" "skinCluster4.ma[32]";
-connectAttr "l_tips_of_toes.wm" "skinCluster4.ma[33]";
-connectAttr "r_leg.wm" "skinCluster4.ma[34]";
-connectAttr "r_foot.wm" "skinCluster4.ma[35]";
-connectAttr "r_phalanges.wm" "skinCluster4.ma[36]";
-connectAttr "r_tips_of_toes.wm" "skinCluster4.ma[37]";
-connectAttr "root.liw" "skinCluster4.lw[0]";
-connectAttr "spine1.liw" "skinCluster4.lw[1]";
-connectAttr "spine2.liw" "skinCluster4.lw[2]";
-connectAttr "spine3.liw" "skinCluster4.lw[3]";
-connectAttr "spine4.liw" "skinCluster4.lw[4]";
-connectAttr "neck1.liw" "skinCluster4.lw[5]";
-connectAttr "neck2.liw" "skinCluster4.lw[6]";
-connectAttr "head.liw" "skinCluster4.lw[7]";
-connectAttr "head_top.liw" "skinCluster4.lw[8]";
-connectAttr "beak_top_end.liw" "skinCluster4.lw[9]";
-connectAttr "beak_bot_end.liw" "skinCluster4.lw[10]";
-connectAttr "l_eye.liw" "skinCluster4.lw[11]";
-connectAttr "r_eye.liw" "skinCluster4.lw[12]";
-connectAttr "l_breast.liw" "skinCluster4.lw[13]";
-connectAttr "l_shoulder.liw" "skinCluster4.lw[14]";
-connectAttr "l_wing.liw" "skinCluster4.lw[15]";
-connectAttr "l_finger1_tip.liw" "skinCluster4.lw[16]";
-connectAttr "l_finger2_tip.liw" "skinCluster4.lw[17]";
-connectAttr "l_finger3_tip.liw" "skinCluster4.lw[18]";
-connectAttr "r_breast.liw" "skinCluster4.lw[19]";
-connectAttr "r_shoulder.liw" "skinCluster4.lw[20]";
-connectAttr "r_wing.liw" "skinCluster4.lw[21]";
-connectAttr "r_finger1_tip.liw" "skinCluster4.lw[22]";
-connectAttr "r_finger2_tip.liw" "skinCluster4.lw[23]";
-connectAttr "r_finger3_tip.liw" "skinCluster4.lw[24]";
-connectAttr "butt.liw" "skinCluster4.lw[25]";
-connectAttr "top_tail.liw" "skinCluster4.lw[26]";
-connectAttr "mid_tail.liw" "skinCluster4.lw[27]";
-connectAttr "bot_tail.liw" "skinCluster4.lw[28]";
-connectAttr "pelvis.liw" "skinCluster4.lw[29]";
-connectAttr "l_leg.liw" "skinCluster4.lw[30]";
-connectAttr "l_foot.liw" "skinCluster4.lw[31]";
-connectAttr "l_phalanges.liw" "skinCluster4.lw[32]";
-connectAttr "l_tips_of_toes.liw" "skinCluster4.lw[33]";
-connectAttr "r_leg.liw" "skinCluster4.lw[34]";
-connectAttr "r_foot.liw" "skinCluster4.lw[35]";
-connectAttr "r_phalanges.liw" "skinCluster4.lw[36]";
-connectAttr "r_tips_of_toes.liw" "skinCluster4.lw[37]";
-connectAttr "root.obcc" "skinCluster4.ifcl[0]";
-connectAttr "spine1.obcc" "skinCluster4.ifcl[1]";
-connectAttr "spine2.obcc" "skinCluster4.ifcl[2]";
-connectAttr "spine3.obcc" "skinCluster4.ifcl[3]";
-connectAttr "spine4.obcc" "skinCluster4.ifcl[4]";
-connectAttr "neck1.obcc" "skinCluster4.ifcl[5]";
-connectAttr "neck2.obcc" "skinCluster4.ifcl[6]";
-connectAttr "head.obcc" "skinCluster4.ifcl[7]";
-connectAttr "head_top.obcc" "skinCluster4.ifcl[8]";
-connectAttr "beak_top_end.obcc" "skinCluster4.ifcl[9]";
-connectAttr "beak_bot_end.obcc" "skinCluster4.ifcl[10]";
-connectAttr "l_eye.obcc" "skinCluster4.ifcl[11]";
-connectAttr "r_eye.obcc" "skinCluster4.ifcl[12]";
-connectAttr "l_breast.obcc" "skinCluster4.ifcl[13]";
-connectAttr "l_shoulder.obcc" "skinCluster4.ifcl[14]";
-connectAttr "l_wing.obcc" "skinCluster4.ifcl[15]";
-connectAttr "l_finger1_tip.obcc" "skinCluster4.ifcl[16]";
-connectAttr "l_finger2_tip.obcc" "skinCluster4.ifcl[17]";
-connectAttr "l_finger3_tip.obcc" "skinCluster4.ifcl[18]";
-connectAttr "r_breast.obcc" "skinCluster4.ifcl[19]";
-connectAttr "r_shoulder.obcc" "skinCluster4.ifcl[20]";
-connectAttr "r_wing.obcc" "skinCluster4.ifcl[21]";
-connectAttr "r_finger1_tip.obcc" "skinCluster4.ifcl[22]";
-connectAttr "r_finger2_tip.obcc" "skinCluster4.ifcl[23]";
-connectAttr "r_finger3_tip.obcc" "skinCluster4.ifcl[24]";
-connectAttr "butt.obcc" "skinCluster4.ifcl[25]";
-connectAttr "top_tail.obcc" "skinCluster4.ifcl[26]";
-connectAttr "mid_tail.obcc" "skinCluster4.ifcl[27]";
-connectAttr "bot_tail.obcc" "skinCluster4.ifcl[28]";
-connectAttr "pelvis.obcc" "skinCluster4.ifcl[29]";
-connectAttr "l_leg.obcc" "skinCluster4.ifcl[30]";
-connectAttr "l_foot.obcc" "skinCluster4.ifcl[31]";
-connectAttr "l_phalanges.obcc" "skinCluster4.ifcl[32]";
-connectAttr "l_tips_of_toes.obcc" "skinCluster4.ifcl[33]";
-connectAttr "r_leg.obcc" "skinCluster4.ifcl[34]";
-connectAttr "r_foot.obcc" "skinCluster4.ifcl[35]";
-connectAttr "r_phalanges.obcc" "skinCluster4.ifcl[36]";
-connectAttr "r_tips_of_toes.obcc" "skinCluster4.ifcl[37]";
-connectAttr "bindPose1.msg" "skinCluster4.bp";
-connectAttr "geomBind1.scs" "skinCluster4.gb";
-connectAttr "root.msg" "skinCluster4.ptt";
-connectAttr "groupParts10.og" "tweak4.ip[0].ig";
-connectAttr "groupId10.id" "tweak4.ip[0].gi";
-connectAttr "skinCluster4GroupId.msg" "skinCluster4Set.gn" -na;
-connectAttr "duck_eyesShapeDeformed.iog.og[0]" "skinCluster4Set.dsm" -na;
-connectAttr "skinCluster4.msg" "skinCluster4Set.ub[0]";
-connectAttr "tweak4.og[0]" "skinCluster4GroupParts.ig";
-connectAttr "skinCluster4GroupId.id" "skinCluster4GroupParts.gi";
-connectAttr "groupId10.msg" "tweakSet4.gn" -na;
-connectAttr "duck_eyesShapeDeformed.iog.og[1]" "tweakSet4.dsm" -na;
-connectAttr "tweak4.msg" "tweakSet4.ub[0]";
-connectAttr "duck_baseRN.phl[4]" "groupParts10.ig";
-connectAttr "groupId10.id" "groupParts10.gi";
 connectAttr "skinCluster5GroupParts.og" "skinCluster5.ip[0].ig";
 connectAttr "skinCluster5GroupId.id" "skinCluster5.ip[0].gi";
 connectAttr "root.wm" "skinCluster5.ma[0]";
