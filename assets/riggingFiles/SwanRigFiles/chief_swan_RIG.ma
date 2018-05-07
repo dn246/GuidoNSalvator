@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff08 scene
 //Name: chief_swan_RIG.ma
-//Last modified: Mon, May 07, 2018 06:36:18 PM
+//Last modified: Mon, May 07, 2018 07:12:48 PM
 //Codeset: 1252
 file -rdi 1 -ns "duck_base" -rfn "duck_baseRN" -op "v=0;" -typ "mayaAscii" "/Users/diana/Documents/GuidoNSalvator//assets/duck_base.ma";
 file -rdi 1 -ns "police_hat" -rfn "police_hatRN" -op "v=0;" -typ "mayaAscii"
@@ -14,7 +14,6 @@ file -r -ns "police_badge" -dr 1 -rfn "police_badgeRN" -op "v=0;" -typ "mayaAsci
 requires maya "2018ff08";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "3.0.0.2";
 requires "stereoCamera" "10.0";
-requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2018";
@@ -25,17 +24,17 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "0169E2C8-C447-70B8-0F5D-AE9E5FC72771";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.3985290097163996 11.850722133484213 27.689377558164811 ;
-	setAttr ".r" -type "double3" 350.06164727587162 7203.799999996033 4.9805666234090118e-17 ;
+	setAttr ".t" -type "double3" 17.765204073993075 12.712193948093844 17.40084889912016 ;
+	setAttr ".r" -type "double3" 350.06164727620188 7243.799999999741 5.5083297707979369e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "6194E4AA-4847-984F-AC64-5DBC2440ABB7";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 25.406543336523502;
+	setAttr ".coi" 24.224315014727786;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0.66736750228344355 4.4488711561834453 3.2934268031399458 ;
+	setAttr ".tp" -type "double3" 0 13.876262413237498 2.7021453666151762 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "26A0689A-C049-2164-F162-CFB629E96F4D";
@@ -87,119 +86,6 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".tp" -type "double3" 0 8.6897063255310059 3.762112102396336 ;
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
-createNode fosterParent -n "duck_baseRNfosterParent1";
-	rename -uid "83578273-44B0-4DEB-7BD0-DD9B6E6B6435";
-createNode mesh -n "duck_eyesShapeDeformed" -p "duck_baseRNfosterParent1";
-	rename -uid "0043B844-4E7B-C793-D007-B3A268C30DB6";
-	setAttr -k off ".v";
-	setAttr -s 4 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "polySurface2ShapeDeformed" -p "duck_baseRNfosterParent1";
-	rename -uid "8DBA7B54-417F-2F7F-EBCC-31B3A028466F";
-	setAttr -k off ".v";
-	setAttr -s 6 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "l_duck_wingShapeDeformed" -p "duck_baseRNfosterParent1";
-	rename -uid "9933F488-4F13-20B2-0C2D-2586ACADAD58";
-	setAttr -k off ".v";
-	setAttr -s 6 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.51459679007530212 0.33115324378013611 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".dr" 1;
-createNode mesh -n "r__duck_wingShapeDeformed" -p "duck_baseRNfosterParent1";
-	rename -uid "50F63ED1-48E8-021A-98E4-F8915DFD46B9";
-	setAttr -k off ".v";
-	setAttr -s 6 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.51488812267780304 0.50715193152427673 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "l_legShapeDeformed" -p "duck_baseRNfosterParent1";
-	rename -uid "766A1F7C-49AD-0933-63F4-B0BFC61B5F97";
-	setAttr -k off ".v";
-	setAttr -s 6 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.43573175370693207 0.51113384962081909 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "r_legShapeDeformed" -p "duck_baseRNfosterParent1";
-	rename -uid "00340151-4D3F-58F4-8C80-8786CA34C7FD";
-	setAttr -k off ".v";
-	setAttr -s 6 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "duck_beakShapeDeformed" -p "duck_baseRNfosterParent1";
-	rename -uid "B20D73F0-4E86-0E81-38C0-CEBCCE50782C";
-	setAttr -k off ".v";
-	setAttr -s 4 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr -s 2 ".clst";
-	setAttr ".clst[0].clsn" -type "string" "SculptFreezeColorTemp";
-	setAttr ".clst[1].clsn" -type "string" "SculptMaskColorTemp";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".vcs" 2;
-createNode mesh -n "duck_bodyShapeDeformed" -p "duck_baseRNfosterParent1";
-	rename -uid "850BC1DF-490B-B4EE-CED3-0DA36CF8E736";
-	setAttr -k off ".v";
-	setAttr -s 8 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.68189340829849243 0.50715969502925873 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr -s 2 ".clst";
-	setAttr ".clst[0].clsn" -type "string" "SculptFreezeColorTemp";
-	setAttr ".clst[1].clsn" -type "string" "SculptMaskColorTemp";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "duck_wings_folded1ShapeDeformed" -p "duck_baseRNfosterParent1";
-	rename -uid "84073293-4DC4-D32B-7A0A-73B0730F4091";
-	setAttr -k off ".v";
-	setAttr -s 6 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "Swan";
 	rename -uid "83411BA7-434B-BA8D-905B-6A8BFE7E0A51";
 createNode transform -n "RIG" -p "Swan";
@@ -1077,7 +963,7 @@ createNode parentConstraint -n "spine1_parentConstraint1" -p "spine1";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -2.0816681711721685e-17 0 0 ;
 	setAttr ".tg[0].tor" -type "double3" -97.252159291888447 -21.926471868888417 92.720584181493294 ;
-	setAttr ".lr" -type "double3" 1.1287241906678147e-14 7.8644184115875262e-15 6.3611093629270367e-15 ;
+	setAttr ".lr" -type "double3" -8.6781931445401021e-15 8.6719811236778707e-15 1.2722218725854067e-14 ;
 	setAttr ".rst" -type "double3" 0.029956857169113338 0.01902988238709441 -0.00017871064775802983 ;
 	setAttr ".rsrr" -type "double3" 1.1287241906678147e-14 7.8644184115875262e-15 6.3611093629270367e-15 ;
 	setAttr -k on ".w0";
@@ -2703,10 +2589,112 @@ createNode transform -n "swan_base1" -p "GEO";
 	rename -uid "1D45F06D-144D-604A-97C9-039F1DB15450";
 	setAttr ".rp" -type "double3" -2.6226043701171875e-06 5.0166320838034153 0.48407173156738281 ;
 	setAttr ".sp" -type "double3" -2.6226043701171875e-06 5.0166320838034153 0.48407173156738281 ;
+createNode fosterParent -n "duck_baseRNfosterParent1";
+	rename -uid "0D7F0A98-41CA-5DBE-D5C9-D89FFCDB164F";
+createNode mesh -n "polySurface2ShapeDeformed" -p "duck_baseRNfosterParent1";
+	rename -uid "8DBA7B54-417F-2F7F-EBCC-31B3A028466F";
+	setAttr -k off ".v";
+	setAttr -s 6 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "l_duck_wingShapeDeformed" -p "duck_baseRNfosterParent1";
+	rename -uid "9933F488-4F13-20B2-0C2D-2586ACADAD58";
+	setAttr -k off ".v";
+	setAttr -s 6 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.51459679007530212 0.33115324378013611 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dr" 1;
+createNode mesh -n "r__duck_wingShapeDeformed" -p "duck_baseRNfosterParent1";
+	rename -uid "50F63ED1-48E8-021A-98E4-F8915DFD46B9";
+	setAttr -k off ".v";
+	setAttr -s 6 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.51488812267780304 0.50715193152427673 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "l_legShapeDeformed" -p "duck_baseRNfosterParent1";
+	rename -uid "766A1F7C-49AD-0933-63F4-B0BFC61B5F97";
+	setAttr -k off ".v";
+	setAttr -s 6 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.43573175370693207 0.51113384962081909 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "r_legShapeDeformed" -p "duck_baseRNfosterParent1";
+	rename -uid "00340151-4D3F-58F4-8C80-8786CA34C7FD";
+	setAttr -k off ".v";
+	setAttr -s 6 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "duck_beakShapeDeformed" -p "duck_baseRNfosterParent1";
+	rename -uid "B20D73F0-4E86-0E81-38C0-CEBCCE50782C";
+	setAttr -k off ".v";
+	setAttr -s 4 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr -s 2 ".clst";
+	setAttr ".clst[0].clsn" -type "string" "SculptFreezeColorTemp";
+	setAttr ".clst[1].clsn" -type "string" "SculptMaskColorTemp";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".vcs" 2;
+createNode mesh -n "duck_bodyShapeDeformed" -p "duck_baseRNfosterParent1";
+	rename -uid "850BC1DF-490B-B4EE-CED3-0DA36CF8E736";
+	setAttr -k off ".v";
+	setAttr -s 8 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.68189340829849243 0.50715969502925873 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr -s 2 ".clst";
+	setAttr ".clst[0].clsn" -type "string" "SculptFreezeColorTemp";
+	setAttr ".clst[1].clsn" -type "string" "SculptMaskColorTemp";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "duck_wings_folded1ShapeDeformed" -p "duck_baseRNfosterParent1";
+	rename -uid "84073293-4DC4-D32B-7A0A-73B0730F4091";
+	setAttr -k off ".v";
+	setAttr -s 6 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 createNode fosterParent -n "police_hatRNfosterParent1";
-	rename -uid "9FC2632D-42B4-3693-32EB-738105328047";
-createNode mesh -n "pCubeShape1Deformed" -p "police_hatRNfosterParent1";
-	rename -uid "86B5CB14-4C9B-45AC-EF08-3AA3844D861C";
+	rename -uid "E1FD0796-48C0-6BF2-AD25-398D0E3712C0";
+createNode mesh -n "police_hatShapeDeformed" -p "police_hatRNfosterParent1";
+	rename -uid "4D90820A-4004-8378-3ACA-7986EE360110";
 	setAttr -k off ".v";
 	setAttr -s 10 ".iog[0].og";
 	setAttr ".vir" yes;
@@ -2717,7 +2705,7 @@ createNode mesh -n "pCubeShape1Deformed" -p "police_hatRNfosterParent1";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode fosterParent -n "police_badgeRNfosterParent1";
-	rename -uid "8ABD5878-4520-AE64-4945-539B3AE8A63D";
+	rename -uid "BADB2DB7-49AA-DBBC-48BC-40ACFC5DD2BD";
 createNode mesh -n "police_badge_GEOShapeDeformed" -p "police_badgeRNfosterParent1";
 	rename -uid "D21BDB5A-4131-F23E-6E07-FD9311FBA576";
 	setAttr -k off ".v";
@@ -2745,27 +2733,27 @@ createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	setAttr ".output_mode" 0;
 	setAttr ".ai_translator" -type "string" "maya";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "6DE6E122-4BE8-1D22-E9B8-4EB22A1BC9B1";
-	setAttr -s 10 ".lnk";
-	setAttr -s 10 ".slnk";
+	rename -uid "A798B960-4D86-0598-C0C3-1587B8AD4584";
+	setAttr -s 8 ".lnk";
+	setAttr -s 8 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "27626FC1-4A81-D095-443A-EA934CA226F6";
+	rename -uid "147E9F02-47E5-9A5C-A893-5DBA9E105C1A";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 createNode displayLayer -n "defaultLayer";
 	rename -uid "89222895-EF46-23FF-E68B-C5B7DABA61C8";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "A68EEBEC-451F-9D1A-F3A1-0492C9C9D491";
+	rename -uid "7546245B-45E7-B316-59A0-95B4B4A57017";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "09FF77FC-8B4D-7196-E512-608E1C75952A";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "EB245317-4E0D-73E6-9E20-1289ECFCEEE6";
+	rename -uid "90F085D2-4432-7585-1236-7FA1FC7E602B";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "7AA2A9B1-4AAA-B447-3106-ACA7E200D2F0";
+	rename -uid "89B9F633-4688-2986-D966-F88B40841C89";
 createNode reference -n "duck_baseRN";
 	rename -uid "BADAE2B3-0649-31EF-BB33-2D84A04A05DC";
-	setAttr -s 15 ".phl";
+	setAttr -s 14 ".phl";
 	setAttr ".phl[4]" 0;
 	setAttr ".phl[5]" 0;
 	setAttr ".phl[6]" 0;
@@ -2780,7 +2768,6 @@ createNode reference -n "duck_baseRN";
 	setAttr ".phl[15]" 0;
 	setAttr ".phl[16]" 0;
 	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"duck_baseRN"
 		"duck_baseRN" 13
@@ -2810,7 +2797,7 @@ createNode reference -n "duck_baseRN";
 		
 		8 "|GEO|duck_base1|duck_base:duck_base_model|duck_base:duck_eyes" "scaleZ"
 		
-		"duck_baseRN" 111
+		"duck_baseRN" 110
 		0 "|duck_baseRNfosterParent1|duck_wings_folded1ShapeDeformed" "|Swan|GEO|swan_base1|duck_base:duck_base_model|duck_base:duck_wings_folded1" 
 		"-s -r "
 		0 "|duck_baseRNfosterParent1|duck_bodyShapeDeformed" "|Swan|GEO|swan_base1|duck_base:duck_base_model|duck_base:duck_body" 
@@ -2885,11 +2872,9 @@ createNode reference -n "duck_baseRN";
 		""
 		5 4 "duck_baseRN" "duck_base:lambert2SG.dagSetMembers" "duck_baseRN.placeHolderList[14]" 
 		""
-		5 4 "duck_baseRN" "duck_base:lambert2SG.dagSetMembers" "duck_baseRN.placeHolderList[15]" 
-		""
 		5 0 "duck_baseRN" "duck_base:groupId78.message" "duck_base:lambert2SG.groupNodes" 
-		"duck_baseRN.placeHolderList[16]" "duck_baseRN.placeHolderList[17]" ""
-		5 3 "duck_baseRN" "duck_base:groupId78.groupId" "duck_baseRN.placeHolderList[18]" 
+		"duck_baseRN.placeHolderList[15]" "duck_baseRN.placeHolderList[16]" ""
+		5 3 "duck_baseRN" "duck_base:groupId78.groupId" "duck_baseRN.placeHolderList[17]" 
 		""
 		8 "|Swan|GEO|swan_base1|duck_base:duck_base_model|duck_base:duck_wings_folded1" 
 		"translateX"
@@ -3044,7 +3029,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 857\n            -height 679\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 856\n            -height 680\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1503\n            -height 1447\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
 		+ "            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n"
 		+ "            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
@@ -8823,936 +8808,6 @@ createNode groupParts -n "groupParts6";
 	rename -uid "A7CCF23A-4966-9E35-1ED7-A58578D4A4BE";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:2111]";
-createNode skinCluster -n "skinCluster4";
-	rename -uid "63CED12A-4F38-3828-63BB-778C250CCA4B";
-	setAttr ".skm" 1;
-	setAttr -s 764 ".wl";
-	setAttr ".wl[0:499].w"
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 11 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1;
-	setAttr ".wl[500:763].w"
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1;
-	setAttr -s 38 ".pm";
-	setAttr ".pm[0]" -type "matrix" 0.01863517100035373 -0.1021071964743563 0.99459883914568037 0
-		 0.98375061167217226 0.1795403409672246 -3.2612801348363973e-16 0 -0.17857061470582136 0.97843721637799541 0.10379378194316456 0
-		 -2.3294605110677953 0.24741272539665171 0.016191311353531038 1;
-	setAttr ".pm[1]" -type "matrix" -0.044031851640286883 0.10851153655707281 -0.99311955094799698 0
-		 0.92661824458466469 0.37600349573220049 -3.0565355398273895e-15 0 0.37341642283643939 -0.92024269496214373 -0.11710489966200882 0
-		 -1.8336177923781598 -1.4577691596190161 -0.025050845925889555 1;
-	setAttr ".pm[2]" -type "matrix" 0.03562622600770067 -0.024049534319150721 -0.99907576885813842 0
-		 0.55950213087706946 0.82882891210672616 1.6618650899857812e-15 0 0.8280628826148817 -0.55898502158377505 0.042983811842597065 0
-		 -1.6991304600878072 -2.8990215614405788 0.0091950110617394307 1;
-	setAttr ".pm[3]" -type "matrix" -0.041308386197129288 0.053490227294828691 -0.99771359257741732 0
-		 0.79146373529517267 0.61121612847880002 8.6220574124217513e-16 0 0.60981863938584369 -0.78965412673608892 -0.067583926981669248 0
-		 -3.9200476795690253 -1.7611845807672639 0.12056904989602549 1;
-	setAttr ".pm[4]" -type "matrix" 0.048094737986099818 -0.16865896249238799 -0.98450040657637106 0
-		 0.96166470139538718 0.27422801113329215 9.7144514654701197e-17 0 0.26997758845535569 -0.94675928951390342 0.17538229514680329 0
-		 -5.4690708756403001 0.26679408215987055 -0.31288026071894409 1;
-	setAttr ".pm[5]" -type "matrix" -0.046521848324449472 0.09522313415795125 0.99436827802862549 0
-		 0.89850229273692661 0.43896882571144702 -2.1783081813664168e-15 0 -0.43649667533093955 0.89344217763358946 -0.105979845491425 0
-		 -4.6943355689089765 -4.6005573765453924 0.16806813797258863 1;
-	setAttr ".pm[6]" -type "matrix" 4.5036793958125164e-15 -3.0025071899070122e-14 -1.0000000000000002 0
-		 0.99245567979813598 0.12260392993872529 9.0477743999665202e-16 0 0.12260392993872522 -0.9924556797981362 3.0595327639290769e-14 0
-		 -7.3923760831322625 0.68468109403248589 -5.3763254582174909e-14 1;
-	setAttr ".pm[7]" -type "matrix" 1.0345835647098016e-14 -2.8543856701711362e-14 -1.0000000000000002 0
-		 0.94868276605266799 0.31622936200590113 9.0477743999665794e-16 0 0.31622936200590113 -0.9486827660526681 3.0595327639290769e-14 0
-		 -8.5701185794277759 -1.0284503583289515 -5.5057721790807512e-14 1;
-	setAttr ".pm[8]" -type "matrix" 1.0000000000000002 5.7786049485777321e-16 3.0280504911937926e-14 1.657500977815574e-61
-		 -7.3824398630288111e-16 1.0000000000000009 2.1094237467877714e-15 -2.7755575615628926e-17
-		 -3.0595327639290763e-14 -2.1649348980190738e-15 1 -1.5407439555097841e-33 5.4342521669459063e-14 -10.238800000000005 -2.3288700000000162 1.0000000000000004;
-	setAttr ".pm[9]" -type "matrix" 1.0000000000000002 5.7786049485777311e-16 3.0280504911937926e-14 0
-		 -7.3824398630288663e-16 1.0000000000000004 2.2759572004815441e-15 0 -3.0595327639290769e-14 -2.2759572004815894e-15 1.0000000000000002 0
-		 5.3745828974205294e-14 -8.7032200000000035 -4.9305881350320151 1;
-	setAttr ".pm[10]" -type "matrix" 1.0000000000000002 5.7786049485777311e-16 3.0280504911937926e-14 0
-		 -7.3824398630287963e-16 1.0000000000000002 2.0539125955565124e-15 0 -3.0595327639290763e-14 -2.2204460492503312e-15 1 0
-		 5.3657041721451117e-14 -8.4747272923323198 -4.7406397778211913 1;
-	setAttr ".pm[11]" -type "matrix" 0.562197326708745 3.2487162541963312e-16 1.7023618912882523e-14 0
-		 -4.0789054522006415e-16 0.56219732670874512 1.2242803465169878e-15 0 -1.720036639583293e-14 -1.2281624823302831e-15 0.56219732670874512 0
-		 -0.28644086071496605 -5.2391219400882711 -1.5793607882353196 1;
-	setAttr ".pm[12]" -type "matrix" 1.0000000000000002 5.7786049485777311e-16 3.0280504911937926e-14 0
-		 -7.382439863028815e-16 1.0000000000000004 2.1094237467877706e-15 0 -3.0595327639290763e-14 -2.2204460492503312e-15 1 0
-		 0.50883513805687564 -9.3190089870393127 -2.8092641377029031 1;
-	setAttr ".pm[13]" -type "matrix" 0.58444470133327719 -0.47855826553334196 0.65529106324836828 0
-		 0.63353609746629758 0.77371313366594352 6.9026092224627998e-16 2.8628579313986847e-17
-		 -0.50700730200918354 0.4151505429149116 0.75537647727925905 -2.6127964019678229e-19
-		 -1.4943738190546567 -2.7110736049572561 -2.4574868089631603 0.99999999999999989;
-	setAttr ".pm[14]" -type "matrix" 0.97263366838322596 0.088657040497830922 -0.21476423421406921 5.7777898331617076e-34
-		 -0.090775195977710346 0.99587140926688333 -4.9960036108132074e-16 5.5740776554792684e-17
-		 0.21387756058688814 0.019495265449785387 0.97666592225921578 4.7541548878778569e-18
-		 -2.0210347259340153 -4.2966545040047324 -0.88767355373546253 0.99999999999999978;
-	setAttr ".pm[15]" -type "matrix" 0.7000309902127998 0.1503270609437142 0.69811058399777293 2.3111159332646827e-33
-		 -0.20995694193175893 0.97771063333414976 5.5511151231257673e-17 2.8554874404772227e-17
-		 -0.68255014121773616 -0.14657316334636653 0.71598995279982036 -1.7718278957786484e-18
-		 -1.6616119356004218 -4.217781120996845 -5.433859002687055 0.99999999999999989;
-	setAttr ".pm[16]" -type "matrix" 1.0000000000000004 -8.7519490416815084e-16 -8.2114458952158764e-16 -1.6250409437360553e-48
-		 6.2821429380669131e-16 1.0000000000000004 -6.5225602696728114e-16 2.8554874404772234e-17
-		 5.6823737895046229e-16 7.0346894852841584e-16 1.0000000000000009 -1.7718278957786499e-18
-		 -7.6388394225497134 -3.1606021373505184 -0.14120917751750428 1.0000000000000002;
-	setAttr ".pm[17]" -type "matrix" 1.0000000000000004 -9.3070605539940877e-16 -8.4890016513721656e-16 1.6342920546120476e-33
-		 6.3299603757986581e-16 1.0000000000000004 -6.2450045135165213e-16 2.8554874404772227e-17
-		 5.6794067209447411e-16 7.0346894852841584e-16 1.0000000000000009 -1.7718278957786499e-18
-		 -7.4713813659884396 -3.053394895594403 0.6577033737500696 1.0000000000000002;
-	setAttr ".pm[18]" -type "matrix" 1.0000000000000004 -8.7519490416815064e-16 -8.2114458952158764e-16 -2.3199597683600252e-48
-		 6.5543282844847613e-16 1.0000000000000007 -6.2450045135165243e-16 2.8554874404772227e-17
-		 5.665484708405225e-16 7.0346894852841574e-16 1.0000000000000009 -1.7718278957786492e-18
-		 -6.6856384294038342 -3.2409144405216099 0.86896194663075144 0.99999999999999967;
-	setAttr ".pm[19]" -type "matrix" -0.58444644542408208 0.47856217806690804 0.65528665037143363 2.5456098655127179e-32
-		 0.63353806635035437 0.77371152148914923 7.7157619489690061e-16 2.8628579313986847e-17
-		 -0.50700283127040957 0.4151490373815182 -0.7553803054389141 -2.6127964019678186e-19
-		 -1.4329419510981873 -2.7613738037619755 2.3885901403296637 0.99999999999999989;
-	setAttr ".pm[20]" -type "matrix" -0.97263354781878042 -0.0886591199785772 -0.21476392178873213 -1.5407439555097887e-33
-		 -0.090777318755032393 0.99587121577021609 7.4940054162198017e-16 5.5740776554792684e-17
-		 0.21387720789532405 0.019495692985296936 -0.97666599096002282 4.7541548878778577e-18
-		 -1.9187677136571675 -4.2873420988047553 0.91025450025980548 0.99999999999999978;
-	setAttr ".pm[21]" -type "matrix" -0.71898739416136537 -0.15366504817553045 0.67782311852448873 2.7755575615628926e-17
-		 -0.20900410816081014 0.97791476252887433 9.7144514654701158e-16 2.8554874404772221e-17
-		 -0.66285323398845619 -0.14166781637798928 -0.73522501317197986 -1.7718278957786476e-18
-		 -1.7377108234803511 -4.2315433404460157 5.2902998052932872 1;
-	setAttr ".pm[22]" -type "matrix" 1.0000000000000002 -1.094069691427509e-15 5.4228604751151759e-15 -2.3820643708033399e-35
-		 -8.9344630692983345e-16 -1 2.1763772754712692e-15 2.8554874404772227e-17 5.1486645434058457e-15 -1.9284846682179282e-15 -1 -1.7718278957786476e-18
-		 7.5987509796202479 3.1605999999999934 0.18999723471518892 1.0000000000000002;
-	setAttr ".pm[23]" -type "matrix" 1.0000000000000002 -1.094069691427509e-15 5.4363045820539962e-15 -8.552847072295028e-50
-		 -8.9915686747413835e-16 -1 2.1486216998556403e-15 2.8554874404772221e-17 5.1490188832754432e-15 -1.9284846682179282e-15 -1 -1.7718278957786499e-18
-		 7.3987654898101258 3.0533899999999941 -0.60891476528481125 1.0000000000000002;
-	setAttr ".pm[24]" -type "matrix" 1.0000000000000002 -1.094069691427509e-15 5.3807934308227383e-15 -2.5658541216885071e-49
-		 -9.2252233576542604e-16 -1 2.1486216998556403e-15 2.8554874404772221e-17 5.1504687088964417e-15 -1.9284846682179282e-15 -1 -1.7718278957786468e-18
-		 6.5804999999999989 3.2409099999999929 -0.86896199999999968 0.99999999999999967;
-	setAttr ".pm[25]" -type "matrix" 0.027022459933108013 -0.00015105936546786934 0.99963481524016184 0
-		 0.005590053815132421 0.99998437552711028 1.4322039647990392e-15 0 -0.99961919647309105 0.0055880124126724291 0.027022882151397486 0
-		 -1.5939099155402321 -3.0893239078332968 0.042620259789763214 1;
-	setAttr ".pm[26]" -type "matrix" 1.0000000000000007 4.4586724214563027e-17 -5.2041704279304025e-16 0
-		 -1.9561016158863578e-16 1 6.0428033772635912e-14 -6.1951854967403552e-17 4.3825008656139545e-16 -6.0028407308946431e-14 1.0000000000000009 -3.718542035834335e-18
-		 -0.052568699999997547 -3.1090604075120942 3.5218213204825228 1.0000000000000002;
-	setAttr ".pm[27]" -type "matrix" 1.0000000000000007 4.4586724214563021e-17 -5.2041704279304025e-16 0
-		 -1.8913891061642609e-16 1.0000000000000007 5.9981521909543116e-14 -6.1951854967403564e-17
-		 4.4061976289812093e-16 -5.9861873855252645e-14 1.0000000000000007 -3.7185420358343442e-18
-		 -0.052568699999997713 -2.3595315559214134 3.2448215275034094 1.0000000000000002;
-	setAttr ".pm[28]" -type "matrix" 1.0000000000000007 4.4586724214563021e-17 -5.2041704279304025e-16 0
-		 -1.8290289369867402e-16 1.0000000000000009 5.9224811741313391e-14 0 4.4148712463610924e-16 -5.9806362704021374e-14 1.0000000000000004 0
-		 -0.052568699999997741 -1.7457869165754294 3.1579196316668487 1;
-	setAttr ".pm[29]" -type "matrix" 0.23662323082654843 0.95924938124237236 -0.15443468269573457 0
-		 -0.97089723499141078 0.23949646988219706 -4.3129071104934388e-17 0 0.036986561333005964 0.14994020641606401 0.98800300039051936 0
-		 2.1937527999473434 -0.48970021284300758 0.65993562595786548 1;
-	setAttr ".pm[30]" -type "matrix" 1.0321264007506926e-16 0.98800300039051925 -0.15443468269573457 0
-		 -1.0000000000000007 -1.2103887175439744e-16 1.2426683751296305e-16 0 4.1803469592754655e-16 0.15443468269573418 0.98800300039051936 0
-		 1.1066026171446437 -0.23140738728795826 0.65993562595786526 1;
-	setAttr ".pm[31]" -type "matrix" 0.26266820392956736 0.009684406299574887 -0.96483761686567782 0
-		 -0.036844317711590059 0.99932101761764658 5.2562121322097255e-16 0 0.96418250912199355 0.0355487836958919 0.26284667218924473 0
-		 0.50913250485138239 -0.028746640332393075 0.48091270520891444 1;
-	setAttr ".pm[32]" -type "matrix" 0.3398099540894417 5.6734381839346906e-16 -0.94049412284273848 0
-		 -1.381630923095358e-15 1.0000000000000007 4.138209592278458e-16 0 0.94049412284273859 7.7621151836509442e-16 0.3398099540894422 0
-		 -0.7073865992814703 -0.0040348137177989435 0.42524339379906417 1;
-	setAttr ".pm[33]" -type "matrix" 1.0000000000000002 5.6734381839346896e-16 -1.1102230246251642e-16 0
-		 -8.5868812060852e-16 1.0000000000000007 -1.1587952819525087e-15 0 -2.7755575615629007e-16 7.7621151836509442e-16 1.0000000000000007 0
-		 -0.97912122426768677 -0.0040348137177992514 -1.4585045470587661 1;
-	setAttr ".pm[34]" -type "matrix" 1.3063523206087654e-16 0.98800300039051925 -0.15443468269573454 0
-		 -1.0000000000000007 -9.784597368363593e-17 9.2920752232996223e-17 0 4.2232111944078348e-16 0.15443468269573407 0.98800300039051869 0
-		 1.1066000000000025 0.41705909375695099 0.55857382110392562 1;
-	setAttr ".pm[35]" -type "matrix" -0.26266838984452928 -0.0096844224764784069 -0.96483756608964 0
-		 -0.036844353130247837 0.99932101631178294 -1.3659976652354479e-15 0 0.96418245712048567 0.035548815998334912 -0.26284685857399992 0
-		 0.51038153019671961 -0.028700609916253363 -0.47632433397228441 1;
-	setAttr ".pm[36]" -type "matrix" -0.33981114173522775 -1.9135442931805601e-15 -0.9404936937335634 0
-		 -1.1705831828428131e-15 1.0000000000000007 -1.2795115676869506e-15 0 0.9404936937335634 4.2398936765819297e-16 -0.33981114173522736 0
-		 -0.7057711785568036 -0.0040348100000030494 -0.42077002514234174 1;
-	setAttr ".pm[37]" -type "matrix" 1.0000000000000002 1.7210229690450499e-15 5.5511151231257624e-17 0
-		 1.4086284441910843e-15 -1.0000000000000007 1.3329345429108158e-16 0 -3.3306690738754731e-16 1.0835096825070883e-16 -1.0000000000000002 0
-		 0.97436546514769007 0.0040348100000026973 1.4584999999999986 1;
-	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr -s 38 ".ma";
-	setAttr -s 38 ".dpf[0:37]"  4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-		4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4;
-	setAttr -s 38 ".lw";
-	setAttr -s 38 ".lw";
-	setAttr ".mi" 1;
-	setAttr ".bm" 3;
-	setAttr ".ucm" yes;
-	setAttr -s 38 ".ifcl";
-	setAttr -s 38 ".ifcl";
-createNode tweak -n "tweak4";
-	rename -uid "B80748A3-467C-1262-688D-388E5C2FC384";
-createNode objectSet -n "skinCluster4Set";
-	rename -uid "25788A8D-453B-F4BD-BE5E-8B9063D21026";
-	setAttr ".ihi" 0;
-	setAttr ".vo" yes;
-createNode groupId -n "skinCluster4GroupId";
-	rename -uid "5BB7A5A9-429D-8D66-E2B8-BAB4E6934309";
-	setAttr ".ihi" 0;
-createNode groupParts -n "skinCluster4GroupParts";
-	rename -uid "259E3DA1-47CA-737D-BA42-EEBEC4DEFBFE";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "vtx[*]";
-createNode objectSet -n "tweakSet4";
-	rename -uid "BB2E4E96-41F3-5DCB-09A1-25B247AD7456";
-	setAttr ".ihi" 0;
-	setAttr ".vo" yes;
-createNode groupId -n "groupId10";
-	rename -uid "11A6191A-4A7F-8B49-846B-DAB04D957D3E";
-	setAttr ".ihi" 0;
-createNode groupParts -n "groupParts10";
-	rename -uid "BF8932C3-4DED-9A12-59A3-D5BFA7BC538E";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "vtx[*]";
 createNode skinCluster -n "skinCluster5";
 	rename -uid "67952ACE-417F-3927-976F-45957EF3E1F4";
 	setAttr ".skm" 1;
@@ -12333,7 +11388,7 @@ createNode skinCluster -n "skinCluster7";
 	setAttr -s 38 ".ifcl";
 createNode tweak -n "tweak7";
 	rename -uid "7431337C-4740-D85D-5928-A09F6EE53E62";
-	setAttr -s 46 ".vl[0].vt";
+	setAttr -s 29 ".vl[0].vt";
 	setAttr ".vl[0].vt[16]" -type "float3" -1.4901161e-08 1.4901161e-08 0 ;
 	setAttr ".vl[0].vt[18]" -type "float3" -2.9802322e-08 2.9802322e-08 0 ;
 	setAttr ".vl[0].vt[19]" -type "float3" 1.8626451e-09 1.4901161e-08 0 ;
@@ -15029,47 +14084,6 @@ createNode animCurveTU -n "r_wing_elbow_CTRL_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "l_foot_CTRL_visibility";
-	rename -uid "ECD851C2-48EE-768D-786D-E38803ECDF9F";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "l_foot_CTRL_translateX";
-	rename -uid "762BDA52-4BE3-A2B7-716F-8CB7043E72F0";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "l_foot_CTRL_translateY";
-	rename -uid "45F5D1F7-44DC-68CF-101E-7BA895AB948D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "l_foot_CTRL_translateZ";
-	rename -uid "5122364E-4C47-D7A1-3A79-EC810A83969E";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "l_foot_CTRL_rotateX";
-	rename -uid "BDFD605C-4D6B-3C12-9F84-748BD40F1E88";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "l_foot_CTRL_rotateY";
-	rename -uid "4CEC33EE-4555-0A0D-3E5E-89A3FF146872";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "l_foot_CTRL_rotateZ";
-	rename -uid "43D2E698-4D80-1560-679E-2C93A90D5D44";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTU -n "l_foot_CTRL_ToeBend";
-	rename -uid "9D4698DC-44FC-BC4B-8022-589EA8F57FA2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 5 50;
 createNode animCurveTA -n "top_beak_CTRL_rotateX";
 	rename -uid "DA4903B2-409F-D0A3-005B-5CBE6774991C";
 	setAttr ".tan" 18;
@@ -15093,30 +14107,35 @@ createNode animCurveTU -n "top_beak_CTRL_visibility";
 	setAttr ".kot[0]"  5;
 createNode reference -n "police_hatRN";
 	rename -uid "97CB3013-4505-88D6-AC3C-D7A74520DC0A";
-	setAttr -s 19 ".phl";
-	setAttr ".phl[1]" 0;
+	setAttr -s 27 ".phl";
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
 	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
-	setAttr ".phl[11]" 0;
 	setAttr ".phl[12]" 0;
-	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
 	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"police_hatRN"
-		"police_hatRN" 0
-		"police_hatRN" 48
+		"police_hatRN" 38
 		0 "|police_hat:pCube1" "|Swan|GEO|swan_base1" "-s -r "
 		0 "|police_hatRNfosterParent1|pCubeShape1Deformed" "|Swan|GEO|swan_base1|police_hat:pCube1" 
 		"-s -r "
@@ -15145,29 +14164,9 @@ createNode reference -n "police_hatRN";
 		"police_hatRN.placeHolderList[2]" ""
 		5 3 "police_hatRN" "police_hat:polyTweakUV10.uvTweak[0]" "police_hatRN.placeHolderList[3]" 
 		"police_hat:pCubeShape1.uvst[0].uvtw"
-		5 3 "police_hatRN" "police_hat:lambert2SG.memberWireframeColor" "police_hatRN.placeHolderList[4]" 
-		""
-		5 4 "police_hatRN" "police_hat:lambert2SG.dagSetMembers" "police_hatRN.placeHolderList[5]" 
-		""
 		5 0 "police_hatRN" "police_hat:groupId1.message" "police_hat:lambert2SG.groupNodes" 
 		"police_hatRN.placeHolderList[6]" "police_hatRN.placeHolderList[7]" ""
-		5 3 "police_hatRN" "police_hat:blinn1SG.memberWireframeColor" "police_hatRN.placeHolderList[8]" 
-		""
-		5 4 "police_hatRN" "police_hat:blinn1SG.dagSetMembers" "police_hatRN.placeHolderList[9]" 
-		""
-		5 0 "police_hatRN" "police_hat:groupId3.message" "police_hat:blinn1SG.groupNodes" 
-		"police_hatRN.placeHolderList[10]" "police_hatRN.placeHolderList[11]" ""
 		5 3 "police_hatRN" "police_hat:groupId1.groupId" "police_hatRN.placeHolderList[12]" 
-		""
-		5 3 "police_hatRN" "police_hat:groupId3.groupId" "police_hatRN.placeHolderList[13]" 
-		""
-		5 3 "police_hatRN" "police_hat:blinn2SG.memberWireframeColor" "police_hatRN.placeHolderList[14]" 
-		""
-		5 4 "police_hatRN" "police_hat:blinn2SG.dagSetMembers" "police_hatRN.placeHolderList[15]" 
-		""
-		5 0 "police_hatRN" "police_hat:groupId4.message" "police_hat:blinn2SG.groupNodes" 
-		"police_hatRN.placeHolderList[16]" "police_hatRN.placeHolderList[17]" ""
-		5 3 "police_hatRN" "police_hat:groupId4.groupId" "police_hatRN.placeHolderList[18]" 
 		""
 		5 3 "police_hatRN" "police_hat:groupParts3.outputGeometry" "police_hatRN.placeHolderList[19]" 
 		"police_hat:pCubeShape1.i"
@@ -15188,528 +14187,920 @@ createNode reference -n "police_hatRN";
 		9 "|Swan|GEO|swan_base1|police_hat:pCube1" "scaleZ"
 		9 "|Swan|GEO|swan_base1|police_hat:pCube1" "rotateX"
 		9 "|Swan|GEO|swan_base1|police_hat:pCube1" "rotateY"
-		9 "|Swan|GEO|swan_base1|police_hat:pCube1" "rotateZ";
+		9 "|Swan|GEO|swan_base1|police_hat:pCube1" "rotateZ"
+		"police_hatRN" 369
+		0 "|police_hat:police_hat" "|Swan|GEO|swan_base1" "-s -r "
+		0 "|police_hatRNfosterParent1|police_hatShapeDeformed" "|Swan|GEO|swan_base1|police_hat:police_hat" 
+		"-s -r "
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat" "translateY" " 0"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat" "translateZ" " 0"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat" "scaleX" " 1"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat" "scaleY" " 1"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat" "scaleZ" " 1"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat" "rotatePivot" " -type \"double3\" 0 12.77829180193585579 2.86302209288880105"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat" "scalePivot" " -type \"double3\" 0 12.77829180193585579 2.86302209288880105"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"intermediateObject" " 1"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts" " -s 333"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[0]" " -type \"float3\" -0.27766201000000001 12.877093 3.2846538999999999"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[1]" " -type \"float3\" 6.6821257999999996e-08 12.880266 3.38913460000000022"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[2]" " -type \"float3\" 0.27766213000000001 12.877093 3.2846538999999999"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[3]" " -type \"float3\" -0.29423263999999999 12.972199 3.0659114999999999"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[4]" " -type \"float3\" 0 12.986052 3.14657449999999983"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[5]" " -type \"float3\" 0.29423263999999999 12.972199 3.0659114999999999"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[6]" " -type \"float3\" -0.25259057000000001 13.447972 3.182904"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[7]" " -type \"float3\" 0 13.48433 3.27838109999999983"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[8]" " -type \"float3\" 0.2525906 13.447972 3.182904"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[9]" " -type \"float3\" -0.49506459000000003 13.289433 2.87537909999999997"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[10]" " -type \"float3\" 9.6871044999999998e-06 13.335885 2.88407420000000014"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[11]" " -type \"float3\" 0.49507105000000001 13.289495 2.87534480000000014"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[12]" " -type \"float3\" -0.30165428 13.131255 2.5119009000000001"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[13]" " -type \"float3\" 6.4505502000000003e-06 13.09922 2.40671180000000007"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[14]" " -type \"float3\" 0.30166577999999999 13.131366 2.51183990000000001"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[15]" " -type \"float3\" -0.2328556 12.900618 2.54297180000000012"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[16]" " -type \"float3\" 0 12.882841 2.45046259999999982"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[17]" " -type \"float3\" 0.2328556 12.900618 2.54297180000000012"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[18]" " -type \"float3\" -0.36828529999999998 12.955604 2.88061519999999982"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[19]" " -type \"float3\" 0.36828533000000002 12.955604 2.88061519999999982"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[20]" " -type \"float3\" 0.37098002000000002 13.078037 2.85449170000000008"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[21]" " -type \"float3\" 0.28447612999999999 13.126307 3.05649470000000001"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[22]" " -type \"float3\" 0 13.128173 3.1386387"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[23]" " -type \"float3\" -0.28447612999999999 13.126307 3.05649470000000001"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[24]" " -type \"float3\" -0.37097998999999998 13.078037 2.85449170000000008"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[25]" " -type \"float3\" -0.25232449000000001 12.973709 2.52110339999999988"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[26]" " -type \"float3\" 0 12.950138 2.419385"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[27]" " -type \"float3\" 0.25232449000000001 12.973709 2.52110339999999988"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[28]" " -type \"float3\" 6.6821257999999996e-08 12.979681 3.12838010000000022"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[29]" " -type \"float3\" -0.27536603999999998 12.965925 3.061461"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[30]" " -type \"float3\" 0.27536612999999999 12.965925 3.061461"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[31]" " -type \"float3\" 0.35865047999999999 12.90837 3.05773310000000009"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[32]" " -type \"float3\" -0.35865042000000003 12.90837 3.05773310000000009"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[33]" " -type \"float3\" 1.1568418000000001e-09 13.158729 3.16439490000000001"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[34]" " -type \"float3\" -0.28154773 13.155803 3.07232949999999994"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[35]" " -type \"float3\" -0.38780587999999999 13.097656 2.86496070000000014"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[36]" " -type \"float3\" -0.26045927000000002 12.977402 2.50389"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[37]" " -type \"float3\" 0 12.951179 2.39452959999999981"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[38]" " -type \"float3\" 0.2604593 12.977402 2.50389030000000012"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[39]" " -type \"float3\" 0.38780587999999999 13.097656 2.86496070000000014"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[40]" " -type \"float3\" 0.28154770000000001 13.155803 3.07232949999999994"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[41]" " -type \"float3\" 0.39552081 13.312228 2.87532850000000018"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[42]" " -type \"float3\" 4.6273673999999995e-09 13.46859 3.22471709999999989"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[43]" " -type \"float3\" -0.39549427999999998 13.311981 2.87546610000000014"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[44]" " -type \"float3\" 0.24856611000000001 13.427965 3.13581969999999988"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[45]" " -type \"float3\" -0.24856607999999999 13.427965 3.13581969999999988"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[46]" " -type \"float3\" 2.5806827999999998e-05 13.175037 2.54801820000000001"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[47]" " -type \"float3\" 0.25097345999999998 13.178583 2.57819509999999985"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[48]" " -type \"float3\" -0.25088385000000002 13.177592 2.5787450999999999"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[49]" " -type \"float3\" 0 13.434835 3.27356740000000013"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[50]" " -type \"float3\" -0.23031656 13.421919 3.1953727999999999"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[51]" " -type \"float3\" -0.49536364999999999 13.249787 2.87367060000000007"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[52]" " -type \"float3\" -0.30049542000000001 13.08648 2.48346419999999979"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[53]" " -type \"float3\" 0 13.057608 2.3753346999999998"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[54]" " -type \"float3\" 0.30049542000000001 13.08648 2.48346419999999979"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[55]" " -type \"float3\" 0.49536367999999997 13.249787 2.87367060000000007"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[56]" " -type \"float3\" 0.23031656 13.421919 3.1953727999999999"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[57]" " -type \"float3\" -0.23417978 13.212655 3.12368660000000009"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[58]" " -type \"float3\" -0.41461691000000001 13.127962 2.86735059999999997"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[59]" " -type \"float3\" -0.26626712000000002 12.998002 2.49646260000000009"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[60]" " -type \"float3\" -2.8921046000000001e-10 12.971117 2.38884350000000012"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[61]" " -type \"float3\" 0.26626712000000002 12.998002 2.49646260000000009"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[62]" " -type \"float3\" 0.41461688000000002 13.127962 2.86735059999999997"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[63]" " -type \"float3\" 0.23417978 13.212655 3.12368660000000009"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[64]" " -type \"float3\" 0 13.212757 3.18715690000000018"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[65]" " -type \"float3\" 1.1568418000000001e-09 12.951224 2.4022386"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[66]" " -type \"float3\" -0.27643040000000002 12.895945 3.26275130000000013"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[67]" " -type \"float3\" 0 12.902123 3.35146329999999981"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[68]" " -type \"float3\" 0.27643040000000002 12.895945 3.26275130000000013"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[69]" " -type \"float3\" 0.34688309000000001 12.920082 3.07842679999999991"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[70]" " -type \"float3\" -0.34688309000000001 12.920082 3.07842679999999991"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[71]" " -type \"float3\" -0.34234065000000002 12.920053 3.04864790000000019"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[72]" " -type \"float3\" -0.27204946000000002 12.890192 3.26131439999999984"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[73]" " -type \"float3\" 6.6821257999999996e-08 12.893627 3.3513153"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[74]" " -type \"float3\" 0.27204961 12.890192 3.26131439999999984"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[75]" " -type \"float3\" 0.34234068000000001 12.920046 3.04860759999999997"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[76]" " -type \"float3\" 0.36619896000000002 12.982625 2.8467235999999998"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[77]" " -type \"float3\" 0.28187081000000003 13.016735 3.04382490000000017"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[78]" " -type \"float3\" 0 13.017184 3.124362"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[79]" " -type \"float3\" -0.28187081000000003 13.016735 3.04382490000000017"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[80]" " -type \"float3\" -0.36619896000000002 12.982625 2.8467235999999998"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[81]" " -type \"float3\" -0.25041795 12.910794 2.5235417"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[82]" " -type \"float3\" 0 12.889345 2.42448119999999978"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[83]" " -type \"float3\" 0.25041797999999998 12.910794 2.5235417"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[84]" " -type \"float3\" 0.36619889999999999 13.059263 2.85129259999999984"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[85]" " -type \"float3\" 0.28187081000000003 13.104182 3.04811049999999994"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[86]" " -type \"float3\" 0 13.105744 3.1288311000000002"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[87]" " -type \"float3\" -0.28187081000000003 13.104182 3.04811049999999994"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[88]" " -type \"float3\" -0.36619896000000002 13.059263 2.85129259999999984"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[89]" " -type \"float3\" -0.25041797999999998 12.962626 2.52671169999999989"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[90]" " -type \"float3\" 0 12.93956 2.4275525"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[91]" " -type \"float3\" 0.25041797999999998 12.962626 2.52671169999999989"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[92]" " -type \"float3\" 0.27764489999999997 12.884127 3.28273530000000013"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[93]" " -type \"float3\" 0.32165828000000002 12.897994 3.15185549999999992"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[94]" " -type \"float3\" -0.36518847999999998 12.937572 2.98390289999999991"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[95]" " -type \"float3\" -0.35848363999999999 12.93186 2.97181270000000008"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[96]" " -type \"float3\" -0.37303665000000003 12.926987 2.97623520000000008"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[97]" " -type \"float3\" -0.15530253999999999 13.160597 3.1294932000000002"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[98]" " -type \"float3\" 0 13.168591 3.17002339999999982"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[99]" " -type \"float3\" -0.28230243999999999 13.164141 3.076544"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[100]" " -type \"float3\" -0.36825766999999998 13.136361 2.9970235999999999"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[101]" " -type \"float3\" -0.38493755000000002 13.172981 3.01358680000000012"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[102]" " -type \"float3\" -0.39171972999999999 13.103355 2.86609820000000015"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[103]" " -type \"float3\" -0.35450396000000001 13.032376 2.67695069999999991"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[104]" " -type \"float3\" -0.37745373999999998 13.05534 2.6742897000000001"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[105]" " -type \"float3\" -0.26189697000000001 12.980469 2.50158"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[106]" " -type \"float3\" -0.14184200999999999 12.973436 2.41077420000000009"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[107]" " -type \"float3\" 0 12.953977 2.39152049999999994"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[108]" " -type \"float3\" -0.13905476 12.954138 2.41667530000000008"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[109]" " -type \"float3\" 0.14184200999999999 12.973436 2.41077420000000009"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[110]" " -type \"float3\" 0.26189697000000001 12.980469 2.50158"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[111]" " -type \"float3\" 0.13905476 12.954138 2.41667530000000008"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[112]" " -type \"float3\" 0.35450398999999999 13.032376 2.67695069999999991"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[113]" " -type \"float3\" 0.37745373999999998 13.05534 2.67428990000000022"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[114]" " -type \"float3\" 0.39171972999999999 13.103355 2.86609820000000015"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[115]" " -type \"float3\" 0.36825766999999998 13.136361 2.9970235999999999"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[116]" " -type \"float3\" 0.38493755000000002 13.172981 3.01358680000000012"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[117]" " -type \"float3\" 0.28230243999999999 13.164141 3.076544"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[118]" " -type \"float3\" 0.15530253999999999 13.160597 3.1294932000000002"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[119]" " -type \"float3\" 0.44129037999999998 13.171894 2.6415538999999999"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[120]" " -type \"float3\" 0.17802087999999999 13.104226 2.43834419999999996"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[121]" " -type \"float3\" -0.17799586000000001 13.103978 2.43848179999999992"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[122]" " -type \"float3\" -0.44126453999999998 13.171647 2.64169140000000002"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[123]" " -type \"float3\" 2.3136836999999997e-09 13.480762 3.29215979999999986"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[124]" " -type \"float3\" -0.2294793 13.449984 3.21187449999999997"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[125]" " -type \"float3\" -0.46096110000000001 13.313852 3.04213859999999992"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[126]" " -type \"float3\" -0.51290214000000001 13.281024 2.87504030000000022"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[127]" " -type \"float3\" -0.45735442999999998 13.148614 2.66511250000000022"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[128]" " -type \"float3\" -0.31458405 13.105656 2.48018740000000015"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[129]" " -type \"float3\" -1.1568418000000001e-09 13.076352 2.37240720000000005"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[130]" " -type \"float3\" -0.15224819000000001 13.057184 2.39572619999999992"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[131]" " -type \"float3\" 0.31458405 13.105656 2.48018740000000015"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[132]" " -type \"float3\" 0.15224819000000001 13.057184 2.39572619999999992"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[133]" " -type \"float3\" 0.45735442999999998 13.148614 2.66511250000000022"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[134]" " -type \"float3\" 0.51290214000000001 13.281024 2.87504030000000022"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[135]" " -type \"float3\" 0.46096110000000001 13.313852 3.04213859999999992"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[136]" " -type \"float3\" 0.2294793 13.449984 3.21187449999999997"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[137]" " -type \"float3\" -0.23226011999999999 13.31673 3.16526720000000017"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[138]" " -type \"float3\" -0.45894649999999998 13.184274 2.870491"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[139]" " -type \"float3\" -0.28396302000000001 13.041967 2.49107069999999986"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[140]" " -type \"float3\" 0 13.014094 2.38213089999999994"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[141]" " -type \"float3\" 0.28396302000000001 13.041967 2.49107069999999986"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[142]" " -type \"float3\" 0.45894649999999998 13.184274 2.870491"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[143]" " -type \"float3\" 0.23226011999999999 13.31673 3.16526720000000017"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[144]" " -type \"float3\" 2.3136836999999997e-09 13.323503 3.230119"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[145]" " -type \"float3\" 0 12.887626 3.385572"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[146]" " -type \"float3\" -0.27764489999999997 12.884127 3.28273530000000013"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[147]" " -type \"float3\" 0.33948656999999999 12.935329 3.05786939999999996"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[148]" " -type \"float3\" -0.35701846999999998 12.914889 3.05865190000000009"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[149]" " -type \"float3\" -0.32259166 12.933283 3.05314849999999982"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[150]" " -type \"float3\" -0.26789391000000001 12.92634 3.177933"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[151]" " -type \"float3\" 6.5664422999999997e-08 12.935252 3.23902389999999984"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[152]" " -type \"float3\" 0.26789403000000001 12.92634 3.177933"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[153]" " -type \"float3\" 0.32259175000000001 12.933283 3.05314849999999982"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[154]" " -type \"float3\" 0.36619889999999999 13.021257 2.84902670000000002"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[155]" " -type \"float3\" 0.35113987000000002 13.08957 2.968215"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[156]" " -type \"float3\" 0.28187084000000001 13.060823 3.04586980000000018"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[157]" " -type \"float3\" 0.15526867999999999 13.107162 3.10565019999999992"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[158]" " -type \"float3\" 0 13.061827 3.12661480000000003"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[159]" " -type \"float3\" -0.15526867999999999 13.107162 3.10565019999999992"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[160]" " -type \"float3\" -0.28187084000000001 13.060823 3.04586980000000018"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[161]" " -type \"float3\" -0.35113983999999998 13.08957 2.968215"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[162]" " -type \"float3\" -0.36619889999999999 13.021257 2.84902670000000002"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[163]" " -type \"float3\" -0.330441 13.009097 2.68267230000000012"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[164]" " -type \"float3\" -0.25041797999999998 12.936922 2.52513960000000015"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[165]" " -type \"float3\" -0.13430012999999999 12.942792 2.4477692000000002"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[166]" " -type \"float3\" 0 12.914658 2.42602919999999989"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[167]" " -type \"float3\" 0.13430012999999999 12.942792 2.4477692000000002"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[168]" " -type \"float3\" 0.25041797999999998 12.936922 2.52513960000000015"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[169]" " -type \"float3\" 0.33044103000000002 13.009097 2.68267230000000012"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[170]" " -type \"float3\" 0.36619889999999999 13.076324 2.85230970000000017"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[171]" " -type \"float3\" 0.28187084000000001 13.123647 3.04911639999999995"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[172]" " -type \"float3\" 0 13.125461 3.12982609999999983"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[173]" " -type \"float3\" -0.28187084000000001 13.123647 3.04911639999999995"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[174]" " -type \"float3\" -0.36619889999999999 13.076324 2.85230970000000017"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[175]" " -type \"float3\" -0.25041797999999998 12.974164 2.52741740000000004"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[176]" " -type \"float3\" 0 12.950739 2.428236"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[177]" " -type \"float3\" 0.25041797999999998 12.974164 2.52741740000000004"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[178]" " -type \"float3\" -0.15526867999999999 12.898554 3.31543920000000014"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[179]" " -type \"float3\" 0 12.946111 3.2358403"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[180]" " -type \"float3\" -0.15526867999999999 12.982274 3.12405750000000015"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[181]" " -type \"float3\" -0.28299004 12.93658 3.17165570000000008"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[182]" " -type \"float3\" 0.15526867999999999 12.898554 3.31543920000000014"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[183]" " -type \"float3\" 0.28299004 12.93658 3.17165570000000008"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[184]" " -type \"float3\" 0.15526867999999999 12.982274 3.12405750000000015"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[185]" " -type \"float3\" 0 12.995229 3.12432430000000005"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[186]" " -type \"float3\" -0.15526867999999999 13.018601 3.10118129999999992"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[187]" " -type \"float3\" -0.28187084000000001 12.994948 3.04559209999999991"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[188]" " -type \"float3\" 0.28187084000000001 12.994948 3.04559209999999991"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[189]" " -type \"float3\" 0.15526867999999999 13.018601 3.10118129999999992"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[190]" " -type \"float3\" -0.44202914999999998 13.368373 3.07251759999999985"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[191]" " -type \"float3\" 0.44202914999999998 13.368373 3.07251759999999985"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[192]" " -type \"float3\" -0.13430012999999999 12.893541 2.44475670000000012"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[193]" " -type \"float3\" 0 12.876934 2.423722"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[194]" " -type \"float3\" -0.135423 12.887371 2.47281890000000004"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[195]" " -type \"float3\" -0.25041797999999998 12.897983 2.522758"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[196]" " -type \"float3\" 0.13430012999999999 12.893541 2.44475670000000012"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[197]" " -type \"float3\" 0.25041797999999998 12.897983 2.522758"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[198]" " -type \"float3\" 0.135423 12.887371 2.47281890000000004"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[199]" " -type \"float3\" -0.29846096 12.921594 2.67230919999999994"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[200]" " -type \"float3\" 0.29846102000000002 12.921594 2.67230919999999994"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[201]" " -type \"float3\" -0.35121235000000001 12.908942 3.05956340000000004"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[202]" " -type \"float3\" -0.32165819000000001 12.897994 3.15185549999999992"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[203]" " -type \"float3\" -0.27555117000000001 12.878587 3.28079339999999986"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[204]" " -type \"float3\" -0.33533263000000002 12.889827 3.16790269999999996"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[205]" " -type \"float3\" 0.15330803000000001 12.889749 3.31544259999999991"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[206]" " -type \"float3\" 0.27555131999999999 12.878587 3.28079339999999986"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[207]" " -type \"float3\" 0.15506320000000001 12.875807 3.34319"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[208]" " -type \"float3\" 6.6821257999999996e-08 12.88082 3.38509629999999984"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[209]" " -type \"float3\" 0.36518851000000002 12.937572 2.98390289999999991"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[210]" " -type \"float3\" 0.35701846999999998 12.914889 3.05865190000000009"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[211]" " -type \"float3\" 0.37303670999999999 12.926987 2.97623520000000008"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[212]" " -type \"float3\" 0.33017129000000001 12.945769 2.6787926999999998"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[213]" " -type \"float3\" 0.36619889999999999 12.963683 2.84559439999999997"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[214]" " -type \"float3\" 0.35098534999999997 12.961493 2.9711555999999999"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[215]" " -type \"float3\" 0.35113987000000002 13.005522 2.96354819999999997"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[216]" " -type \"float3\" -0.33948656999999999 12.935329 3.05786939999999996"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[217]" " -type \"float3\" -0.32937822 12.905463 3.15501429999999994"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[218]" " -type \"float3\" -0.36619889999999999 12.963683 2.84559439999999997"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[219]" " -type \"float3\" -0.33017126000000002 12.945769 2.6787926999999998"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[220]" " -type \"float3\" -0.35098534999999997 12.961493 2.9711555999999999"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[221]" " -type \"float3\" -0.35113983999999998 13.005522 2.96354819999999997"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[222]" " -type \"float3\" 0.35545850000000001 13.110648 2.97458789999999995"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[223]" " -type \"float3\" 0.15504937999999999 13.129611 3.11500570000000021"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[224]" " -type \"float3\" -0.15504937999999999 13.129611 3.11500570000000021"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[225]" " -type \"float3\" -0.35545850000000001 13.110648 2.97458789999999995"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[226]" " -type \"float3\" -0.33696967 13.022773 2.68128279999999997"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[227]" " -type \"float3\" -0.13361496 12.953074 2.44009590000000021"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[228]" " -type \"float3\" 0.13361496 12.953074 2.44009590000000021"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[229]" " -type \"float3\" 0.33696967 13.022773 2.68128279999999997"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[230]" " -type \"float3\" 6.7978107000000006e-08 12.987253 3.10752890000000015"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[231]" " -type \"float3\" -0.15577443999999999 12.976011 3.11190770000000017"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[232]" " -type \"float3\" -0.28533133999999999 12.97994 3.03966210000000014"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[233]" " -type \"float3\" 0.28533149000000002 12.97994 3.03966210000000014"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[234]" " -type \"float3\" 0.15577458 12.976011 3.11190770000000017"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[235]" " -type \"float3\" 0.35121240999999997 12.908942 3.05956340000000004"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[236]" " -type \"float3\" 0.35848366999999998 12.93186 2.97181270000000008"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[237]" " -type \"float3\" -0.1533079 12.889749 3.31544259999999991"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[238]" " -type \"float3\" -0.15506306 12.875807 3.34319"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[239]" " -type \"float3\" 0.33533268999999999 12.889827 3.16790269999999996"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[240]" " -type \"float3\" 0.32937822 12.905463 3.15501429999999994"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[241]" " -type \"float3\" -0.15526867999999999 12.941973 3.21133710000000017"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[242]" " -type \"float3\" 0.15526867999999999 12.941973 3.21133710000000017"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[243]" " -type \"float3\" -0.15526867999999999 12.996624 3.10152150000000004"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[244]" " -type \"float3\" 0.15526867999999999 12.996624 3.10152150000000004"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[245]" " -type \"float3\" -0.13430012999999999 12.881368 2.44401240000000008"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[246]" " -type \"float3\" 0.13430012999999999 12.881368 2.44401240000000008"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[247]" " -type \"float3\" -0.32997282999999999 12.891146 3.16494389999999992"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[248]" " -type \"float3\" 0.15444649999999999 12.876803 3.33919360000000021"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[249]" " -type \"float3\" 0.37120410999999998 12.932664 2.98246240000000018"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[250]" " -type \"float3\" 0.33017126000000002 12.930092 2.67783380000000015"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[251]" " -type \"float3\" 0.35113983999999998 12.984747 2.96239469999999994"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[252]" " -type \"float3\" -0.32008230999999998 12.924142 3.13020750000000003"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[253]" " -type \"float3\" -0.33017126000000002 12.930092 2.67783380000000015"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[254]" " -type \"float3\" -0.35113983999999998 12.984747 2.96239469999999994"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[255]" " -type \"float3\" -0.17266059 12.985522 3.08405709999999988"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[256]" " -type \"float3\" 0.17266071999999999 12.985522 3.08405709999999988"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[257]" " -type \"float3\" 0.36461600999999999 12.926069 2.98801490000000003"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[258]" " -type \"float3\" -0.15444636 12.876803 3.33919360000000021"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[259]" " -type \"float3\" 0.33423617 12.896137 3.16532249999999982"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[260]" " -type \"float3\" 0.32997285999999998 12.891146 3.16494389999999992"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[261]" " -type \"float3\" -0.35309917000000002 12.947951 2.99254560000000014"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[262]" " -type \"float3\" -0.36461600999999999 12.926069 2.98801490000000003"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[263]" " -type \"float3\" -0.15557234 13.169935 3.13461420000000013"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[264]" " -type \"float3\" -0.37019742 13.143694 3.00030570000000019"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[265]" " -type \"float3\" -0.35857335000000001 13.036193 2.67610860000000006"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[266]" " -type \"float3\" -0.13977985000000001 12.956841 2.41375610000000007"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[267]" " -type \"float3\" 0.13977985000000001 12.956841 2.41375610000000007"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[268]" " -type \"float3\" 0.35857335000000001 13.036193 2.67610860000000006"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[269]" " -type \"float3\" 0.37019742 13.143694 3.00030570000000019"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[270]" " -type \"float3\" 0.15557234 13.169935 3.13461420000000013"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[271]" " -type \"float3\" -0.47589176999999999 13.349577 3.04970529999999984"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[272]" " -type \"float3\" -0.47484242999999998 13.173244 2.66312339999999992"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[273]" " -type \"float3\" -0.15450344999999999 13.075335 2.3924650999999999"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[274]" " -type \"float3\" 0.15450344999999999 13.075335 2.39246489999999978"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[275]" " -type \"float3\" 0.47484242999999998 13.173244 2.66312339999999992"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[276]" " -type \"float3\" 0.47589176999999999 13.349577 3.04970529999999984"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[277]" " -type \"float3\" -0.42865010999999997 13.238722 3.02457360000000008"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[278]" " -type \"float3\" -0.42567229000000001 13.097281 2.66972949999999987"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[279]" " -type \"float3\" -0.14701291999999999 13.015052 2.40329669999999984"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[280]" " -type \"float3\" 0.14701291999999999 13.015052 2.40329669999999984"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[281]" " -type \"float3\" 0.42567231999999999 13.097281 2.66972949999999987"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[282]" " -type \"float3\" 0.42865017 13.238722 3.02457360000000008"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[283]" " -type \"float3\" -0.15526867999999999 12.883037 3.33987619999999996"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[284]" " -type \"float3\" 0.15526867999999999 12.883037 3.33987619999999996"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[285]" " -type \"float3\" 0.32008230999999998 12.924142 3.13020750000000003"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[286]" " -type \"float3\" -0.33423617 12.896137 3.16532249999999982"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[287]" " -type \"float3\" 0.35309917000000002 12.947951 2.99254560000000014"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[288]" " -type \"float3\" -0.37120410999999998 12.932664 2.98246240000000018"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[289]" " -type \"float3\" -0.34205475000000002 12.942291 2.98030639999999991"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[290]" " -type \"float3\" -0.31389007000000002 12.915918 3.13133380000000017"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[291]" " -type \"float3\" -0.15153709000000001 12.930727 3.21625190000000005"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[292]" " -type \"float3\" 0.15153722 12.930727 3.21625190000000005"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[293]" " -type \"float3\" 0.31389012999999999 12.915918 3.13133380000000017"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[294]" " -type \"float3\" 0.34205480999999999 12.942291 2.98030639999999991"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[295]" " -type \"float3\" 0.35113983999999998 13.04789 2.96590070000000017"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[296]" " -type \"float3\" 0.15526867999999999 13.063244 3.10343409999999986"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[297]" " -type \"float3\" -0.15526867999999999 13.063244 3.10343409999999986"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[298]" " -type \"float3\" -0.35113983999999998 13.04789 2.96590070000000017"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[299]" " -type \"float3\" -0.33017126000000002 12.977743 2.68074820000000003"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[300]" " -type \"float3\" -0.13430012999999999 12.918367 2.44627520000000009"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[301]" " -type \"float3\" 0.13430012999999999 12.918367 2.44627520000000009"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[302]" " -type \"float3\" 0.33017126000000002 12.977743 2.68074820000000003"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[303]" " -type \"float3\" 0.35113983999999998 13.108281 2.969254"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[304]" " -type \"float3\" 0.15526867999999999 13.126878 3.10659580000000002"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[305]" " -type \"float3\" -0.15526867999999999 13.126878 3.10659580000000002"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[306]" " -type \"float3\" -0.35113983999999998 13.108281 2.969254"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[307]" " -type \"float3\" -0.33255622000000001 13.022426 2.68353580000000003"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[308]" " -type \"float3\" -0.13430012999999999 12.953756 2.44843980000000006"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[309]" " -type \"float3\" 0.13430012999999999 12.953756 2.44843980000000006"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[310]" " -type \"float3\" 0.33255622000000001 13.022426 2.68353580000000003"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[311]" " -type \"float3\" -0.34030408000000001 12.952833 2.87454870000000007"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[312]" " -type \"float3\" 0.34030410999999999 12.952833 2.87454870000000007"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[313]" " -type \"float3\" -0.23109567 13.086582 2.53316449999999982"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[314]" " -type \"float3\" -0.12915774999999999 13.06275 2.4663371999999999"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[315]" " -type \"float3\" -0.15808742000000001 13.13096 2.64405849999999987"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[316]" " -type \"float3\" -0.30124483000000002 13.12338 2.65668250000000006"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[317]" " -type \"float3\" 2.0244733e-09 13.059286 2.45317819999999998"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[318]" " -type \"float3\" 6.9819491999999996e-08 13.131548 2.635462"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[319]" " -type \"float3\" 6.4571324e-08 13.196571 2.82001690000000016"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[320]" " -type \"float3\" -0.17371423999999999 13.184202 2.81773190000000007"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[321]" " -type \"float3\" -0.33787790000000001 13.184538 2.84707450000000017"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[322]" " -type \"float3\" 0.12915777000000001 13.06275 2.4663371999999999"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[323]" " -type \"float3\" 0.15808749 13.13096 2.64405849999999987"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[324]" " -type \"float3\" 0.23107572000000001 13.086582 2.53316430000000015"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[325]" " -type \"float3\" 0.301193 13.123385 2.65668250000000006"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[326]" " -type \"float3\" 0.17371437000000001 13.184202 2.81773190000000007"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[327]" " -type \"float3\" -0.27307603000000003 13.238031 2.99182110000000012"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[328]" " -type \"float3\" -0.16311407 13.241622 3.03806589999999987"
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[329]" " -type \"float3\" 6.4218369000000002e-08 13.24248 3.06322740000000016"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[330]" " -type \"float3\" 0.16311421000000001 13.241622 3.03806589999999987"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[331]" " -type \"float3\" 0.33787795999999998 13.184538 2.84707450000000017"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"pnts[332]" " -type \"float3\" 0.27307615000000002 13.238031 2.99182110000000012"
+		
+		2 "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape" 
+		"vertexColorSource" " 2"
+		5 3 "police_hatRN" "|Swan|GEO|swan_base1|police_hat:police_hat|police_hat:police_hatShape.worldMesh" 
+		"police_hatRN.placeHolderList[20]" ""
+		5 3 "police_hatRN" "police_hat:lambert2SG.memberWireframeColor" "police_hatRN.placeHolderList[21]" 
+		""
+		5 4 "police_hatRN" "police_hat:lambert2SG.dagSetMembers" "police_hatRN.placeHolderList[22]" 
+		""
+		5 0 "police_hatRN" "police_hat:groupId3.message" "police_hat:lambert2SG.groupNodes" 
+		"police_hatRN.placeHolderList[23]" "police_hatRN.placeHolderList[24]" ""
+		5 3 "police_hatRN" "police_hat:blinn1SG.memberWireframeColor" "police_hatRN.placeHolderList[25]" 
+		""
+		5 4 "police_hatRN" "police_hat:blinn1SG.dagSetMembers" "police_hatRN.placeHolderList[26]" 
+		""
+		5 0 "police_hatRN" "police_hat:groupId3.message" "police_hat:blinn1SG.groupNodes" 
+		"police_hatRN.placeHolderList[27]" "police_hatRN.placeHolderList[28]" ""
+		5 0 "police_hatRN" "police_hat:groupId4.message" "police_hat:blinn1SG.groupNodes" 
+		"police_hatRN.placeHolderList[29]" "police_hatRN.placeHolderList[30]" ""
+		5 3 "police_hatRN" "police_hat:blinn2SG.memberWireframeColor" "police_hatRN.placeHolderList[31]" 
+		""
+		5 4 "police_hatRN" "police_hat:blinn2SG.dagSetMembers" "police_hatRN.placeHolderList[32]" 
+		""
+		5 0 "police_hatRN" "police_hat:groupId4.message" "police_hat:blinn2SG.groupNodes" 
+		"police_hatRN.placeHolderList[33]" "police_hatRN.placeHolderList[34]" ""
+		5 0 "police_hatRN" "police_hat:groupId5.message" "police_hat:blinn2SG.groupNodes" 
+		"police_hatRN.placeHolderList[35]" "police_hatRN.placeHolderList[36]" ""
+		5 3 "police_hatRN" "police_hat:groupId3.groupId" "police_hatRN.placeHolderList[37]" 
+		""
+		5 3 "police_hatRN" "police_hat:groupId4.groupId" "police_hatRN.placeHolderList[38]" 
+		""
+		5 3 "police_hatRN" "police_hat:groupId5.groupId" "police_hatRN.placeHolderList[39]" 
+		""
+		8 "|Swan|GEO|swan_base1|police_hat:police_hat" "translateY"
+		8 "|Swan|GEO|swan_base1|police_hat:police_hat" "translateZ"
+		8 "|Swan|GEO|swan_base1|police_hat:police_hat" "translateX"
+		8 "|Swan|GEO|swan_base1|police_hat:police_hat" "scaleX"
+		8 "|Swan|GEO|swan_base1|police_hat:police_hat" "scaleY"
+		8 "|Swan|GEO|swan_base1|police_hat:police_hat" "scaleZ"
+		8 "|Swan|GEO|swan_base1|police_hat:police_hat" "rotateX"
+		8 "|Swan|GEO|swan_base1|police_hat:police_hat" "rotateY"
+		8 "|Swan|GEO|swan_base1|police_hat:police_hat" "rotateZ";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode transformGeometry -n "transformGeometry1";
 	rename -uid "92D83A19-4193-3276-1896-B695B572BC12";
 	setAttr ".txf" -type "matrix" 1.4171747969181157 0 0 0 0 1.4171747969181157 0 0
 		 0 0 1.4171747969181157 0 0 13.017841684193796 2.7976597165888326 1;
-createNode skinCluster -n "skinCluster12";
-	rename -uid "77D9EC36-4433-EE0D-2289-B88A401132DB";
-	setAttr ".skm" 1;
-	setAttr -s 333 ".wl";
-	setAttr ".wl[0:332].w"
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1;
-	setAttr -s 47 ".pm";
-	setAttr ".pm[0]" -type "matrix" 0.018635171000353772 -0.10210719647435636 0.99459883914568015 -0
-		 0.98375061167217204 0.17954034096722452 -1.52655665885959e-16 0 -0.17857061470582106 0.97843721637799519 0.10379378194316485 -0
-		 -2.3294605110677944 0.24741272539665177 0.016191311353530875 1;
-	setAttr ".pm[1]" -type "matrix" -0.044031851640286883 0.10851153655707287 -0.99311955094799675 -0
-		 0.92661824458466446 0.37600349573220021 -3.2474023470285829e-15 -0 0.37341642283643967 -0.92024269496214328 -0.1171048996620091 -0
-		 -1.86910635077876 -1.4577691596190159 -0.025050845925889326 1;
-	setAttr ".pm[2]" -type "matrix" 0.022298772870656562 -0.025670122464623205 -0.99942173757684194 -0
-		 0.6049260347494434 0.79625129418684504 -0.0069547816708678632 -0 0.79596938208123214 -0.60442114565791416 0.033283952151095843 -0
-		 -1.8583230822148191 -2.7994934276406691 0.030442618618246431 1;
-	setAttr ".pm[3]" -type "matrix" -0.026809585743133409 0.051450778528410207 -0.99831561317105599 -0
-		 0.75335872902867851 0.65746803791561492 0.01365300390702882 -0 0.65706306509236689 -0.75172375012913584 -0.056387338855567598 -0
-		 -3.8290929009159766 -2.0712515851497622 0.029041022754618194 1;
-	setAttr ".pm[4]" -type "matrix" 0.048094737986099166 -0.16865896249238674 -0.98450040657637117 -0
-		 0.96166470139538718 0.27422801113329204 -3.0531133177191805e-16 -0 0.26997758845535619 -0.94675928951390331 0.17538229514680159 -0
-		 -5.4902824267124446 0.27359399385002026 -0.31631495879421845 1;
-	setAttr ".pm[5]" -type "matrix" -0.046521848324449097 0.095223134157949862 0.99436827802862549 -0
-		 0.89850229273692628 0.43896882571144702 -1.7763568394002501e-15 0 -0.43649667533093928 0.89344217763358968 -0.10597984549142327 0
-		 -5.4605563054467359 -5.0260884565664341 0.1706287651994127 1;
-	setAttr ".pm[6]" -type "matrix" 4.0568165544821682e-15 -2.8681947296708125e-14 -0.99999999999999978 -0
-		 0.99245567979813598 0.1226039299387252 4.9605152357391211e-16 -0 0.12260392993872564 -0.99245567979813587 2.8866841445420719e-14 -0
-		 -10.786311994363892 0.62303140052027961 0.0023281917466973926 1;
-	setAttr ".pm[7]" -type "matrix" 9.6424682689692091e-15 -2.7315465710285541e-14 -0.99999999999999978 -0
-		 0.94868276605266777 0.31622936200590118 4.9605152357391251e-16 -0 0.31622936200590157 -0.94868276605266755 2.8866841445420726e-14 -0
-		 -11.885004535272792 -1.7592942226387389 0.0023281917466960989 1;
-	setAttr ".pm[8]" -type "matrix" 0.99999999999999978 2.9904128453571014e-16 2.8892726131156467e-14 -0
-		 -3.2951806988013838e-16 1 2.0539125955565254e-15 0 -2.8866841445420726e-14 -1.6098233857064857e-15 1 -0
-		 -0.0023281917466973757 -13.614689466676804 -2.6837952921931847 1;
-	setAttr ".pm[9]" -type "matrix" 0.99999999999999978 2.9904128453571014e-16 2.8892726131156467e-14 -0
-		 -3.2951806988013838e-16 1 2.0539125955565254e-15 0 -2.8866841445420726e-14 -1.6098233857064857e-15 1 -0
-		 -0.58432143000784109 -12.694898453716112 -3.1641894298960724 1;
-	setAttr ".pm[10]" -type "matrix" 0.99999999999999978 2.9904128453571014e-16 2.8892726131156467e-14 -0
-		 -3.2951806988013838e-16 1 2.0539125955565254e-15 0 -2.8866841445420726e-14 -1.6098233857064857e-15 1 -0
-		 0.58147263106908187 -12.694898453716114 -3.1641894298960689 1;
-	setAttr ".pm[11]" -type "matrix" 9.6424682689692091e-15 -2.7315465710285541e-14 -0.99999999999999978 -0
-		 0.94868276605266777 0.31622936200590118 4.9605152357391251e-16 -0 0.31622936200590157 -0.94868276605266755 2.8866841445420726e-14 -0
-		 -12.643065328431971 -0.38757276079116953 0.0023281917466430328 1;
-	setAttr ".pm[12]" -type "matrix" -1.2858868641136192e-16 2.8967142182783406e-14 -0.99999999999999978 0
-		 -0.99991344614169964 0.013156755870284418 4.9605152357391152e-16 0 0.01315675587028403 0.99991344614169952 2.8866841445420726e-14 -0
-		 12.123307736548986 -4.053406893112883 0.0023281917466374119 1;
-	setAttr ".pm[13]" -type "matrix" 0.99999999999999978 7.317165606308225e-16 2.8960021768249446e-14 -0
-		 -7.1809612849894303e-16 1 1.99666672084929e-15 0 -2.8866841445420726e-14 -1.5508427875232864e-15 0.99999999999999978 -0
-		 -0.0023281917467078634 -12.093681469615253 -4.8097519572989684 1;
-	setAttr ".pm[14]" -type "matrix" 0.99999999999999978 2.9904128453577107e-16 2.8892726131156467e-14 -0
-		 -3.2951806988013898e-16 1 -5.5511151231272162e-17 0 -2.8866841445420726e-14 4.9960036108131177e-16 1 -0
-		 -0.0023281917466393834 -11.841195615647296 -3.897952556018724 1;
-	setAttr ".pm[15]" -type "matrix" 0.99999999999999978 2.9904128453577107e-16 2.8892726131156467e-14 -0
-		 -3.2951806988013898e-16 1 -5.5511151231272162e-17 0 -2.8866841445420726e-14 4.9960036108131177e-16 1 -0
-		 -0.0023281917466980617 -11.850616759009132 -4.6622931607321503 1;
-	setAttr ".pm[16]" -type "matrix" 0.58554230204754976 -0.46623669478901331 0.6631467084628202 -0
-		 0.65751082371933312 0.75164077721044686 -0.052111982560632285 0 -0.47415158884557151 0.46653990876096824 0.74667314423951814 -0
-		 -1.6827485469648518 -2.7087321107125941 -2.179455914981177 1;
-	setAttr ".pm[17]" -type "matrix" 0.9726336683832254 0.088657040497831421 -0.21476423421406951 -0
-		 -0.090775195977710402 0.99587140926688344 -1.1900203045200899e-15 0 0.21387756058688837 0.019495265449787091 0.976665922259216 -0
-		 -1.9861246525280902 -4.317860529017616 -0.81660229787675098 1;
-	setAttr ".pm[18]" -type "matrix" 0.70003099021280013 0.15032706094371448 0.6981105839977727 -0
-		 -0.20995694193175823 0.97771063333414998 -3.4694469519536157e-16 0 -0.68255014121773616 -0.14657316334636517 0.71598995279982036 -0
-		 -1.6969361742718345 -4.2502079053808384 -5.3673741626993712 1;
-	setAttr ".pm[19]" -type "matrix" -0.58774017307818738 -9.0719609140863041e-16 0.80904974442244437 -0
-		 6.0287858659676738e-16 1.0000000000000002 1.6729956301517735e-15 -0 -0.80904974442244459 2.3186761480786456e-15 -0.58774017307818782 -0
-		 4.7240677438018883 -3.2591044466753809 -5.576062714723208 1;
-	setAttr ".pm[20]" -type "matrix" 1 -9.071960914086306e-16 -1.0547118733938979e-15 -0
-		 9.992007221626399e-16 1.0000000000000002 -1.4710455076283344e-15 0 7.7715611723761224e-16 2.3186761480786456e-15 1.0000000000000004 -0
-		 -7.622028337046876 -3.1848895801200627 -0.06474323961492652 1;
-	setAttr ".pm[21]" -type "matrix" -0.73831266871772583 -3.7420910776046637e-16 0.67445860007187186 -0
-		 2.6893904030221751e-16 1.0000000000000002 1.1318127507755961e-15 -0 -0.67445860007187208 1.8456910891971049e-15 -0.73831266871772627 -0
-		 4.8947742910713572 -3.4436485830619725 -4.6881871080918467 1;
-	setAttr ".pm[22]" -type "matrix" 0.99999999999999978 -3.7420910776046632e-16 -1.3322676295501875e-15 -0
-		 5.6479974286368753e-16 1 -1.017019941140788e-15 0 1.1657341758564154e-15 1.8456910891971049e-15 1.0000000000000002 -0
-		 -7.4545702804855951 -3.077682338363954 0.73416931165264687 1;
-	setAttr ".pm[23]" -type "matrix" 0.99999999999999989 -8.2000597750227007e-16 -1.998401444325281e-15 -0
-		 9.436895709313805e-16 1.0000000000000002 -1.4432899320127065e-15 0 1.7763568394002532e-15 2.3074248706709095e-15 1.0000000000000004 -0
-		 -6.1911997181259144 -3.4286620379612369 0.69412219937840447 1;
-	setAttr ".pm[24]" -type "matrix" 0.99999999999999989 -8.2000597750227007e-16 -1.998401444325281e-15 -0
-		 9.436895709313805e-16 1.0000000000000002 -1.4432899320127065e-15 0 1.7763568394002532e-15 2.3074248706709095e-15 1.0000000000000004 -0
-		 -6.6688273439009942 -3.2652018832911551 0.94542788453333826 1;
-	setAttr ".pm[25]" -type "matrix" -0.58322327557414633 0.49078095193967852 0.64729025022917308 -0
-		 0.6687031379056122 0.74247606959607304 0.039565128994546422 0 -0.46117970920645518 0.45592032559467061 -0.76121608793160611 0
-		 -1.7042787664932868 -2.691099994062947 2.2035776461553858 1;
-	setAttr ".pm[26]" -type "matrix" -0.97263354781877975 -0.088659119978576631 -0.21476392178873221 0
-		 -0.090777318755031963 0.99587121577021531 1.8249290967275991e-15 0 0.21387720789532394 0.019495692985298865 -0.97666599096002249 -0
-		 -1.9224458745274733 -4.3525079885153808 0.87764060753043227 1;
-	setAttr ".pm[27]" -type "matrix" -0.71898739416136437 -0.15366504817552923 0.67782311852448762 -0
-		 -0.20900410816080886 0.97791476252887422 1.1796119636642272e-15 0 -0.66285323398845597 -0.14166781637798748 -0.73522501317197941 0
-		 -1.7557292732510477 -4.3014153506395996 5.2794819632027279 1;
-	setAttr ".pm[28]" -type "matrix" -0.71898739416136437 -0.15366504817552923 0.67782311852448762 -0
-		 -0.20900410816080886 0.97791476252887422 1.1796119636642272e-15 0 -0.66285323398845597 -0.14166781637798748 -0.73522501317197941 0
-		 -4.3186812880865091 -4.3014153506396005 5.2794819632027279 1;
-	setAttr ".pm[29]" -type "matrix" 0.99999999999999911 -1.7851672989623906e-15 5.3290705182007506e-15 -0
-		 -1.7208456881690068e-15 -0.99999999999999956 3.1641356201816851e-15 0 5.2180482157382239e-15 -3.771253943428806e-15 -0.99999999999999978 -0
-		 7.6149487913102991 3.2252098954430002 0.16035040152388347 1;
-	setAttr ".pm[30]" -type "matrix" -0.71898739416136437 -0.15366504817552923 0.67782311852448762 -0
-		 -0.20900410816080886 0.97791476252887422 1.1796119636642272e-15 0 -0.66285323398845597 -0.14166781637798748 -0.73522501317197941 0
-		 -4.2869473991888594 -4.494659517213667 4.4307216890592649 1;
-	setAttr ".pm[31]" -type "matrix" 0.99999999999999933 -1.84067845019365e-15 5.2735593669694951e-15 -0
-		 -1.7763568394002666e-15 -1 3.2196467714129437e-15 0 5.3845816694319982e-15 -3.7712539434288091e-15 -0.99999999999999978 -0
-		 7.4151248304085753 3.1179529402311075 -0.63871051619036578 1;
-	setAttr ".pm[32]" -type "matrix" -0.71898739416136437 -0.15366504817552923 0.67782311852448762 -0
-		 -0.20900410816080886 0.97791476252887422 1.1796119636642272e-15 0 -0.66285323398845597 -0.14166781637798748 -0.73522501317197941 0
-		 -4.0216231527187389 -4.4940063707148754 3.6803509809209327 1;
-	setAttr ".pm[33]" -type "matrix" 0.99999999999999933 -1.8406784501936496e-15 5.3845816694320092e-15 -0
-		 -1.776356839400267e-15 -1 3.2196467714129429e-15 0 5.4956039718945123e-15 -3.7712539434288084e-15 -0.99999999999999956 -0
-		 6.5857820588966298 3.2349778118104404 -0.88854531594566344 1;
-	setAttr ".pm[34]" -type "matrix" 0.027022459933108093 -0.00015105936546784944 0.99963481524016173 -0
-		 0.0055900538151324791 0.99998437552711006 1.6022339704990794e-15 0 -0.99961919647309116 0.0055880124126728775 0.027022882151397799 -0
-		 -1.5939099155402328 -3.0893239078332964 0.042620259789763068 1;
-	setAttr ".pm[35]" -type "matrix" 1.0000000000000002 6.6935509126113131e-17 -1.2663481374630662e-15 -0
-		 -1.9108904916327919e-17 1 5.9984123994757031e-14 0 1.4190038033490304e-15 -5.9580878858358115e-14 1.0000000000000004 -0
-		 -0.052568699999995368 -3.1090604075120942 3.5218213204825219 1;
-	setAttr ".pm[36]" -type "matrix" 1.0000000000000002 6.6935509126113131e-17 -1.2663481374630662e-15 -0
-		 -1.9108904916327919e-17 1 5.9984123994757031e-14 0 1.4190038033490304e-15 -5.9580878858358115e-14 1.0000000000000004 -0
-		 -0.052568699999995715 -2.3595315559214125 3.2448215275034098 1;
-	setAttr ".pm[37]" -type "matrix" 0.97437006478523547 6.7948297954725271e-17 0.22495105434386506 -0
-		 -1.3512973905088483e-14 1.0000000000000002 5.8444005342268931e-14 0 -0.22495105434386495 -5.9580904442756133e-14 0.97437006478523569 -0
-		 -0.76159871830132297 -1.7457869165754289 3.0651569716033071 1;
-	setAttr ".pm[38]" -type "matrix" 0.23662323082654821 0.95924938124237191 -0.15443468269573413 -0
-		 -0.97089723499141012 0.23949646988219714 2.2898349882893844e-16 0 0.036986561333005721 0.14994020641606412 0.98800300039051892 -0
-		 2.1937527999473421 -0.48970021284300758 0.65993562595786448 1;
-	setAttr ".pm[39]" -type "matrix" 0.010833394824092655 0.98627331865540835 -0.16476522225588741 -0
-		 -0.99993713975942411 0.0102089866636242 -0.0046360674114832422 0 -0.0028903436347944172 0.16480508942307764 0.98632191926060542 -0
-		 1.1011708332916905 -0.23574185039617623 0.66744463249821673 1;
-	setAttr ".pm[40]" -type "matrix" 0.25293894606021466 -0.001515060633293206 -0.96748105622654179 -0
-		 -0.036900771251797936 0.9992560332616659 -0.011212184050531197 0 0.96677826963940927 0.038536795163038061 0.25269486099165483 -0
-		 0.51401068262059069 -0.023131310637923976 0.48793755250683934 1;
-	setAttr ".pm[41]" -type "matrix" 0.32992089441454958 -0.01083339482409194 -0.94394641849274896 -0
-		 0.00084570836926690463 0.999937139759424 -0.011180398342457083 0 0.9440082034633267 0.002890343634795609 0.32990931740042601 -0
-		 -0.70288799077314479 0.0013969701351541791 0.43265522698312625 1;
-	setAttr ".pm[42]" -type "matrix" 0.99988646285503824 -0.010833394824091944 -0.010473726931010206 -0
-		 0.010802479054255226 0.99993713975942422 -0.0030038268965175692 0 0.010505610192768933 0.0028903436347956098 0.99994063727210858 -0
-		 -0.98456333786610728 0.001396970135153869 -1.4517550175017211 1;
-	setAttr ".pm[43]" -type "matrix" -0.012460827714085059 0.9897143196479633 -0.14251418615860095 -0
-		 -0.99991686898226129 -0.012805921294011006 -0.0015044947731276818 0 -0.0033140454720271442 0.14248359155909884 0.98979161606826571 -0
-		 1.1004059801794714 0.42442243078366415 0.56522459283098336 1;
-	setAttr ".pm[44]" -type "matrix" -0.25147759478683923 0.0031974694370025388 -0.96785783848116114 0
-		 -0.03691901126723468 0.99923507621135421 0.012893761124611741 0 0.96715872840360406 0.038974846479340887 -0.25116718618210415 -0
-		 0.51594424304254782 -0.022297287787994287 -0.48437859183928322 1;
-	setAttr ".pm[45]" -type "matrix" -0.32843490731291425 0.01246082771408265 -0.94444440780335892 -0
-		 0.00096244830397073169 0.99991686898226162 0.012858025430559035 -0 0.94452611681817444 0.0033140454720278273 -0.32841959708730811 -0
-		 -0.70064482666242878 0.0021592098205267161 -0.4292654364325284 1;
-	setAttr ".pm[46]" -type "matrix" 0.99984985046069341 -0.012460827714082835 -0.012041773391347134 -0
-		 -0.01241994248834017 -0.99991686898226162 0.0034641237415892869 0 -0.012083938195593908 -0.0033140454720272917 -0.99992149468860536 -0
-		 0.98061335440161934 -0.0021592098205270647 1.4507918629614511 1;
-	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr -s 47 ".ma";
-	setAttr -s 47 ".dpf[0:46]"  4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-		4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4;
-	setAttr -s 47 ".lw";
-	setAttr -s 47 ".lw";
-	setAttr ".mi" 1;
-	setAttr ".bm" 3;
-	setAttr ".ucm" yes;
-	setAttr -s 47 ".ifcl";
-	setAttr -s 47 ".ifcl";
-createNode tweak -n "tweak12";
-	rename -uid "5EFFFFB6-4C89-BE24-D528-FB9D60DCF04E";
-createNode objectSet -n "skinCluster12Set";
-	rename -uid "3511F1CB-48E2-089B-F24B-6CBBFA013AAA";
-	setAttr ".ihi" 0;
-	setAttr ".vo" yes;
-createNode groupId -n "skinCluster12GroupId";
-	rename -uid "4D60987C-4D3A-47FD-34AF-96BC5A8A9905";
-	setAttr ".ihi" 0;
-createNode groupParts -n "skinCluster12GroupParts";
-	rename -uid "47975B59-4625-EE71-B96F-7695E0E48DC2";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "vtx[*]";
-createNode objectSet -n "tweakSet12";
-	rename -uid "5339D708-4DAA-89B7-756E-E6B6D6D78939";
-	setAttr ".ihi" 0;
-	setAttr ".vo" yes;
-createNode groupId -n "groupId34";
-	rename -uid "052BC4B4-47D4-1F2E-0D09-9B83FA8F9D96";
-	setAttr ".ihi" 0;
-createNode groupParts -n "groupParts34";
-	rename -uid "AA97CE9C-4F85-BF76-533F-85B40F96F3D1";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "vtx[*]";
 createNode dagPose -n "bindPose4";
 	rename -uid "9C09ADE6-40BD-5E5C-7EA5-BEA094F9AA9E";
 	setAttr -s 52 ".wm";
@@ -15893,7 +15284,7 @@ createNode dagPose -n "bindPose4";
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.95726932398582854 0.28428784773540572 0.0087562355579536271 0.052337265161061873 1
 		 1 1 yes;
 	setAttr ".xm[10]" -type "matrix" "xform" 1 1 1 -1.6653345369377348e-16 -5.5511151231257827e-17
-		 4.622231866529366e-33 0 1.2120329264670886 -3.3306690738754696e-16 1.2945373939476923e-15 0
+		 4.6222318665293654e-33 0 1.2120329264670886 -3.3306690738754696e-16 1.2945373939476923e-15 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 -0.099255825925948504 0.99506194833274464 1
 		 1 1 yes;
 	setAttr ".xm[11]" -type "matrix" "xform" 1 1 1 0 0 0 0 1.8797115999269671 -4.4408920985006262e-16
@@ -16038,9 +15429,6 @@ createNode dagPose -n "bindPose4";
 		no no no no no no no no no no no no no no no no no no no no no no no no no no no 
 		no no no no no no no no no no no no;
 	setAttr ".bp" yes;
-createNode geomBind -n "geomBind5";
-	rename -uid "7606FA45-4026-223D-2B0D-92A621FF5CA1";
-	setAttr ".mi" 1;
 createNode reference -n "police_badgeRN";
 	rename -uid "E351033F-4949-BCC3-3D95-8B9ED9C1C13D";
 	setAttr -s 2 ".phl";
@@ -16049,7 +15437,7 @@ createNode reference -n "police_badgeRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"police_badgeRN"
 		"police_badgeRN" 0
-		"police_badgeRN" 2363
+		"police_badgeRN" 41
 		0 "|police_badge:police_badge_GEO" "|Swan|GEO|swan_base1" "-s -r "
 		0 "|police_badgeRNfosterParent1|police_badge_GEOShapeDeformed" "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" 
 		"-s -r "
@@ -16070,6699 +15458,172 @@ createNode reference -n "police_badgeRN";
 		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
 		"pnts" " -s 2328"
 		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[0]" " -type \"float3\" 0.66254597999999998 3.94135619999999998 2.5083985000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1]" " -type \"float3\" 0.84529125999999999 4.44887109999999986 3.38313029999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2]" " -type \"float3\" 0.75356095999999995 4.17142579999999974 2.90957450000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[3]" " -type \"float3\" 0.57153111999999995 4.17142579999999974 2.80627439999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[4]" " -type \"float3\" 0.47980075999999999 4.44887109999999986 3.1757181000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[5]" " -type \"float3\" 0.75356089999999998 4.72631650000000025 3.752574"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[6]" " -type \"float3\" 0.57153105999999998 4.72631650000000025 3.64927389999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[7]" " -type \"float3\" 0.66254603999999995 4.95638609999999957 4.05044979999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[8]" " -type \"float3\" 0.91368936999999995 4.70161289999999976 3.80591539999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[9]" " -type \"float3\" 0.91368936999999995 4.19612929999999995 3.03797579999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[10]" " -type \"float3\" 0.41140267000000003 4.70161340000000028 3.5208731000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[11]" " -type \"float3\" 0.41140272999999999 4.19612880000000033 2.75293279999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[12]" " -type \"float3\" 0.668975 3.91135620000000017 2.52706959999999992"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[13]" " -type \"float3\" 0.57796007000000005 4.14142610000000033 2.82494569999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[14]" " -type \"float3\" 0.75998991999999999 4.14142610000000033 2.92824580000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[15]" " -type \"float3\" 0.41783172000000002 4.16612910000000003 2.77160379999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[16]" " -type \"float3\" 0.48622980999999998 4.41887139999999956 3.1943893000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[17]" " -type \"float3\" 0.85172026999999995 4.41887139999999956 3.4018016000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[18]" " -type \"float3\" 0.75998991999999999 4.69631620000000005 3.771245"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[19]" " -type \"float3\" 0.57796007000000005 4.69631620000000005 3.66794490000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[20]" " -type \"float3\" 0.92011838999999995 4.67161320000000035 3.82458659999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[21]" " -type \"float3\" 0.668975 4.92638640000000017 4.06912089999999971"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[22]" " -type \"float3\" 0.92011832999999998 4.16612910000000003 3.05664680000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[23]" " -type \"float3\" 0.41783165999999999 4.67161369999999998 3.53954410000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[24]" " -type \"float3\" 0.40984832999999998 4.18115089999999956 2.75958989999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[25]" " -type \"float3\" 0.57301694000000003 4.15597870000000036 2.81394460000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[26]" " -type \"float3\" 0.66575998000000003 3.92154120000000006 2.5104131999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[27]" " -type \"float3\" 0.75850284000000001 4.15597870000000036 2.91920590000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[28]" " -type \"float3\" 0.92167151000000003 4.18115140000000007 3.05004479999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[29]" " -type \"float3\" 0.85197478999999998 4.43387409999999971 3.394433"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[30]" " -type \"float3\" 0.92167157 4.6865964 3.81792590000000009"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[31]" " -type \"float3\" 0.75850289999999998 4.71176860000000008 3.76357169999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[32]" " -type \"float3\" 0.66575991999999995 4.946207 4.06710290000000008"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[33]" " -type \"float3\" 0.573017 4.71176860000000008 3.65831019999999985"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[34]" " -type \"float3\" 0.40984832999999998 4.68659689999999962 3.52747179999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[35]" " -type \"float3\" 0.47954506000000002 4.43387409999999971 3.18308310000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[36]" " -type \"float3\" 0.39366421000000001 4.73770380000000024 3.49950770000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[37]" " -type \"float3\" 0.39455353999999998 4.740746 3.50463440000000004"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[38]" " -type \"float3\" 0.39593872000000002 4.74316020000000016 3.50908849999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[39]" " -type \"float3\" 0.39768416000000001 4.74471039999999977 3.51243419999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[40]" " -type \"float3\" 0.39961898000000001 4.74524450000000009 3.51434369999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[41]" " -type \"float3\" 0.40155374999999999 4.74471039999999977 3.5146301000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[42]" " -type \"float3\" 0.40329917999999998 4.74316020000000016 3.51326559999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[43]" " -type \"float3\" 0.40468430999999999 4.740746 3.51038359999999994"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[44]" " -type \"float3\" 0.40557367 4.73770380000000024 3.50626609999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[45]" " -type \"float3\" 0.40588009000000003 4.73433110000000035 3.50131650000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[46]" " -type \"float3\" 0.40557367 4.73095849999999984 3.49601890000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[47]" " -type \"float3\" 0.40468430999999999 4.72791620000000012 3.4908923999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[48]" " -type \"float3\" 0.40329915 4.72550150000000002 3.4864383000000001"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[49]" " -type \"float3\" 0.40155374999999999 4.72395130000000041 3.48309250000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[50]" " -type \"float3\" 0.39961898000000001 4.72341730000000037 3.48118309999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[51]" " -type \"float3\" 0.39768416000000001 4.72395130000000041 3.48089670000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[52]" " -type \"float3\" 0.39593872000000002 4.72550150000000002 3.48226119999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[53]" " -type \"float3\" 0.39455357000000002 4.72791620000000012 3.4851432"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[54]" " -type \"float3\" 0.39366424 4.73095849999999984 3.48926040000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[55]" " -type \"float3\" 0.39335777999999999 4.73433110000000035 3.49421019999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[56]" " -type \"float3\" 0.38823551000000001 4.73922250000000034 3.502311"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[57]" " -type \"float3\" 0.38999226999999997 4.74523259999999958 3.51243809999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[58]" " -type \"float3\" 0.39272854000000001 4.7500019 3.52123689999999989"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[59]" " -type \"float3\" 0.39617639999999998 4.75306419999999985 3.52784539999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[60]" " -type \"float3\" 0.39999831000000002 4.75411889999999993 3.53161740000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[61]" " -type \"float3\" 0.40382034 4.75306419999999985 3.53218340000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[62]" " -type \"float3\" 0.40726816999999998 4.75000140000000037 3.52948780000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[63]" " -type \"float3\" 0.41000435000000002 4.74523259999999958 3.52379489999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[64]" " -type \"float3\" 0.41176110999999999 4.73922250000000034 3.51566150000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[65]" " -type \"float3\" 0.41236651000000002 4.73256060000000023 3.50588420000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[66]" " -type \"float3\" 0.41176110999999999 4.72589870000000012 3.49541950000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[67]" " -type \"float3\" 0.41000440999999999 4.71988870000000027 3.48529219999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[68]" " -type \"float3\" 0.40726820000000002 4.71511939999999985 3.47649359999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[69]" " -type \"float3\" 0.40382027999999998 4.7120571 3.46988489999999983"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[70]" " -type \"float3\" 0.39999836999999999 4.7110019000000003 3.46611309999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[71]" " -type \"float3\" 0.39617639999999998 4.7120571 3.46554710000000021"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[72]" " -type \"float3\" 0.39272857 4.71511939999999985 3.46824259999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[73]" " -type \"float3\" 0.38999233 4.71988870000000027 3.4739355999999999"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[74]" " -type \"float3\" 0.38823551000000001 4.72589870000000012 3.482069"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[75]" " -type \"float3\" 0.38763022000000003 4.73256060000000023 3.49184660000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[76]" " -type \"float3\" 0.38333901999999997 4.73944619999999972 3.50573369999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[77]" " -type \"float3\" 0.38591996000000001 4.74827479999999991 3.520612"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[78]" " -type \"float3\" 0.38993992999999999 4.75528239999999958 3.53353859999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[79]" " -type \"float3\" 0.39500526000000002 4.75978089999999998 3.54324769999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[80]" " -type \"float3\" 0.40062030999999998 4.76133109999999959 3.54878930000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[81]" " -type \"float3\" 0.40623531000000002 4.75978089999999998 3.5496205999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[82]" " -type \"float3\" 0.41130072000000001 4.75528239999999958 3.54566049999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[83]" " -type \"float3\" 0.41532060999999998 4.74827479999999991 3.53729650000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[84]" " -type \"float3\" 0.41790152000000003 4.73944619999999972 3.52534750000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[85]" " -type \"float3\" 0.41879084999999999 4.7296585999999996 3.510983"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[86]" " -type \"float3\" 0.41790157999999999 4.719871 3.49560929999999992"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[87]" " -type \"float3\" 0.41532057999999999 4.71104150000000033 3.4807307999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[88]" " -type \"float3\" 0.41130065999999998 4.70403479999999963 3.4678043999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[89]" " -type \"float3\" 0.40623534 4.6995357999999996 3.45809530000000009"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[90]" " -type \"float3\" 0.40062028 4.69798559999999998 3.45255370000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[91]" " -type \"float3\" 0.39500529000000001 4.6995357999999996 3.45172239999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[92]" " -type \"float3\" 0.38993987000000002 4.70403479999999963 3.45568229999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[93]" " -type \"float3\" 0.38591996000000001 4.71104150000000033 3.46404619999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[94]" " -type \"float3\" 0.38333901999999997 4.719871 3.47599530000000012"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[95]" " -type \"float3\" 0.38244969000000001 4.7296585999999996 3.49035979999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[96]" " -type \"float3\" 0.37909525999999999 4.738368 3.50969169999999986"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[97]" " -type \"float3\" 0.38243686999999998 4.74979879999999977 3.528955"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[98]" " -type \"float3\" 0.38764143000000001 4.75887110000000035 3.54569080000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[99]" " -type \"float3\" 0.39419960999999998 4.7646961000000001 3.55826140000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[100]" " -type \"float3\" 0.40146949999999998 4.76670269999999974 3.56543590000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[101]" " -type \"float3\" 0.40873926999999999 4.7646961000000001 3.56651259999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[102]" " -type \"float3\" 0.41529745000000001 4.75887110000000035 3.56138539999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[103]" " -type \"float3\" 0.42050209999999999 4.74979879999999977 3.55055670000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[104]" " -type \"float3\" 0.42384361999999998 4.738368 3.53508619999999985"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[105]" " -type \"float3\" 0.42499503 4.7256961000000004 3.51648810000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[106]" " -type \"float3\" 0.42384361999999998 4.71302410000000016 3.49658349999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[107]" " -type \"float3\" 0.42050207000000001 4.7015924 3.47732039999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[108]" " -type \"float3\" 0.41529745000000001 4.69252059999999993 3.46058440000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[109]" " -type \"float3\" 0.40873930000000003 4.68669609999999981 3.44801380000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[110]" " -type \"float3\" 0.40146949999999998 4.68468860000000031 3.44083929999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[111]" " -type \"float3\" 0.39419967 4.68669609999999981 3.43976280000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[112]" " -type \"float3\" 0.38764143000000001 4.69252059999999993 3.44488979999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[113]" " -type \"float3\" 0.38243681000000002 4.7015924 3.45571880000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[114]" " -type \"float3\" 0.37909532000000001 4.71302410000000016 3.47118929999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[115]" " -type \"float3\" 0.37794380999999999 4.7256961000000004 3.48978710000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[116]" " -type \"float3\" 0.37560871000000001 4.73601480000000041 3.51408740000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[117]" " -type \"float3\" 0.37962863000000002 4.74976679999999973 3.53726120000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[118]" " -type \"float3\" 0.38588985999999997 4.76068069999999999 3.55739450000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[119]" " -type \"float3\" 0.39377930999999999 4.76768780000000003 3.57251690000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[120]" " -type \"float3\" 0.40252492000000001 4.770102 3.58114810000000006"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[121]" " -type \"float3\" 0.41127053000000002 4.76768780000000003 3.582443"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[122]" " -type \"float3\" 0.41916009999999998 4.76068069999999999 3.57627510000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[123]" " -type \"float3\" 0.42542118000000001 4.74976679999999973 3.56324789999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[124]" " -type \"float3\" 0.42944109000000003 4.73601480000000041 3.54463669999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[125]" " -type \"float3\" 0.43082625000000002 4.72077080000000038 3.52226350000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[126]" " -type \"float3\" 0.42944109000000003 4.70552640000000011 3.49831819999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[127]" " -type \"float3\" 0.42542118000000001 4.6917743999999999 3.47514460000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[128]" " -type \"float3\" 0.41916009999999998 4.68086049999999965 3.45501140000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[129]" " -type \"float3\" 0.41127056000000001 4.67385390000000012 3.439889"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[130]" " -type \"float3\" 0.40252497999999998 4.67143920000000001 3.43125770000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[131]" " -type \"float3\" 0.39377937000000002 4.67385390000000012 3.42996290000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[132]" " -type \"float3\" 0.38588985999999997 4.68086049999999965 3.43613079999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[133]" " -type \"float3\" 0.37962863000000002 4.6917743999999999 3.449158"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[134]" " -type \"float3\" 0.37560874 4.70552640000000011 3.46776889999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[135]" " -type \"float3\" 0.37422356000000001 4.72077080000000038 3.49014209999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[136]" " -type \"float3\" 0.37296528000000001 4.73244519999999991 3.51881289999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[137]" " -type \"float3\" 0.37756455 4.74817939999999972 3.54532619999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[138]" " -type \"float3\" 0.38472813 4.76066590000000023 3.56836149999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[139]" " -type \"float3\" 0.39375472 4.76868249999999971 3.58566330000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[140]" " -type \"float3\" 0.40376069999999997 4.77144529999999989 3.59553840000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[141]" " -type \"float3\" 0.41376679999999999 4.76868249999999971 3.59702009999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[142]" " -type \"float3\" 0.42279338999999999 4.76066590000000023 3.58996320000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[143]" " -type \"float3\" 0.42995685 4.74817939999999972 3.57505849999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[144]" " -type \"float3\" 0.4345561 4.73244519999999991 3.55376510000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[145]" " -type \"float3\" 0.43614091999999999 4.715004 3.52816719999999995"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[146]" " -type \"float3\" 0.4345561 4.69756269999999976 3.50077080000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[147]" " -type \"float3\" 0.42995685 4.681829 3.47425750000000022"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[148]" " -type \"float3\" 0.42279333000000002 4.669342 3.4512223999999998"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[149]" " -type \"float3\" 0.41376674000000002 4.661325 3.43392059999999999"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[150]" " -type \"float3\" 0.40376069999999997 4.65856270000000006 3.42404559999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[151]" " -type \"float3\" 0.39375469000000002 4.661325 3.422564"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[152]" " -type \"float3\" 0.38472806999999998 4.669342 3.42962070000000008"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[153]" " -type \"float3\" 0.37756461000000002 4.681829 3.44452550000000013"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[154]" " -type \"float3\" 0.37296537000000002 4.69756269999999976 3.46581889999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[155]" " -type \"float3\" 0.37138048000000001 4.715004 3.49141650000000014"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[156]" " -type \"float3\" 0.37123003999999998 4.727747 3.52375149999999993"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[157]" " -type \"float3\" 0.37629541999999999 4.7450751999999996 3.55295210000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[158]" " -type \"float3\" 0.38418499 4.75882719999999981 3.57832149999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[159]" " -type \"float3\" 0.39412636000000001 4.76765680000000014 3.59737710000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[160]" " -type \"float3\" 0.40514644999999999 4.770699 3.60825279999999982"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[161]" " -type \"float3\" 0.41616653999999997 4.76765680000000014 3.60988469999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[162]" " -type \"float3\" 0.42610794000000002 4.75882719999999981 3.60211229999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[163]" " -type \"float3\" 0.43399738999999998 4.7450751999999996 3.58569719999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[164]" " -type \"float3\" 0.43906276999999999 4.727747 3.56224579999999991"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[165]" " -type \"float3\" 0.44080817999999999 4.70853810000000017 3.534054"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[166]" " -type \"float3\" 0.43906276999999999 4.68932910000000014 3.503881"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[167]" " -type \"float3\" 0.43399745000000001 4.67200039999999994 3.47468069999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[168]" " -type \"float3\" 0.42610785000000001 4.65824839999999973 3.44931130000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[169]" " -type \"float3\" 0.41616653999999997 4.6494188000000003 3.43025590000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[170]" " -type \"float3\" 0.40514644999999999 4.64637659999999997 3.41937990000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[171]" " -type \"float3\" 0.39412629999999998 4.6494188000000003 3.41774820000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[172]" " -type \"float3\" 0.38418499 4.65824839999999973 3.42552019999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[173]" " -type \"float3\" 0.37629548000000002 4.67200039999999994 3.44193529999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[174]" " -type \"float3\" 0.37123010000000001 4.68932910000000014 3.46538689999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[175]" " -type \"float3\" 0.36948462999999998 4.70853810000000017 3.49357840000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[176]" " -type \"float3\" 0.37044572999999997 4.7220348999999997 3.52878170000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[177]" " -type \"float3\" 0.37585244000000001 4.74053140000000006 3.55995010000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[178]" " -type \"float3\" 0.38427373999999997 4.75520989999999966 3.58702949999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[179]" " -type \"float3\" 0.39488506000000001 4.76463459999999994 3.60736889999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[180]" " -type \"float3\" 0.40664792 4.7678818999999999 3.618978"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[181]" " -type \"float3\" 0.41841068999999997 4.76463459999999994 3.62071940000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[182]" " -type \"float3\" 0.42902213 4.75520989999999966 3.61242390000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[183]" " -type \"float3\" 0.43744332000000002 4.74053140000000006 3.59490230000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[184]" " -type \"float3\" 0.44285014 4.7220348999999997 3.56987049999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[185]" " -type \"float3\" 0.44471315 4.70153140000000036 3.53977869999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[186]" " -type \"float3\" 0.44285007999999998 4.68102839999999976 3.50757219999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[187]" " -type \"float3\" 0.43744328999999998 4.66253139999999977 3.4764037000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[188]" " -type \"float3\" 0.42902206999999998 4.64785239999999966 3.44932440000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[189]" " -type \"float3\" 0.41841072000000001 4.63842819999999989 3.42898490000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[190]" " -type \"float3\" 0.40664792 4.6351804999999997 3.417376"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[191]" " -type \"float3\" 0.39488511999999998 4.63842819999999989 3.41563440000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[192]" " -type \"float3\" 0.38427377000000001 4.64785239999999966 3.42393020000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[193]" " -type \"float3\" 0.37585246999999999 4.66253139999999977 3.44145149999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[194]" " -type \"float3\" 0.37044569999999999 4.68102839999999976 3.46648339999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[195]" " -type \"float3\" 0.36858269999999999 4.70153140000000036 3.49657539999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[196]" " -type \"float3\" 0.37063158000000002 4.71545029999999965 3.53377989999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[197]" " -type \"float3\" 0.37624659999999999 4.73465920000000029 3.56614880000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[198]" " -type \"float3\" 0.38499221 4.74990369999999995 3.59427090000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[199]" " -type \"float3\" 0.39601230999999998 4.75969119999999979 3.61539410000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[200]" " -type \"float3\" 0.40822818999999999 4.76306340000000006 3.62745"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[201]" " -type \"float3\" 0.42044407 4.75969119999999979 3.62925889999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[202]" " -type \"float3\" 0.43146416999999998 4.74990369999999995 3.62064340000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[203]" " -type \"float3\" 0.44020975000000001 4.73465920000000029 3.602447"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[204]" " -type \"float3\" 0.44582476999999998 4.71545029999999965 3.5764513"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[205]" " -type \"float3\" 0.44775957 4.69415709999999997 3.54520010000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[206]" " -type \"float3\" 0.44582476999999998 4.672864 3.51175330000000008"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[207]" " -type \"float3\" 0.44020975000000001 4.65365550000000017 3.47938439999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[208]" " -type \"float3\" 0.43146416999999998 4.638411 3.451262"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[209]" " -type \"float3\" 0.42044407 4.62862349999999978 3.43013879999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[210]" " -type \"float3\" 0.40822818999999999 4.62525079999999988 3.418083"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[211]" " -type \"float3\" 0.39601230999999998 4.62862349999999978 3.41627409999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[212]" " -type \"float3\" 0.38499221 4.638411 3.4248892999999998"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[213]" " -type \"float3\" 0.37624663000000003 4.65365550000000017 3.44308589999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[214]" " -type \"float3\" 0.37063161 4.672864 3.46908189999999994"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[215]" " -type \"float3\" 0.36869680999999999 4.69415709999999997 3.5003327999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[216]" " -type \"float3\" 0.37178311000000003 4.70815560000000044 3.53862239999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[217]" " -type \"float3\" 0.37746811000000002 4.72760339999999957 3.57139469999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[218]" " -type \"float3\" 0.38632274 4.74303770000000036 3.59986760000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[219]" " -type \"float3\" 0.39748024999999998 4.75294729999999976 3.621254"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[220]" " -type \"float3\" 0.40984832999999998 4.756362 3.63346"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[221]" " -type \"float3\" 0.42221656000000002 4.75294729999999976 3.63529159999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[222]" " -type \"float3\" 0.43337396 4.74303770000000036 3.62656879999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[223]" " -type \"float3\" 0.44222858999999998 4.72760339999999957 3.60814570000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[224]" " -type \"float3\" 0.44791355999999999 4.70815560000000044 3.58182549999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[225]" " -type \"float3\" 0.44987249000000001 4.68659689999999962 3.550185"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[226]" " -type \"float3\" 0.44791362000000001 4.6650381000000003 3.51632120000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[227]" " -type \"float3\" 0.44222855999999999 4.64558979999999977 3.48354890000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[228]" " -type \"float3\" 0.43337396 4.63015560000000015 3.455076"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[229]" " -type \"float3\" 0.42221652999999998 4.62024589999999957 3.43368960000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[230]" " -type \"float3\" 0.40984832999999998 4.6168313000000003 3.4214834999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[231]" " -type \"float3\" 0.39748019000000001 4.62024589999999957 3.41965219999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[232]" " -type \"float3\" 0.38632274 4.63015560000000015 3.42837479999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[233]" " -type \"float3\" 0.37746814000000001 4.64558979999999977 3.44679780000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[234]" " -type \"float3\" 0.37178317 4.6650381000000003 3.47311779999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[235]" " -type \"float3\" 0.36982419999999999 4.68659689999999962 3.50475840000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[236]" " -type \"float3\" 0.37387188999999998 4.70032979999999956 3.54319050000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[237]" " -type \"float3\" 0.37948704 4.7195387000000002 3.57555939999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[238]" " -type \"float3\" 0.38823253000000002 4.73478270000000023 3.60368159999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[239]" " -type \"float3\" 0.39925262 4.74457030000000035 3.62480450000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[240]" " -type \"float3\" 0.41146851000000001 4.74794240000000034 3.63686059999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[241]" " -type \"float3\" 0.42368439000000002 4.74457030000000035 3.63866949999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[242]" " -type \"float3\" 0.43470448 4.73478270000000023 3.630054"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[243]" " -type \"float3\" 0.44345014999999999 4.7195387000000002 3.61185789999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[244]" " -type \"float3\" 0.44906511999999998 4.70032979999999956 3.58586170000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[245]" " -type \"float3\" 0.45099994999999998 4.67903659999999988 3.55461070000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[246]" " -type \"float3\" 0.44906511999999998 4.657743 3.52116369999999979"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[247]" " -type \"float3\" 0.44345009000000002 4.63853449999999956 3.48879479999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[248]" " -type \"float3\" 0.43470448 4.62329050000000041 3.4606726000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[249]" " -type \"float3\" 0.42368444999999999 4.613503 3.4395494000000002"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[250]" " -type \"float3\" 0.41146851000000001 4.61013029999999979 3.42749360000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[251]" " -type \"float3\" 0.39925268000000003 4.613503 3.42568470000000014"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[252]" " -type \"float3\" 0.38823258999999999 4.62329050000000041 3.43430020000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[253]" " -type \"float3\" 0.37948694999999999 4.63853449999999956 3.45249650000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[254]" " -type \"float3\" 0.37387192000000002 4.657743 3.47849250000000021"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[255]" " -type \"float3\" 0.37193718999999997 4.67903659999999988 3.50974349999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[256]" " -type \"float3\" 0.37684661000000003 4.6921659 3.54737139999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[257]" " -type \"float3\" 0.38225334999999999 4.71066240000000036 3.57853960000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[258]" " -type \"float3\" 0.39067468 4.72534079999999967 3.60561920000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[259]" " -type \"float3\" 0.40128601000000003 4.73476549999999996 3.62595869999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[260]" " -type \"float3\" 0.41304886000000002 4.73801279999999991 3.6375677999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[261]" " -type \"float3\" 0.42481163 4.73476549999999996 3.63930920000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[262]" " -type \"float3\" 0.43542308000000002 4.72534079999999967 3.63101340000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[263]" " -type \"float3\" 0.44384420000000002 4.71066240000000036 3.613492"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[264]" " -type \"float3\" 0.44925103 4.6921659 3.58846"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[265]" " -type \"float3\" 0.45111403 4.67166230000000038 3.55836819999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[266]" " -type \"float3\" 0.44925103 4.65115929999999977 3.52616169999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[267]" " -type \"float3\" 0.44384423000000001 4.6326628000000003 3.49499339999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[268]" " -type \"float3\" 0.43542301999999999 4.61798329999999968 3.46791410000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[269]" " -type \"float3\" 0.42481160000000001 4.60855909999999991 3.44757440000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[270]" " -type \"float3\" 0.41304879999999999 4.60531139999999972 3.43596550000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[271]" " -type \"float3\" 0.40128601000000003 4.60855909999999991 3.43422390000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[272]" " -type \"float3\" 0.39067465000000001 4.61798329999999968 3.44251970000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[273]" " -type \"float3\" 0.38225341000000002 4.6326628000000003 3.46004129999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[274]" " -type \"float3\" 0.37684664000000001 4.65115929999999977 3.48507310000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[275]" " -type \"float3\" 0.37498357999999998 4.67166230000000038 3.51516489999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[276]" " -type \"float3\" 0.38063392000000001 4.68386510000000023 3.55106229999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[277]" " -type \"float3\" 0.38569933000000001 4.70119329999999991 3.58026290000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[278]" " -type \"float3\" 0.39358886999999998 4.71494530000000012 3.6056322999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[279]" " -type \"float3\" 0.40353014999999998 4.72377490000000044 3.62468769999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[280]" " -type \"float3\" 0.41455033000000002 4.72681709999999988 3.63556359999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[281]" " -type \"float3\" 0.42557033999999999 4.72377490000000044 3.63719510000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[282]" " -type \"float3\" 0.43551182999999999 4.71494530000000012 3.6294230999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[283]" " -type \"float3\" 0.44340125000000002 4.70119329999999991 3.613008"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[284]" " -type \"float3\" 0.44846666000000002 4.68386510000000023 3.58955670000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[285]" " -type \"float3\" 0.45021206000000003 4.66465619999999959 3.56136490000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[286]" " -type \"float3\" 0.44846666000000002 4.64544729999999984 3.53119180000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[287]" " -type \"float3\" 0.44340133999999998 4.62811850000000025 3.50199149999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[288]" " -type \"float3\" 0.43551173999999998 4.61436650000000004 3.47662210000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[289]" " -type \"float3\" 0.42557043 4.60553689999999971 3.4575667000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[290]" " -type \"float3\" 0.41455033000000002 4.60249470000000027 3.44669079999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[291]" " -type \"float3\" 0.40353018000000002 4.60553740000000023 3.44505909999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[292]" " -type \"float3\" 0.39358886999999998 4.61436650000000004 3.452831"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[293]" " -type \"float3\" 0.38569935999999999 4.62811850000000025 3.46924639999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[294]" " -type \"float3\" 0.38063392000000001 4.64544729999999984 3.49269749999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[295]" " -type \"float3\" 0.37888852000000001 4.66465619999999959 3.52088950000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[296]" " -type \"float3\" 0.38514057000000002 4.675631 3.55417249999999996"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[297]" " -type \"float3\" 0.38973984 4.6913651999999999 3.5806859000000002"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[298]" " -type \"float3\" 0.39690343 4.70385170000000041 3.60372110000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[299]" " -type \"float3\" 0.40592998000000002 4.7118682999999999 3.62102289999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[300]" " -type \"float3\" 0.41593598999999998 4.71463059999999956 3.630898"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[301]" " -type \"float3\" 0.42594209 4.7118682999999999 3.63237949999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[302]" " -type \"float3\" 0.43496865000000001 4.70385170000000041 3.62532280000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[303]" " -type \"float3\" 0.44213212000000002 4.6913651999999999 3.61041809999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[304]" " -type \"float3\" 0.44673139000000001 4.675631 3.58912470000000017"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[305]" " -type \"float3\" 0.44831621999999999 4.65818979999999971 3.56352689999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[306]" " -type \"float3\" 0.44673139000000001 4.64074849999999994 3.53613039999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[307]" " -type \"float3\" 0.44213215 4.62501479999999976 3.50961709999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[308]" " -type \"float3\" 0.43496861999999997 4.61252779999999962 3.486582"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[309]" " -type \"float3\" 0.42594203000000003 4.6045107999999999 3.46928020000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[310]" " -type \"float3\" 0.41593598999999998 4.60174850000000024 3.45940519999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[311]" " -type \"float3\" 0.40592994999999998 4.6045107999999999 3.45792339999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[312]" " -type \"float3\" 0.39690336999999998 4.61252779999999962 3.46498039999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[313]" " -type \"float3\" 0.38973989999999997 4.62501479999999976 3.47988510000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[314]" " -type \"float3\" 0.38514062999999998 4.64074849999999994 3.50117849999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[315]" " -type \"float3\" 0.38355577000000002 4.65818979999999971 3.52677610000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[316]" " -type \"float3\" 0.39025563000000002 4.66766740000000002 3.55662510000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[317]" " -type \"float3\" 0.39427549000000001 4.68141940000000023 3.5797987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[318]" " -type \"float3\" 0.40053672000000001 4.6923332000000002 3.59993240000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[319]" " -type \"float3\" 0.40842616999999998 4.69933990000000001 3.61505460000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[320]" " -type \"float3\" 0.41717184000000002 4.70175460000000012 3.62368580000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[321]" " -type \"float3\" 0.42591739000000001 4.69933990000000001 3.62498070000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[322]" " -type \"float3\" 0.43380696000000002 4.6923332000000002 3.61881280000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[323]" " -type \"float3\" 0.44006803999999999 4.68141889999999972 3.60578559999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[324]" " -type \"float3\" 0.44408800999999998 4.66766740000000002 3.58717439999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[325]" " -type \"float3\" 0.44547315999999998 4.65242290000000036 3.56480119999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[326]" " -type \"float3\" 0.44408795000000001 4.63717890000000033 3.54085589999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[327]" " -type \"float3\" 0.44006810000000002 4.6234263999999996 3.51768230000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[328]" " -type \"float3\" 0.43380696000000002 4.61251310000000014 3.49754880000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[329]" " -type \"float3\" 0.42591741999999999 4.60550640000000033 3.48242660000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[330]" " -type \"float3\" 0.41717184000000002 4.60309170000000023 3.4737954000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[331]" " -type \"float3\" 0.40842623 4.60550640000000033 3.4725003000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[332]" " -type \"float3\" 0.40053672000000001 4.61251310000000014 3.47866849999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[333]" " -type \"float3\" 0.39427554999999997 4.62342690000000012 3.4916955999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[334]" " -type \"float3\" 0.39025566 4.63717890000000033 3.51030659999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[335]" " -type \"float3\" 0.38887048000000002 4.65242290000000036 3.53267979999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[336]" " -type \"float3\" 0.39585306999999997 4.66016959999999969 3.5583600999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[337]" " -type \"float3\" 0.39919469000000002 4.67160080000000022 3.57762309999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[338]" " -type \"float3\" 0.40439931000000001 4.68067309999999992 3.59435919999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[339]" " -type \"float3\" 0.41095743000000001 4.68649770000000032 3.60692980000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[340]" " -type \"float3\" 0.41822731000000002 4.68850470000000019 3.61410449999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[341]" " -type \"float3\" 0.42549708000000003 4.68649770000000032 3.6151806999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[342]" " -type \"float3\" 0.43205532000000002 4.68067309999999992 3.6100538000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[343]" " -type \"float3\" 0.43725994000000001 4.67160080000000022 3.5992248"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[344]" " -type \"float3\" 0.44060144000000001 4.66016959999999969 3.58375429999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[345]" " -type \"float3\" 0.44175291 4.64749809999999997 3.56515650000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[346]" " -type \"float3\" 0.44060149999999998 4.63482620000000001 3.54525179999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[347]" " -type \"float3\" 0.43725987999999999 4.62339449999999985 3.52598859999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[348]" " -type \"float3\" 0.43205532000000002 4.61432269999999978 3.50925280000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[349]" " -type \"float3\" 0.42549711000000001 4.60849810000000026 3.49668219999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[350]" " -type \"float3\" 0.41822731000000002 4.60649059999999988 3.48950739999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[351]" " -type \"float3\" 0.41095748999999998 4.60849810000000026 3.488431"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[352]" " -type \"float3\" 0.40439931000000001 4.61432269999999978 3.49355819999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[353]" " -type \"float3\" 0.39919462999999999 4.62339449999999985 3.50438690000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[354]" " -type \"float3\" 0.39585313 4.63482620000000001 3.5198573999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[355]" " -type \"float3\" 0.39470168999999999 4.64749809999999997 3.53845549999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[356]" " -type \"float3\" 0.40179517999999997 4.65332319999999999 3.55933430000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[357]" " -type \"float3\" 0.40437617999999997 4.66215180000000018 3.57421280000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[358]" " -type \"float3\" 0.40839604000000002 4.66915939999999985 3.5871388999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[359]" " -type \"float3\" 0.41346145000000001 4.67365790000000025 3.59684850000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[360]" " -type \"float3\" 0.41907641000000001 4.67520809999999987 3.60238959999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[361]" " -type \"float3\" 0.4246915 4.67365790000000025 3.6032213999999998"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[362]" " -type \"float3\" 0.42975681999999998 4.66915939999999985 3.599261"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[363]" " -type \"float3\" 0.43377680000000002 4.66215180000000018 3.59089729999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[364]" " -type \"float3\" 0.43635768000000003 4.65332319999999999 3.578948"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[365]" " -type \"float3\" 0.43724700999999999 4.64353559999999987 3.5645834999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[366]" " -type \"float3\" 0.43635773999999999 4.63374810000000004 3.54920979999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[367]" " -type \"float3\" 0.43377673999999999 4.62491849999999971 3.53433129999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[368]" " -type \"float3\" 0.42975681999999998 4.6179117999999999 3.521405"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[369]" " -type \"float3\" 0.42469147000000002 4.61341290000000015 3.51169589999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[370]" " -type \"float3\" 0.41907641000000001 4.61186220000000002 3.50615429999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[371]" " -type \"float3\" 0.41346145000000001 4.61341290000000015 3.50532289999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[372]" " -type \"float3\" 0.40839604000000002 4.6179117999999999 3.50928279999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[373]" " -type \"float3\" 0.40437612000000001 4.62491849999999971 3.51764680000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[374]" " -type \"float3\" 0.40179517999999997 4.63374810000000004 3.5295958999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[375]" " -type \"float3\" 0.40090585000000001 4.64353559999999987 3.54396030000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[376]" " -type \"float3\" 0.40793559000000001 4.64729550000000025 3.55952380000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[377]" " -type \"float3\" 0.40969229000000001 4.65330509999999986 3.56965110000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[378]" " -type \"float3\" 0.41242856 4.65807440000000028 3.57844970000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[379]" " -type \"float3\" 0.41587642000000002 4.66113659999999985 3.58505850000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[380]" " -type \"float3\" 0.41969838999999998 4.66219189999999983 3.58883049999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[381]" " -type \"float3\" 0.42352035999999998 4.66113659999999985 3.58939619999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[382]" " -type \"float3\" 0.42696819000000003 4.65807440000000028 3.58670089999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[383]" " -type \"float3\" 0.42970437 4.65330509999999986 3.58100769999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[384]" " -type \"float3\" 0.43146116000000001 4.64729550000000025 3.57287430000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[385]" " -type \"float3\" 0.43206653 4.64063309999999962 3.563097"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[386]" " -type \"float3\" 0.43146116000000001 4.6339712000000004 3.55263229999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[387]" " -type \"float3\" 0.42970443000000003 4.62796119999999966 3.54250530000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[388]" " -type \"float3\" 0.42696819000000003 4.62319179999999985 3.5337067000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[389]" " -type \"float3\" 0.42352035999999998 4.62013009999999991 3.52709789999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[390]" " -type \"float3\" 0.41969838999999998 4.6190743000000003 3.52332590000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[391]" " -type \"float3\" 0.41587642000000002 4.62013009999999991 3.52276020000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[392]" " -type \"float3\" 0.41242858999999998 4.62319179999999985 3.52545550000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[393]" " -type \"float3\" 0.40969232 4.6279615999999999 3.53114870000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[394]" " -type \"float3\" 0.40793559000000001 4.6339712000000004 3.53928179999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[395]" " -type \"float3\" 0.40733024000000001 4.64063309999999962 3.54905939999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[396]" " -type \"float3\" 0.41412303 4.64223579999999991 3.55892439999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[397]" " -type \"float3\" 0.41501239000000001 4.645278 3.5640512000000002"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[398]" " -type \"float3\" 0.41639756999999999 4.64769219999999983 3.56850529999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[399]" " -type \"float3\" 0.418143 4.64924240000000033 3.571851"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[400]" " -type \"float3\" 0.42007768000000001 4.64977649999999976 3.5737603"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[401]" " -type \"float3\" 0.42201260000000002 4.64924240000000033 3.57404689999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[402]" " -type \"float3\" 0.42375803000000001 4.64769219999999983 3.57268240000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[403]" " -type \"float3\" 0.42514318000000001 4.645278 3.5698004000000001"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[404]" " -type \"float3\" 0.42603245000000001 4.64223579999999991 3.5656829000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[405]" " -type \"float3\" 0.42633891000000002 4.63886310000000002 3.56073310000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[406]" " -type \"float3\" 0.42603250999999998 4.63549040000000012 3.55543589999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[407]" " -type \"float3\" 0.42514311999999999 4.63244819999999979 3.5503089000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[408]" " -type \"float3\" 0.42375794 4.63003349999999969 3.54585479999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[409]" " -type \"float3\" 0.42201260000000002 4.62848330000000008 3.54250929999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[410]" " -type \"float3\" 0.4200778 4.62794880000000042 3.54059979999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[411]" " -type \"float3\" 0.418143 4.62848330000000008 3.54031349999999989"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[412]" " -type \"float3\" 0.41639754000000001 4.63003349999999969 3.541678"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[413]" " -type \"float3\" 0.41501236000000002 4.63244819999999979 3.54456"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[414]" " -type \"float3\" 0.41412309000000003 4.63549040000000012 3.54867739999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[415]" " -type \"float3\" 0.41381659999999998 4.63886310000000002 3.55362679999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[416]" " -type \"float3\" 0.39949146000000002 4.73492620000000031 3.49739310000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[417]" " -type \"float3\" 0.42020527000000002 4.638268 3.55755039999999978"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[418]" " -type \"float3\" 0.65279083999999998 4.9823107999999996 4.04847619999999964"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[419]" " -type \"float3\" 0.65368026000000001 4.985353 4.05360320000000041"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[420]" " -type \"float3\" 0.65506536000000004 4.98776770000000003 4.05805729999999976"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[421]" " -type \"float3\" 0.65681082000000002 4.98931740000000001 4.06140279999999976"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[422]" " -type \"float3\" 0.65874564999999996 4.989852 4.06331250000000033"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[423]" " -type \"float3\" 0.66068046999999996 4.98931740000000001 4.06359859999999973"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[424]" " -type \"float3\" 0.66242582000000005 4.9877672000000004 4.06223440000000036"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[425]" " -type \"float3\" 0.66381102999999997 4.985353 4.05935239999999986"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[426]" " -type \"float3\" 0.66470026999999998 4.9823107999999996 4.05523490000000031"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[427]" " -type \"float3\" 0.66500682 4.9789380999999997 4.05028529999999964"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[428]" " -type \"float3\" 0.66470039000000003 4.97556590000000032 4.04498770000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[429]" " -type \"float3\" 0.66381102999999997 4.97252320000000037 4.03986119999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[430]" " -type \"float3\" 0.66242588000000002 4.97010850000000026 4.03540659999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[431]" " -type \"float3\" 0.66068041 4.96855880000000028 4.03206109999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[432]" " -type \"float3\" 0.65874558999999999 4.96802469999999996 4.03015179999999962"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[433]" " -type \"float3\" 0.65681082000000002 4.96855880000000028 4.02986529999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[434]" " -type \"float3\" 0.65506542000000001 4.97010850000000026 4.03123"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[435]" " -type \"float3\" 0.65368026000000001 4.97252320000000037 4.034112"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[436]" " -type \"float3\" 0.65279096000000003 4.97556590000000032 4.03822949999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[437]" " -type \"float3\" 0.65248448000000003 4.9789380999999997 4.043179"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[438]" " -type \"float3\" 0.64736223000000004 4.98382949999999969 4.0512794999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[439]" " -type \"float3\" 0.64911890000000005 4.98983959999999982 4.06140710000000027"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[440]" " -type \"float3\" 0.65185523000000001 4.99460939999999987 4.07020569999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[441]" " -type \"float3\" 0.65530306000000005 4.99767160000000032 4.07681420000000028"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[442]" " -type \"float3\" 0.65912508999999997 4.99872680000000003 4.080586"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[443]" " -type \"float3\" 0.662947 4.99767160000000032 4.081152"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[444]" " -type \"float3\" 0.66639488999999996 4.99460939999999987 4.07845640000000031"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[445]" " -type \"float3\" 0.66913104000000001 4.98983959999999982 4.07276340000000037"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[446]" " -type \"float3\" 0.67088782999999996 4.98382949999999969 4.06463049999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[447]" " -type \"float3\" 0.67149311 4.97716759999999958 4.05485249999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[448]" " -type \"float3\" 0.67088782999999996 4.97050570000000036 4.0443882999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[449]" " -type \"float3\" 0.66913098000000004 4.96449569999999962 4.03426069999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[450]" " -type \"float3\" 0.66639482999999999 4.95972680000000032 4.02546219999999977"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[451]" " -type \"float3\" 0.662947 4.95666459999999987 4.0188537000000002"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[452]" " -type \"float3\" 0.65912503 4.95560929999999988 4.0150819000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[453]" " -type \"float3\" 0.65530306000000005 4.95666459999999987 4.01451590000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[454]" " -type \"float3\" 0.65185523000000001 4.95972680000000032 4.01721139999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[455]" " -type \"float3\" 0.64911890000000005 4.96449569999999962 4.02290439999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[456]" " -type \"float3\" 0.64736223000000004 4.97050570000000036 4.0310378"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[457]" " -type \"float3\" 0.64675682999999995 4.97716759999999958 4.04081489999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[458]" " -type \"float3\" 0.64246570999999997 4.98405309999999968 4.05470280000000027"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[459]" " -type \"float3\" 0.64504658999999998 4.99288229999999977 4.0695806000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[460]" " -type \"float3\" 0.64906657000000001 4.99988939999999982 4.08250709999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[461]" " -type \"float3\" 0.65413195000000002 5.00438829999999957 4.09221650000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[462]" " -type \"float3\" 0.65974694 5.00593850000000007 4.09775780000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[463]" " -type \"float3\" 0.665362 5.00438829999999957 4.09858939999999983"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[464]" " -type \"float3\" 0.67042738000000002 4.99988939999999982 4.09462930000000025"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[465]" " -type \"float3\" 0.67444724 4.99288270000000001 4.08626510000000032"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[466]" " -type \"float3\" 0.67702817999999998 4.98405309999999968 4.07431650000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[467]" " -type \"float3\" 0.67791754000000004 4.97426559999999984 4.05995180000000033"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[468]" " -type \"float3\" 0.67702817999999998 4.96447850000000024 4.04457809999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[469]" " -type \"float3\" 0.67444724 4.95564889999999991 4.02969929999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[470]" " -type \"float3\" 0.67042738000000002 4.94864179999999987 4.01677320000000027"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[471]" " -type \"float3\" 0.665362 4.94414330000000035 4.00706429999999969"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[472]" " -type \"float3\" 0.65974694 4.94259309999999985 4.00152250000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[473]" " -type \"float3\" 0.65413195000000002 4.94414330000000035 4.00069140000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[474]" " -type \"float3\" 0.64906657000000001 4.94864179999999987 4.00465110000000024"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[475]" " -type \"float3\" 0.64504665000000005 4.95564889999999991 4.01301479999999966"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[476]" " -type \"float3\" 0.64246570999999997 4.96447850000000024 4.02496429999999972"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[477]" " -type \"float3\" 0.64157640999999999 4.97426559999999984 4.03932860000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[478]" " -type \"float3\" 0.63822186000000003 4.982975 4.05866050000000023"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[479]" " -type \"float3\" 0.64156347999999996 4.99440669999999987 4.07792330000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[480]" " -type \"float3\" 0.64676809000000002 5.00347809999999971 4.0946593"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[481]" " -type \"float3\" 0.65332621000000002 5.00930310000000034 4.10723020000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[482]" " -type \"float3\" 0.66059612999999995 5.01131010000000021 4.11440469999999969"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[483]" " -type \"float3\" 0.66786586999999997 5.00930310000000034 4.11548089999999966"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[484]" " -type \"float3\" 0.67442416999999999 5.00347849999999994 4.11035389999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[485]" " -type \"float3\" 0.67962873000000001 4.99440669999999987 4.099525"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[486]" " -type \"float3\" 0.68297023000000001 4.982975 4.0840544999999997"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[487]" " -type \"float3\" 0.68412172999999998 4.97030309999999975 4.06545690000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[488]" " -type \"float3\" 0.68297034999999995 4.9576311000000004 4.04555229999999977"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[489]" " -type \"float3\" 0.67962873000000001 4.94619989999999987 4.026289"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[490]" " -type \"float3\" 0.67442411000000002 4.93712760000000017 4.009553"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[491]" " -type \"float3\" 0.66786593000000005 4.931303 3.99698259999999994"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[492]" " -type \"float3\" 0.66059606999999998 4.92929650000000041 3.9898077999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[493]" " -type \"float3\" 0.65332632999999996 4.931303 3.98873139999999982"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[494]" " -type \"float3\" 0.64676809000000002 4.9371280999999998 3.99385859999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[495]" " -type \"float3\" 0.64156352999999999 4.94619989999999987 4.00468729999999962"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[496]" " -type \"float3\" 0.63822197999999997 4.9576311000000004 4.02015779999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[497]" " -type \"float3\" 0.63707053999999996 4.97030309999999975 4.03875589999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[498]" " -type \"float3\" 0.63473535000000003 4.98062230000000028 4.063056"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[499]" " -type \"float3\" 0.63875532000000002 4.9943742999999996 4.08622979999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[500]" " -type \"float3\" 0.64501649000000005 5.00528759999999995 4.10636329999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[501]" " -type \"float3\" 0.65290588000000005 5.01229480000000027 4.12148570000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[502]" " -type \"float3\" 0.66165160999999995 5.014709 4.13011689999999998"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[503]" " -type \"float3\" 0.67039709999999997 5.01229480000000027 4.13141159999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[504]" " -type \"float3\" 0.67828672999999995 5.00528759999999995 4.1252437000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[505]" " -type \"float3\" 0.68454778000000005 4.9943742999999996 4.11221649999999972"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[506]" " -type \"float3\" 0.68856775999999997 4.98062230000000028 4.09360549999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[507]" " -type \"float3\" 0.68995297 4.96537779999999973 4.07123230000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[508]" " -type \"float3\" 0.68856782000000005 4.95013330000000007 4.047287"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[509]" " -type \"float3\" 0.68454789999999999 4.93638180000000037 4.02411370000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[510]" " -type \"float3\" 0.67828666999999998 4.925468 4.00397970000000036"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[511]" " -type \"float3\" 0.67039722000000002 4.91846080000000008 3.98885770000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[512]" " -type \"float3\" 0.66165154999999998 4.9160465999999996 3.98022650000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[513]" " -type \"float3\" 0.652906 4.91846080000000008 3.97893169999999996"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[514]" " -type \"float3\" 0.64501642999999997 4.925468 3.98509959999999985"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[515]" " -type \"float3\" 0.63875532000000002 4.93638180000000037 3.99812669999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[516]" " -type \"float3\" 0.63473541 4.95013330000000007 4.01673789999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[517]" " -type \"float3\" 0.63335025 4.96537779999999973 4.0391111000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[518]" " -type \"float3\" 0.632092 4.97705269999999977 4.06778140000000032"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[519]" " -type \"float3\" 0.63669127000000003 4.99278639999999996 4.094295"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[520]" " -type \"float3\" 0.64385473999999998 5.00527289999999958 4.11733010000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[521]" " -type \"float3\" 0.65288131999999999 5.01329039999999981 4.13463210000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[522]" " -type \"float3\" 0.66288745000000004 5.01605270000000036 4.14450740000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[523]" " -type \"float3\" 0.67289339999999997 5.01329039999999981 4.14598849999999963"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[524]" " -type \"float3\" 0.68191999000000003 5.00527289999999958 4.13893179999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[525]" " -type \"float3\" 0.68908358000000003 4.99278689999999958 4.12402729999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[526]" " -type \"float3\" 0.69368278999999999 4.97705269999999977 4.10273410000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[527]" " -type \"float3\" 0.69526756000000001 4.95961090000000038 4.077136"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[528]" " -type \"float3\" 0.69368278999999999 4.94217010000000023 4.04973980000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[529]" " -type \"float3\" 0.68908364 4.92643590000000042 4.02322630000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[530]" " -type \"float3\" 0.68191999000000003 4.913949 4.00019119999999972"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[531]" " -type \"float3\" 0.67289339999999997 4.90593240000000019 3.9828891999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[532]" " -type \"float3\" 0.66288738999999997 4.90317009999999964 3.97301439999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[533]" " -type \"float3\" 0.65288131999999999 4.90593240000000019 3.97153260000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[534]" " -type \"float3\" 0.64385473999999998 4.913949 3.9785895"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[535]" " -type \"float3\" 0.63669127000000003 4.92643590000000042 3.99349430000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[536]" " -type \"float3\" 0.632092 4.94217010000000023 4.01478770000000029"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[537]" " -type \"float3\" 0.63050711000000004 4.95961090000000038 4.04038520000000023"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[538]" " -type \"float3\" 0.63035673000000003 4.97235389999999988 4.07272049999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[539]" " -type \"float3\" 0.63542211000000004 4.98968270000000036 4.10192059999999969"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[540]" " -type \"float3\" 0.64331156 5.00343469999999968 4.12729020000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[541]" " -type \"float3\" 0.65325301999999996 5.01226380000000038 4.14634560000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[542]" " -type \"float3\" 0.66427307999999996 5.015306 4.15722129999999979"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[543]" " -type \"float3\" 0.67529320999999998 5.01226380000000038 4.15885309999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[544]" " -type \"float3\" 0.68523455 5.00343420000000005 4.15108109999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[545]" " -type \"float3\" 0.69312412000000001 4.98968270000000036 4.134666"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[546]" " -type \"float3\" 0.69818950000000002 4.97235389999999988 4.11121460000000027"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[547]" " -type \"float3\" 0.69993490000000003 4.953145 4.08302259999999961"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[548]" " -type \"float3\" 0.69818950000000002 4.93393610000000038 4.05284979999999972"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[549]" " -type \"float3\" 0.69312406000000004 4.91660789999999981 4.02364920000000037"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[550]" " -type \"float3\" 0.68523449000000003 4.9028558999999996 3.99827980000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[551]" " -type \"float3\" 0.67529320999999998 4.89402630000000016 3.97922470000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[552]" " -type \"float3\" 0.66427307999999996 4.89098409999999983 3.96834849999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[553]" " -type \"float3\" 0.65325301999999996 4.89402630000000016 3.96671720000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[554]" " -type \"float3\" 0.64331161999999997 4.90285539999999997 3.974489"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[555]" " -type \"float3\" 0.63542204999999996 4.91660789999999981 3.99090390000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[556]" " -type \"float3\" 0.63035673000000003 4.93393610000000038 4.0143557000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[557]" " -type \"float3\" 0.62861133000000002 4.953145 4.04254719999999956"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[558]" " -type \"float3\" 0.62957238999999998 4.96664239999999957 4.07775070000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[559]" " -type \"float3\" 0.63497906999999998 4.9851384000000003 4.10891870000000026"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[560]" " -type \"float3\" 0.64340030999999998 4.99981779999999976 4.1359982000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[561]" " -type \"float3\" 0.65401178999999998 5.00924209999999981 4.15633769999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[562]" " -type \"float3\" 0.66577452000000004 5.01248930000000037 4.16794629999999966"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[563]" " -type \"float3\" 0.67753737999999997 5.00924209999999981 4.1696882000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[564]" " -type \"float3\" 0.68814874000000004 4.99981779999999976 4.16139219999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[565]" " -type \"float3\" 0.69656998000000003 4.9851384000000003 4.14387080000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[566]" " -type \"float3\" 0.70197677999999997 4.96664239999999957 4.11883930000000031"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[567]" " -type \"float3\" 0.70383971999999995 4.94613839999999971 4.088747"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[568]" " -type \"float3\" 0.70197684000000005 4.92563529999999972 4.056541"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[569]" " -type \"float3\" 0.69656991999999995 4.90713880000000024 4.025372"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[570]" " -type \"float3\" 0.68814874000000004 4.89245990000000042 3.99829290000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[571]" " -type \"float3\" 0.67753737999999997 4.88303569999999976 3.97795370000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[572]" " -type \"float3\" 0.66577452000000004 4.8797883999999998 3.96634460000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[573]" " -type \"float3\" 0.65401178999999998 4.88303569999999976 3.96460290000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[574]" " -type \"float3\" 0.64340037000000005 4.89245990000000042 3.97289870000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[575]" " -type \"float3\" 0.63497925 4.90713880000000024 3.99042029999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[576]" " -type \"float3\" 0.62957238999999998 4.92563529999999972 4.01545240000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[577]" " -type \"float3\" 0.62770926999999999 4.94613839999999971 4.04554369999999963"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[578]" " -type \"float3\" 0.62975829999999999 4.96005770000000012 4.08274839999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[579]" " -type \"float3\" 0.63537328999999998 4.97926659999999988 4.11511750000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[580]" " -type \"float3\" 0.64411885000000002 4.99451070000000019 4.14323949999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[581]" " -type \"float3\" 0.65513896999999999 5.00429820000000003 4.16436239999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[582]" " -type \"float3\" 0.66735482000000002 5.00767089999999993 4.17641829999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[583]" " -type \"float3\" 0.67957067000000004 5.00429820000000003 4.17822739999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[584]" " -type \"float3\" 0.69059079999999995 4.99451070000000019 4.16961189999999959"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[585]" " -type \"float3\" 0.69933641000000002 4.97926659999999988 4.15141579999999966"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[586]" " -type \"float3\" 0.70495147000000002 4.96005770000000012 4.12541959999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[587]" " -type \"float3\" 0.70688622999999995 4.93876459999999984 4.09416869999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[588]" " -type \"float3\" 0.70495140999999995 4.91747140000000016 4.06072189999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[589]" " -type \"float3\" 0.69933641000000002 4.89826250000000041 4.02835270000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[590]" " -type \"float3\" 0.69059086000000003 4.883018 4.00023079999999975"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[591]" " -type \"float3\" 0.67957067000000004 4.87323090000000025 3.97910740000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[592]" " -type \"float3\" 0.66735487999999998 4.86985829999999975 3.96705150000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[593]" " -type \"float3\" 0.65513891000000002 4.87323090000000025 3.96524259999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[594]" " -type \"float3\" 0.64411890999999999 4.883018 3.97385840000000012"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[595]" " -type \"float3\" 0.63537328999999998 4.89826250000000041 3.99205450000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[596]" " -type \"float3\" 0.62975824000000002 4.91747140000000016 4.01805020000000024"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[597]" " -type \"float3\" 0.62782347000000005 4.93876459999999984 4.04930159999999972"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[598]" " -type \"float3\" 0.63090974 4.95276310000000031 4.0875906999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[599]" " -type \"float3\" 0.63659476999999998 4.97221139999999995 4.12036319999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[600]" " -type \"float3\" 0.64544939999999995 4.98764559999999957 4.14883609999999958"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[601]" " -type \"float3\" 0.65660684999999996 4.99755479999999963 4.17022280000000034"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[602]" " -type \"float3\" 0.66897505999999995 5.00096939999999979 4.18242880000000028"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[603]" " -type \"float3\" 0.68134313999999996 4.99755479999999963 4.18426040000000032"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[604]" " -type \"float3\" 0.69250058999999997 4.98764559999999957 4.17553709999999967"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[605]" " -type \"float3\" 0.70135521999999995 4.97221139999999995 4.157114"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[606]" " -type \"float3\" 0.70704018999999996 4.95276310000000031 4.130794"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[607]" " -type \"float3\" 0.70899915999999996 4.93120379999999958 4.09915349999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[608]" " -type \"float3\" 0.70704025000000004 4.90964560000000017 4.06529"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[609]" " -type \"float3\" 0.70135521999999995 4.89019729999999964 4.0325173999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[610]" " -type \"float3\" 0.69250065000000005 4.874763 4.00404450000000001"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[611]" " -type \"float3\" 0.68134313999999996 4.86485389999999995 3.98265810000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[612]" " -type \"float3\" 0.668975 4.8614392000000004 3.9704518000000002"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[613]" " -type \"float3\" 0.65660684999999996 4.86485389999999995 3.96862050000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[614]" " -type \"float3\" 0.64544939999999995 4.874763 3.9773436000000002"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[615]" " -type \"float3\" 0.63659482999999994 4.89019729999999964 3.99576660000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[616]" " -type \"float3\" 0.63090979999999997 4.90964560000000017 4.02208659999999973"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[617]" " -type \"float3\" 0.62895082999999996 4.93120379999999958 4.05372709999999969"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[618]" " -type \"float3\" 0.63299859000000003 4.94493720000000003 4.09215929999999961"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[619]" " -type \"float3\" 0.63861363999999998 4.96414609999999978 4.12452790000000036"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[620]" " -type \"float3\" 0.64735931000000002 4.97939009999999982 4.15265039999999974"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[621]" " -type \"float3\" 0.65837937999999996 4.98917769999999994 4.17377329999999969"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[622]" " -type \"float3\" 0.67059522999999999 4.99254990000000021 4.18582919999999969"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[623]" " -type \"float3\" 0.68281113999999998 4.98917769999999994 4.1876382999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[624]" " -type \"float3\" 0.69383121000000003 4.97939009999999982 4.17902280000000026"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[625]" " -type \"float3\" 0.70257676000000002 4.96414609999999978 4.16082619999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[626]" " -type \"float3\" 0.70819180999999998 4.94493720000000003 4.13483049999999963"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[627]" " -type \"float3\" 0.71012651999999998 4.92364360000000012 4.10357950000000038"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[628]" " -type \"float3\" 0.70819186999999995 4.90235040000000044 4.07013270000000027"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[629]" " -type \"float3\" 0.70257676000000002 4.8831414999999998 4.0377635999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[630]" " -type \"float3\" 0.69383121000000003 4.86789749999999977 4.00964119999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[631]" " -type \"float3\" 0.68281108000000001 4.85811040000000016 3.98851820000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[632]" " -type \"float3\" 0.67059522999999999 4.85473779999999966 3.9764621"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[633]" " -type \"float3\" 0.65837931999999999 4.85811040000000016 3.97465350000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[634]" " -type \"float3\" 0.64735925000000005 4.86789749999999977 3.9832687"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[635]" " -type \"float3\" 0.63861369999999995 4.8831414999999998 4.00146529999999956"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[636]" " -type \"float3\" 0.63299859000000003 4.90235040000000044 4.02746110000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[637]" " -type \"float3\" 0.63106375999999997 4.92364360000000012 4.058712"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[638]" " -type \"float3\" 0.63597333 4.93677329999999959 4.09634020000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[639]" " -type \"float3\" 0.64138001 4.95526979999999995 4.12750859999999964"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[640]" " -type \"float3\" 0.64980125 4.96994880000000006 4.15458770000000044"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[641]" " -type \"float3\" 0.66041273 4.979373 4.17492769999999958"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[642]" " -type \"float3\" 0.67217547 4.98262020000000039 4.18653630000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[643]" " -type \"float3\" 0.68393831999999999 4.979373 4.18827820000000006"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[644]" " -type \"float3\" 0.69454967999999995 4.96994880000000006 4.17998220000000043"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[645]" " -type \"float3\" 0.70297092000000005 4.95526979999999995 4.16246079999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[646]" " -type \"float3\" 0.70837771999999999 4.93677329999999959 4.13742880000000035"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[647]" " -type \"float3\" 0.71024065999999997 4.91626929999999973 4.107337"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[648]" " -type \"float3\" 0.70837766000000002 4.89576630000000002 4.07513050000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[649]" " -type \"float3\" 0.70297085999999998 4.87726970000000026 4.043962"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[650]" " -type \"float3\" 0.69454967999999995 4.86259080000000043 4.0168828999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[651]" " -type \"float3\" 0.68393831999999999 4.85316659999999978 3.99654320000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[652]" " -type \"float3\" 0.67217547 4.84991929999999982 3.98493429999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[653]" " -type \"float3\" 0.66041273 4.85316659999999978 3.98319270000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[654]" " -type \"float3\" 0.64980130999999997 4.86259080000000043 3.99148849999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[655]" " -type \"float3\" 0.64138006999999997 4.87726970000000026 4.00900980000000029"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[656]" " -type \"float3\" 0.63597333 4.89576630000000002 4.03404190000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[657]" " -type \"float3\" 0.63411021000000001 4.91626929999999973 4.0641335999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[658]" " -type \"float3\" 0.63976060999999995 4.928472 4.10003139999999977"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[659]" " -type \"float3\" 0.64482598999999996 4.94580079999999978 4.12923150000000039"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[660]" " -type \"float3\" 0.65271544000000004 4.95955279999999998 4.15460109999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[661]" " -type \"float3\" 0.66265689999999999 4.9683818999999998 4.17365649999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[662]" " -type \"float3\" 0.67367697000000004 4.97142410000000012 4.18453219999999959"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[663]" " -type \"float3\" 0.68469709000000001 4.9683818999999998 4.18616390000000038"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[664]" " -type \"float3\" 0.69463843000000003 4.95955279999999998 4.17839190000000027"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[665]" " -type \"float3\" 0.702528 4.94580079999999978 4.1619767999999997"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[666]" " -type \"float3\" 0.70759338000000005 4.928472 4.13852550000000008"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[667]" " -type \"float3\" 0.70933877999999995 4.90926310000000043 4.11033340000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[668]" " -type \"float3\" 0.70759338000000005 4.8900541999999998 4.08016060000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[669]" " -type \"float3\" 0.70252793999999996 4.872726 4.05096010000000017"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[670]" " -type \"float3\" 0.69463836999999995 4.85897350000000028 4.02559090000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[671]" " -type \"float3\" 0.68469696999999996 4.85014439999999958 4.00653550000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[672]" " -type \"float3\" 0.67367697000000004 4.84710220000000014 3.99565940000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[673]" " -type \"float3\" 0.66265689999999999 4.85014439999999958 3.99402809999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[674]" " -type \"float3\" 0.6527155 4.85897350000000028 4.00179960000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[675]" " -type \"float3\" 0.64482594000000004 4.872726 4.0182146999999997"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[676]" " -type \"float3\" 0.63976060999999995 4.8900541999999998 4.04166649999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[677]" " -type \"float3\" 0.63801521000000005 4.90926310000000043 4.06985810000000026"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[678]" " -type \"float3\" 0.64426731999999998 4.92023849999999996 4.10314129999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[679]" " -type \"float3\" 0.64886653000000005 4.93597220000000014 4.12965490000000024"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[680]" " -type \"float3\" 0.65603 4.94845869999999977 4.15268950000000014"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[681]" " -type \"float3\" 0.66505658999999995 4.9564762 4.16999150000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[682]" " -type \"float3\" 0.67506272 4.95923849999999966 4.1798668000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[683]" " -type \"float3\" 0.68506867000000005 4.9564762 4.1813482999999998"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[684]" " -type \"float3\" 0.69409525000000005 4.94845869999999977 4.17429109999999959"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[685]" " -type \"float3\" 0.70125890000000002 4.93597269999999977 4.15938660000000038"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[686]" " -type \"float3\" 0.70585810999999998 4.92023849999999996 4.13809350000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[687]" " -type \"float3\" 0.70744288 4.90279669999999967 4.11249540000000025"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[688]" " -type \"float3\" 0.70585810999999998 4.88535590000000042 4.08509920000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[689]" " -type \"float3\" 0.70125890000000002 4.8696218 4.05858559999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[690]" " -type \"float3\" 0.69409525000000005 4.85713479999999986 4.03555059999999965"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[691]" " -type \"float3\" 0.68506867000000005 4.84911820000000038 4.018249"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[692]" " -type \"float3\" 0.67506272 4.84635589999999983 4.00837369999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[693]" " -type \"float3\" 0.66505658999999995 4.84911820000000038 4.00689220000000024"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[694]" " -type \"float3\" 0.65603 4.85713479999999986 4.01394889999999993"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[695]" " -type \"float3\" 0.64886653000000005 4.8696218 4.02885389999999965"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[696]" " -type \"float3\" 0.64426726000000001 4.88535590000000042 4.05014710000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[697]" " -type \"float3\" 0.64268243000000003 4.90279669999999967 4.07574460000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[698]" " -type \"float3\" 0.64938222999999995 4.91227440000000026 4.10559370000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[699]" " -type \"float3\" 0.65340220999999998 4.92602679999999982 4.12876750000000037"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[700]" " -type \"float3\" 0.65966338000000002 4.93694019999999956 4.148901"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[701]" " -type \"float3\" 0.66755288999999995 4.9439472999999996 4.1640233999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[702]" " -type \"float3\" 0.67629850000000002 4.94636150000000008 4.1726542000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[703]" " -type \"float3\" 0.68504405000000002 4.9439472999999996 4.17394969999999965"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[704]" " -type \"float3\" 0.69293355999999995 4.93694019999999956 4.16778139999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[705]" " -type \"float3\" 0.69919472999999999 4.92602679999999982 4.15475460000000041"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[706]" " -type \"float3\" 0.70321458999999997 4.91227440000000026 4.13614320000000024"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[707]" " -type \"float3\" 0.7045998 4.89703040000000023 4.11377"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[708]" " -type \"float3\" 0.70321465000000005 4.88178589999999968 4.08982470000000031"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[709]" " -type \"float3\" 0.69919472999999999 4.86803439999999998 4.06665130000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[710]" " -type \"float3\" 0.69293362000000003 4.85712049999999973 4.04651780000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[711]" " -type \"float3\" 0.68504405000000002 4.85011339999999969 4.03139540000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[712]" " -type \"float3\" 0.67629843999999995 4.84769869999999958 4.02276420000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[713]" " -type \"float3\" 0.66755288999999995 4.85011339999999969 4.02146910000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[714]" " -type \"float3\" 0.65966338000000002 4.85712049999999973 4.02763749999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[715]" " -type \"float3\" 0.65340220999999998 4.86803439999999998 4.04066420000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[716]" " -type \"float3\" 0.64938222999999995 4.88178589999999968 4.05927520000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[717]" " -type \"float3\" 0.64799713999999997 4.89703040000000023 4.08164879999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[718]" " -type \"float3\" 0.65497976999999996 4.90477709999999956 4.10732889999999973"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[719]" " -type \"float3\" 0.65832137999999996 4.91620830000000009 4.12659220000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[720]" " -type \"float3\" 0.66352588000000001 4.92528010000000016 4.14332770000000039"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[721]" " -type \"float3\" 0.67008411999999995 4.93110509999999991 4.15589860000000044"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[722]" " -type \"float3\" 0.67735398000000002 4.93311209999999978 4.16307310000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[723]" " -type \"float3\" 0.68462378000000002 4.93110509999999991 4.16414979999999968"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[724]" " -type \"float3\" 0.69118195999999998 4.92528059999999979 4.15902230000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[725]" " -type \"float3\" 0.69638652000000001 4.91620830000000009 4.14819340000000025"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[726]" " -type \"float3\" 0.69972813 4.90477709999999956 4.13272330000000032"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[727]" " -type \"float3\" 0.70087957000000001 4.89210510000000021 4.11412530000000043"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[728]" " -type \"float3\" 0.69972813 4.87943320000000025 4.09422059999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[729]" " -type \"float3\" 0.69638657999999998 4.86800190000000033 4.07495739999999973"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[730]" " -type \"float3\" 0.69118195999999998 4.85892959999999974 4.05822129999999959"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[731]" " -type \"float3\" 0.68462378000000002 4.85310509999999962 4.045651"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[732]" " -type \"float3\" 0.67735403999999999 4.85109809999999975 4.0384764999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[733]" " -type \"float3\" 0.67008411999999995 4.85310509999999962 4.03739980000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[734]" " -type \"float3\" 0.66352588000000001 4.85892959999999974 4.04252669999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[735]" " -type \"float3\" 0.65832131999999999 4.86800190000000033 4.05335570000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[736]" " -type \"float3\" 0.65497976999999996 4.87943320000000025 4.06882620000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[737]" " -type \"float3\" 0.65382832000000002 4.89210510000000021 4.08742430000000034"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[738]" " -type \"float3\" 0.66092187000000002 4.89793009999999995 4.10830309999999965"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[739]" " -type \"float3\" 0.66350275000000003 4.90675930000000005 4.12318129999999972"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[740]" " -type \"float3\" 0.66752272999999995 4.91376640000000009 4.13610789999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[741]" " -type \"float3\" 0.67258810999999996 4.91826529999999984 4.14581680000000041"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[742]" " -type \"float3\" 0.67820311 4.91981550000000034 4.15135860000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[743]" " -type \"float3\" 0.68381815999999995 4.91826529999999984 4.15218970000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[744]" " -type \"float3\" 0.68888353999999996 4.91376640000000009 4.14823010000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[745]" " -type \"float3\" 0.69290339999999995 4.90675930000000005 4.13986590000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[746]" " -type \"float3\" 0.69548434000000003 4.89793009999999995 4.12791680000000039"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[747]" " -type \"float3\" 0.69637369999999998 4.88814260000000012 4.11355260000000023"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[748]" " -type \"float3\" 0.69548434000000003 4.87835549999999962 4.09817840000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[749]" " -type \"float3\" 0.69290339999999995 4.86952590000000018 4.08330009999999977"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[750]" " -type \"float3\" 0.68888353999999996 4.86251880000000014 4.070374"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[751]" " -type \"float3\" 0.68381809999999998 4.85802029999999974 4.06066470000000024"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[752]" " -type \"float3\" 0.67820311 4.85647010000000012 4.05512329999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[753]" " -type \"float3\" 0.67258810999999996 4.85802029999999974 4.05429170000000028"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[754]" " -type \"float3\" 0.66752272999999995 4.86251880000000014 4.05825190000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[755]" " -type \"float3\" 0.66350281 4.86952590000000018 4.06661560000000044"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[756]" " -type \"float3\" 0.66092187000000002 4.87835549999999962 4.07856459999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[757]" " -type \"float3\" 0.66003257000000004 4.88814260000000012 4.09292940000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[758]" " -type \"float3\" 0.66706222000000004 4.89190240000000021 4.10849240000000027"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[759]" " -type \"float3\" 0.66881900999999999 4.897912 4.11861989999999967"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[760]" " -type \"float3\" 0.67155522000000001 4.90268179999999987 4.1274185000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[761]" " -type \"float3\" 0.67500311000000002 4.90574409999999972 4.13402750000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[762]" " -type \"float3\" 0.67882502 4.90679930000000031 4.13779930000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[763]" " -type \"float3\" 0.68264705000000003 4.90574409999999972 4.13836530000000025"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[764]" " -type \"float3\" 0.68609481999999999 4.90268179999999987 4.13566919999999971"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[765]" " -type \"float3\" 0.68883108999999998 4.897912 4.12997670000000028"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[766]" " -type \"float3\" 0.69058781999999996 4.89190240000000021 4.1218433000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[767]" " -type \"float3\" 0.69119315999999997 4.88524060000000038 4.11206579999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[768]" " -type \"float3\" 0.69058788000000004 4.87857819999999975 4.10160109999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[769]" " -type \"float3\" 0.68883108999999998 4.87256860000000014 4.09147410000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[770]" " -type \"float3\" 0.68609481999999999 4.86779929999999972 4.08267549999999968"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[771]" " -type \"float3\" 0.68264692999999999 4.864737 4.07606649999999959"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[772]" " -type \"float3\" 0.67882507999999997 4.86368180000000017 4.0722946999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[773]" " -type \"float3\" 0.67500311000000002 4.864737 4.07172920000000005"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[774]" " -type \"float3\" 0.67155527999999998 4.86779929999999972 4.07442430000000044"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[775]" " -type \"float3\" 0.66881900999999999 4.87256860000000014 4.08011720000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[776]" " -type \"float3\" 0.66706228000000001 4.87857819999999975 4.08825060000000029"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[777]" " -type \"float3\" 0.66645688000000003 4.88524060000000038 4.0980281999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[778]" " -type \"float3\" 0.67324972000000005 4.88684269999999987 4.10789350000000031"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[779]" " -type \"float3\" 0.67413908 4.8898849000000002 4.11301990000000028"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[780]" " -type \"float3\" 0.67552418000000003 4.8922996999999997 4.11747409999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[781]" " -type \"float3\" 0.67726964000000001 4.89384939999999968 4.12081959999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[782]" " -type \"float3\" 0.67920446000000001 4.89438390000000023 4.12272879999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[783]" " -type \"float3\" 0.68113922999999998 4.89384939999999968 4.12301539999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[784]" " -type \"float3\" 0.68288462999999999 4.89229920000000007 4.1216507"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[785]" " -type \"float3\" 0.68426984999999996 4.8898849000000002 4.11876920000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[786]" " -type \"float3\" 0.68515915000000005 4.88684269999999987 4.11465169999999958"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[787]" " -type \"float3\" 0.68546556999999997 4.88347010000000026 4.1097020999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[788]" " -type \"float3\" 0.68515915000000005 4.88009789999999999 4.10440439999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[789]" " -type \"float3\" 0.68426984999999996 4.87705520000000003 4.099278"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[790]" " -type \"float3\" 0.68288462999999999 4.87464049999999993 4.09482340000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[791]" " -type \"float3\" 0.68113917000000002 4.87309069999999966 4.09147790000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[792]" " -type \"float3\" 0.67920440000000004 4.87255669999999963 4.08956859999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[793]" " -type \"float3\" 0.67726958000000004 4.87309069999999966 4.089282"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[794]" " -type \"float3\" 0.67552422999999995 4.87464049999999993 4.09064669999999975"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[795]" " -type \"float3\" 0.67413908 4.87705520000000003 4.09352870000000024"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[796]" " -type \"float3\" 0.67324972000000005 4.88009789999999999 4.09764619999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[797]" " -type \"float3\" 0.67294328999999997 4.88347010000000026 4.10259579999999957"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[798]" " -type \"float3\" 0.65861809000000004 4.97953319999999966 4.04636189999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[799]" " -type \"float3\" 0.67933195999999996 4.882875 4.10651920000000015"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[800]" " -type \"float3\" 0.90870249000000003 4.72270059999999958 3.7992992000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[801]" " -type \"float3\" 0.90959179000000001 4.72574279999999991 3.804426"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[802]" " -type \"float3\" 0.91097700999999998 4.728157 3.8088801000000001"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[803]" " -type \"float3\" 0.91272240999999998 4.7297072 3.8122256000000001"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[804]" " -type \"float3\" 0.91465717999999996 4.73024130000000032 3.81413510000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[805]" " -type \"float3\" 0.916592 4.7297072 3.81442170000000003"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[806]" " -type \"float3\" 0.91833746000000005 4.728157 3.81305689999999986"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[807]" " -type \"float3\" 0.91972255999999997 4.72574279999999991 3.81017489999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[808]" " -type \"float3\" 0.92061185999999995 4.72270059999999958 3.80605750000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[809]" " -type \"float3\" 0.92091835 4.71932789999999969 3.80110789999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[810]" " -type \"float3\" 0.92061192000000003 4.71595530000000007 3.79581049999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[811]" " -type \"float3\" 0.91972255999999997 4.712913 3.79068370000000021"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[812]" " -type \"float3\" 0.91833739999999997 4.71049830000000025 3.78622959999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[813]" " -type \"float3\" 0.916592 4.70894809999999975 3.78288409999999997"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[814]" " -type \"float3\" 0.91465717999999996 4.70841409999999971 3.78097459999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[815]" " -type \"float3\" 0.91272240999999998 4.70894809999999975 3.780688"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[816]" " -type \"float3\" 0.91097700999999998 4.71049830000000025 3.78205280000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[817]" " -type \"float3\" 0.90959184999999998 4.712913 3.78493479999999982"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[818]" " -type \"float3\" 0.90870249000000003 4.71595530000000007 3.789052"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[819]" " -type \"float3\" 0.90839607 4.71932789999999969 3.79400160000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[820]" " -type \"float3\" 0.90327376000000004 4.72421929999999968 3.80210230000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[821]" " -type \"float3\" 0.90503054999999999 4.73022939999999981 3.81222960000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[822]" " -type \"float3\" 0.90776676000000001 4.73499870000000023 3.82102820000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[823]" " -type \"float3\" 0.91121452999999997 4.738061 3.827637"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[824]" " -type \"float3\" 0.91503656 4.73911570000000015 3.831409"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[825]" " -type \"float3\" 0.91885846999999998 4.738061 3.83197469999999996"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[826]" " -type \"float3\" 0.92230635999999999 4.73499870000000023 3.82927920000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[827]" " -type \"float3\" 0.92504262999999998 4.73022939999999981 3.82358619999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[828]" " -type \"float3\" 0.92679935999999996 4.72421929999999968 3.81545310000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[829]" " -type \"float3\" 0.92740469999999997 4.71755739999999957 3.80567549999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[830]" " -type \"float3\" 0.92679935999999996 4.71089550000000035 3.79521109999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[831]" " -type \"float3\" 0.92504257000000001 4.70488549999999961 3.78508380000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[832]" " -type \"float3\" 0.92230641999999996 4.70011620000000008 3.77628489999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[833]" " -type \"float3\" 0.91885852999999995 4.69705390000000023 3.76967639999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[834]" " -type \"float3\" 0.91503656 4.69599909999999987 3.7659047000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[835]" " -type \"float3\" 0.91121459000000005 4.69705390000000023 3.76533840000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[836]" " -type \"float3\" 0.90776676000000001 4.70011660000000031 3.768034"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[837]" " -type \"float3\" 0.90503054999999999 4.70488549999999961 3.77372720000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[838]" " -type \"float3\" 0.90327382000000001 4.71089550000000035 3.78186039999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[839]" " -type \"float3\" 0.90266842000000003 4.71755739999999957 3.79163790000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[840]" " -type \"float3\" 0.89837730000000005 4.724443 3.8055251000000001"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[841]" " -type \"float3\" 0.90095818000000005 4.73327209999999976 3.82040360000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[842]" " -type \"float3\" 0.90497810000000001 4.7402791999999998 3.83332989999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[843]" " -type \"float3\" 0.91004348000000002 4.74477770000000021 3.84303930000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[844]" " -type \"float3\" 0.91565847 4.74632789999999982 3.84858060000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[845]" " -type \"float3\" 0.92127353000000001 4.74477770000000021 3.84941220000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[846]" " -type \"float3\" 0.92633891000000002 4.7402791999999998 3.8454518000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[847]" " -type \"float3\" 0.93035882999999997 4.73327209999999976 3.83708809999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[848]" " -type \"float3\" 0.93293976999999995 4.724443 3.825139"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[849]" " -type \"float3\" 0.93382913000000001 4.71465539999999983 3.81077459999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[850]" " -type \"float3\" 0.93293976999999995 4.70486779999999971 3.79540059999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[851]" " -type \"float3\" 0.93035882999999997 4.69603820000000027 3.78052229999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[852]" " -type \"float3\" 0.92633891000000002 4.68903159999999986 3.76759580000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[853]" " -type \"float3\" 0.92127347000000004 4.68453259999999982 3.75788659999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[854]" " -type \"float3\" 0.91565852999999997 4.68298240000000021 3.75234529999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[855]" " -type \"float3\" 0.91004348000000002 4.68453259999999982 3.75151369999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[856]" " -type \"float3\" 0.90497815999999998 4.68903159999999986 3.75547390000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[857]" " -type \"float3\" 0.90095818000000005 4.69603820000000027 3.76383780000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[858]" " -type \"float3\" 0.89837730000000005 4.70486779999999971 3.77578659999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[859]" " -type \"float3\" 0.89748793999999998 4.71465539999999983 3.79015140000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[860]" " -type \"float3\" 0.89413345 4.7233647999999997 3.80948310000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[861]" " -type \"float3\" 0.897475 4.73479649999999985 3.82874630000000016"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[862]" " -type \"float3\" 0.90267967999999998 4.74386789999999969 3.84548230000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[863]" " -type \"float3\" 0.90923779999999998 4.74969290000000033 3.8580527"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[864]" " -type \"float3\" 0.91650765999999995 4.7516999000000002 3.86522750000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[865]" " -type \"float3\" 0.92377746000000005 4.74969290000000033 3.86630390000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[866]" " -type \"float3\" 0.93033569999999999 4.74386789999999969 3.86117670000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[867]" " -type \"float3\" 0.93554026000000001 4.734796 3.850348"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[868]" " -type \"float3\" 0.93888181000000004 4.7233647999999997 3.83487750000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[869]" " -type \"float3\" 0.94003331999999995 4.71069289999999974 3.81627960000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[870]" " -type \"float3\" 0.93888187000000001 4.69802090000000039 3.79637480000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[871]" " -type \"float3\" 0.93554026000000001 4.68658969999999986 3.77711180000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[872]" " -type \"float3\" 0.93033569999999999 4.67751740000000016 3.76037569999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[873]" " -type \"float3\" 0.92377746000000005 4.67169279999999976 3.74780539999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[874]" " -type \"float3\" 0.91650765999999995 4.6696863000000004 3.74063059999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[875]" " -type \"float3\" 0.90923779999999998 4.67169279999999976 3.73955420000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[876]" " -type \"float3\" 0.90267967999999998 4.67751740000000016 3.74468140000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[877]" " -type \"float3\" 0.897475 4.68658969999999986 3.75551009999999996"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[878]" " -type \"float3\" 0.89413345 4.69802090000000039 3.77098060000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[879]" " -type \"float3\" 0.89298206999999996 4.71069289999999974 3.7895783999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[880]" " -type \"float3\" 0.89064699000000003 4.72101159999999975 3.813879"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[881]" " -type \"float3\" 0.89466690999999998 4.73476409999999959 3.83705259999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[882]" " -type \"float3\" 0.90092802000000005 4.74567750000000022 3.85718609999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[883]" " -type \"float3\" 0.90881752999999998 4.75268460000000026 3.87230829999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[884]" " -type \"float3\" 0.91756314000000005 4.75509879999999985 3.88093950000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[885]" " -type \"float3\" 0.92630875000000001 4.75268460000000026 3.88223429999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[886]" " -type \"float3\" 0.93419825999999995 4.74567750000000022 3.87606640000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[887]" " -type \"float3\" 0.94045942999999999 4.73476409999999959 3.86303950000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[888]" " -type \"float3\" 0.94447935000000005 4.72101159999999975 3.84442830000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[889]" " -type \"float3\" 0.9458645 4.70576759999999972 3.82205510000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[890]" " -type \"float3\" 0.94447928999999997 4.69052310000000006 3.79810949999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[891]" " -type \"float3\" 0.94045942999999999 4.67677120000000013 3.77493619999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[892]" " -type \"float3\" 0.93419825999999995 4.66585729999999987 3.75480269999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[893]" " -type \"float3\" 0.92630875000000001 4.65885070000000034 3.73968029999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[894]" " -type \"float3\" 0.91756314000000005 4.65643639999999959 3.73104930000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[895]" " -type \"float3\" 0.90881752999999998 4.65885070000000034 3.72975419999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[896]" " -type \"float3\" 0.90092802000000005 4.66585729999999987 3.73592229999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[897]" " -type \"float3\" 0.89466690999999998 4.67677120000000013 3.74894930000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[898]" " -type \"float3\" 0.89064699000000003 4.69052310000000006 3.76756050000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[899]" " -type \"float3\" 0.88926183999999997 4.70576759999999972 3.78993370000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[900]" " -type \"float3\" 0.88800352999999999 4.71744249999999976 3.81860450000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[901]" " -type \"float3\" 0.89260280000000003 4.73317619999999994 3.84511780000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[902]" " -type \"float3\" 0.89976626999999998 4.74566269999999957 3.86815290000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[903]" " -type \"float3\" 0.90879284999999999 4.75367979999999957 3.88545469999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[904]" " -type \"float3\" 0.91879891999999996 4.75644210000000012 3.89532970000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[905]" " -type \"float3\" 0.92880499000000005 4.75367979999999957 3.89681150000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[906]" " -type \"float3\" 0.93783152000000003 4.74566269999999957 3.8897545"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[907]" " -type \"float3\" 0.94499511000000003 4.73317619999999994 3.87484979999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[908]" " -type \"float3\" 0.94959437999999996 4.71744249999999976 3.85355660000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[909]" " -type \"float3\" 0.95117921000000005 4.70000079999999976 3.82795880000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[910]" " -type \"float3\" 0.94959437999999996 4.68256 3.80056240000000001"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[911]" " -type \"float3\" 0.94499511000000003 4.6668257999999998 3.774049"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[912]" " -type \"float3\" 0.93783158 4.65433879999999967 3.751014"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[913]" " -type \"float3\" 0.92880499000000005 4.64632229999999957 3.73371219999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[914]" " -type \"float3\" 0.91879898000000004 4.64355989999999963 3.7238370999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[915]" " -type \"float3\" 0.90879284999999999 4.64632229999999957 3.72235540000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[916]" " -type \"float3\" 0.89976632999999995 4.65433879999999967 3.7294122999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[917]" " -type \"float3\" 0.89260273999999995 4.6668257999999998 3.7443168"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[918]" " -type \"float3\" 0.88800347000000002 4.68255949999999999 3.7656101999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[919]" " -type \"float3\" 0.88641875999999997 4.70000079999999976 3.791208"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[920]" " -type \"float3\" 0.88626826000000003 4.71274380000000015 3.82354310000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[921]" " -type \"float3\" 0.89133364000000004 4.730072 3.85274340000000004"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[922]" " -type \"float3\" 0.89922314999999997 4.743824 3.8781127999999998"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[923]" " -type \"float3\" 0.90916454999999996 4.75265360000000037 3.89716839999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[924]" " -type \"float3\" 0.92018467000000004 4.75569579999999981 3.90804410000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[925]" " -type \"float3\" 0.93120473999999998 4.75265360000000037 3.90967580000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[926]" " -type \"float3\" 0.94114608 4.743824 3.9019039000000002"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[927]" " -type \"float3\" 0.94903557999999999 4.730072 3.88548850000000012"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[928]" " -type \"float3\" 0.95410103000000002 4.71274380000000015 3.86203740000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[929]" " -type \"float3\" 0.95584643000000002 4.6935349000000004 3.83384539999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[930]" " -type \"float3\" 0.95410103000000002 4.67432590000000037 3.80367260000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[931]" " -type \"float3\" 0.94903563999999996 4.65699720000000017 3.774472"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[932]" " -type \"float3\" 0.94114608 4.64324519999999996 3.74910260000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[933]" " -type \"float3\" 0.93120473999999998 4.63441559999999964 3.730047"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[934]" " -type \"float3\" 0.92018467000000004 4.6313734000000002 3.71917130000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[935]" " -type \"float3\" 0.90916448999999999 4.63441559999999964 3.7175395"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[936]" " -type \"float3\" 0.89922321000000005 4.64324519999999996 3.72531180000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[937]" " -type \"float3\" 0.89133364000000004 4.65699720000000017 3.74172690000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[938]" " -type \"float3\" 0.88626832 4.67432590000000037 3.76517819999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[939]" " -type \"float3\" 0.88452286000000002 4.6935349000000004 3.79337"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[940]" " -type \"float3\" 0.88548386000000001 4.70703169999999993 3.82857320000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[941]" " -type \"float3\" 0.89089072000000002 4.72552820000000029 3.85974169999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[942]" " -type \"float3\" 0.89931190000000005 4.7402072000000004 3.886821"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[943]" " -type \"float3\" 0.90992342999999998 4.7496318999999998 3.90716049999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[944]" " -type \"float3\" 0.92168611 4.75287870000000012 3.91876939999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[945]" " -type \"float3\" 0.93344903000000001 4.7496318999999998 3.92051119999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[946]" " -type \"float3\" 0.94406027000000003 4.7402072000000004 3.91221519999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[947]" " -type \"float3\" 0.95248157 4.72552820000000029 3.89469390000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[948]" " -type \"float3\" 0.95788830999999997 4.70703169999999993 3.869662"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[949]" " -type \"float3\" 0.95975136999999999 4.6865281999999997 3.83957"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[950]" " -type \"float3\" 0.95788835999999999 4.66602519999999998 3.80736350000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[951]" " -type \"float3\" 0.95248151000000003 4.6475282 3.776195"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[952]" " -type \"float3\" 0.94406033 4.6328497000000004 3.74911569999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[953]" " -type \"float3\" 0.93344885 4.62342549999999974 3.72877619999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[954]" " -type \"float3\" 0.92168611 4.62017770000000016 3.71716740000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[955]" " -type \"float3\" 0.90992331999999998 4.62342549999999974 3.71542569999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[956]" " -type \"float3\" 0.89931190000000005 4.6328497000000004 3.72372170000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[957]" " -type \"float3\" 0.89089065999999995 4.6475282 3.74124290000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[958]" " -type \"float3\" 0.88548397999999995 4.66602519999999998 3.76627489999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[959]" " -type \"float3\" 0.88362092000000003 4.6865281999999997 3.79636670000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[960]" " -type \"float3\" 0.88566977000000002 4.70044709999999988 3.83357120000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[961]" " -type \"float3\" 0.89128476000000001 4.719656 3.86593989999999987"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[962]" " -type \"float3\" 0.90003043000000005 4.73490050000000018 3.89406229999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[963]" " -type \"float3\" 0.91105049999999999 4.744688 3.91518550000000021"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[964]" " -type \"float3\" 0.92326640999999998 4.74806069999999991 3.92724129999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[965]" " -type \"float3\" 0.93548226000000001 4.744688 3.92905019999999983"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[966]" " -type \"float3\" 0.94650239000000003 4.73490050000000018 3.92043469999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[967]" " -type \"float3\" 0.95524788000000005 4.719656 3.90223839999999988"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[968]" " -type \"float3\" 0.96086298999999997 4.70044709999999988 3.87624259999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[969]" " -type \"float3\" 0.96279775999999995 4.6791539000000002 3.84499140000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[970]" " -type \"float3\" 0.96086298999999997 4.65786120000000015 3.81154469999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[971]" " -type \"float3\" 0.95524794000000002 4.63865230000000039 3.77917579999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[972]" " -type \"float3\" 0.94650239000000003 4.62340779999999985 3.75105330000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[973]" " -type \"float3\" 0.93548226000000001 4.61362030000000001 3.7299304000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[974]" " -type \"float3\" 0.92326640999999998 4.61024760000000011 3.71787430000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[975]" " -type \"float3\" 0.91105049999999999 4.61362030000000001 3.71606559999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[976]" " -type \"float3\" 0.90003043000000005 4.62340779999999985 3.72468069999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[977]" " -type \"float3\" 0.89128481999999998 4.63865230000000039 3.74287720000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[978]" " -type \"float3\" 0.88566982999999999 4.65786120000000015 3.76887319999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[979]" " -type \"float3\" 0.883735 4.6791539000000002 3.80012419999999995"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[980]" " -type \"float3\" 0.88682132999999996 4.69315239999999978 3.83841369999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[981]" " -type \"float3\" 0.89250636000000005 4.71260070000000031 3.871186"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[982]" " -type \"float3\" 0.90136092999999995 4.728035 3.89965889999999993"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[983]" " -type \"float3\" 0.91251844000000004 4.73794409999999999 3.92104529999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[984]" " -type \"float3\" 0.92488658000000001 4.74135880000000043 3.93325160000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[985]" " -type \"float3\" 0.93725479 4.73794409999999999 3.93508289999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[986]" " -type \"float3\" 0.94841218000000005 4.728035 3.92636010000000013"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[987]" " -type \"float3\" 0.95726681000000002 4.71260070000000031 3.907937"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[988]" " -type \"float3\" 0.96295178000000003 4.69315239999999978 3.8816168000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[989]" " -type \"float3\" 0.96491075000000004 4.67159369999999985 3.84997649999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[990]" " -type \"float3\" 0.96295178000000003 4.65003540000000015 3.81611250000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[991]" " -type \"float3\" 0.95726675000000006 4.63058709999999962 3.78334020000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[992]" " -type \"float3\" 0.94841224000000002 4.61515279999999972 3.75486729999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[993]" " -type \"float3\" 0.93725473000000004 4.60524320000000031 3.73348089999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[994]" " -type \"float3\" 0.92488658000000001 4.60182860000000016 3.72127490000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[995]" " -type \"float3\" 0.91251844000000004 4.60524320000000031 3.71944359999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[996]" " -type \"float3\" 0.90136092999999995 4.61515279999999972 3.72816610000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[997]" " -type \"float3\" 0.89250636000000005 4.63058709999999962 3.74658919999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[998]" " -type \"float3\" 0.88682132999999996 4.65003540000000015 3.77290940000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[999]" " -type \"float3\" 0.88486248000000001 4.67159369999999985 3.80454990000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1000]" " -type \"float3\" 0.88891017000000005 4.68532659999999979 3.8429818"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1001]" " -type \"float3\" 0.89452516999999998 4.70453550000000043 3.87535069999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1002]" " -type \"float3\" 0.90327071999999997 4.71977949999999957 3.90347290000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1003]" " -type \"float3\" 0.91429084999999999 4.72956709999999969 3.92459580000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1004]" " -type \"float3\" 0.92650670000000002 4.73293970000000019 3.9366519000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1005]" " -type \"float3\" 0.93872261000000001 4.72956709999999969 3.93846080000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1006]" " -type \"float3\" 0.94974267000000001 4.71977949999999957 3.92984530000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1007]" " -type \"float3\" 0.95848834999999999 4.70453550000000043 3.91164919999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1008]" " -type \"float3\" 0.96410333999999998 4.68532659999999979 3.88565329999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1009]" " -type \"float3\" 0.96603817000000003 4.66403340000000011 3.85440210000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1010]" " -type \"float3\" 0.96410333999999998 4.64274020000000043 3.82095530000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1011]" " -type \"float3\" 0.95848834999999999 4.62353129999999979 3.7885863999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1012]" " -type \"float3\" 0.94974272999999998 4.60828729999999975 3.76046419999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1013]" " -type \"float3\" 0.93872266999999998 4.59849979999999992 3.739341"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1014]" " -type \"float3\" 0.92650675999999998 4.59512710000000002 3.72728510000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1015]" " -type \"float3\" 0.91429090000000002 4.59849979999999992 3.72547629999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1016]" " -type \"float3\" 0.90327078000000005 4.60828729999999975 3.7340914999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1017]" " -type \"float3\" 0.89452522999999995 4.62353129999999979 3.75228789999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1018]" " -type \"float3\" 0.88891017000000005 4.64274020000000043 3.77828380000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1019]" " -type \"float3\" 0.88697541000000002 4.66403340000000011 3.80953480000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1020]" " -type \"float3\" 0.89188480000000003 4.67716259999999995 3.84716270000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1021]" " -type \"float3\" 0.89729166000000005 4.6956591999999997 3.87833139999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1022]" " -type \"float3\" 0.90571283999999996 4.71033810000000042 3.9054104999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1023]" " -type \"float3\" 0.91632426 4.71976279999999981 3.92575"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1024]" " -type \"float3\" 0.92808705999999996 4.72300960000000014 3.93735910000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1025]" " -type \"float3\" 0.93984984999999999 4.71976279999999981 3.93910049999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1026]" " -type \"float3\" 0.95046120999999995 4.71033810000000042 3.930805"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1027]" " -type \"float3\" 0.95888251000000002 4.6956591999999997 3.9132836000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1028]" " -type \"float3\" 0.96428924999999999 4.67716259999999995 3.88825129999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1029]" " -type \"float3\" 0.96615231000000001 4.65665909999999972 3.85815950000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1030]" " -type \"float3\" 0.96428924999999999 4.6361561 3.825953"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1031]" " -type \"float3\" 0.95888245000000005 4.61765959999999964 3.79478479999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1032]" " -type \"float3\" 0.95046127000000002 4.60298060000000042 3.76770540000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1033]" " -type \"float3\" 0.93984979000000002 4.59355639999999976 3.747366"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1034]" " -type \"float3\" 0.92808705999999996 4.59030869999999958 3.73575709999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1035]" " -type \"float3\" 0.91632420000000003 4.59355639999999976 3.73401519999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1036]" " -type \"float3\" 0.90571283999999996 4.60298060000000042 3.74231120000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1037]" " -type \"float3\" 0.89729159999999997 4.61765959999999964 3.75983260000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1038]" " -type \"float3\" 0.89188486 4.6361561 3.78486440000000002"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1039]" " -type \"float3\" 0.89002186000000005 4.65665909999999972 3.8149563999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1040]" " -type \"float3\" 0.89567207999999998 4.66886189999999957 3.85085370000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1041]" " -type \"float3\" 0.90073751999999996 4.68619010000000014 3.88005420000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1042]" " -type \"float3\" 0.90862703 4.69994259999999997 3.90542390000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1043]" " -type \"float3\" 0.91856842999999999 4.70877169999999978 3.92447919999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1044]" " -type \"float3\" 0.92958856000000001 4.71181390000000011 3.9353549000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1045]" " -type \"float3\" 0.94060862000000001 4.70877169999999978 3.93698689999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1046]" " -type \"float3\" 0.95054996000000003 4.69994210000000034 3.92921470000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1047]" " -type \"float3\" 0.95843953000000004 4.68619010000000014 3.91279960000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1048]" " -type \"float3\" 0.96350484999999997 4.66886189999999957 3.889348"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1049]" " -type \"float3\" 0.96525030999999994 4.649653 3.86115619999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1050]" " -type \"float3\" 0.96350491000000005 4.630444 3.83098340000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1051]" " -type \"float3\" 0.95843953000000004 4.61311529999999959 3.8017827999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1052]" " -type \"float3\" 0.95054996000000003 4.59936330000000027 3.77641340000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1053]" " -type \"float3\" 0.94060862000000001 4.59053369999999994 3.75735809999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1054]" " -type \"float3\" 0.92958856000000001 4.58749149999999961 3.74648210000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1055]" " -type \"float3\" 0.91856842999999999 4.59053419999999957 3.7448503999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1056]" " -type \"float3\" 0.90862703 4.59936330000000027 3.75262260000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1057]" " -type \"float3\" 0.90073751999999996 4.61311529999999959 3.76903770000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1058]" " -type \"float3\" 0.89567220000000003 4.630444 3.79248910000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1059]" " -type \"float3\" 0.89392680000000002 4.649653 3.82068090000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1060]" " -type \"float3\" 0.90017879000000001 4.66062829999999995 3.85396390000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1061]" " -type \"float3\" 0.904778 4.676362 3.88047720000000007"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1062]" " -type \"float3\" 0.91194153 4.68884849999999975 3.90351250000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1063]" " -type \"float3\" 0.92096816999999997 4.69686559999999975 3.92081429999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1064]" " -type \"float3\" 0.93097419000000003 4.6996279000000003 3.93068930000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1065]" " -type \"float3\" 0.94098026000000001 4.69686559999999975 3.93217110000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1066]" " -type \"float3\" 0.95000684000000002 4.68884849999999975 3.92511419999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1067]" " -type \"float3\" 0.95717030999999997 4.676362 3.91020939999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1068]" " -type \"float3\" 0.96176958000000001 4.66062829999999995 3.888916"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1069]" " -type \"float3\" 0.96335446999999996 4.64318659999999994 3.86331839999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1070]" " -type \"float3\" 0.96176963999999998 4.6257457999999998 3.835922"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1071]" " -type \"float3\" 0.95717043000000002 4.61001159999999999 3.80940840000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1072]" " -type \"float3\" 0.95000684000000002 4.59752459999999985 3.78637360000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1073]" " -type \"float3\" 0.94098026000000001 4.58950809999999976 3.76907179999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1074]" " -type \"float3\" 0.93097425 4.58674569999999981 3.75919679999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1075]" " -type \"float3\" 0.92096816999999997 4.58950809999999976 3.757715"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1076]" " -type \"float3\" 0.91194165000000005 4.59752459999999985 3.76477189999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1077]" " -type \"float3\" 0.90477806000000005 4.61001159999999999 3.77967640000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1078]" " -type \"float3\" 0.90017879000000001 4.62574530000000017 3.80096979999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1079]" " -type \"float3\" 0.89859401999999999 4.64318659999999994 3.82656740000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1080]" " -type \"float3\" 0.90529388 4.65266420000000025 3.85641649999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1081]" " -type \"float3\" 0.90931379999999995 4.66641619999999957 3.87959029999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1082]" " -type \"float3\" 0.91557491000000002 4.67733 3.89972379999999985"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1083]" " -type \"float3\" 0.92346435999999998 4.68433670000000024 3.91484589999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1084]" " -type \"float3\" 0.93221003000000002 4.68675140000000034 3.92347720000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1085]" " -type \"float3\" 0.94095558000000001 4.68433670000000024 3.924772"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1086]" " -type \"float3\" 0.94884515000000003 4.67733 3.91860410000000003"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1087]" " -type \"float3\" 0.95510638000000003 4.66641619999999957 3.90557720000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1088]" " -type \"float3\" 0.95912622999999997 4.65266420000000025 3.886966"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1089]" " -type \"float3\" 0.96051138999999996 4.6374196999999997 3.86459280000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1090]" " -type \"float3\" 0.95912622999999997 4.62217569999999967 3.84064750000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1091]" " -type \"float3\" 0.95510631999999995 4.60842319999999983 3.81747360000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1092]" " -type \"float3\" 0.94884515000000003 4.59750990000000037 3.79734039999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1093]" " -type \"float3\" 0.94095563999999998 4.59050319999999967 3.782218"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1094]" " -type \"float3\" 0.93221003000000002 4.58808849999999957 3.773587"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1095]" " -type \"float3\" 0.92346441999999995 4.59050319999999967 3.77229189999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1096]" " -type \"float3\" 0.91557496999999999 4.59750990000000037 3.77846"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1097]" " -type \"float3\" 0.90931373999999998 4.60842370000000034 3.791487"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1098]" " -type \"float3\" 0.90529388 4.62217569999999967 3.81009790000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1099]" " -type \"float3\" 0.90390873000000005 4.6374196999999997 3.8324710999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1100]" " -type \"float3\" 0.91089129000000002 4.64516639999999992 3.85815140000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1101]" " -type \"float3\" 0.91423284999999999 4.65659810000000007 3.87741449999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1102]" " -type \"float3\" 0.91943752999999995 4.66566990000000015 3.89415049999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1103]" " -type \"float3\" 0.92599564999999995 4.67149449999999966 3.90672109999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1104]" " -type \"float3\" 0.93326551000000002 4.673502 3.91389580000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1105]" " -type \"float3\" 0.94053531000000001 4.67149449999999966 3.91497209999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1106]" " -type \"float3\" 0.94709354999999995 4.66566990000000015 3.90984510000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1107]" " -type \"float3\" 0.95229810000000004 4.65659810000000007 3.89901609999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1108]" " -type \"float3\" 0.95563966 4.64516639999999992 3.88354560000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1109]" " -type \"float3\" 0.95679110000000001 4.63249490000000019 3.86494779999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1110]" " -type \"float3\" 0.95563971999999997 4.619823 3.84504320000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1111]" " -type \"float3\" 0.95229816 4.60839179999999971 3.82578020000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1112]" " -type \"float3\" 0.94709354999999995 4.59931950000000001 3.80904409999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1113]" " -type \"float3\" 0.94053531000000001 4.5934948999999996 3.79647369999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1114]" " -type \"float3\" 0.93326551000000002 4.59148789999999973 3.789299"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1115]" " -type \"float3\" 0.92599571000000003 4.5934948999999996 3.78822260000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1116]" " -type \"float3\" 0.91943752999999995 4.59931950000000001 3.79334950000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1117]" " -type \"float3\" 0.91423290999999995 4.60839179999999971 3.80417849999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1118]" " -type \"float3\" 0.91089129000000002 4.619823 3.819649"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1119]" " -type \"float3\" 0.90973990999999998 4.63249490000000019 3.83824679999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1120]" " -type \"float3\" 0.91683340000000002 4.63832 3.85912560000000004"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1121]" " -type \"float3\" 0.91941434 4.64714910000000003 3.87400410000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1122]" " -type \"float3\" 0.92343432000000003 4.65415620000000008 3.88693070000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1123]" " -type \"float3\" 0.92849963999999996 4.65865469999999959 3.89663979999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1124]" " -type \"float3\" 0.93411469000000003 4.66020490000000009 3.90218139999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1125]" " -type \"float3\" 0.93972968999999995 4.65865469999999959 3.90301279999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1126]" " -type \"float3\" 0.94479513000000004 4.65415620000000008 3.89905260000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1127]" " -type \"float3\" 0.94881499000000002 4.64714910000000003 3.89068870000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1128]" " -type \"float3\" 0.95139587000000003 4.63832 3.87873940000000017"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1129]" " -type \"float3\" 0.95228528999999995 4.6285324000000001 3.86437510000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1130]" " -type \"float3\" 0.95139593 4.61874490000000026 3.84900120000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1131]" " -type \"float3\" 0.94881499000000002 4.60991529999999994 3.83412290000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1132]" " -type \"float3\" 0.94479506999999996 4.60290860000000013 3.82119659999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1133]" " -type \"float3\" 0.93972962999999998 4.59840970000000038 3.81148720000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1134]" " -type \"float3\" 0.93411469000000003 4.59685990000000011 3.80594590000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1135]" " -type \"float3\" 0.92849957999999999 4.59840970000000038 3.80511430000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1136]" " -type \"float3\" 0.92343425999999995 4.60290860000000013 3.80907440000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1137]" " -type \"float3\" 0.91941434 4.60991529999999994 3.8174383999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1138]" " -type \"float3\" 0.91683345999999999 4.61874490000000026 3.82938720000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1139]" " -type \"float3\" 0.91594410000000004 4.6285324000000001 3.8437519"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1140]" " -type \"float3\" 0.92297375000000004 4.63229229999999959 3.85931539999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1141]" " -type \"float3\" 0.92473059999999996 4.63830179999999981 3.86944270000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1142]" " -type \"float3\" 0.92746675000000001 4.64307170000000013 3.87824109999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1143]" " -type \"float3\" 0.93091464000000002 4.64613340000000008 3.88484980000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1144]" " -type \"float3\" 0.93473660999999997 4.64718870000000006 3.88862180000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1145]" " -type \"float3\" 0.93855858000000003 4.64613340000000008 3.88918760000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1146]" " -type \"float3\" 0.94200640999999996 4.64307170000000013 3.88649230000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1147]" " -type \"float3\" 0.94474267999999995 4.63830179999999981 3.88079930000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1148]" " -type \"float3\" 0.94649934999999996 4.63229229999999959 3.87266589999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1149]" " -type \"float3\" 0.94710481000000002 4.62562989999999985 3.86288859999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1150]" " -type \"float3\" 0.94649934999999996 4.618968 3.85242389999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1151]" " -type \"float3\" 0.94474261999999998 4.612958 3.84229680000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1152]" " -type \"float3\" 0.94200640999999996 4.6081890999999997 3.833498"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1153]" " -type \"float3\" 0.93855858000000003 4.60512690000000013 3.82688929999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1154]" " -type \"float3\" 0.93473660999999997 4.60407160000000015 3.82311749999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1155]" " -type \"float3\" 0.93091464000000002 4.60512690000000013 3.82255149999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1156]" " -type \"float3\" 0.92746687000000005 4.6081890999999997 3.825247"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1157]" " -type \"float3\" 0.92473053999999999 4.61295840000000013 3.83094020000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1158]" " -type \"float3\" 0.92297381000000001 4.618968 3.83907340000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1159]" " -type \"float3\" 0.92236847 4.62562989999999985 3.848851"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1160]" " -type \"float3\" 0.92916125000000005 4.62723260000000014 3.85871580000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1161]" " -type \"float3\" 0.93005066999999997 4.63027479999999958 3.86384270000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1162]" " -type \"float3\" 0.93143575999999995 4.632689 3.86829659999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1163]" " -type \"float3\" 0.93318122999999997 4.63423919999999967 3.87164239999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1164]" " -type \"float3\" 0.93511599000000001 4.63477329999999998 3.87355179999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1165]" " -type \"float3\" 0.93705081999999995 4.63423919999999967 3.87383819999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1166]" " -type \"float3\" 0.93879621999999996 4.632689 3.87247370000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1167]" " -type \"float3\" 0.94018142999999998 4.63027479999999958 3.86959169999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1168]" " -type \"float3\" 0.94107068000000005 4.62723260000000014 3.86547419999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1169]" " -type \"float3\" 0.94137709999999997 4.62385990000000024 3.86052440000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1170]" " -type \"float3\" 0.94107074000000002 4.62048720000000035 3.85522719999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1171]" " -type \"float3\" 0.94018137000000002 4.617445 3.85010049999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1172]" " -type \"float3\" 0.93879621999999996 4.61503029999999992 3.84564640000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1173]" " -type \"float3\" 0.93705081999999995 4.61348010000000031 3.84230070000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1174]" " -type \"float3\" 0.93511593000000004 4.612946 3.8403912"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1175]" " -type \"float3\" 0.93318122999999997 4.61348010000000031 3.84010480000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1176]" " -type \"float3\" 0.93143582000000003 4.61503029999999992 3.84146929999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1177]" " -type \"float3\" 0.93005061 4.617445 3.84435130000000003"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1178]" " -type \"float3\" 0.92916131000000002 4.62048720000000035 3.84846850000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1179]" " -type \"float3\" 0.92885481999999997 4.62385990000000024 3.85341809999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1180]" " -type \"float3\" 0.91452968000000001 4.719923 3.79718450000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1181]" " -type \"float3\" 0.93524348999999996 4.62326480000000029 3.85734179999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1182]" " -type \"float3\" 0.90870242999999995 4.217236 3.03138880000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1183]" " -type \"float3\" 0.90959179000000001 4.22027830000000037 3.03651569999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1184]" " -type \"float3\" 0.91097700999999998 4.222693 3.04096980000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1185]" " -type \"float3\" 0.91272235000000002 4.22424320000000009 3.04431530000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1186]" " -type \"float3\" 0.91465724000000004 4.22477669999999961 3.04622459999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1187]" " -type \"float3\" 0.91659193999999999 4.22424320000000009 3.04651119999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1188]" " -type \"float3\" 0.91833739999999997 4.222693 3.0451467000000001"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1189]" " -type \"float3\" 0.91972255999999997 4.22027830000000037 3.04226470000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1190]" " -type \"float3\" 0.92061185999999995 4.217236 3.03814720000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1191]" " -type \"float3\" 0.92091829000000003 4.21386340000000015 3.03319759999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1192]" " -type \"float3\" 0.92061192000000003 4.21049070000000025 3.02790019999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1193]" " -type \"float3\" 0.91972255999999997 4.20744849999999992 3.0227735"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1194]" " -type \"float3\" 0.91833735000000005 4.20503430000000034 3.01831940000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1195]" " -type \"float3\" 0.916592 4.20348409999999983 3.01497390000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1196]" " -type \"float3\" 0.91465724000000004 4.20294949999999989 3.0130640999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1197]" " -type \"float3\" 0.91272240999999998 4.20348409999999983 3.01277779999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1198]" " -type \"float3\" 0.91097695000000001 4.20503430000000034 3.01414230000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1199]" " -type \"float3\" 0.90959179000000001 4.20744849999999992 3.0170243000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1200]" " -type \"float3\" 0.90870249000000003 4.21049070000000025 3.0211418000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1201]" " -type \"float3\" 0.90839601000000003 4.21386340000000015 3.02609130000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1202]" " -type \"float3\" 0.90327369999999996 4.21875520000000037 3.03419209999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1203]" " -type \"float3\" 0.90503054999999999 4.22476479999999999 3.04431940000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1204]" " -type \"float3\" 0.90776676000000001 4.22953410000000041 3.053118"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1205]" " -type \"float3\" 0.91121459000000005 4.23259640000000026 3.05972650000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1206]" " -type \"float3\" 0.91503656 4.23365159999999996 3.0634986999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1207]" " -type \"float3\" 0.91885852999999995 4.23259640000000026 3.06406450000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1208]" " -type \"float3\" 0.92230635999999999 4.22953410000000041 3.06136890000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1209]" " -type \"float3\" 0.92504262999999998 4.22476479999999999 3.055676"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1210]" " -type \"float3\" 0.92679929999999999 4.21875520000000037 3.04754259999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1211]" " -type \"float3\" 0.92740469999999997 4.21209290000000003 3.03776529999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1212]" " -type \"float3\" 0.92679929999999999 4.205431 3.02730059999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1213]" " -type \"float3\" 0.92504262999999998 4.19942089999999979 3.01717330000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1214]" " -type \"float3\" 0.92230641999999996 4.19465160000000026 3.00837470000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1215]" " -type \"float3\" 0.91885852999999995 4.19158980000000003 3.00176620000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1216]" " -type \"float3\" 0.91503656 4.19053409999999982 2.99799419999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1217]" " -type \"float3\" 0.91121459000000005 4.19158980000000003 2.99742819999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1218]" " -type \"float3\" 0.90776676000000001 4.19465160000000026 3.00012370000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1219]" " -type \"float3\" 0.90503054999999999 4.1994214000000003 3.00581670000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1220]" " -type \"float3\" 0.90327376000000004 4.205431 3.01395010000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1221]" " -type \"float3\" 0.90266842000000003 4.21209290000000003 3.0237276999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1222]" " -type \"float3\" 0.89837730000000005 4.21897840000000013 3.03761480000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1223]" " -type \"float3\" 0.90095818000000005 4.227807 3.05249330000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1224]" " -type \"float3\" 0.90497810000000001 4.23481459999999998 3.06541970000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1225]" " -type \"float3\" 0.91004348000000002 4.23931310000000039 3.07512879999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1226]" " -type \"float3\" 0.91565852999999997 4.2408633 3.08067039999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1227]" " -type \"float3\" 0.92127353000000001 4.23931310000000039 3.08150170000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1228]" " -type \"float3\" 0.92633891000000002 4.23481459999999998 3.07754159999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1229]" " -type \"float3\" 0.93035882999999997 4.22780749999999994 3.06917790000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1230]" " -type \"float3\" 0.93293970999999998 4.21897840000000013 3.05722860000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1231]" " -type \"float3\" 0.93382913000000001 4.20919080000000001 3.04286430000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1232]" " -type \"float3\" 0.93293976999999995 4.19940330000000017 3.02749040000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1233]" " -type \"float3\" 0.93035882999999997 4.19057369999999985 3.01261210000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1234]" " -type \"float3\" 0.92633891000000002 4.183567 2.9996855"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1235]" " -type \"float3\" 0.92127353000000001 4.17906859999999991 2.9899764000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1236]" " -type \"float3\" 0.91565847 4.17751789999999978 2.98443479999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1237]" " -type \"float3\" 0.91004348000000002 4.17906859999999991 2.98360350000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1238]" " -type \"float3\" 0.90497815999999998 4.183567 2.9875636000000001"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1239]" " -type \"float3\" 0.90095818000000005 4.19057369999999985 2.99592759999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1240]" " -type \"float3\" 0.89837730000000005 4.19940330000000017 3.00787639999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1241]" " -type \"float3\" 0.89748793999999998 4.20919080000000001 3.02224110000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1242]" " -type \"float3\" 0.89413345 4.21790030000000016 3.04157279999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1243]" " -type \"float3\" 0.89747505999999999 4.2293314999999998 3.06083609999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1244]" " -type \"float3\" 0.90267962000000002 4.23840380000000039 3.07757190000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1245]" " -type \"float3\" 0.90923779999999998 4.2442283999999999 3.09014249999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1246]" " -type \"float3\" 0.91650772000000003 4.24623490000000015 3.09731719999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1247]" " -type \"float3\" 0.92377746000000005 4.2442283999999999 3.09839369999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1248]" " -type \"float3\" 0.93033564000000002 4.23840380000000039 3.09326649999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1249]" " -type \"float3\" 0.93554031999999998 4.2293314999999998 3.08243750000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1250]" " -type \"float3\" 0.93888181000000004 4.21790030000000016 3.066967"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1251]" " -type \"float3\" 0.94003325999999998 4.20522829999999992 3.04836919999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1252]" " -type \"float3\" 0.93888187000000001 4.19255639999999996 3.02846459999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1253]" " -type \"float3\" 0.93554026000000001 4.18112469999999981 3.00920150000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1254]" " -type \"float3\" 0.93033569999999999 4.17205329999999996 2.99246549999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1255]" " -type \"float3\" 0.92377752000000002 4.16622830000000022 2.97989490000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1256]" " -type \"float3\" 0.91650772000000003 4.16422130000000035 2.97272010000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1257]" " -type \"float3\" 0.90923785999999995 4.16622830000000022 2.97164390000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1258]" " -type \"float3\" 0.90267967999999998 4.17205329999999996 2.97677110000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1259]" " -type \"float3\" 0.897475 4.18112469999999981 2.98759979999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1260]" " -type \"float3\" 0.89413350999999996 4.19255639999999996 3.00307039999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1261]" " -type \"float3\" 0.89298206999999996 4.20522829999999992 3.02166820000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1262]" " -type \"float3\" 0.89064699000000003 4.21554759999999984 3.04596879999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1263]" " -type \"float3\" 0.89466685000000001 4.22929910000000042 3.06914230000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1264]" " -type \"float3\" 0.90092808000000002 4.2402129000000004 3.08927560000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1265]" " -type \"float3\" 0.90881752999999998 4.24722 3.104398"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1266]" " -type \"float3\" 0.91756314000000005 4.24963469999999965 3.11302920000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1267]" " -type \"float3\" 0.92630880999999998 4.24722 3.11432410000000015"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1268]" " -type \"float3\" 0.93419832000000003 4.2402129000000004 3.10815619999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1269]" " -type \"float3\" 0.94045942999999999 4.22929910000000042 3.095129"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1270]" " -type \"float3\" 0.94447935000000005 4.21554759999999984 3.07651809999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1271]" " -type \"float3\" 0.9458645 4.20030310000000018 3.05414459999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1272]" " -type \"float3\" 0.94447928999999997 4.18505859999999963 3.03019930000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1273]" " -type \"float3\" 0.94045942999999999 4.17130660000000031 3.0070256999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1274]" " -type \"float3\" 0.93419832000000003 4.16039319999999968 2.98689250000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1275]" " -type \"float3\" 0.92630880999999998 4.15338609999999964 2.97177"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1276]" " -type \"float3\" 0.91756320000000002 4.15097190000000005 2.96313879999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1277]" " -type \"float3\" 0.90881758999999995 4.15338609999999964 2.961844"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1278]" " -type \"float3\" 0.90092808000000002 4.16039319999999968 2.96801190000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1279]" " -type \"float3\" 0.89466690999999998 4.17130660000000031 2.981039"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1280]" " -type \"float3\" 0.89064699000000003 4.18505910000000014 2.99965"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1281]" " -type \"float3\" 0.88926178 4.20030310000000018 3.02202320000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1282]" " -type \"float3\" 0.88800352999999999 4.21197749999999971 3.05069420000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1283]" " -type \"float3\" 0.89260280000000003 4.22771170000000041 3.07720759999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1284]" " -type \"float3\" 0.89976632999999995 4.24019860000000026 3.10024260000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1285]" " -type \"float3\" 0.90879290999999995 4.24821519999999975 3.11754439999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1286]" " -type \"float3\" 0.91879891999999996 4.2509775000000003 3.1274194999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1287]" " -type \"float3\" 0.92880499000000005 4.24821519999999975 3.12890120000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1288]" " -type \"float3\" 0.93783158 4.24019860000000026 3.12184429999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1289]" " -type \"float3\" 0.94499511000000003 4.22771170000000041 3.10693980000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1290]" " -type \"float3\" 0.94959431999999999 4.21197749999999971 3.08564619999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1291]" " -type \"float3\" 0.95117921000000005 4.19453619999999994 3.06004860000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1292]" " -type \"float3\" 0.94959437999999996 4.17709490000000017 3.03265209999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1293]" " -type \"float3\" 0.94499511000000003 4.16136119999999998 3.0061388"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1294]" " -type \"float3\" 0.93783158 4.14887430000000013 2.98310379999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1295]" " -type \"float3\" 0.92880499000000005 4.14085769999999975 2.9658017000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1296]" " -type \"float3\" 0.91879891999999996 4.13809489999999958 2.95592670000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1297]" " -type \"float3\" 0.90879290999999995 4.14085769999999975 2.95444510000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1298]" " -type \"float3\" 0.89976632999999995 4.14887430000000013 2.96150210000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1299]" " -type \"float3\" 0.89260280000000003 4.16136119999999998 2.97640659999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1300]" " -type \"float3\" 0.88800352999999999 4.17709490000000017 2.9977"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1301]" " -type \"float3\" 0.88641875999999997 4.19453619999999994 3.02329779999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1302]" " -type \"float3\" 0.88626826000000003 4.20727920000000033 3.05563260000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1303]" " -type \"float3\" 0.89133357999999996 4.22460750000000029 3.08483309999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1304]" " -type \"float3\" 0.89922321000000005 4.23835989999999985 3.11020260000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1305]" " -type \"float3\" 0.90916448999999999 4.247189 3.12925789999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1306]" " -type \"float3\" 0.92018467000000004 4.25023169999999961 3.14013389999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1307]" " -type \"float3\" 0.93120473999999998 4.247189 3.14176559999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1308]" " -type \"float3\" 0.94114613999999996 4.23835989999999985 3.13399340000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1309]" " -type \"float3\" 0.94903557999999999 4.22460750000000029 3.11757829999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1310]" " -type \"float3\" 0.95410103000000002 4.20727920000000033 3.09412719999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1311]" " -type \"float3\" 0.95584643000000002 4.18807029999999969 3.06593509999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1312]" " -type \"float3\" 0.95410103000000002 4.16886139999999994 3.03576230000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1313]" " -type \"float3\" 0.94903563999999996 4.15153309999999998 3.00656180000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1314]" " -type \"float3\" 0.94114608 4.13778070000000042 2.98119239999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1315]" " -type \"float3\" 0.93120473999999998 4.12895150000000033 2.96213669999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1316]" " -type \"float3\" 0.92018467000000004 4.1259093 2.951261"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1317]" " -type \"float3\" 0.90916448999999999 4.12895150000000033 2.94962929999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1318]" " -type \"float3\" 0.89922321000000005 4.13778070000000042 2.9574012999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1319]" " -type \"float3\" 0.89133370000000001 4.15153309999999998 2.97381640000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1320]" " -type \"float3\" 0.88626832 4.16886139999999994 2.997268"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1321]" " -type \"float3\" 0.88452286000000002 4.18807029999999969 3.02545980000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1322]" " -type \"float3\" 0.88548391999999998 4.20156720000000039 3.06066269999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1323]" " -type \"float3\" 0.89089065999999995 4.22006369999999986 3.09183120000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1324]" " -type \"float3\" 0.89931196000000002 4.23474220000000035 3.11891059999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1325]" " -type \"float3\" 0.90992337000000001 4.24416689999999974 3.13925030000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1326]" " -type \"float3\" 0.92168611 4.2474141000000003 3.1508588999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1327]" " -type \"float3\" 0.93344897000000004 4.24416689999999974 3.15260080000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1328]" " -type \"float3\" 0.94406027000000003 4.23474259999999969 3.144305"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1329]" " -type \"float3\" 0.95248151000000003 4.22006369999999986 3.12678339999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1330]" " -type \"float3\" 0.95788835999999999 4.20156720000000039 3.10175160000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1331]" " -type \"float3\" 0.95975136999999999 4.18106370000000016 3.07165979999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1332]" " -type \"float3\" 0.95788835999999999 4.16056060000000016 3.03945329999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1333]" " -type \"float3\" 0.95248151000000003 4.1420640999999998 3.0082848000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1334]" " -type \"float3\" 0.94406027000000003 4.12738470000000035 2.98120550000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1335]" " -type \"float3\" 0.93344890999999997 4.11796049999999969 2.960866"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1336]" " -type \"float3\" 0.92168611 4.11471319999999974 2.94925710000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1337]" " -type \"float3\" 0.90992331999999998 4.11796049999999969 2.94751550000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1338]" " -type \"float3\" 0.89931196000000002 4.1273850999999997 2.95581130000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1339]" " -type \"float3\" 0.89089065999999995 4.1420640999999998 2.97333259999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1340]" " -type \"float3\" 0.88548397999999995 4.16056060000000016 2.99836439999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1341]" " -type \"float3\" 0.88362092000000003 4.18106370000000016 3.02845640000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1342]" " -type \"float3\" 0.88566977000000002 4.19498250000000006 3.065661"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1343]" " -type \"float3\" 0.89128481999999998 4.21419139999999981 3.09802989999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1344]" " -type \"float3\" 0.90003043000000005 4.22943590000000036 3.126152"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1345]" " -type \"float3\" 0.91105049999999999 4.23922349999999959 3.14727520000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1346]" " -type \"float3\" 0.92326640999999998 4.24259569999999986 3.15933080000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1347]" " -type \"float3\" 0.93548226000000001 4.23922349999999959 3.16114"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1348]" " -type \"float3\" 0.94650239000000003 4.22943590000000036 3.15252450000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1349]" " -type \"float3\" 0.95524794000000002 4.21419139999999981 3.13432809999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1350]" " -type \"float3\" 0.96086298999999997 4.19498250000000006 3.10833240000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1351]" " -type \"float3\" 0.96279775999999995 4.17368980000000001 3.07708119999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1352]" " -type \"float3\" 0.96086298999999997 4.15239620000000009 3.04363440000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1353]" " -type \"float3\" 0.95524794000000002 4.13318779999999997 3.01126549999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1354]" " -type \"float3\" 0.94650239000000003 4.11794379999999993 2.98314309999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1355]" " -type \"float3\" 0.93548226000000001 4.10815570000000019 2.96201990000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1356]" " -type \"float3\" 0.92326640999999998 4.10478349999999992 2.949964"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1357]" " -type \"float3\" 0.91105049999999999 4.10815570000000019 2.94815519999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1358]" " -type \"float3\" 0.90003043000000005 4.11794330000000031 2.95677039999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1359]" " -type \"float3\" 0.89128481999999998 4.13318779999999997 2.974967"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1360]" " -type \"float3\" 0.88566982999999999 4.15239620000000009 3.000963"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1361]" " -type \"float3\" 0.883735 4.17368980000000001 3.03221389999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1362]" " -type \"float3\" 0.88682132999999996 4.18768790000000024 3.07050350000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1363]" " -type \"float3\" 0.89250636000000005 4.20713619999999988 3.10327580000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1364]" " -type \"float3\" 0.90136092999999995 4.22257040000000039 3.13174870000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1365]" " -type \"float3\" 0.91251837999999996 4.23247959999999956 3.15313510000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1366]" " -type \"float3\" 0.92488658000000001 4.23589419999999972 3.16534139999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1367]" " -type \"float3\" 0.93725473000000004 4.23248 3.16717270000000006"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1368]" " -type \"float3\" 0.94841218000000005 4.22257040000000039 3.15844989999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1369]" " -type \"float3\" 0.95726681000000002 4.20713619999999988 3.14002679999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1370]" " -type \"float3\" 0.96295178000000003 4.18768790000000024 3.11370659999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1371]" " -type \"float3\" 0.96491068999999996 4.16612959999999966 3.08206610000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1372]" " -type \"float3\" 0.96295184 4.1445704000000001 3.04820229999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1373]" " -type \"float3\" 0.95726675000000006 4.12512209999999957 3.01543"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1374]" " -type \"float3\" 0.94841218000000005 4.10968779999999967 2.98695710000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1375]" " -type \"float3\" 0.93725473000000004 4.09977869999999989 2.96557069999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1376]" " -type \"float3\" 0.92488658000000001 4.096364 2.95336460000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1377]" " -type \"float3\" 0.91251844000000004 4.09977869999999989 2.95153329999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1378]" " -type \"float3\" 0.90136092999999995 4.10968779999999967 2.96025589999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1379]" " -type \"float3\" 0.89250636000000005 4.12512209999999957 2.9786788999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1380]" " -type \"float3\" 0.88682139000000004 4.1445704000000001 3.00499889999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1381]" " -type \"float3\" 0.88486242000000004 4.16612959999999966 3.03663950000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1382]" " -type \"float3\" 0.88891010999999998 4.179862 3.07507159999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1383]" " -type \"float3\" 0.89452516999999998 4.19907089999999972 3.10744050000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1384]" " -type \"float3\" 0.90327071999999997 4.21431540000000027 3.13556269999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1385]" " -type \"float3\" 0.91429090000000002 4.224103 3.15668579999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1386]" " -type \"float3\" 0.92650675999999998 4.22747519999999977 3.16874169999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1387]" " -type \"float3\" 0.93872261000000001 4.224103 3.17055059999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1388]" " -type \"float3\" 0.94974272999999998 4.21431540000000027 3.16193530000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1389]" " -type \"float3\" 0.95848829000000002 4.19907089999999972 3.14373870000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1390]" " -type \"float3\" 0.96410333999999998 4.179862 3.11774279999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1391]" " -type \"float3\" 0.96603817000000003 4.15856889999999968 3.08649180000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1392]" " -type \"float3\" 0.96410333999999998 4.1372757 3.05304479999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1393]" " -type \"float3\" 0.95848829000000002 4.11806729999999988 3.02067590000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1394]" " -type \"float3\" 0.94974267000000001 4.10282280000000021 2.99255370000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1395]" " -type \"float3\" 0.93872266999999998 4.0930352000000001 2.97143049999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1396]" " -type \"float3\" 0.92650675999999998 4.08966259999999959 2.95937489999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1397]" " -type \"float3\" 0.91429090000000002 4.0930352000000001 2.9575657999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1398]" " -type \"float3\" 0.90327078000000005 4.10282280000000021 2.96618130000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1399]" " -type \"float3\" 0.89452516999999998 4.11806729999999988 2.98437760000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1400]" " -type \"float3\" 0.88891010999999998 4.1372757 3.01037359999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1401]" " -type \"float3\" 0.88697541000000002 4.15856889999999968 3.04162450000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1402]" " -type \"float3\" 0.89188486 4.17169810000000041 3.07925249999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1403]" " -type \"float3\" 0.89729159999999997 4.19019510000000039 3.11042089999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1404]" " -type \"float3\" 0.90571283999999996 4.20487359999999999 3.1375"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1405]" " -type \"float3\" 0.91632431999999997 4.21429779999999976 3.15783980000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1406]" " -type \"float3\" 0.92808705999999996 4.21754549999999995 3.16944859999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1407]" " -type \"float3\" 0.93984984999999999 4.21429779999999976 3.17119030000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1408]" " -type \"float3\" 0.95046120999999995 4.20487359999999999 3.16289469999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1409]" " -type \"float3\" 0.95888245000000005 4.19019510000000039 3.14537310000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1410]" " -type \"float3\" 0.96428930999999996 4.17169810000000041 3.12034130000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1411]" " -type \"float3\" 0.96615225000000005 4.151195 3.09024929999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1412]" " -type \"float3\" 0.96428924999999999 4.13069150000000018 3.05804279999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1413]" " -type \"float3\" 0.95888245000000005 4.112195 3.02687449999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1414]" " -type \"float3\" 0.95046120999999995 4.09751609999999999 2.99979519999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1415]" " -type \"float3\" 0.93984984999999999 4.08809139999999971 2.97945569999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1416]" " -type \"float3\" 0.92808705999999996 4.08484409999999976 2.96784690000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1417]" " -type \"float3\" 0.91632420000000003 4.08809139999999971 2.966105"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1418]" " -type \"float3\" 0.90571283999999996 4.09751609999999999 2.97440080000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1419]" " -type \"float3\" 0.89729159999999997 4.112195 2.99192239999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1420]" " -type \"float3\" 0.89188486 4.13069150000000018 3.01695419999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1421]" " -type \"float3\" 0.89002179999999997 4.151195 3.04704590000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1422]" " -type \"float3\" 0.89567207999999998 4.16339729999999975 3.0829434"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1423]" " -type \"float3\" 0.90073745999999999 4.18072610000000022 3.112144"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1424]" " -type \"float3\" 0.90862708999999997 4.194478 3.13751340000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1425]" " -type \"float3\" 0.91856842999999999 4.20330720000000024 3.15656880000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1426]" " -type \"float3\" 0.92958850000000004 4.20634979999999992 3.16744469999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1427]" " -type \"float3\" 0.94060862000000001 4.20330720000000024 3.16907639999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1428]" " -type \"float3\" 0.95055002 4.194478 3.16130420000000001"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1429]" " -type \"float3\" 0.95843946999999996 4.18072610000000022 3.14488939999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1430]" " -type \"float3\" 0.96350484999999997 4.16339729999999975 3.12143779999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1431]" " -type \"float3\" 0.96525024999999998 4.14418839999999999 3.093246"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1432]" " -type \"float3\" 0.96350484999999997 4.12497950000000024 3.06307289999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1433]" " -type \"float3\" 0.95843953000000004 4.10765120000000028 3.03387260000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1434]" " -type \"float3\" 0.95054996000000003 4.09389879999999984 3.00850319999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1435]" " -type \"float3\" 0.94060862000000001 4.08506970000000003 2.98944780000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1436]" " -type \"float3\" 0.92958856000000001 4.08202740000000031 2.97857189999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1437]" " -type \"float3\" 0.91856842999999999 4.08506970000000003 2.97694020000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1438]" " -type \"float3\" 0.90862708999999997 4.09389879999999984 2.98471209999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1439]" " -type \"float3\" 0.90073758000000004 4.10765120000000028 3.00112719999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1440]" " -type \"float3\" 0.89567220000000003 4.12497950000000024 3.02457880000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1441]" " -type \"float3\" 0.89392674000000005 4.14418839999999999 3.05277060000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1442]" " -type \"float3\" 0.90017879000000001 4.15516329999999989 3.08605380000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1443]" " -type \"float3\" 0.90477806000000005 4.1708974999999997 3.11256719999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1444]" " -type \"float3\" 0.91194158999999997 4.18338439999999956 3.13560220000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1445]" " -type \"float3\" 0.92096816999999997 4.191401 3.152904"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1446]" " -type \"float3\" 0.93097419000000003 4.19416329999999959 3.16277909999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1447]" " -type \"float3\" 0.94098026000000001 4.191401 3.16426089999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1448]" " -type \"float3\" 0.95000684000000002 4.18338439999999956 3.15720389999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1449]" " -type \"float3\" 0.95717037000000005 4.1708974999999997 3.14229920000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1450]" " -type \"float3\" 0.96176958000000001 4.15516329999999989 3.12100579999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1451]" " -type \"float3\" 0.96335446999999996 4.137722 3.09540820000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1452]" " -type \"float3\" 0.96176963999999998 4.12028070000000035 3.06801179999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1453]" " -type \"float3\" 0.95717043000000002 4.104547 3.04149819999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1454]" " -type \"float3\" 0.95000684000000002 4.09206010000000031 3.01846339999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1455]" " -type \"float3\" 0.94098031999999998 4.08404349999999994 3.00116130000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1456]" " -type \"float3\" 0.93097419000000003 4.08128069999999976 2.99128630000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1457]" " -type \"float3\" 0.92096816999999997 4.08404349999999994 2.98980470000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1458]" " -type \"float3\" 0.91194165000000005 4.09206010000000031 2.99686170000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1459]" " -type \"float3\" 0.90477806000000005 4.104547 3.01176619999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1460]" " -type \"float3\" 0.90017879000000001 4.12028070000000035 3.03305960000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1461]" " -type \"float3\" 0.89859401999999999 4.137722 3.05865719999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1462]" " -type \"float3\" 0.90529388 4.14719960000000043 3.08850619999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1463]" " -type \"float3\" 0.90931373999999998 4.16095159999999975 3.11168"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1464]" " -type \"float3\" 0.91557491000000002 4.1718655 3.13181330000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1465]" " -type \"float3\" 0.92346441999999995 4.17887260000000005 3.14693569999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1466]" " -type \"float3\" 0.93221003000000002 4.18128679999999964 3.15556690000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1467]" " -type \"float3\" 0.94095563999999998 4.17887260000000005 3.15686150000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1468]" " -type \"float3\" 0.94884515000000003 4.1718655 3.15069370000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1469]" " -type \"float3\" 0.95510631999999995 4.16095159999999975 3.13766670000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1470]" " -type \"float3\" 0.95912622999999997 4.14719960000000043 3.1190557000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1471]" " -type \"float3\" 0.96051138999999996 4.13195560000000039 3.0966825"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1472]" " -type \"float3\" 0.95912622999999997 4.11671109999999985 3.07273720000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1473]" " -type \"float3\" 0.95510631999999995 4.10295919999999992 3.04956339999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1474]" " -type \"float3\" 0.94884515000000003 4.09204580000000018 3.02942989999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1475]" " -type \"float3\" 0.94095563999999998 4.08503870000000013 3.01430750000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1476]" " -type \"float3\" 0.93221003000000002 4.08262440000000026 3.00567649999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1477]" " -type \"float3\" 0.92346441999999995 4.08503870000000013 3.0043814000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1478]" " -type \"float3\" 0.91557496999999999 4.09204580000000018 3.01054950000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1479]" " -type \"float3\" 0.90931373999999998 4.10295919999999992 3.02357670000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1480]" " -type \"float3\" 0.90529388 4.11671109999999985 3.04218769999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1481]" " -type \"float3\" 0.90390873000000005 4.13195560000000039 3.06456090000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1482]" " -type \"float3\" 0.91089129000000002 4.13970229999999972 3.09024119999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1483]" " -type \"float3\" 0.91423290999999995 4.15113350000000025 3.10950419999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1484]" " -type \"float3\" 0.91943752999999995 4.16020539999999972 3.12624030000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1485]" " -type \"float3\" 0.92599571000000003 4.16603040000000036 3.13881090000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1486]" " -type \"float3\" 0.93326551000000002 4.16803689999999971 3.14598539999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1487]" " -type \"float3\" 0.94053531000000001 4.16603040000000036 3.14706209999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1488]" " -type \"float3\" 0.94709354999999995 4.16020539999999972 3.14193489999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1489]" " -type \"float3\" 0.95229816 4.15113350000000025 3.13110590000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1490]" " -type \"float3\" 0.95563971999999997 4.13970229999999972 3.11563560000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1491]" " -type \"float3\" 0.95679110000000001 4.12703039999999977 3.09703760000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1492]" " -type \"float3\" 0.95563971999999997 4.11435840000000042 3.07713290000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1493]" " -type \"float3\" 0.95229816 4.10292670000000026 3.05786990000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1494]" " -type \"float3\" 0.94709354999999995 4.09385490000000019 3.04113390000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1495]" " -type \"float3\" 0.94053531000000001 4.08803029999999978 3.02856330000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1496]" " -type \"float3\" 0.93326551000000002 4.08602329999999991 3.02138850000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1497]" " -type \"float3\" 0.92599571000000003 4.08803029999999978 3.02031209999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1498]" " -type \"float3\" 0.91943752999999995 4.09385490000000019 3.02543929999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1499]" " -type \"float3\" 0.91423290999999995 4.10292670000000026 3.03626819999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1500]" " -type \"float3\" 0.91089129000000002 4.11435840000000042 3.05173849999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1501]" " -type \"float3\" 0.90973990999999998 4.12703039999999977 3.07033660000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1502]" " -type \"float3\" 0.91683345999999999 4.1328554000000004 3.09121539999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1503]" " -type \"float3\" 0.91941434 4.14168450000000021 3.10609389999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1504]" " -type \"float3\" 0.92343425999999995 4.14869169999999965 3.11902020000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1505]" " -type \"float3\" 0.92849963999999996 4.15319009999999977 3.12872929999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1506]" " -type \"float3\" 0.93411469000000003 4.15474030000000027 3.13427090000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1507]" " -type \"float3\" 0.93972962999999998 4.15319009999999977 3.13510229999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1508]" " -type \"float3\" 0.94479506999999996 4.14869169999999965 3.13114209999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1509]" " -type \"float3\" 0.94881499000000002 4.14168450000000021 3.12277840000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1510]" " -type \"float3\" 0.95139587000000003 4.1328554000000004 3.11082910000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1511]" " -type \"float3\" 0.95228528999999995 4.12306789999999967 3.09646489999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1512]" " -type \"float3\" 0.95139593 4.11328029999999956 3.08109089999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1513]" " -type \"float3\" 0.94881499000000002 4.10445119999999974 3.0662126999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1514]" " -type \"float3\" 0.94479506999999996 4.0974440999999997 3.05328609999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1515]" " -type \"float3\" 0.93972968999999995 4.09294560000000018 3.043577"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1516]" " -type \"float3\" 0.93411462999999995 4.09139490000000006 3.03803540000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1517]" " -type \"float3\" 0.92849963999999996 4.09294560000000018 3.037204"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1518]" " -type \"float3\" 0.92343425999999995 4.0974440999999997 3.04116419999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1519]" " -type \"float3\" 0.91941434 4.10445070000000012 3.04952809999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1520]" " -type \"float3\" 0.91683345999999999 4.11328029999999956 3.06147690000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1521]" " -type \"float3\" 0.91594410000000004 4.12306789999999967 3.07584169999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1522]" " -type \"float3\" 0.92297375000000004 4.12682769999999977 3.09140520000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1523]" " -type \"float3\" 0.92473053999999999 4.13283779999999989 3.1015324999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1524]" " -type \"float3\" 0.92746675000000001 4.1376065999999998 3.11033079999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1525]" " -type \"float3\" 0.93091464000000002 4.14066889999999965 3.11693949999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1526]" " -type \"float3\" 0.93473660999999997 4.14172410000000024 3.12071159999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1527]" " -type \"float3\" 0.93855858000000003 4.14066889999999965 3.12127759999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1528]" " -type \"float3\" 0.94200640999999996 4.1376065999999998 3.118582"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1529]" " -type \"float3\" 0.94474261999999998 4.13283779999999989 3.11288909999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1530]" " -type \"float3\" 0.94649934999999996 4.12682769999999977 3.10475559999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1531]" " -type \"float3\" 0.94710475000000005 4.12016579999999966 3.09497810000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1532]" " -type \"float3\" 0.94649934999999996 4.1135035000000002 3.08451370000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1533]" " -type \"float3\" 0.94474261999999998 4.1074938999999997 3.07438639999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1534]" " -type \"float3\" 0.94200640999999996 4.10272409999999965 3.06558779999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1535]" " -type \"float3\" 0.93855858000000003 4.09966230000000031 3.058979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1536]" " -type \"float3\" 0.93473667000000005 4.0986066000000001 3.05520730000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1537]" " -type \"float3\" 0.93091464000000002 4.09966230000000031 3.05464119999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1538]" " -type \"float3\" 0.92746680999999997 4.10272409999999965 3.05733679999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1539]" " -type \"float3\" 0.92473059999999996 4.1074938999999997 3.0630297999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1540]" " -type \"float3\" 0.92297381000000001 4.1135035000000002 3.07116319999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1541]" " -type \"float3\" 0.92236847 4.12016579999999966 3.08094050000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1542]" " -type \"float3\" 0.92916131000000002 4.121768 3.09080550000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1543]" " -type \"float3\" 0.93005061 4.12481019999999976 3.09593220000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1544]" " -type \"float3\" 0.93143575999999995 4.12722489999999986 3.1003864000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1545]" " -type \"float3\" 0.93318122999999997 4.12877459999999985 3.10373210000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1546]" " -type \"float3\" 0.93511599000000001 4.12930870000000017 3.10564140000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1547]" " -type \"float3\" 0.93705081999999995 4.12877459999999985 3.10592790000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1548]" " -type \"float3\" 0.93879621999999996 4.12722489999999986 3.10456349999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1549]" " -type \"float3\" 0.94018137000000002 4.12481019999999976 3.1016815000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1550]" " -type \"float3\" 0.94107068000000005 4.121768 3.097564"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1551]" " -type \"float3\" 0.94137716000000005 4.11839530000000043 3.09261439999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1552]" " -type \"float3\" 0.94107074000000002 4.11502269999999992 3.087317"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1553]" " -type \"float3\" 0.94018137000000002 4.1119804000000002 3.08219030000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1554]" " -type \"float3\" 0.93879621999999996 4.1095657000000001 3.07773610000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1555]" " -type \"float3\" 0.93705081999999995 4.108016 3.07439039999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1556]" " -type \"float3\" 0.93511599000000001 4.10748149999999956 3.07248089999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1557]" " -type \"float3\" 0.93318122999999997 4.108016 3.0721946"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1558]" " -type \"float3\" 0.93143582000000003 4.1095657000000001 3.073559"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1559]" " -type \"float3\" 0.93005061 4.1119804000000002 3.076441"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1560]" " -type \"float3\" 0.92916131000000002 4.11502269999999992 3.08055829999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1561]" " -type \"float3\" 0.92885488000000005 4.11839530000000043 3.0855081000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1562]" " -type \"float3\" 0.91452968000000001 4.21445850000000011 3.02927420000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1563]" " -type \"float3\" 0.93524348999999996 4.11780019999999958 3.08943149999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1564]" " -type \"float3\" 0.39687931999999998 4.21725510000000003 2.74096319999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1565]" " -type \"float3\" 0.39776867999999999 4.22029730000000036 2.74608989999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1566]" " -type \"float3\" 0.39915386000000003 4.22271160000000023 2.75054409999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1567]" " -type \"float3\" 0.40089923 4.22426179999999984 2.75388959999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1568]" " -type \"float3\" 0.40283408999999998 4.22479579999999988 2.75579909999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1569]" " -type \"float3\" 0.40476881999999997 4.22426179999999984 2.75608539999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1570]" " -type \"float3\" 0.40651426000000002 4.22271160000000023 2.75472090000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1571]" " -type \"float3\" 0.40789946999999999 4.22029730000000036 2.75183920000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1572]" " -type \"float3\" 0.40878873999999998 4.21725460000000041 2.74772170000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1573]" " -type \"float3\" 0.40909517000000001 4.21388240000000014 2.74277190000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1574]" " -type \"float3\" 0.40878880000000001 4.21050979999999964 2.73747439999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1575]" " -type \"float3\" 0.40789941000000002 4.2074676000000002 2.73234770000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1576]" " -type \"float3\" 0.40651422999999998 4.20505290000000009 2.72789359999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1577]" " -type \"float3\" 0.40476888 4.20350269999999959 2.72454809999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1578]" " -type \"float3\" 0.40283408999999998 4.20296860000000017 2.7226385999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1579]" " -type \"float3\" 0.40089929000000002 4.20350269999999959 2.72235229999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1580]" " -type \"float3\" 0.39915382999999999 4.20505290000000009 2.72371670000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1581]" " -type \"float3\" 0.39776865 4.2074676000000002 2.72659869999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1582]" " -type \"float3\" 0.39687937000000001 4.21050979999999964 2.730716"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1583]" " -type \"float3\" 0.39657289000000001 4.21388240000000014 2.73566559999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1584]" " -type \"float3\" 0.39145057999999999 4.21877380000000013 2.74376629999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1585]" " -type \"float3\" 0.39320739999999998 4.22478390000000026 2.75389360000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1586]" " -type \"float3\" 0.39594363999999999 4.22955319999999979 2.76269220000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1587]" " -type \"float3\" 0.39939147000000003 4.23261549999999964 2.76930090000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1588]" " -type \"float3\" 0.40321343999999998 4.23367019999999972 2.773073"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1589]" " -type \"float3\" 0.40703540999999999 4.23261549999999964 2.77363869999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1590]" " -type \"float3\" 0.41048324000000003 4.22955319999999979 2.77094340000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1591]" " -type \"float3\" 0.41321951000000001 4.22478390000000026 2.76525040000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1592]" " -type \"float3\" 0.41497617999999997 4.21877380000000013 2.75711679999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1593]" " -type \"float3\" 0.41558158000000001 4.21211190000000002 2.74733949999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1594]" " -type \"float3\" 0.41497617999999997 4.20545010000000019 2.73687479999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1595]" " -type \"float3\" 0.41321951000000001 4.19944 2.72674780000000005"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1596]" " -type \"float3\" 0.41048327000000001 4.19467069999999964 2.71794920000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1597]" " -type \"float3\" 0.40703540999999999 4.19160839999999979 2.71134040000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1598]" " -type \"float3\" 0.40321343999999998 4.19055369999999971 2.70756839999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1599]" " -type \"float3\" 0.39939147000000003 4.19160839999999979 2.70700260000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1600]" " -type \"float3\" 0.39594363999999999 4.19467069999999964 2.709698"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1601]" " -type \"float3\" 0.39320739999999998 4.19944 2.71539090000000005"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1602]" " -type \"float3\" 0.39145057999999999 4.20545010000000019 2.72352429999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1603]" " -type \"float3\" 0.39084530000000001 4.21211190000000002 2.73330189999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1604]" " -type \"float3\" 0.38655414999999999 4.218997 2.74718930000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1605]" " -type \"float3\" 0.38913509000000002 4.22782660000000021 2.76206759999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1606]" " -type \"float3\" 0.39315501000000003 4.23483370000000026 2.77499390000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1607]" " -type \"float3\" 0.39822038999999998 4.23933219999999977 2.784703"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1608]" " -type \"float3\" 0.40383542 4.24088240000000027 2.79024459999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1609]" " -type \"float3\" 0.40945038 4.23933219999999977 2.79107620000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1610]" " -type \"float3\" 0.41451579 4.23483370000000026 2.78711609999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1611]" " -type \"float3\" 0.41853573999999999 4.22782660000000021 2.77875210000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1612]" " -type \"float3\" 0.42111659000000001 4.218997 2.766803"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1613]" " -type \"float3\" 0.42200598 4.20920939999999977 2.75243849999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1614]" " -type \"float3\" 0.42111664999999998 4.19942240000000044 2.73706460000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1615]" " -type \"float3\" 0.41853571000000001 4.19059280000000012 2.72218630000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1616]" " -type \"float3\" 0.41451579 4.18358559999999979 2.70926"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1617]" " -type \"float3\" 0.40945040999999999 4.17908719999999967 2.6995505999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1618]" " -type \"float3\" 0.40383535999999998 4.177537 2.69400929999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1619]" " -type \"float3\" 0.39822038999999998 4.17908719999999967 2.69317770000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1620]" " -type \"float3\" 0.39315501000000003 4.18358610000000031 2.69713780000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1621]" " -type \"float3\" 0.38913509000000002 4.19059280000000012 2.70550179999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1622]" " -type \"float3\" 0.38655414999999999 4.19942189999999993 2.71745089999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1623]" " -type \"float3\" 0.38566482000000002 4.20920939999999977 2.73181530000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1624]" " -type \"float3\" 0.38231032999999998 4.21791930000000015 2.75114729999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1625]" " -type \"float3\" 0.38565195000000002 4.22935060000000007 2.77041029999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1626]" " -type \"float3\" 0.3908565 4.23842240000000015 2.78714610000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1627]" " -type \"float3\" 0.39741471 4.24424739999999989 2.79971689999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1628]" " -type \"float3\" 0.40468457000000002 4.24625439999999976 2.80689140000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1629]" " -type \"float3\" 0.41195433999999997 4.24424739999999989 2.80796789999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1630]" " -type \"float3\" 0.41851252 4.23842240000000015 2.80284069999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1631]" " -type \"float3\" 0.42371720000000002 4.22935060000000007 2.792012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1632]" " -type \"float3\" 0.42705873 4.21791930000000015 2.7765415"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1633]" " -type \"float3\" 0.42821014000000002 4.20524740000000019 2.75794359999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1634]" " -type \"float3\" 0.42705875999999998 4.19257550000000023 2.738039"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1635]" " -type \"float3\" 0.42371713999999999 4.18114420000000031 2.71877570000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1636]" " -type \"float3\" 0.41851258000000002 4.17207189999999972 2.70204"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1637]" " -type \"float3\" 0.4119544 4.1662473999999996 2.68946929999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1638]" " -type \"float3\" 0.40468457000000002 4.16424039999999973 2.68229460000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1639]" " -type \"float3\" 0.39741473999999999 4.1662473999999996 2.68121810000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1640]" " -type \"float3\" 0.39085656000000002 4.17207189999999972 2.68634530000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1641]" " -type \"float3\" 0.38565189 4.18114420000000031 2.6971740999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1642]" " -type \"float3\" 0.38231039 4.19257550000000023 2.71264459999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1643]" " -type \"float3\" 0.38115892000000001 4.20524740000000019 2.73124240000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1644]" " -type \"float3\" 0.37882385000000002 4.2155661999999996 2.755543"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1645]" " -type \"float3\" 0.38284372999999999 4.22931860000000004 2.77871660000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1646]" " -type \"float3\" 0.38910493000000002 4.240232 2.79885010000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1647]" " -type \"float3\" 0.39699441000000002 4.24723909999999982 2.81397250000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1648]" " -type \"float3\" 0.40573998999999999 4.2496533000000003 2.82260350000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1649]" " -type \"float3\" 0.41448565999999998 4.2472386000000002 2.82389830000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1650]" " -type \"float3\" 0.42237517000000002 4.240232 2.81773039999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1651]" " -type \"float3\" 0.42863627999999998 4.22931860000000004 2.80470350000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1652]" " -type \"float3\" 0.43265622999999997 4.2155661999999996 2.78609229999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1653]" " -type \"float3\" 0.43404134999999999 4.20032219999999956 2.76371909999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1654]" " -type \"float3\" 0.43265617000000001 4.1850776999999999 2.73977380000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1655]" " -type \"float3\" 0.42863627999999998 4.17132620000000021 2.7166001999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1656]" " -type \"float3\" 0.42237517000000002 4.16041180000000033 2.69646670000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1657]" " -type \"float3\" 0.41448565999999998 4.15340519999999991 2.68134430000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1658]" " -type \"float3\" 0.40574005000000002 4.15099049999999981 2.67271329999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1659]" " -type \"float3\" 0.39699444 4.15340519999999991 2.67141820000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1660]" " -type \"float3\" 0.38910493000000002 4.16041180000000033 2.67758610000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1661]" " -type \"float3\" 0.38284379000000002 4.17132569999999969 2.69061349999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1662]" " -type \"float3\" 0.37882381999999998 4.1850776999999999 2.70922449999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1663]" " -type \"float3\" 0.37743865999999998 4.20032219999999956 2.73159770000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1664]" " -type \"float3\" 0.37618041000000002 4.21199659999999998 2.76026840000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1665]" " -type \"float3\" 0.38077968000000001 4.22773079999999979 2.78678179999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1666]" " -type \"float3\" 0.38794320999999998 4.24021720000000002 2.80981680000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1667]" " -type \"float3\" 0.39696979999999998 4.24823430000000002 2.82711889999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1668]" " -type \"float3\" 0.40697578000000001 4.25099659999999968 2.83699389999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1669]" " -type \"float3\" 0.41698184999999999 4.24823380000000039 2.83847549999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1670]" " -type \"float3\" 0.42600845999999998 4.24021720000000002 2.83141849999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1671]" " -type \"float3\" 0.43317199000000001 4.22773030000000016 2.816514"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1672]" " -type \"float3\" 0.43777120000000003 4.21199659999999998 2.79522059999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1673]" " -type \"float3\" 0.43935605999999999 4.19455530000000021 2.76962280000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1674]" " -type \"float3\" 0.43777126 4.17711450000000006 2.74222639999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1675]" " -type \"float3\" 0.43317199000000001 4.16137979999999974 2.715713"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1676]" " -type \"float3\" 0.42600845999999998 4.1488934000000004 2.692678"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1677]" " -type \"float3\" 0.41698188000000003 4.14087680000000002 2.67537620000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1678]" " -type \"float3\" 0.40697578000000001 4.13811450000000036 2.66550110000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1679]" " -type \"float3\" 0.39696983000000002 4.14087680000000002 2.66401960000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1680]" " -type \"float3\" 0.38794320999999998 4.1488934000000004 2.67107630000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1681]" " -type \"float3\" 0.38077970999999999 4.16138030000000025 2.68598079999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1682]" " -type \"float3\" 0.37618044 4.17711450000000006 2.70727420000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1683]" " -type \"float3\" 0.37459561000000002 4.19455530000000021 2.732872"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1684]" " -type \"float3\" 0.37444516999999999 4.20729829999999971 2.76520710000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1685]" " -type \"float3\" 0.37951048999999998 4.22462650000000028 2.79440739999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1686]" " -type \"float3\" 0.38740005999999999 4.2383784999999996 2.819777"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1687]" " -type \"float3\" 0.39734140000000001 4.24720809999999993 2.83883239999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1688]" " -type \"float3\" 0.40836151999999998 4.25025030000000026 2.84970830000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1689]" " -type \"float3\" 0.41938159000000003 4.24720809999999993 2.85133979999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1690]" " -type \"float3\" 0.42932302 4.2383784999999996 2.8435678000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1691]" " -type \"float3\" 0.4372125 4.22462650000000028 2.82715270000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1692]" " -type \"float3\" 0.44227791 4.20729829999999971 2.80370140000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1693]" " -type \"float3\" 0.44402331 4.18808939999999996 2.77550959999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1694]" " -type \"float3\" 0.44227791 4.16888050000000021 2.74533650000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1695]" " -type \"float3\" 0.43721252999999999 4.15155169999999973 2.716136"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1696]" " -type \"float3\" 0.42932292999999999 4.13779970000000041 2.6907665999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1697]" " -type \"float3\" 0.41938162000000001 4.12897010000000009 2.67171119999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1698]" " -type \"float3\" 0.40836151999999998 4.12592789999999976 2.66083550000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1699]" " -type \"float3\" 0.39734140000000001 4.12897010000000009 2.65920379999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1700]" " -type \"float3\" 0.38740008999999997 4.13779970000000041 2.66697570000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1701]" " -type \"float3\" 0.37951055 4.15155169999999973 2.68339090000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1702]" " -type \"float3\" 0.37444516999999999 4.16888050000000021 2.70684220000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1703]" " -type \"float3\" 0.37269976999999999 4.18808939999999996 2.735034"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1704]" " -type \"float3\" 0.37366080000000002 4.20158620000000038 2.77023719999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1705]" " -type \"float3\" 0.37906753999999998 4.22008280000000013 2.80140540000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1706]" " -type \"float3\" 0.38748881000000002 4.23476169999999996 2.828485"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1707]" " -type \"float3\" 0.39810020000000002 4.24418589999999973 2.84882450000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1708]" " -type \"float3\" 0.40986296999999999 4.24743319999999969 2.86043329999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1709]" " -type \"float3\" 0.42162581999999998 4.24418640000000025 2.862175"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1710]" " -type \"float3\" 0.43223715000000001 4.23476120000000034 2.85387920000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1711]" " -type \"float3\" 0.44065839000000001 4.22008280000000013 2.83635780000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1712]" " -type \"float3\" 0.44606521999999998 4.20158620000000038 2.811326"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1713]" " -type \"float3\" 0.44792821999999999 4.18108270000000015 2.781234"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1714]" " -type \"float3\" 0.44606521999999998 4.16057919999999992 2.74902770000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1715]" " -type \"float3\" 0.44065836000000003 4.14208269999999956 2.7178593000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1716]" " -type \"float3\" 0.43223715000000001 4.12740419999999997 2.69077970000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1717]" " -type \"float3\" 0.42162579 4.11798 2.67044019999999982"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1718]" " -type \"float3\" 0.409863 4.11473230000000001 2.65883139999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1719]" " -type \"float3\" 0.39810020000000002 4.11798 2.65708970000000022"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1720]" " -type \"float3\" 0.38748884 4.12740419999999997 2.66538569999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1721]" " -type \"float3\" 0.37906753999999998 4.14208269999999956 2.68290709999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1722]" " -type \"float3\" 0.37366083 4.16057919999999992 2.70793889999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1723]" " -type \"float3\" 0.37179777000000003 4.18108270000000015 2.73803069999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1724]" " -type \"float3\" 0.37384667999999999 4.19500160000000033 2.77523520000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1725]" " -type \"float3\" 0.37946171000000001 4.21421050000000008 2.80760409999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1726]" " -type \"float3\" 0.38820728999999998 4.229455 2.83572649999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1727]" " -type \"float3\" 0.39922738000000002 4.23924259999999986 2.85684940000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1728]" " -type \"float3\" 0.41144325999999998 4.24261469999999985 2.86890530000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1729]" " -type \"float3\" 0.42365914999999998 4.23924259999999986 2.8707142000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1730]" " -type \"float3\" 0.43467924000000002 4.229455 2.86209870000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1731]" " -type \"float3\" 0.44342482 4.21421050000000008 2.84390259999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1732]" " -type \"float3\" 0.44903988 4.19500160000000033 2.81790660000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1733]" " -type \"float3\" 0.45097463999999998 4.17370839999999976 2.78665539999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1734]" " -type \"float3\" 0.44903988 4.15241530000000036 2.75320859999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1735]" " -type \"float3\" 0.44342484999999998 4.13320639999999973 2.72083969999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1736]" " -type \"float3\" 0.43467924000000002 4.11796239999999969 2.69271729999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1737]" " -type \"float3\" 0.42365914999999998 4.10817479999999957 2.67159410000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1738]" " -type \"float3\" 0.41144325999999998 4.10480209999999968 2.65953850000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1739]" " -type \"float3\" 0.39922738000000002 4.10817479999999957 2.65772940000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1740]" " -type \"float3\" 0.38820728999999998 4.11796239999999969 2.66634489999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1741]" " -type \"float3\" 0.37946171000000001 4.13320639999999973 2.68454119999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1742]" " -type \"float3\" 0.37384667999999999 4.15241530000000036 2.71053720000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1743]" " -type \"float3\" 0.37191187999999997 4.17370839999999976 2.74178809999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1744]" " -type \"float3\" 0.37499818000000001 4.1877065 2.7800777000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1745]" " -type \"float3\" 0.38068318000000001 4.20715519999999987 2.81285020000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1746]" " -type \"float3\" 0.38953780999999998 4.22258949999999977 2.84132309999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1747]" " -type \"float3\" 0.40069528999999998 4.23249860000000044 2.86270930000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1748]" " -type \"float3\" 0.41306344 4.23591329999999999 2.87491560000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1749]" " -type \"float3\" 0.42543161000000002 4.23249860000000044 2.87674690000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1750]" " -type \"float3\" 0.43658902999999999 4.22258949999999977 2.86802409999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1751]" " -type \"float3\" 0.44544366000000002 4.20715519999999987 2.849601"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1752]" " -type \"float3\" 0.45112866000000001 4.1877065 2.823281"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1753]" " -type \"float3\" 0.45308757 4.1661482000000003 2.79164030000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1754]" " -type \"float3\" 0.45112869 4.14458989999999972 2.75777669999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1755]" " -type \"float3\" 0.44544366000000002 4.12514160000000007 2.72500419999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1756]" " -type \"float3\" 0.43658902999999999 4.10970739999999957 2.69653130000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1757]" " -type \"float3\" 0.42543164 4.09979769999999988 2.67514509999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1758]" " -type \"float3\" 0.41306344 4.09638309999999972 2.66293880000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1759]" " -type \"float3\" 0.40069528999999998 4.09979769999999988 2.66110749999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1760]" " -type \"float3\" 0.38953780999999998 4.10970739999999957 2.6698303000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1761]" " -type \"float3\" 0.38068320999999999 4.12514160000000007 2.68825339999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1762]" " -type \"float3\" 0.37499823999999998 4.14458989999999972 2.71457339999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1763]" " -type \"float3\" 0.37303927999999997 4.1661482000000003 2.74621389999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1764]" " -type \"float3\" 0.377087 4.17988110000000024 2.78464579999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1765]" " -type \"float3\" 0.38270201999999998 4.19909 2.81701470000000009"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1766]" " -type \"float3\" 0.39144762999999999 4.214334 2.84513710000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1767]" " -type \"float3\" 0.40246776000000001 4.22412160000000014 2.86626009999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1768]" " -type \"float3\" 0.41468364000000002 4.22749419999999976 2.87831590000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1769]" " -type \"float3\" 0.42689946000000001 4.22412160000000014 2.88012479999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1770]" " -type \"float3\" 0.43791962000000001 4.214334 2.8715096"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1771]" " -type \"float3\" 0.44666514000000002 4.19909 2.8533132000000001"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1772]" " -type \"float3\" 0.45228019000000003 4.17988110000000024 2.82731719999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1773]" " -type \"float3\" 0.45421502000000002 4.15858789999999967 2.79606630000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1774]" " -type \"float3\" 0.45228019000000003 4.13729480000000027 2.76261929999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1775]" " -type \"float3\" 0.44666517 4.11808589999999963 2.73025040000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1776]" " -type \"float3\" 0.43791955999999999 4.1028418999999996 2.7021278999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1777]" " -type \"float3\" 0.42689951999999998 4.09305430000000037 2.681005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1778]" " -type \"float3\" 0.41468364000000002 4.0896821000000001 2.66894909999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1779]" " -type \"float3\" 0.40246776000000001 4.09305430000000037 2.66714"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1780]" " -type \"float3\" 0.39144765999999998 4.1028418999999996 2.67575550000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1781]" " -type \"float3\" 0.38270205000000002 4.11808589999999963 2.69395179999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1782]" " -type \"float3\" 0.37708702999999999 4.13729480000000027 2.71994779999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1783]" " -type \"float3\" 0.37515226000000002 4.15858789999999967 2.75119880000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1784]" " -type \"float3\" 0.38006174999999998 4.17171719999999979 2.78882690000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1785]" " -type \"float3\" 0.38546848 4.19021370000000015 2.81999520000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1786]" " -type \"float3\" 0.39388970000000001 4.20489259999999998 2.84707450000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1787]" " -type \"float3\" 0.40450113999999998 4.21431679999999975 2.8674141999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1788]" " -type \"float3\" 0.41626391000000001 4.2175640999999997 2.87902279999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1789]" " -type \"float3\" 0.42802674000000002 4.21431730000000027 2.88076469999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1790]" " -type \"float3\" 0.43863808999999998 4.20489219999999975 2.87246889999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1791]" " -type \"float3\" 0.44705932999999998 4.19021370000000015 2.85494760000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1792]" " -type \"float3\" 0.45246616000000001 4.17171719999999979 2.82991549999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1793]" " -type \"float3\" 0.45432913000000003 4.15121360000000017 2.79982350000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1794]" " -type \"float3\" 0.45246609999999998 4.13071059999999957 2.76761720000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1795]" " -type \"float3\" 0.44705929999999999 4.11221359999999958 2.73644879999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1796]" " -type \"float3\" 0.43863808999999998 4.09753509999999999 2.70936939999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1797]" " -type \"float3\" 0.42802674000000002 4.08811090000000021 2.68902989999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1798]" " -type \"float3\" 0.41626394 4.08486320000000003 2.67742110000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1799]" " -type \"float3\" 0.40450111 4.08811090000000021 2.67567919999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1800]" " -type \"float3\" 0.39388972999999999 4.09753509999999999 2.68397519999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1801]" " -type \"float3\" 0.38546848 4.11221359999999958 2.70149660000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1802]" " -type \"float3\" 0.38006171999999999 4.13071059999999957 2.72652839999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1803]" " -type \"float3\" 0.37819868000000001 4.15121360000000017 2.75662040000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1804]" " -type \"float3\" 0.38384899 4.16341640000000002 2.79251769999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1805]" " -type \"float3\" 0.38891438 4.1807445999999997 2.82171819999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1806]" " -type \"float3\" 0.39680395000000002 4.19449659999999991 2.8470879"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1807]" " -type \"float3\" 0.40674527999999999 4.20332620000000023 2.86614319999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1808]" " -type \"float3\" 0.41776538000000002 4.20636839999999967 2.87701889999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1809]" " -type \"float3\" 0.42878547 4.20332620000000023 2.87865070000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1810]" " -type \"float3\" 0.43872689999999998 4.19449659999999991 2.87087870000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1811]" " -type \"float3\" 0.44661637999999998 4.1807445999999997 2.85446359999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1812]" " -type \"float3\" 0.45168173 4.16341640000000002 2.83101219999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1813]" " -type \"float3\" 0.45342716999999999 4.14420750000000027 2.80282020000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1814]" " -type \"float3\" 0.45168173 4.12499859999999963 2.77264739999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1815]" " -type \"float3\" 0.44661641000000002 4.10766980000000004 2.74344710000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1816]" " -type \"float3\" 0.43872684000000001 4.09391779999999983 2.71807739999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1817]" " -type \"float3\" 0.42878553000000003 4.08508829999999978 2.69902210000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1818]" " -type \"float3\" 0.41776543999999999 4.082046 2.68814639999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1819]" " -type \"float3\" 0.40674527999999999 4.08508870000000002 2.6865146000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1820]" " -type \"float3\" 0.39680398 4.09391779999999983 2.69428659999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1821]" " -type \"float3\" 0.38891443999999997 4.10766980000000004 2.71070169999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1822]" " -type \"float3\" 0.38384905000000002 4.12499859999999963 2.734153"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1823]" " -type \"float3\" 0.38210358999999999 4.14420750000000027 2.76234480000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1824]" " -type \"float3\" 0.38835570000000003 4.15518240000000016 2.79562810000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1825]" " -type \"float3\" 0.39295498000000001 4.17091659999999997 2.82214140000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1826]" " -type \"float3\" 0.40011849999999999 4.183403 2.8451765"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1827]" " -type \"float3\" 0.40914506 4.1914201000000002 2.86247829999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1828]" " -type \"float3\" 0.41915107000000001 4.19418239999999987 2.87235329999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1829]" " -type \"float3\" 0.42915711000000001 4.19141959999999969 2.87383509999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1830]" " -type \"float3\" 0.43818374999999998 4.183403 2.86677809999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1831]" " -type \"float3\" 0.44534724999999997 4.17091610000000035 2.85187359999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1832]" " -type \"float3\" 0.44994645999999999 4.15518240000000016 2.83058"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1833]" " -type \"float3\" 0.45153135 4.13774110000000039 2.8049824000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1834]" " -type \"float3\" 0.44994652000000002 4.12030030000000025 2.777586"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1835]" " -type \"float3\" 0.44534728000000001 4.10456559999999993 2.75107260000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1836]" " -type \"float3\" 0.43818374999999998 4.09207919999999969 2.72803759999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1837]" " -type \"float3\" 0.42915716999999998 4.08406260000000021 2.71073580000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1838]" " -type \"float3\" 0.41915107000000001 4.08130029999999966 2.70086050000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1839]" " -type \"float3\" 0.40914508999999999 4.08406260000000021 2.699379"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1840]" " -type \"float3\" 0.40011849999999999 4.09207919999999969 2.70643589999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1841]" " -type \"float3\" 0.39295498000000001 4.10456610000000044 2.72134039999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1842]" " -type \"float3\" 0.38835570000000003 4.12030030000000025 2.74263380000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1843]" " -type \"float3\" 0.38677089999999997 4.13774110000000039 2.76823160000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1844]" " -type \"float3\" 0.39347070000000001 4.14721869999999981 2.79808069999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1845]" " -type \"float3\" 0.39749062000000002 4.16097070000000002 2.8212543000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1846]" " -type \"float3\" 0.40375179 4.1718845 2.84138750000000018"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1847]" " -type \"float3\" 0.41164129999999999 4.17889119999999981 2.85651020000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1848]" " -type \"float3\" 0.42038691 4.18130589999999991 2.86514120000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1849]" " -type \"float3\" 0.42913252000000002 4.17889119999999981 2.866436"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1850]" " -type \"float3\" 0.43702203000000001 4.1718845 2.86026809999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1851]" " -type \"float3\" 0.44328317 4.16097070000000002 2.84724120000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1852]" " -type \"float3\" 0.44730309000000001 4.14721869999999981 2.82863"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1853]" " -type \"float3\" 0.44868824000000002 4.13197420000000015 2.80625679999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1854]" " -type \"float3\" 0.44730309000000001 4.11673020000000012 2.78231140000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1855]" " -type \"float3\" 0.44328317 4.10297819999999991 2.75913789999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1856]" " -type \"float3\" 0.43702203000000001 4.09206439999999994 2.73900439999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1857]" " -type \"float3\" 0.42913252000000002 4.08505770000000012 2.723882"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1858]" " -type \"float3\" 0.42038691 4.082643 2.71525069999999991"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1859]" " -type \"float3\" 0.41164129999999999 4.08505770000000012 2.7139559000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1860]" " -type \"float3\" 0.40375179 4.09206439999999994 2.72012380000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1861]" " -type \"float3\" 0.39749062000000002 4.10297779999999968 2.733151"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1862]" " -type \"float3\" 0.39347072999999999 4.11673020000000012 2.75176219999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1863]" " -type \"float3\" 0.39208555 4.13197420000000015 2.77413540000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1864]" " -type \"float3\" 0.39906820999999998 4.13972090000000037 2.79981569999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1865]" " -type \"float3\" 0.40240976000000001 4.15115259999999964 2.81907839999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1866]" " -type \"float3\" 0.40761438 4.16022439999999971 2.83581450000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1867]" " -type \"float3\" 0.41417256000000002 4.166049 2.8483852999999999"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1868]" " -type \"float3\" 0.42144239 4.16805649999999961 2.85555959999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1869]" " -type \"float3\" 0.42871221999999998 4.166049 2.85663629999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1870]" " -type \"float3\" 0.4352704 4.16022439999999971 2.85150909999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1871]" " -type \"float3\" 0.44047501999999999 4.15115259999999964 2.84068010000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1872]" " -type \"float3\" 0.44381657000000002 4.13972090000000037 2.82520989999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1873]" " -type \"float3\" 0.44496798999999998 4.127049 2.806612"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1874]" " -type \"float3\" 0.44381657000000002 4.114377 2.78670719999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1875]" " -type \"float3\" 0.44047501999999999 4.10294630000000016 2.76744410000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1876]" " -type \"float3\" 0.4352704 4.093874 2.75070810000000021"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1877]" " -type \"float3\" 0.42871221999999998 4.08804940000000006 2.73813750000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1878]" " -type \"float3\" 0.42144239 4.08604240000000019 2.73096279999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1879]" " -type \"float3\" 0.41417256000000002 4.08804940000000006 2.7298865000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1880]" " -type \"float3\" 0.40761438 4.093874 2.73501349999999999"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1881]" " -type \"float3\" 0.40240976000000001 4.10294630000000016 2.74584250000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1882]" " -type \"float3\" 0.39906820999999998 4.1143774999999998 2.761313"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1883]" " -type \"float3\" 0.39791679000000002 4.127049 2.77991080000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1884]" " -type \"float3\" 0.40501030999999998 4.13287449999999978 2.8007898"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1885]" " -type \"float3\" 0.40759125000000002 4.1417035999999996 2.8156680999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1886]" " -type \"float3\" 0.41161117000000003 4.14871069999999964 2.82859440000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1887]" " -type \"float3\" 0.41667651999999999 4.15320920000000005 2.83830360000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1888]" " -type \"float3\" 0.42229155000000002 4.15475939999999966 2.84384509999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1889]" " -type \"float3\" 0.42790654 4.15320920000000005 2.84467649999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1890]" " -type \"float3\" 0.43297194999999999 4.14871069999999964 2.84071659999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1891]" " -type \"float3\" 0.43699187 4.1417035999999996 2.83235260000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1892]" " -type \"float3\" 0.43957275000000001 4.132874 2.82040360000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1893]" " -type \"float3\" 0.44046214 4.12308689999999967 2.80603910000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1894]" " -type \"float3\" 0.43957280999999998 4.11329939999999983 2.79066510000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1895]" " -type \"float3\" 0.43699187 4.10446980000000039 2.77578689999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1896]" " -type \"float3\" 0.43297194999999999 4.09746270000000035 2.76286049999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1897]" " -type \"float3\" 0.42790656999999999 4.09296419999999994 2.75315120000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1898]" " -type \"float3\" 0.42229151999999998 4.091414 2.7476096000000001"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1899]" " -type \"float3\" 0.41667651999999999 4.09296419999999994 2.74677820000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1900]" " -type \"float3\" 0.41161117000000003 4.09746270000000035 2.75073839999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1901]" " -type \"float3\" 0.40759125000000002 4.10446980000000039 2.7591022999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1902]" " -type \"float3\" 0.40501030999999998 4.11329939999999983 2.77105140000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1903]" " -type \"float3\" 0.40412098000000002 4.12308689999999967 2.78541589999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1904]" " -type \"float3\" 0.41115066 4.12684630000000041 2.80097959999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1905]" " -type \"float3\" 0.41290742000000002 4.13285639999999965 2.81110669999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1906]" " -type \"float3\" 0.41564362999999999 4.1376261999999997 2.81990529999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1907]" " -type \"float3\" 0.41909149000000001 4.14068789999999964 2.82651379999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1908]" " -type \"float3\" 0.42291346000000002 4.14174319999999963 2.830286"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1909]" " -type \"float3\" 0.42673549 4.14068789999999964 2.83085180000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1910]" " -type \"float3\" 0.43018326000000001 4.1376261999999997 2.82815620000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1911]" " -type \"float3\" 0.43291950000000001 4.13285639999999965 2.8224632999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1912]" " -type \"float3\" 0.43467623 4.12684630000000041 2.81433009999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1913]" " -type \"float3\" 0.43528159999999999 4.1201844000000003 2.80455260000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1914]" " -type \"float3\" 0.43467623 4.11352250000000019 2.79408810000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1915]" " -type \"float3\" 0.43291950000000001 4.10751250000000034 2.7839605999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1916]" " -type \"float3\" 0.43018329 4.10274360000000016 2.77516220000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1917]" " -type \"float3\" 0.42673543000000003 4.0996813999999997 2.76855349999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1918]" " -type \"float3\" 0.42291351999999999 4.09862609999999972 2.76478149999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1919]" " -type \"float3\" 0.41909149000000001 4.0996813999999997 2.76421550000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1920]" " -type \"float3\" 0.41564366000000003 4.10274360000000016 2.766911"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1921]" " -type \"float3\" 0.41290745000000001 4.10751250000000034 2.77260419999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1922]" " -type \"float3\" 0.41115066 4.11352250000000019 2.78073740000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1923]" " -type \"float3\" 0.41054531999999999 4.1201844000000003 2.7905148999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1924]" " -type \"float3\" 0.41733816000000001 4.12178660000000008 2.80038"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1925]" " -type \"float3\" 0.41822748999999998 4.12482930000000003 2.80550670000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1926]" " -type \"float3\" 0.41961264999999998 4.12724349999999962 2.80996079999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1927]" " -type \"float3\" 0.42135808000000002 4.12879370000000012 2.81330629999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1928]" " -type \"float3\" 0.42329287999999998 4.12932780000000044 2.81521560000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1929]" " -type \"float3\" 0.42522767 4.12879370000000012 2.81550240000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1930]" " -type \"float3\" 0.42697309999999999 4.12724349999999962 2.81413769999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1931]" " -type \"float3\" 0.42835825999999999 4.12482930000000003 2.8112556999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1932]" " -type \"float3\" 0.42924755999999997 4.12178660000000008 2.80713819999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1933]" " -type \"float3\" 0.42955405000000002 4.11841390000000018 2.80218860000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1934]" " -type \"float3\" 0.42924762 4.11504169999999991 2.79689120000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1935]" " -type \"float3\" 0.42835825999999999 4.11199949999999959 2.7917645000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1936]" " -type \"float3\" 0.42697307000000001 4.10958480000000037 2.78731039999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1937]" " -type \"float3\" 0.42522767 4.10803459999999987 2.78396489999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1938]" " -type \"float3\" 0.42329287999999998 4.10750059999999984 2.7820551"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1939]" " -type \"float3\" 0.42135808000000002 4.10803459999999987 2.78176880000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1940]" " -type \"float3\" 0.41961268000000002 4.10958480000000037 2.78313349999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1941]" " -type \"float3\" 0.41822748999999998 4.11199949999999959 2.78601549999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1942]" " -type \"float3\" 0.41733819 4.11504169999999991 2.79013279999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1943]" " -type \"float3\" 0.41703173999999998 4.11841390000000018 2.79508260000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1944]" " -type \"float3\" 0.40270655999999999 4.21447709999999987 2.73884840000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1945]" " -type \"float3\" 0.42342036999999999 4.11781929999999985 2.79900569999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1946]" " -type \"float3\" 0.65279089999999995 3.95764449999999979 2.49178619999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1947]" " -type \"float3\" 0.65368020999999998 3.96068720000000019 2.496913"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1948]" " -type \"float3\" 0.65506542000000001 3.96310189999999984 2.50136709999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1949]" " -type \"float3\" 0.65681076000000005 3.96465179999999995 2.50471259999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1950]" " -type \"float3\" 0.65874564999999996 3.96518589999999982 2.50662209999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1951]" " -type \"float3\" 0.66068041 3.96465179999999995 2.50690869999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1952]" " -type \"float3\" 0.66242582000000005 3.96310159999999989 2.50554390000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1953]" " -type \"float3\" 0.66381097 3.96068720000000019 2.50266190000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1954]" " -type \"float3\" 0.66470032999999995 3.95764449999999979 2.49854470000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1955]" " -type \"float3\" 0.66500676000000003 3.95427229999999996 2.49359509999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1956]" " -type \"float3\" 0.66470039000000003 3.95089960000000007 2.48829769999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1957]" " -type \"float3\" 0.66381097 3.94785740000000018 2.48317070000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1958]" " -type \"float3\" 0.66242582000000005 3.9454429000000002 2.47871659999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1959]" " -type \"float3\" 0.66068041 3.94389270000000014 2.47537109999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1960]" " -type \"float3\" 0.65874564999999996 3.94335840000000015 2.47346159999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1961]" " -type \"float3\" 0.65681087999999999 3.943893 2.47317529999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1962]" " -type \"float3\" 0.65506536000000004 3.9454429000000002 2.47453980000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1963]" " -type \"float3\" 0.65368020999999998 3.94785740000000018 2.47742180000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1964]" " -type \"float3\" 0.65279089999999995 3.95089960000000007 2.481539"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1965]" " -type \"float3\" 0.65248441999999995 3.95427229999999996 2.48648880000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1966]" " -type \"float3\" 0.64736223000000004 3.95916410000000019 2.49458959999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1967]" " -type \"float3\" 0.64911896000000002 3.9651736999999998 2.50471690000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1968]" " -type \"float3\" 0.65185517000000004 3.969943 2.51351550000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1969]" " -type \"float3\" 0.65530306000000005 3.97300530000000007 2.520124"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1970]" " -type \"float3\" 0.65912503 3.97406050000000022 2.523896"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1971]" " -type \"float3\" 0.662947 3.97300530000000007 2.52446169999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1972]" " -type \"float3\" 0.66639482999999999 3.969943 2.52176640000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1973]" " -type \"float3\" 0.66913104000000001 3.9651736999999998 2.51607350000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1974]" " -type \"float3\" 0.67088776999999999 3.95916390000000007 2.50794009999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1975]" " -type \"float3\" 0.67149316999999997 3.952502 2.49816249999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1976]" " -type \"float3\" 0.67088776999999999 3.94583990000000018 2.4876980999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1977]" " -type \"float3\" 0.66913104000000001 3.9398301 2.47757080000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1978]" " -type \"float3\" 0.66639482999999999 3.93506050000000007 2.46877220000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1979]" " -type \"float3\" 0.662947 3.93199830000000006 2.46216340000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1980]" " -type \"float3\" 0.65912497000000003 3.930943 2.45839169999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1981]" " -type \"float3\" 0.65530306000000005 3.93199830000000006 2.45782569999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1982]" " -type \"float3\" 0.65185523000000001 3.93506050000000007 2.46052120000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1983]" " -type \"float3\" 0.64911890000000005 3.9398301 2.46621420000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1984]" " -type \"float3\" 0.64736216999999996 3.94583990000000018 2.4743476000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1985]" " -type \"float3\" 0.64675689000000003 3.952502 2.48412489999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1986]" " -type \"float3\" 0.64246570999999997 3.95938679999999987 2.49801230000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1987]" " -type \"float3\" 0.64504665000000005 3.96821620000000008 2.51289059999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1988]" " -type \"float3\" 0.64906657000000001 3.9752234999999998 2.5258172000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1989]" " -type \"float3\" 0.65413189000000005 3.97972230000000016 2.5355262999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1990]" " -type \"float3\" 0.65974694 3.98127219999999982 2.54106759999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1991]" " -type \"float3\" 0.665362 3.979722 2.541899"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1992]" " -type \"float3\" 0.67042738000000002 3.9752234999999998 2.5379391"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1993]" " -type \"float3\" 0.67444729999999997 3.96821620000000008 2.52957529999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1994]" " -type \"float3\" 0.67702817999999998 3.95938679999999987 2.517626"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1995]" " -type \"float3\" 0.67791754000000004 3.94959969999999982 2.50326160000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1996]" " -type \"float3\" 0.67702817999999998 3.93981219999999999 2.48788790000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1997]" " -type \"float3\" 0.67444729999999997 3.93098280000000022 2.47300930000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1998]" " -type \"float3\" 0.67042738000000002 3.92397589999999985 2.460083"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[1999]" " -type \"float3\" 0.665362 3.919477 2.45037359999999982"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2000]" " -type \"float3\" 0.65974694 3.91792680000000004 2.44483229999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2001]" " -type \"float3\" 0.65413195000000002 3.919477 2.44400070000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2002]" " -type \"float3\" 0.64906657000000001 3.92397589999999985 2.44796110000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2003]" " -type \"float3\" 0.64504665000000005 3.93098280000000022 2.45632479999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2004]" " -type \"float3\" 0.64246570999999997 3.93981219999999999 2.4682738999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2005]" " -type \"float3\" 0.64157640999999999 3.94959969999999982 2.48263839999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2006]" " -type \"float3\" 0.63822192 3.95830919999999997 2.50197029999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2007]" " -type \"float3\" 0.64156352999999999 3.96974040000000006 2.52123330000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2008]" " -type \"float3\" 0.64676809000000002 3.97881250000000009 2.53796940000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2009]" " -type \"float3\" 0.65332632999999996 3.98463730000000016 2.55053969999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2010]" " -type \"float3\" 0.66059606999999998 3.986644 2.55771470000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2011]" " -type \"float3\" 0.66786586999999997 3.98463730000000016 2.55879089999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2012]" " -type \"float3\" 0.67442411000000002 3.97881250000000009 2.55366369999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2013]" " -type \"float3\" 0.67962878999999998 3.96974040000000006 2.542835"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2014]" " -type \"float3\" 0.68297028999999998 3.95830919999999997 2.52736450000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2015]" " -type \"float3\" 0.68412167000000002 3.94563720000000018 2.50876669999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2016]" " -type \"float3\" 0.68297034999999995 3.93296530000000022 2.488862"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2017]" " -type \"float3\" 0.67962873000000001 3.92153380000000018 2.46959879999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2018]" " -type \"float3\" 0.67442411000000002 3.91246150000000004 2.45286269999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2019]" " -type \"float3\" 0.66786593000000005 3.90663740000000015 2.44029240000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2020]" " -type \"float3\" 0.66059612999999995 3.90463020000000016 2.4331176000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2021]" " -type \"float3\" 0.65332632999999996 3.90663740000000015 2.43204120000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2022]" " -type \"float3\" 0.64676814999999999 3.91246179999999999 2.43716860000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2023]" " -type \"float3\" 0.64156347999999996 3.92153380000000018 2.44799729999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2024]" " -type \"float3\" 0.63822197999999997 3.93296549999999989 2.4634678000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2025]" " -type \"float3\" 0.63707047999999999 3.94563720000000018 2.4820654000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2026]" " -type \"float3\" 0.63473541 3.9559565000000001 2.50636629999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2027]" " -type \"float3\" 0.63875526000000005 3.969708 2.52953960000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2028]" " -type \"float3\" 0.64501642999999997 3.98062210000000016 2.54967310000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2029]" " -type \"float3\" 0.65290594000000002 3.98762889999999981 2.56479549999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2030]" " -type \"float3\" 0.66165154999999998 3.9900433999999998 2.57342670000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2031]" " -type \"float3\" 0.67039722000000002 3.98762889999999981 2.57472160000000017"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2032]" " -type \"float3\" 0.67828672999999995 3.98062180000000021 2.56855339999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2033]" " -type \"float3\" 0.68454784000000002 3.969708 2.55552650000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2034]" " -type \"float3\" 0.68856782000000005 3.9559565000000001 2.5369155000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2035]" " -type \"float3\" 0.68995291000000003 3.940712 2.51454209999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2036]" " -type \"float3\" 0.68856775999999997 3.9254677 2.49059680000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2037]" " -type \"float3\" 0.68454784000000002 3.91171550000000012 2.46742319999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2038]" " -type \"float3\" 0.67828672999999995 3.90080209999999994 2.44728989999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2039]" " -type \"float3\" 0.67039722000000002 3.89379479999999978 2.43216749999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2040]" " -type \"float3\" 0.66165160999999995 3.89138029999999979 2.42353629999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2041]" " -type \"float3\" 0.652906 3.89379479999999978 2.42224139999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2042]" " -type \"float3\" 0.64501649000000005 3.90080209999999994 2.42840930000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2043]" " -type \"float3\" 0.63875526000000005 3.91171550000000012 2.44143629999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2044]" " -type \"float3\" 0.63473541 3.9254677 2.46004749999999994"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2045]" " -type \"float3\" 0.63335019000000004 3.940712 2.48242070000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2046]" " -type \"float3\" 0.632092 3.95238639999999997 2.51109150000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2047]" " -type \"float3\" 0.63669120999999995 3.96812060000000022 2.53760479999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2048]" " -type \"float3\" 0.64385479999999995 3.98060679999999989 2.56063989999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2049]" " -type \"float3\" 0.65288137999999996 3.98862389999999989 2.5779418999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2050]" " -type \"float3\" 0.66288733 3.99138640000000011 2.587817"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2051]" " -type \"float3\" 0.67289339999999997 3.98862410000000001 2.58929870000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2052]" " -type \"float3\" 0.68191999000000003 3.98060679999999989 2.58224149999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2053]" " -type \"float3\" 0.68908351999999995 3.96812060000000022 2.567337"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2054]" " -type \"float3\" 0.69368273000000003 3.95238639999999997 2.54604359999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2055]" " -type \"float3\" 0.69526761999999998 3.93494529999999987 2.52044610000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2056]" " -type \"float3\" 0.69368278999999999 3.91750379999999998 2.49304959999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2057]" " -type \"float3\" 0.68908358000000003 3.90176960000000017 2.466536"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2058]" " -type \"float3\" 0.68192005 3.88928340000000006 2.443501"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2059]" " -type \"float3\" 0.67289346000000005 3.88126639999999989 2.42619920000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2060]" " -type \"float3\" 0.66288733 3.878504 2.4163241000000002"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2061]" " -type \"float3\" 0.65288137999999996 3.88126639999999989 2.41484260000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2062]" " -type \"float3\" 0.64385479999999995 3.88928340000000006 2.42189960000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2063]" " -type \"float3\" 0.63669127000000003 3.90176960000000017 2.43680409999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2064]" " -type \"float3\" 0.632092 3.91750379999999998 2.45809750000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2065]" " -type \"float3\" 0.63050717000000001 3.93494529999999987 2.483695"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2066]" " -type \"float3\" 0.63035673000000003 3.94768810000000014 2.51603010000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2067]" " -type \"float3\" 0.63542204999999996 3.96501659999999978 2.54523039999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2068]" " -type \"float3\" 0.64331161999999997 3.97876880000000011 2.5706"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2069]" " -type \"float3\" 0.65325295999999999 3.9875976999999998 2.58965539999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2070]" " -type \"float3\" 0.66427307999999996 3.9906404000000002 2.6005313000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2071]" " -type \"float3\" 0.67529315000000001 3.9875976999999998 2.60216309999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2072]" " -type \"float3\" 0.68523460999999997 3.97876880000000011 2.59439090000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2073]" " -type \"float3\" 0.69312412000000001 3.96501640000000011 2.57797570000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2074]" " -type \"float3\" 0.69818944000000005 3.94768810000000014 2.55452440000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2075]" " -type \"float3\" 0.69993490000000003 3.92847919999999995 2.52633259999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2076]" " -type \"float3\" 0.69818950000000002 3.9092703000000002 2.49615959999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2077]" " -type \"float3\" 0.69312412000000001 3.89194150000000016 2.4669591999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2078]" " -type \"float3\" 0.68523449000000003 3.87818979999999991 2.44158959999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2079]" " -type \"float3\" 0.67529320999999998 3.86936040000000014 2.42253419999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2080]" " -type \"float3\" 0.66427307999999996 3.86631819999999982 2.41165850000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2081]" " -type \"float3\" 0.65325295999999999 3.86936040000000014 2.4100267999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2082]" " -type \"float3\" 0.64331161999999997 3.87818959999999979 2.41779879999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2083]" " -type \"float3\" 0.63542211000000004 3.89194150000000016 2.43421390000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2084]" " -type \"float3\" 0.63035673000000003 3.9092703000000002 2.45766520000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2085]" " -type \"float3\" 0.62861133000000002 3.92847919999999995 2.48585719999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2086]" " -type \"float3\" 0.62957238999999998 3.9419761000000002 2.52106019999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2087]" " -type \"float3\" 0.63497906999999998 3.96047279999999979 2.55222870000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2088]" " -type \"float3\" 0.64340037000000005 3.97515129999999983 2.579308"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2089]" " -type \"float3\" 0.65401178999999998 3.98457570000000016 2.59964750000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2090]" " -type \"float3\" 0.66577452000000004 3.98782319999999979 2.61125639999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2091]" " -type \"float3\" 0.67753737999999997 3.98457570000000016 2.61299819999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2092]" " -type \"float3\" 0.68814874000000004 3.97515149999999995 2.60470250000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2093]" " -type \"float3\" 0.69656998000000003 3.96047260000000012 2.58718089999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2094]" " -type \"float3\" 0.70197672 3.9419761000000002 2.562149"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2095]" " -type \"float3\" 0.70383978000000003 3.92147280000000009 2.532057"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2096]" " -type \"float3\" 0.70197677999999997 3.900969 2.49985070000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2097]" " -type \"float3\" 0.69656991999999995 3.882473 2.46868230000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2098]" " -type \"float3\" 0.68814874000000004 3.86779379999999984 2.44160269999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2099]" " -type \"float3\" 0.67753737999999997 3.85836939999999995 2.42126349999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2100]" " -type \"float3\" 0.66577458 3.85512189999999988 2.40965460000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2101]" " -type \"float3\" 0.65401178999999998 3.85836939999999995 2.40791269999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2102]" " -type \"float3\" 0.64340043000000002 3.86779379999999984 2.41620869999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2103]" " -type \"float3\" 0.63497912999999995 3.882473 2.43373010000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2104]" " -type \"float3\" 0.62957238999999998 3.900969 2.45876189999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2105]" " -type \"float3\" 0.62770932999999995 3.92147280000000009 2.48885390000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2106]" " -type \"float3\" 0.62975824000000002 3.93539169999999983 2.52605820000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2107]" " -type \"float3\" 0.63537323000000001 3.95460060000000002 2.55842729999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2108]" " -type \"float3\" 0.64411885000000002 3.96984480000000017 2.58654949999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2109]" " -type \"float3\" 0.65513896999999999 3.97963190000000022 2.60767250000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2110]" " -type \"float3\" 0.66735482000000002 3.98300460000000012 2.61972829999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2111]" " -type \"float3\" 0.67957067000000004 3.97963239999999985 2.62153720000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2112]" " -type \"float3\" 0.69059079999999995 3.96984480000000017 2.612922"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2113]" " -type \"float3\" 0.69933641000000002 3.95460060000000002 2.59472540000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2114]" " -type \"float3\" 0.70495140999999995 3.93539169999999983 2.56872940000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2115]" " -type \"float3\" 0.70688622999999995 3.91409869999999982 2.53747839999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2116]" " -type \"float3\" 0.70495140999999995 3.89280509999999991 2.50403170000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2117]" " -type \"float3\" 0.69933641000000002 3.87359620000000016 2.47166279999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2118]" " -type \"float3\" 0.69059079999999995 3.85835190000000017 2.44354059999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2119]" " -type \"float3\" 0.67957073000000001 3.84856489999999996 2.42241719999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2120]" " -type \"float3\" 0.66735482000000002 3.84519220000000006 2.41036150000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2121]" " -type \"float3\" 0.65513896999999999 3.84856489999999996 2.40855240000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2122]" " -type \"float3\" 0.64411885000000002 3.85835239999999979 2.41716789999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2123]" " -type \"float3\" 0.63537328999999998 3.87359620000000016 2.43536419999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2124]" " -type \"float3\" 0.62975824000000002 3.89280509999999991 2.46136050000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2125]" " -type \"float3\" 0.62782347000000005 3.91409869999999982 2.4926111999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2126]" " -type \"float3\" 0.63090974 3.92809680000000006 2.53090070000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2127]" " -type \"float3\" 0.63659476999999998 3.94754510000000014 2.56367330000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2128]" " -type \"float3\" 0.64544939999999995 3.9629793000000002 2.59214620000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2129]" " -type \"float3\" 0.65660684999999996 3.97288869999999994 2.61353230000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2130]" " -type \"float3\" 0.668975 3.9763033000000001 2.62573860000000003"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2131]" " -type \"float3\" 0.68134313999999996 3.97288869999999994 2.62756990000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2132]" " -type \"float3\" 0.69250058999999997 3.9629793000000002 2.61884739999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2133]" " -type \"float3\" 0.70135521999999995 3.94754510000000014 2.6004242999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2134]" " -type \"float3\" 0.70704018999999996 3.92809680000000006 2.57410410000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2135]" " -type \"float3\" 0.70899915999999996 3.90653819999999996 2.54246350000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2136]" " -type \"float3\" 0.70704025000000004 3.88497920000000008 2.50859979999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2137]" " -type \"float3\" 0.70135521999999995 3.86553119999999995 2.47582719999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2138]" " -type \"float3\" 0.69250058999999997 3.85009690000000004 2.4473543000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2139]" " -type \"float3\" 0.68134320000000004 3.84018749999999986 2.4259681999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2140]" " -type \"float3\" 0.668975 3.83677290000000015 2.4137618999999999"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2141]" " -type \"float3\" 0.65660684999999996 3.84018749999999986 2.41193059999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2142]" " -type \"float3\" 0.64544939999999995 3.85009690000000004 2.42065330000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2143]" " -type \"float3\" 0.63659476999999998 3.86553119999999995 2.43907639999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2144]" " -type \"float3\" 0.63090979999999997 3.88497920000000008 2.46539639999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2145]" " -type \"float3\" 0.62895082999999996 3.90653819999999996 2.49703689999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2146]" " -type \"float3\" 0.63299859000000003 3.92027089999999978 2.53546909999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2147]" " -type \"float3\" 0.63861358000000001 3.93947979999999998 2.56783770000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2148]" " -type \"float3\" 0.64735918999999997 3.95472409999999996 2.5959601000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2149]" " -type \"float3\" 0.65837931999999999 3.96451140000000013 2.6170833"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2150]" " -type \"float3\" 0.67059522999999999 3.96788380000000007 2.62913890000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2151]" " -type \"float3\" 0.68281102000000005 3.9645115999999998 2.63094779999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2152]" " -type \"float3\" 0.69383121000000003 3.95472430000000008 2.62233260000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2153]" " -type \"float3\" 0.70257676000000002 3.93947979999999998 2.60413620000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2154]" " -type \"float3\" 0.70819180999999998 3.92027089999999978 2.57814029999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2155]" " -type \"float3\" 0.71012657999999995 3.898978 2.54688930000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2156]" " -type \"float3\" 0.70819175000000001 3.87768440000000014 2.51344229999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2157]" " -type \"float3\" 0.70257676000000002 3.85847540000000011 2.4810734000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2158]" " -type \"float3\" 0.69383114999999995 3.84323119999999996 2.45295120000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2159]" " -type \"float3\" 0.68281108000000001 3.83344409999999991 2.431828"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2160]" " -type \"float3\" 0.67059522999999999 3.83007140000000001 2.41977209999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2161]" " -type \"float3\" 0.65837931999999999 3.83344409999999991 2.41796329999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2162]" " -type \"float3\" 0.64735925000000005 3.84323170000000003 2.42657850000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2163]" " -type \"float3\" 0.63861358000000001 3.85847540000000011 2.44477490000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2164]" " -type \"float3\" 0.63299859000000003 3.87768440000000014 2.47077079999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2165]" " -type \"float3\" 0.63106382000000005 3.898978 2.502022"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2166]" " -type \"float3\" 0.63597333 3.912107 2.53965"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2167]" " -type \"float3\" 0.64138001 3.93060369999999981 2.57081839999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2168]" " -type \"float3\" 0.64980125 3.9452824999999998 2.59789750000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2169]" " -type \"float3\" 0.66041273 3.95470670000000002 2.6182373000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2170]" " -type \"float3\" 0.67217547 3.95795420000000009 2.62984609999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2171]" " -type \"float3\" 0.68393826000000002 3.95470670000000002 2.63158769999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2172]" " -type \"float3\" 0.69454967999999995 3.9452824999999998 2.623292"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2173]" " -type \"float3\" 0.70297092000000005 3.93060369999999981 2.60577060000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2174]" " -type \"float3\" 0.70837766000000002 3.9121071999999999 2.58073880000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2175]" " -type \"float3\" 0.71024065999999997 3.89160389999999978 2.55064679999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2176]" " -type \"float3\" 0.70837766000000002 3.87109989999999993 2.51844020000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2177]" " -type \"float3\" 0.70297085999999998 3.85260390000000008 2.487272"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2178]" " -type \"float3\" 0.69454967999999995 3.83792469999999986 2.46019239999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2179]" " -type \"float3\" 0.68393831999999999 3.82850029999999997 2.439853"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2180]" " -type \"float3\" 0.67217552999999997 3.825253 2.42824410000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2181]" " -type \"float3\" 0.66041267000000003 3.82850029999999997 2.42650219999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2182]" " -type \"float3\" 0.64980130999999997 3.837925 2.43479819999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2183]" " -type \"float3\" 0.64138006999999997 3.85260390000000008 2.4523199"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2184]" " -type \"float3\" 0.63597327000000003 3.87109989999999993 2.47735139999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2185]" " -type \"float3\" 0.63411021000000001 3.89160389999999978 2.5074434000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2186]" " -type \"float3\" 0.63976060999999995 3.9038062 2.54334090000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2187]" " -type \"float3\" 0.64482594000000004 3.92113470000000008 2.57254119999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2188]" " -type \"float3\" 0.6527155 3.93488689999999997 2.59791090000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2189]" " -type \"float3\" 0.66265684000000002 3.9437158000000001 2.6169661999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2190]" " -type \"float3\" 0.67367690999999996 3.94675850000000006 2.62784189999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2191]" " -type \"float3\" 0.68469703000000004 3.9437158000000001 2.62947389999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2192]" " -type \"float3\" 0.69463849 3.93488689999999997 2.62170170000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2193]" " -type \"float3\" 0.702528 3.92113470000000008 2.6052865999999999"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2194]" " -type \"float3\" 0.70759331999999997 3.9038062 2.58183529999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2195]" " -type \"float3\" 0.70933871999999998 3.88459729999999981 2.55364319999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2196]" " -type \"float3\" 0.70759331999999997 3.86538840000000006 2.52347039999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2197]" " -type \"float3\" 0.702528 3.84805969999999986 2.49427010000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2198]" " -type \"float3\" 0.69463836999999995 3.83430790000000021 2.46890039999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2199]" " -type \"float3\" 0.68469709000000001 3.82547859999999984 2.44984510000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2200]" " -type \"float3\" 0.67367703000000001 3.82243630000000012 2.43896939999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2201]" " -type \"float3\" 0.66265684000000002 3.82547859999999984 2.43733760000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2202]" " -type \"float3\" 0.6527155 3.83430790000000021 2.44510959999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2203]" " -type \"float3\" 0.64482598999999996 3.84805969999999986 2.46152470000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2204]" " -type \"float3\" 0.63976054999999998 3.86538840000000006 2.48497609999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2205]" " -type \"float3\" 0.63801514999999998 3.88459729999999981 2.51316790000000001"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2206]" " -type \"float3\" 0.64426726000000001 3.89557220000000015 2.54645110000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2207]" " -type \"float3\" 0.64886646999999997 3.91130639999999996 2.57296440000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2208]" " -type \"float3\" 0.65603005999999997 3.92379260000000007 2.59599950000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2209]" " -type \"float3\" 0.66505665000000003 3.93180970000000007 2.61330149999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2210]" " -type \"float3\" 0.67506266000000004 3.93457219999999985 2.62317659999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2211]" " -type \"float3\" 0.68506867000000005 3.93180990000000019 2.62465809999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2212]" " -type \"float3\" 0.69409531000000002 3.92379260000000007 2.61760120000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2213]" " -type \"float3\" 0.70125884000000005 3.91130639999999996 2.60269670000000009"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2214]" " -type \"float3\" 0.70585805000000001 3.89557220000000015 2.58140329999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2215]" " -type \"float3\" 0.70744288 3.87813119999999989 2.55580570000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2216]" " -type \"float3\" 0.70585810999999998 3.86068960000000017 2.528409"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2217]" " -type \"float3\" 0.70125884000000005 3.84495539999999991 2.50189569999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2218]" " -type \"float3\" 0.69409531000000002 3.8324691999999998 2.47886059999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2219]" " -type \"float3\" 0.68506873000000001 3.82445220000000008 2.46155880000000016"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2220]" " -type \"float3\" 0.67506266000000004 3.82168980000000014 2.45168380000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2221]" " -type \"float3\" 0.66505665000000003 3.82445220000000008 2.45020220000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2222]" " -type \"float3\" 0.65603005999999997 3.8324691999999998 2.4572588999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2223]" " -type \"float3\" 0.64886653000000005 3.84495539999999991 2.47216369999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2224]" " -type \"float3\" 0.64426726000000001 3.86068960000000017 2.49345680000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2225]" " -type \"float3\" 0.64268249 3.87813119999999989 2.51905469999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2226]" " -type \"float3\" 0.64938229000000003 3.8876088000000002 2.54890369999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2227]" " -type \"float3\" 0.65340220999999998 3.90136050000000001 2.57207730000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2228]" " -type \"float3\" 0.65966338000000002 3.91227439999999982 2.59221080000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2229]" " -type \"float3\" 0.66755288999999995 3.91928149999999986 2.6073331999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2230]" " -type \"float3\" 0.67629850000000002 3.9216956999999999 2.61596440000000019"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2231]" " -type \"float3\" 0.68504405000000002 3.91928119999999991 2.617259"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2232]" " -type \"float3\" 0.69293355999999995 3.91227439999999982 2.61109109999999989"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2233]" " -type \"float3\" 0.69919472999999999 3.90136050000000001 2.59806420000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2234]" " -type \"float3\" 0.70321465000000005 3.8876088000000002 2.579453"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2235]" " -type \"float3\" 0.7045998 3.87236450000000021 2.5570797999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2236]" " -type \"float3\" 0.70321465000000005 3.85712 2.53313450000000007"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2237]" " -type \"float3\" 0.69919472999999999 3.84336810000000018 2.50996089999999983"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2238]" " -type \"float3\" 0.69293362000000003 3.83245440000000004 2.4898273999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2239]" " -type \"float3\" 0.68504405000000002 3.82544709999999988 2.474705"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2240]" " -type \"float3\" 0.67629850000000002 3.82303259999999989 2.466074"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2241]" " -type \"float3\" 0.66755288999999995 3.82544709999999988 2.46477890000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2242]" " -type \"float3\" 0.65966338000000002 3.83245440000000004 2.47094680000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2243]" " -type \"float3\" 0.65340220999999998 3.84336810000000018 2.483974"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2244]" " -type \"float3\" 0.64938229000000003 3.85712030000000006 2.50258519999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2245]" " -type \"float3\" 0.64799713999999997 3.87236450000000021 2.52495840000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2246]" " -type \"float3\" 0.65497976999999996 3.88011119999999998 2.55063869999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2247]" " -type \"float3\" 0.65832131999999999 3.89154219999999995 2.56990169999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2248]" " -type \"float3\" 0.66352593999999998 3.90061429999999998 2.58663769999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2249]" " -type \"float3\" 0.67008411999999995 3.90643910000000005 2.5992080999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2250]" " -type \"float3\" 0.67735398000000002 3.90844579999999997 2.60638309999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2251]" " -type \"float3\" 0.68462378000000002 3.90643930000000017 2.60745929999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2252]" " -type \"float3\" 0.69118195999999998 3.90061429999999998 2.60233209999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2253]" " -type \"float3\" 0.69638657999999998 3.89154219999999995 2.59150340000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2254]" " -type \"float3\" 0.69972813 3.88011119999999998 2.57603289999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2255]" " -type \"float3\" 0.70087957000000001 3.86743930000000002 2.557435"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2256]" " -type \"float3\" 0.69972813 3.85476729999999979 2.53753019999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2257]" " -type \"float3\" 0.69638657999999998 3.84333560000000007 2.51826719999999993"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2258]" " -type \"float3\" 0.69118195999999998 3.83426359999999988 2.50153109999999979"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2259]" " -type \"float3\" 0.68462378000000002 3.82843920000000004 2.48896050000000013"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2260]" " -type \"float3\" 0.67735398000000002 3.826432 2.481786"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2261]" " -type \"float3\" 0.67008411999999995 3.82843920000000004 2.48070959999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2262]" " -type \"float3\" 0.66352593999999998 3.83426359999999988 2.48583670000000012"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2263]" " -type \"float3\" 0.65832131999999999 3.84333560000000007 2.49666569999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2264]" " -type \"float3\" 0.65497976999999996 3.85476729999999979 2.512136"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2265]" " -type \"float3\" 0.65382832000000002 3.86743930000000002 2.53073380000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2266]" " -type \"float3\" 0.66092187000000002 3.87326380000000015 2.55161289999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2267]" " -type \"float3\" 0.66350281 3.88209319999999991 2.56649109999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2268]" " -type \"float3\" 0.66752272999999995 3.88910059999999991 2.57941770000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2269]" " -type \"float3\" 0.67258804999999999 3.89359929999999999 2.58912679999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2270]" " -type \"float3\" 0.67820311 3.89514920000000009 2.59466840000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2271]" " -type \"float3\" 0.68381815999999995 3.893599 2.59549949999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2272]" " -type \"float3\" 0.68888353999999996 3.88910059999999991 2.59153959999999994"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2273]" " -type \"float3\" 0.69290346000000003 3.88209319999999991 2.58317569999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2274]" " -type \"float3\" 0.69548427999999995 3.87326380000000015 2.57122660000000014"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2275]" " -type \"float3\" 0.69637369999999998 3.86347679999999993 2.55686239999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2276]" " -type \"float3\" 0.69548434000000003 3.85368919999999981 2.54148839999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2277]" " -type \"float3\" 0.69290346000000003 3.84485980000000005 2.52660989999999996"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2278]" " -type \"float3\" 0.68888353999999996 3.837853 2.5136835999999998"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2279]" " -type \"float3\" 0.68381809999999998 3.833354 2.50397420000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2280]" " -type \"float3\" 0.67820305000000003 3.83180379999999987 2.49843290000000007"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2281]" " -type \"float3\" 0.67258810999999996 3.833354 2.49760129999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2282]" " -type \"float3\" 0.66752272999999995 3.837853 2.50156160000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2283]" " -type \"float3\" 0.66350281 3.84485980000000005 2.5099254000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2284]" " -type \"float3\" 0.66092187000000002 3.85368919999999981 2.52187440000000018"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2285]" " -type \"float3\" 0.66003257000000004 3.86347679999999993 2.53623889999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2286]" " -type \"float3\" 0.66706222000000004 3.86723660000000002 2.55180259999999981"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2287]" " -type \"float3\" 0.66881900999999999 3.8732464000000002 2.56192969999999987"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2288]" " -type \"float3\" 0.67155522000000001 3.87801550000000006 2.57072829999999986"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2289]" " -type \"float3\" 0.67500305000000005 3.881078 2.577337"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2290]" " -type \"float3\" 0.67882502 3.882133 2.581109"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2291]" " -type \"float3\" 0.68264698999999995 3.88107779999999991 2.58167480000000005"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2292]" " -type \"float3\" 0.68609481999999999 3.87801550000000006 2.57897949999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2293]" " -type \"float3\" 0.68883108999999998 3.8732464000000002 2.57328650000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2294]" " -type \"float3\" 0.69058781999999996 3.86723660000000002 2.56515309999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2295]" " -type \"float3\" 0.69119315999999997 3.86057469999999991 2.55537560000000008"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2296]" " -type \"float3\" 0.69058781999999996 3.85391260000000013 2.5449111000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2297]" " -type \"float3\" 0.68883108999999998 3.84790279999999996 2.53478380000000003"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2298]" " -type \"float3\" 0.68609481999999999 3.843133 2.52598520000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2299]" " -type \"float3\" 0.68264698999999995 3.84007070000000006 2.51937649999999991"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2300]" " -type \"float3\" 0.67882502 3.83901570000000003 2.51560469999999992"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2301]" " -type \"float3\" 0.67500305000000005 3.84007070000000006 2.51503869999999985"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2302]" " -type \"float3\" 0.67155522000000001 3.843133 2.5177341000000002"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2303]" " -type \"float3\" 0.66881900999999999 3.84790279999999996 2.52342719999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2304]" " -type \"float3\" 0.66706222000000004 3.85391260000000013 2.5315607"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2305]" " -type \"float3\" 0.66645688000000003 3.86057469999999991 2.541338"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2306]" " -type \"float3\" 0.67324965999999997 3.86217640000000006 2.55120279999999999"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2307]" " -type \"float3\" 0.67413908 3.86521910000000002 2.55632970000000004"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2308]" " -type \"float3\" 0.67552422999999995 3.8676336 2.56078390000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2309]" " -type \"float3\" 0.67726964000000001 3.86918380000000006 2.56412940000000011"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2310]" " -type \"float3\" 0.67920446000000001 3.86971759999999998 2.56603879999999984"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2311]" " -type \"float3\" 0.68113922999999998 3.86918380000000006 2.5663254000000002"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2312]" " -type \"float3\" 0.68288468999999996 3.8676336 2.564961"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2313]" " -type \"float3\" 0.68426984999999996 3.86521910000000002 2.56207869999999982"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2314]" " -type \"float3\" 0.68515908999999997 3.86217640000000006 2.55796150000000022"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2315]" " -type \"float3\" 0.68546556999999997 3.8588041999999998 2.5530119"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2316]" " -type \"float3\" 0.68515915000000005 3.85543160000000018 2.54771420000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2317]" " -type \"float3\" 0.68426984999999996 3.85238930000000002 2.54258749999999978"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2318]" " -type \"float3\" 0.68288462999999999 3.84997489999999987 2.53813339999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2319]" " -type \"float3\" 0.68113922999999998 3.84842469999999981 2.53478789999999998"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2320]" " -type \"float3\" 0.67920446000000001 3.84789039999999982 2.53287839999999997"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2321]" " -type \"float3\" 0.67726964000000001 3.84842469999999981 2.53259180000000006"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2322]" " -type \"float3\" 0.67552422999999995 3.84997489999999987 2.53395649999999995"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2323]" " -type \"float3\" 0.67413908 3.85238930000000002 2.5368385"
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2324]" " -type \"float3\" 0.67324972000000005 3.85543160000000018 2.54095579999999988"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2325]" " -type \"float3\" 0.67294328999999997 3.8588041999999998 2.54590560000000021"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2326]" " -type \"float3\" 0.65861809000000004 3.95486739999999992 2.48967170000000015"
-		
-		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
-		"pnts[2327]" " -type \"float3\" 0.67933189999999999 3.85820909999999984 2.549829"
+		"pt[0:165]" (" -type \"float3\" 0.66254597999999998 3.94135619999999998 2.5083985000000002 0.84529125999999999 4.44887109999999986 3.38313029999999992 0.75356095999999995 4.17142579999999974 2.90957450000000017 0.57153111999999995 4.17142579999999974 2.80627439999999995 0.47980075999999999 4.44887109999999986 3.1757181000000001 0.75356089999999998 4.72631650000000025 3.752574 0.57153105999999998 4.72631650000000025 3.64927389999999985 0.66254603999999995 4.95638609999999957 4.05044979999999999 0.91368936999999995 4.70161289999999976 3.80591539999999995 0.91368936999999995 4.19612929999999995 3.03797579999999989 0.41140267000000003 4.70161340000000028 3.5208731000000002 0.41140272999999999 4.19612880000000033 2.75293279999999996 0.668975 3.91135620000000017 2.52706959999999992 0.57796007000000005 4.14142610000000033 2.82494569999999978 0.75998991999999999 4.14142610000000033 2.92824580000000001 0.41783172000000002 4.16612910000000003 2.77160379999999984 0.48622980999999998 4.41887139999999956 3.1943893000000001 0.851720269999"
+		+ "99995 4.41887139999999956 3.4018016000000002 0.75998991999999999 4.69631620000000005 3.771245 0.57796007000000005 4.69631620000000005 3.66794490000000017 0.92011838999999995 4.67161320000000035 3.82458659999999995 0.668975 4.92638640000000017 4.06912089999999971 0.92011832999999998 4.16612910000000003 3.05664680000000022 0.41783165999999999 4.67161369999999998 3.53954410000000008 0.40984832999999998 4.18115089999999956 2.75958989999999993 0.57301694000000003 4.15597870000000036 2.81394460000000013 0.66575998000000003 3.92154120000000006 2.5104131999999999 0.75850284000000001 4.15597870000000036 2.91920590000000013 0.92167151000000003 4.18115140000000007 3.05004479999999978 0.85197478999999998 4.43387409999999971 3.394433 0.92167157 4.6865964 3.81792590000000009 0.75850289999999998 4.71176860000000008 3.76357169999999996 0.66575991999999995 4.946207 4.06710290000000008 0.573017 4.71176860000000008 3.65831019999999985 0.40984832999999998 4.68659689999999962 3.52747179999999982 0.47954506000000002 4.433874099999"
+		+ "99971 3.18308310000000017 0.39366421000000001 4.73770380000000024 3.49950770000000011 0.39455353999999998 4.740746 3.50463440000000004 0.39593872000000002 4.74316020000000016 3.50908849999999983 0.39768416000000001 4.74471039999999977 3.51243419999999995 0.39961898000000001 4.74524450000000009 3.51434369999999996 0.40155374999999999 4.74471039999999977 3.5146301000000002 0.40329917999999998 4.74316020000000016 3.51326559999999999 0.40468430999999999 4.740746 3.51038359999999994 0.40557367 4.73770380000000024 3.50626609999999994 0.40588009000000003 4.73433110000000035 3.50131650000000016 0.40557367 4.73095849999999984 3.49601890000000015 0.40468430999999999 4.72791620000000012 3.4908923999999999 0.40329915 4.72550150000000002 3.4864383000000001 0.40155374999999999 4.72395130000000041 3.48309250000000015 0.39961898000000001 4.72341730000000037 3.48118309999999997 0.39768416000000001 4.72395130000000041 3.48089670000000018 0.39593872000000002 4.72550150000000002 3.48226119999999995 0.39455357000000002 4.72791620"
+		+ "000000012 3.4851432 0.39366424 4.73095849999999984 3.48926040000000004 0.39335777999999999 4.73433110000000035 3.49421019999999993 0.38823551000000001 4.73922250000000034 3.502311 0.38999226999999997 4.74523259999999958 3.51243809999999979 0.39272854000000001 4.7500019 3.52123689999999989 0.39617639999999998 4.75306419999999985 3.52784539999999991 0.39999831000000002 4.75411889999999993 3.53161740000000002 0.40382034 4.75306419999999985 3.53218340000000008 0.40726816999999998 4.75000140000000037 3.52948780000000006 0.41000435000000002 4.74523259999999958 3.52379489999999995 0.41176110999999999 4.73922250000000034 3.51566150000000022 0.41236651000000002 4.73256060000000023 3.50588420000000012 0.41176110999999999 4.72589870000000012 3.49541950000000012 0.41000440999999999 4.71988870000000027 3.48529219999999995 0.40726820000000002 4.71511939999999985 3.47649359999999996 0.40382027999999998 4.7120571 3.46988489999999983 0.39999836999999999 4.7110019000000003 3.46611309999999984 0.39617639999999998 4.7120571 3.46"
+		+ "554710000000021 0.39272857 4.71511939999999985 3.46824259999999995 0.38999233 4.71988870000000027 3.4739355999999999 0.38823551000000001 4.72589870000000012 3.482069 0.38763022000000003 4.73256060000000023 3.49184660000000013 0.38333901999999997 4.73944619999999972 3.50573369999999995 0.38591996000000001 4.74827479999999991 3.520612 0.38993992999999999 4.75528239999999958 3.53353859999999997 0.39500526000000002 4.75978089999999998 3.54324769999999978 0.40062030999999998 4.76133109999999959 3.54878930000000015 0.40623531000000002 4.75978089999999998 3.5496205999999999 0.41130072000000001 4.75528239999999958 3.54566049999999988 0.41532060999999998 4.74827479999999991 3.53729650000000007 0.41790152000000003 4.73944619999999972 3.52534750000000008 0.41879084999999999 4.7296585999999996 3.510983 0.41790157999999999 4.719871 3.49560929999999992 0.41532057999999999 4.71104150000000033 3.4807307999999999 0.41130065999999998 4.70403479999999963 3.4678043999999999 0.40623534 4.6995357999999996 3.45809530000000009 0.400"
+		+ "62028 4.69798559999999998 3.45255370000000017 0.39500529000000001 4.6995357999999996 3.45172239999999997 0.38993987000000002 4.70403479999999963 3.45568229999999987 0.38591996000000001 4.71104150000000033 3.46404619999999985 0.38333901999999997 4.719871 3.47599530000000012 0.38244969000000001 4.7296585999999996 3.49035979999999979 0.37909525999999999 4.738368 3.50969169999999986 0.38243686999999998 4.74979879999999977 3.528955 0.38764143000000001 4.75887110000000035 3.54569080000000003 0.39419960999999998 4.7646961000000001 3.55826140000000013 0.40146949999999998 4.76670269999999974 3.56543590000000021 0.40873926999999999 4.7646961000000001 3.56651259999999981 0.41529745000000001 4.75887110000000035 3.56138539999999981 0.42050209999999999 4.74979879999999977 3.55055670000000001 0.42384361999999998 4.738368 3.53508619999999985 0.42499503 4.7256961000000004 3.51648810000000012 0.42384361999999998 4.71302410000000016 3.49658349999999984 0.42050207000000001 4.7015924 3.47732039999999998 0.41529745000000001 4.6925"
+		+ "2059999999993 3.46058440000000012 0.40873930000000003 4.68669609999999981 3.44801380000000002 0.40146949999999998 4.68468860000000031 3.44083929999999993 0.39419967 4.68669609999999981 3.43976280000000001 0.38764143000000001 4.69252059999999993 3.44488979999999989 0.38243681000000002 4.7015924 3.45571880000000009 0.37909532000000001 4.71302410000000016 3.47118929999999981 0.37794380999999999 4.7256961000000004 3.48978710000000003 0.37560871000000001 4.73601480000000041 3.51408740000000019 0.37962863000000002 4.74976679999999973 3.53726120000000011 0.38588985999999997 4.76068069999999999 3.55739450000000001 0.39377930999999999 4.76768780000000003 3.57251690000000011 0.40252492000000001 4.770102 3.58114810000000006 0.41127053000000002 4.76768780000000003 3.582443 0.41916009999999998 4.76068069999999999 3.57627510000000015 0.42542118000000001 4.74976679999999973 3.56324789999999991 0.42944109000000003 4.73601480000000041 3.54463669999999986 0.43082625000000002 4.72077080000000038 3.52226350000000021 0.4294410900"
+		+ "0000003 4.70552640000000011 3.49831819999999993 0.42542118000000001 4.6917743999999999 3.47514460000000014 0.41916009999999998 4.68086049999999965 3.45501140000000007 0.41127056000000001 4.67385390000000012 3.439889 0.40252497999999998 4.67143920000000001 3.43125770000000019 0.39377937000000002 4.67385390000000012 3.42996290000000004 0.38588985999999997 4.68086049999999965 3.43613079999999993 0.37962863000000002 4.6917743999999999 3.449158 0.37560874 4.70552640000000011 3.46776889999999982 0.37422356000000001 4.72077080000000038 3.49014209999999991 0.37296528000000001 4.73244519999999991 3.51881289999999991 0.37756455 4.74817939999999972 3.54532619999999987 0.38472813 4.76066590000000023 3.56836149999999996 0.39375472 4.76868249999999971 3.58566330000000022 0.40376069999999997 4.77144529999999989 3.59553840000000013 0.41376679999999999 4.76868249999999971 3.59702009999999994 0.42279338999999999 4.76066590000000023 3.58996320000000013 0.42995685 4.74817939999999972 3.57505849999999992 0.4345561 4.7324451999999"
+		+ "9991 3.55376510000000012 0.43614091999999999 4.715004 3.52816719999999995 0.4345561 4.69756269999999976 3.50077080000000018 0.42995685 4.681829 3.47425750000000022 0.42279333000000002 4.669342 3.4512223999999998 0.41376674000000002 4.661325 3.43392059999999999 0.40376069999999997 4.65856270000000006 3.42404559999999991 0.39375469000000002 4.661325 3.422564 0.38472806999999998 4.669342 3.42962070000000008 0.37756461000000002 4.681829 3.44452550000000013 0.37296537000000002 4.69756269999999976 3.46581889999999992 0.37138048000000001 4.715004 3.49141650000000014 0.37123003999999998 4.727747 3.52375149999999993 0.37629541999999999 4.7450751999999996 3.55295210000000017 0.38418499 4.75882719999999981 3.57832149999999993 0.39412636000000001 4.76765680000000014 3.59737710000000011 0.40514644999999999 4.770699 3.60825279999999982 0.41616653999999997 4.76765680000000014 3.60988469999999984 0.42610794000000002 4.75882719999999981 3.60211229999999993 0.43399738999999998 4.7450751999999996 3.58569719999999981 0.439062769"
+		+ "99999999 4.727747 3.56224579999999991 0.44080817999999999 4.70853810000000017 3.534054"
+		)
+		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
+		"pt[166:331]" (" 0.43906276999999999 4.68932910000000014 3.503881 0.43399745000000001 4.67200039999999994 3.47468069999999996 0.42610785000000001 4.65824839999999973 3.44931130000000019 0.41616653999999997 4.6494188000000003 3.43025590000000014 0.40514644999999999 4.64637659999999997 3.41937990000000003 0.39412629999999998 4.6494188000000003 3.41774820000000012 0.38418499 4.65824839999999973 3.42552019999999979 0.37629548000000002 4.67200039999999994 3.44193529999999992 0.37123010000000001 4.68932910000000014 3.46538689999999994 0.36948462999999998 4.70853810000000017 3.49357840000000008 0.37044572999999997 4.7220348999999997 3.52878170000000013 0.37585244000000001 4.74053140000000006 3.55995010000000001 0.38427373999999997 4.75520989999999966 3.58702949999999987 0.39488506000000001 4.76463459999999994 3.60736889999999999 0.40664792 4.7678818999999999 3.618978 0.41841068999999997 4.76463459999999994 3.62071940000000003 0.42902213 4.75520989999999966 3.61242390000000002 0.43744332000000002 4.74053140000000006 3.59490230000000"
+		+ "022 0.44285014 4.7220348999999997 3.56987049999999995 0.44471315 4.70153140000000036 3.53977869999999983 0.44285007999999998 4.68102839999999976 3.50757219999999981 0.43744328999999998 4.66253139999999977 3.4764037000000001 0.42902206999999998 4.64785239999999966 3.44932440000000007 0.41841072000000001 4.63842819999999989 3.42898490000000011 0.40664792 4.6351804999999997 3.417376 0.39488511999999998 4.63842819999999989 3.41563440000000007 0.38427377000000001 4.64785239999999966 3.42393020000000003 0.37585246999999999 4.66253139999999977 3.44145149999999989 0.37044569999999999 4.68102839999999976 3.46648339999999999 0.36858269999999999 4.70153140000000036 3.49657539999999978 0.37063158000000002 4.71545029999999965 3.53377989999999986 0.37624659999999999 4.73465920000000029 3.56614880000000012 0.38499221 4.74990369999999995 3.59427090000000016 0.39601230999999998 4.75969119999999979 3.61539410000000005 0.40822818999999999 4.76306340000000006 3.62745 0.42044407 4.75969119999999979 3.62925889999999995 0.431464169"
+		+ "99999998 4.74990369999999995 3.62064340000000007 0.44020975000000001 4.73465920000000029 3.602447 0.44582476999999998 4.71545029999999965 3.5764513 0.44775957 4.69415709999999997 3.54520010000000019 0.44582476999999998 4.672864 3.51175330000000008 0.44020975000000001 4.65365550000000017 3.47938439999999982 0.43146416999999998 4.638411 3.451262 0.42044407 4.62862349999999978 3.43013879999999993 0.40822818999999999 4.62525079999999988 3.418083 0.39601230999999998 4.62862349999999978 3.41627409999999987 0.38499221 4.638411 3.4248892999999998 0.37624663000000003 4.65365550000000017 3.44308589999999981 0.37063161 4.672864 3.46908189999999994 0.36869680999999999 4.69415709999999997 3.5003327999999998 0.37178311000000003 4.70815560000000044 3.53862239999999995 0.37746811000000002 4.72760339999999957 3.57139469999999992 0.38632274 4.74303770000000036 3.59986760000000006 0.39748024999999998 4.75294729999999976 3.621254 0.40984832999999998 4.756362 3.63346 0.42221656000000002 4.75294729999999976 3.63529159999999996 0.4"
+		+ "3337396 4.74303770000000036 3.62656879999999981 0.44222858999999998 4.72760339999999957 3.60814570000000012 0.44791355999999999 4.70815560000000044 3.58182549999999988 0.44987249000000001 4.68659689999999962 3.550185 0.44791362000000001 4.6650381000000003 3.51632120000000015 0.44222855999999999 4.64558979999999977 3.48354890000000017 0.43337396 4.63015560000000015 3.455076 0.42221652999999998 4.62024589999999957 3.43368960000000012 0.40984832999999998 4.6168313000000003 3.4214834999999999 0.39748019000000001 4.62024589999999957 3.41965219999999981 0.38632274 4.63015560000000015 3.42837479999999983 0.37746814000000001 4.64558979999999977 3.44679780000000013 0.37178317 4.6650381000000003 3.47311779999999981 0.36982419999999999 4.68659689999999962 3.50475840000000005 0.37387188999999998 4.70032979999999956 3.54319050000000013 0.37948704 4.7195387000000002 3.57555939999999994 0.38823253000000002 4.73478270000000023 3.60368159999999982 0.39925262 4.74457030000000035 3.62480450000000021 0.41146851000000001 4.747942"
+		+ "40000000034 3.63686059999999989 0.42368439000000002 4.74457030000000035 3.63866949999999978 0.43470448 4.73478270000000023 3.630054 0.44345014999999999 4.7195387000000002 3.61185789999999995 0.44906511999999998 4.70032979999999956 3.58586170000000015 0.45099994999999998 4.67903659999999988 3.55461070000000001 0.44906511999999998 4.657743 3.52116369999999979 0.44345009000000002 4.63853449999999956 3.48879479999999997 0.43470448 4.62329050000000041 3.4606726000000001 0.42368444999999999 4.613503 3.4395494000000002 0.41146851000000001 4.61013029999999979 3.42749360000000003 0.39925268000000003 4.613503 3.42568470000000014 0.38823258999999999 4.62329050000000041 3.43430020000000003 0.37948694999999999 4.63853449999999956 3.45249650000000008 0.37387192000000002 4.657743 3.47849250000000021 0.37193718999999997 4.67903659999999988 3.50974349999999991 0.37684661000000003 4.6921659 3.54737139999999984 0.38225334999999999 4.71066240000000036 3.57853960000000004 0.39067468 4.72534079999999967 3.60561920000000002 0.40128"
+		+ "601000000003 4.73476549999999996 3.62595869999999998 0.41304886000000002 4.73801279999999991 3.6375677999999998 0.42481163 4.73476549999999996 3.63930920000000002 0.43542308000000002 4.72534079999999967 3.63101340000000006 0.44384420000000002 4.71066240000000036 3.613492 0.44925103 4.6921659 3.58846 0.45111403 4.67166230000000038 3.55836819999999987 0.44925103 4.65115929999999977 3.52616169999999984 0.44384423000000001 4.6326628000000003 3.49499339999999981 0.43542301999999999 4.61798329999999968 3.46791410000000022 0.42481160000000001 4.60855909999999991 3.44757440000000015 0.41304879999999999 4.60531139999999972 3.43596550000000001 0.40128601000000003 4.60855909999999991 3.43422390000000011 0.39067465000000001 4.61798329999999968 3.44251970000000007 0.38225341000000002 4.6326628000000003 3.46004129999999988 0.37684664000000001 4.65115929999999977 3.48507310000000015 0.37498357999999998 4.67166230000000038 3.51516489999999981 0.38063392000000001 4.68386510000000023 3.55106229999999989 0.38569933000000001 4.7"
+		+ "0119329999999991 3.58026290000000014 0.39358886999999998 4.71494530000000012 3.6056322999999999 0.40353014999999998 4.72377490000000044 3.62468769999999996 0.41455033000000002 4.72681709999999988 3.63556359999999978 0.42557033999999999 4.72377490000000044 3.63719510000000001 0.43551182999999999 4.71494530000000012 3.6294230999999999 0.44340125000000002 4.70119329999999991 3.613008 0.44846666000000002 4.68386510000000023 3.58955670000000016 0.45021206000000003 4.66465619999999959 3.56136490000000006 0.44846666000000002 4.64544729999999984 3.53119180000000021 0.44340133999999998 4.62811850000000025 3.50199149999999992 0.43551173999999998 4.61436650000000004 3.47662210000000016 0.42557043 4.60553689999999971 3.4575667000000001 0.41455033000000002 4.60249470000000027 3.44669079999999983 0.40353018000000002 4.60553740000000023 3.44505909999999993 0.39358886999999998 4.61436650000000004 3.452831 0.38569935999999999 4.62811850000000025 3.46924639999999984 0.38063392000000001 4.64544729999999984 3.49269749999999979 0"
+		+ ".37888852000000001 4.66465619999999959 3.52088950000000001 0.38514057000000002 4.675631 3.55417249999999996 0.38973984 4.6913651999999999 3.5806859000000002 0.39690343 4.70385170000000041 3.60372110000000001 0.40592998000000002 4.7118682999999999 3.62102289999999982 0.41593598999999998 4.71463059999999956 3.630898 0.42594209 4.7118682999999999 3.63237949999999987 0.43496865000000001 4.70385170000000041 3.62532280000000018 0.44213212000000002 4.6913651999999999 3.61041809999999996 0.44673139000000001 4.675631 3.58912470000000017 0.44831621999999999 4.65818979999999971 3.56352689999999983 0.44673139000000001 4.64074849999999994 3.53613039999999978 0.44213215 4.62501479999999976 3.50961709999999982 0.43496861999999997 4.61252779999999962 3.486582 0.42594203000000003 4.6045107999999999 3.46928020000000004 0.41593598999999998 4.60174850000000024 3.45940519999999996 0.40592994999999998 4.6045107999999999 3.45792339999999987 0.39690336999999998 4.61252779999999962 3.46498039999999996 0.38973989999999997 4.6250147999"
+		+ "9999976 3.47988510000000018 0.38514062999999998 4.64074849999999994 3.50117849999999997 0.38355577000000002 4.65818979999999971 3.52677610000000019 0.39025563000000002 4.66766740000000002 3.55662510000000021 0.39427549000000001 4.68141940000000023 3.5797987 0.40053672000000001 4.6923332000000002 3.59993240000000014 0.40842616999999998 4.69933990000000001 3.61505460000000012 0.41717184000000002 4.70175460000000012 3.62368580000000007 0.42591739000000001 4.69933990000000001 3.62498070000000006 0.43380696000000002 4.6923332000000002 3.61881280000000016 0.44006803999999999 4.68141889999999972 3.60578559999999992 0.44408800999999998 4.66766740000000002 3.58717439999999987 0.44547315999999998 4.65242290000000036 3.56480119999999978 0.44408795000000001 4.63717890000000033 3.54085589999999995 0.44006810000000002 4.6234263999999996 3.51768230000000015 0.43380696000000002 4.61251310000000014 3.49754880000000012 0.42591741999999999 4.60550640000000033 3.48242660000000015 0.41717184000000002 4.60309170000000023 3.4737954"
+		+ "000000002 0.40842623 4.60550640000000033 3.4725003000000001")
+		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
+		"pt[332:497]" (" 0.40053672000000001 4.61251310000000014 3.47866849999999994 0.39427554999999997 4.62342690000000012 3.4916955999999999 0.39025566 4.63717890000000033 3.51030659999999983 0.38887048000000002 4.65242290000000036 3.53267979999999993 0.39585306999999997 4.66016959999999969 3.5583600999999998 0.39919469000000002 4.67160080000000022 3.57762309999999983 0.40439931000000001 4.68067309999999992 3.59435919999999998 0.41095743000000001 4.68649770000000032 3.60692980000000007 0.41822731000000002 4.68850470000000019 3.61410449999999983 0.42549708000000003 4.68649770000000032 3.6151806999999998 0.43205532000000002 4.68067309999999992 3.6100538000000002 0.43725994000000001 4.67160080000000022 3.5992248 0.44060144000000001 4.66016959999999969 3.58375429999999984 0.44175291 4.64749809999999997 3.56515650000000006 0.44060149999999998 4.63482620000000001 3.54525179999999995 0.43725987999999999 4.62339449999999985 3.52598859999999981 0.43205532000000002 4.61432269999999978 3.50925280000000006 0.42549711000000001 4.6084981000000"
+		+ "0026 3.49668219999999996 0.41822731000000002 4.60649059999999988 3.48950739999999993 0.41095748999999998 4.60849810000000026 3.488431 0.40439931000000001 4.61432269999999978 3.49355819999999984 0.39919462999999999 4.62339449999999985 3.50438690000000008 0.39585313 4.63482620000000001 3.5198573999999998 0.39470168999999999 4.64749809999999997 3.53845549999999998 0.40179517999999997 4.65332319999999999 3.55933430000000017 0.40437617999999997 4.66215180000000018 3.57421280000000019 0.40839604000000002 4.66915939999999985 3.5871388999999998 0.41346145000000001 4.67365790000000025 3.59684850000000012 0.41907641000000001 4.67520809999999987 3.60238959999999997 0.4246915 4.67365790000000025 3.6032213999999998 0.42975681999999998 4.66915939999999985 3.599261 0.43377680000000002 4.66215180000000018 3.59089729999999996 0.43635768000000003 4.65332319999999999 3.578948 0.43724700999999999 4.64353559999999987 3.5645834999999999 0.43635773999999999 4.63374810000000004 3.54920979999999986 0.43377673999999999 4.6249184999999"
+		+ "9971 3.53433129999999984 0.42975681999999998 4.6179117999999999 3.521405 0.42469147000000002 4.61341290000000015 3.51169589999999987 0.41907641000000001 4.61186220000000002 3.50615429999999995 0.41346145000000001 4.61341290000000015 3.50532289999999991 0.40839604000000002 4.6179117999999999 3.50928279999999981 0.40437612000000001 4.62491849999999971 3.51764680000000007 0.40179517999999997 4.63374810000000004 3.5295958999999999 0.40090585000000001 4.64353559999999987 3.54396030000000017 0.40793559000000001 4.64729550000000025 3.55952380000000002 0.40969229000000001 4.65330509999999986 3.56965110000000019 0.41242856 4.65807440000000028 3.57844970000000018 0.41587642000000002 4.66113659999999985 3.58505850000000015 0.41969838999999998 4.66219189999999983 3.58883049999999981 0.42352035999999998 4.66113659999999985 3.58939619999999993 0.42696819000000003 4.65807440000000028 3.58670089999999986 0.42970437 4.65330509999999986 3.58100769999999979 0.43146116000000001 4.64729550000000025 3.57287430000000006 0.43206653 "
+		+ "4.64063309999999962 3.563097 0.43146116000000001 4.6339712000000004 3.55263229999999997 0.42970443000000003 4.62796119999999966 3.54250530000000019 0.42696819000000003 4.62319179999999985 3.5337067000000002 0.42352035999999998 4.62013009999999991 3.52709789999999979 0.41969838999999998 4.6190743000000003 3.52332590000000012 0.41587642000000002 4.62013009999999991 3.52276020000000001 0.41242858999999998 4.62319179999999985 3.52545550000000008 0.40969232 4.6279615999999999 3.53114870000000014 0.40793559000000001 4.6339712000000004 3.53928179999999992 0.40733024000000001 4.64063309999999962 3.54905939999999998 0.41412303 4.64223579999999991 3.55892439999999999 0.41501239000000001 4.645278 3.5640512000000002 0.41639756999999999 4.64769219999999983 3.56850529999999999 0.418143 4.64924240000000033 3.571851 0.42007768000000001 4.64977649999999976 3.5737603 0.42201260000000002 4.64924240000000033 3.57404689999999992 0.42375803000000001 4.64769219999999983 3.57268240000000015 0.42514318000000001 4.645278 3.56980040000"
+		+ "00001 0.42603245000000001 4.64223579999999991 3.5656829000000001 0.42633891000000002 4.63886310000000002 3.56073310000000021 0.42603250999999998 4.63549040000000012 3.55543589999999998 0.42514311999999999 4.63244819999999979 3.5503089000000001 0.42375794 4.63003349999999969 3.54585479999999986 0.42201260000000002 4.62848330000000008 3.54250929999999986 0.4200778 4.62794880000000042 3.54059979999999985 0.418143 4.62848330000000008 3.54031349999999989 0.41639754000000001 4.63003349999999969 3.541678 0.41501236000000002 4.63244819999999979 3.54456 0.41412309000000003 4.63549040000000012 3.54867739999999987 0.41381659999999998 4.63886310000000002 3.55362679999999997 0.39949146000000002 4.73492620000000031 3.49739310000000003 0.42020527000000002 4.638268 3.55755039999999978 0.65279083999999998 4.9823107999999996 4.04847619999999964 0.65368026000000001 4.985353 4.05360320000000041 0.65506536000000004 4.98776770000000003 4.05805729999999976 0.65681082000000002 4.98931740000000001 4.06140279999999976 0.65874564999999"
+		+ "996 4.989852 4.06331250000000033 0.66068046999999996 4.98931740000000001 4.06359859999999973 0.66242582000000005 4.9877672000000004 4.06223440000000036 0.66381102999999997 4.985353 4.05935239999999986 0.66470026999999998 4.9823107999999996 4.05523490000000031 0.66500682 4.9789380999999997 4.05028529999999964 0.66470039000000003 4.97556590000000032 4.04498770000000007 0.66381102999999997 4.97252320000000037 4.03986119999999982 0.66242588000000002 4.97010850000000026 4.03540659999999995 0.66068041 4.96855880000000028 4.03206109999999995 0.65874558999999999 4.96802469999999996 4.03015179999999962 0.65681082000000002 4.96855880000000028 4.02986529999999998 0.65506542000000001 4.97010850000000026 4.03123 0.65368026000000001 4.97252320000000037 4.034112 0.65279096000000003 4.97556590000000032 4.03822949999999992 0.65248448000000003 4.9789380999999997 4.043179 0.64736223000000004 4.98382949999999969 4.0512794999999997 0.64911890000000005 4.98983959999999982 4.06140710000000027 0.65185523000000001 4.99460939999999987"
+		+ " 4.07020569999999982 0.65530306000000005 4.99767160000000032 4.07681420000000028 0.65912508999999997 4.99872680000000003 4.080586 0.662947 4.99767160000000032 4.081152 0.66639488999999996 4.99460939999999987 4.07845640000000031 0.66913104000000001 4.98983959999999982 4.07276340000000037 0.67088782999999996 4.98382949999999969 4.06463049999999981 0.67149311 4.97716759999999958 4.05485249999999997 0.67088782999999996 4.97050570000000036 4.0443882999999996 0.66913098000000004 4.96449569999999962 4.03426069999999992 0.66639482999999999 4.95972680000000032 4.02546219999999977 0.662947 4.95666459999999987 4.0188537000000002 0.65912503 4.95560929999999988 4.0150819000000002 0.65530306000000005 4.95666459999999987 4.01451590000000014 0.65185523000000001 4.95972680000000032 4.01721139999999988 0.64911890000000005 4.96449569999999962 4.02290439999999982 0.64736223000000004 4.97050570000000036 4.0310378 0.64675682999999995 4.97716759999999958 4.04081489999999999 0.64246570999999997 4.98405309999999968 4.0547028000000002"
+		+ "7 0.64504658999999998 4.99288229999999977 4.0695806000000001 0.64906657000000001 4.99988939999999982 4.08250709999999994 0.65413195000000002 5.00438829999999957 4.09221650000000015 0.65974694 5.00593850000000007 4.09775780000000012 0.665362 5.00438829999999957 4.09858939999999983 0.67042738000000002 4.99988939999999982 4.09462930000000025 0.67444724 4.99288270000000001 4.08626510000000032 0.67702817999999998 4.98405309999999968 4.07431650000000012 0.67791754000000004 4.97426559999999984 4.05995180000000033 0.67702817999999998 4.96447850000000024 4.04457809999999984 0.67444724 4.95564889999999991 4.02969929999999987 0.67042738000000002 4.94864179999999987 4.01677320000000027 0.665362 4.94414330000000035 4.00706429999999969 0.65974694 4.94259309999999985 4.00152250000000009 0.65413195000000002 4.94414330000000035 4.00069140000000001 0.64906657000000001 4.94864179999999987 4.00465110000000024 0.64504665000000005 4.95564889999999991 4.01301479999999966 0.64246570999999997 4.96447850000000024 4.02496429999999972 0"
+		+ ".64157640999999999 4.97426559999999984 4.03932860000000016 0.63822186000000003 4.982975 4.05866050000000023 0.64156347999999996 4.99440669999999987 4.07792330000000014 0.64676809000000002 5.00347809999999971 4.0946593 0.65332621000000002 5.00930310000000034 4.10723020000000005 0.66059612999999995 5.01131010000000021 4.11440469999999969 0.66786586999999997 5.00930310000000034 4.11548089999999966 0.67442416999999999 5.00347849999999994 4.11035389999999978 0.67962873000000001 4.99440669999999987 4.099525 0.68297023000000001 4.982975 4.0840544999999997 0.68412172999999998 4.97030309999999975 4.06545690000000004 0.68297034999999995 4.9576311000000004 4.04555229999999977 0.67962873000000001 4.94619989999999987 4.026289 0.67442411000000002 4.93712760000000017 4.009553 0.66786593000000005 4.931303 3.99698259999999994 0.66059606999999998 4.92929650000000041 3.9898077999999999 0.65332632999999996 4.931303 3.98873139999999982 0.64676809000000002 4.9371280999999998 3.99385859999999981 0.64156352999999999 4.94619989999999"
+		+ "987 4.00468729999999962 0.63822197999999997 4.9576311000000004 4.02015779999999978 0.63707053999999996 4.97030309999999975 4.03875589999999995"
+		)
+		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
+		"pt[498:663]" (" 0.63473535000000003 4.98062230000000028 4.063056 0.63875532000000002 4.9943742999999996 4.08622979999999991 0.64501649000000005 5.00528759999999995 4.10636329999999994 0.65290588000000005 5.01229480000000027 4.12148570000000003 0.66165160999999995 5.014709 4.13011689999999998 0.67039709999999997 5.01229480000000027 4.13141159999999985 0.67828672999999995 5.00528759999999995 4.1252437000000004 0.68454778000000005 4.9943742999999996 4.11221649999999972 0.68856775999999997 4.98062230000000028 4.09360549999999979 0.68995297 4.96537779999999973 4.07123230000000014 0.68856782000000005 4.95013330000000007 4.047287 0.68454789999999999 4.93638180000000037 4.02411370000000002 0.67828666999999998 4.925468 4.00397970000000036 0.67039722000000002 4.91846080000000008 3.98885770000000006 0.66165154999999998 4.9160465999999996 3.98022650000000011 0.652906 4.91846080000000008 3.97893169999999996 0.64501642999999997 4.925468 3.98509959999999985 0.63875532000000002 4.93638180000000037 3.99812669999999981 0.63473541 4.950133300"
+		+ "00000007 4.01673789999999986 0.63335025 4.96537779999999973 4.0391111000000004 0.632092 4.97705269999999977 4.06778140000000032 0.63669127000000003 4.99278639999999996 4.094295 0.64385473999999998 5.00527289999999958 4.11733010000000021 0.65288131999999999 5.01329039999999981 4.13463210000000014 0.66288745000000004 5.01605270000000036 4.14450740000000017 0.67289339999999997 5.01329039999999981 4.14598849999999963 0.68191999000000003 5.00527289999999958 4.13893179999999994 0.68908358000000003 4.99278689999999958 4.12402729999999984 0.69368278999999999 4.97705269999999977 4.10273410000000016 0.69526756000000001 4.95961090000000038 4.077136 0.69368278999999999 4.94217010000000023 4.04973980000000022 0.68908364 4.92643590000000042 4.02322630000000014 0.68191999000000003 4.913949 4.00019119999999972 0.67289339999999997 4.90593240000000019 3.9828891999999998 0.66288738999999997 4.90317009999999964 3.97301439999999983 0.65288131999999999 4.90593240000000019 3.97153260000000019 0.64385473999999998 4.913949 3.9785895 "
+		+ "0.63669127000000003 4.92643590000000042 3.99349430000000005 0.632092 4.94217010000000023 4.01478770000000029 0.63050711000000004 4.95961090000000038 4.04038520000000023 0.63035673000000003 4.97235389999999988 4.07272049999999997 0.63542211000000004 4.98968270000000036 4.10192059999999969 0.64331156 5.00343469999999968 4.12729020000000002 0.65325301999999996 5.01226380000000038 4.14634560000000008 0.66427307999999996 5.015306 4.15722129999999979 0.67529320999999998 5.01226380000000038 4.15885309999999997 0.68523455 5.00343420000000005 4.15108109999999986 0.69312412000000001 4.98968270000000036 4.134666 0.69818950000000002 4.97235389999999988 4.11121460000000027 0.69993490000000003 4.953145 4.08302259999999961 0.69818950000000002 4.93393610000000038 4.05284979999999972 0.69312406000000004 4.91660789999999981 4.02364920000000037 0.68523449000000003 4.9028558999999996 3.99827980000000016 0.67529320999999998 4.89402630000000016 3.97922470000000006 0.66427307999999996 4.89098409999999983 3.96834849999999983 0.65325"
+		+ "301999999996 4.89402630000000016 3.96671720000000017 0.64331161999999997 4.90285539999999997 3.974489 0.63542204999999996 4.91660789999999981 3.99090390000000017 0.63035673000000003 4.93393610000000038 4.0143557000000003 0.62861133000000002 4.953145 4.04254719999999956 0.62957238999999998 4.96664239999999957 4.07775070000000017 0.63497906999999998 4.9851384000000003 4.10891870000000026 0.64340030999999998 4.99981779999999976 4.1359982000000004 0.65401178999999998 5.00924209999999981 4.15633769999999991 0.66577452000000004 5.01248930000000037 4.16794629999999966 0.67753737999999997 5.00924209999999981 4.1696882000000004 0.68814874000000004 4.99981779999999976 4.16139219999999987 0.69656998000000003 4.9851384000000003 4.14387080000000019 0.70197677999999997 4.96664239999999957 4.11883930000000031 0.70383971999999995 4.94613839999999971 4.088747 0.70197684000000005 4.92563529999999972 4.056541 0.69656991999999995 4.90713880000000024 4.025372 0.68814874000000004 4.89245990000000042 3.99829290000000004 0.677537379"
+		+ "99999997 4.88303569999999976 3.97795370000000004 0.66577452000000004 4.8797883999999998 3.96634460000000022 0.65401178999999998 4.88303569999999976 3.96460290000000004 0.64340037000000005 4.89245990000000042 3.97289870000000001 0.63497925 4.90713880000000024 3.99042029999999981 0.62957238999999998 4.92563529999999972 4.01545240000000003 0.62770926999999999 4.94613839999999971 4.04554369999999963 0.62975829999999999 4.96005770000000012 4.08274839999999983 0.63537328999999998 4.97926659999999988 4.11511750000000021 0.64411885000000002 4.99451070000000019 4.14323949999999996 0.65513896999999999 5.00429820000000003 4.16436239999999991 0.66735482000000002 5.00767089999999993 4.17641829999999992 0.67957067000000004 5.00429820000000003 4.17822739999999992 0.69059079999999995 4.99451070000000019 4.16961189999999959 0.69933641000000002 4.97926659999999988 4.15141579999999966 0.70495147000000002 4.96005770000000012 4.12541959999999985 0.70688622999999995 4.93876459999999984 4.09416869999999999 0.70495140999999995 4.917"
+		+ "47140000000016 4.06072189999999988 0.69933641000000002 4.89826250000000041 4.02835270000000012 0.69059086000000003 4.883018 4.00023079999999975 0.67957067000000004 4.87323090000000025 3.97910740000000018 0.66735487999999998 4.86985829999999975 3.96705150000000017 0.65513891000000002 4.87323090000000025 3.96524259999999984 0.64411890999999999 4.883018 3.97385840000000012 0.63537328999999998 4.89826250000000041 3.99205450000000006 0.62975824000000002 4.91747140000000016 4.01805020000000024 0.62782347000000005 4.93876459999999984 4.04930159999999972 0.63090974 4.95276310000000031 4.0875906999999998 0.63659476999999998 4.97221139999999995 4.12036319999999989 0.64544939999999995 4.98764559999999957 4.14883609999999958 0.65660684999999996 4.99755479999999963 4.17022280000000034 0.66897505999999995 5.00096939999999979 4.18242880000000028 0.68134313999999996 4.99755479999999963 4.18426040000000032 0.69250058999999997 4.98764559999999957 4.17553709999999967 0.70135521999999995 4.97221139999999995 4.157114 0.7070401899"
+		+ "9999996 4.95276310000000031 4.130794 0.70899915999999996 4.93120379999999958 4.09915349999999989 0.70704025000000004 4.90964560000000017 4.06529 0.70135521999999995 4.89019729999999964 4.0325173999999997 0.69250065000000005 4.874763 4.00404450000000001 0.68134313999999996 4.86485389999999995 3.98265810000000009 0.668975 4.8614392000000004 3.9704518000000002 0.65660684999999996 4.86485389999999995 3.96862050000000011 0.64544939999999995 4.874763 3.9773436000000002 0.63659482999999994 4.89019729999999964 3.99576660000000006 0.63090979999999997 4.90964560000000017 4.02208659999999973 0.62895082999999996 4.93120379999999958 4.05372709999999969 0.63299859000000003 4.94493720000000003 4.09215929999999961 0.63861363999999998 4.96414609999999978 4.12452790000000036 0.64735931000000002 4.97939009999999982 4.15265039999999974 0.65837937999999996 4.98917769999999994 4.17377329999999969 0.67059522999999999 4.99254990000000021 4.18582919999999969 0.68281113999999998 4.98917769999999994 4.1876382999999997 0.693831210000000"
+		+ "03 4.97939009999999982 4.17902280000000026 0.70257676000000002 4.96414609999999978 4.16082619999999981 0.70819180999999998 4.94493720000000003 4.13483049999999963 0.71012651999999998 4.92364360000000012 4.10357950000000038 0.70819186999999995 4.90235040000000044 4.07013270000000027 0.70257676000000002 4.8831414999999998 4.0377635999999999 0.69383121000000003 4.86789749999999977 4.00964119999999991 0.68281108000000001 4.85811040000000016 3.98851820000000012 0.67059522999999999 4.85473779999999966 3.9764621 0.65837931999999999 4.85811040000000016 3.97465350000000006 0.64735925000000005 4.86789749999999977 3.9832687 0.63861369999999995 4.8831414999999998 4.00146529999999956 0.63299859000000003 4.90235040000000044 4.02746110000000002 0.63106375999999997 4.92364360000000012 4.058712 0.63597333 4.93677329999999959 4.09634020000000021 0.64138001 4.95526979999999995 4.12750859999999964 0.64980125 4.96994880000000006 4.15458770000000044 0.66041273 4.979373 4.17492769999999958 0.67217547 4.98262020000000039 4.186536300"
+		+ "00000021 0.68393831999999999 4.979373 4.18827820000000006 0.69454967999999995 4.96994880000000006 4.17998220000000043 0.70297092000000005 4.95526979999999995 4.16246079999999985 0.70837771999999999 4.93677329999999959 4.13742880000000035 0.71024065999999997 4.91626929999999973 4.107337 0.70837766000000002 4.89576630000000002 4.07513050000000021 0.70297085999999998 4.87726970000000026 4.043962 0.69454967999999995 4.86259080000000043 4.0168828999999997 0.68393831999999999 4.85316659999999978 3.99654320000000007 0.67217547 4.84991929999999982 3.98493429999999993 0.66041273 4.85316659999999978 3.98319270000000003 0.64980130999999997 4.86259080000000043 3.99148849999999999 0.64138006999999997 4.87726970000000026 4.00900980000000029 0.63597333 4.89576630000000002 4.03404190000000007 0.63411021000000001 4.91626929999999973 4.0641335999999999 0.63976060999999995 4.928472 4.10003139999999977 0.64482598999999996 4.94580079999999978 4.12923150000000039 0.65271544000000004 4.95955279999999998 4.15460109999999982 0.662656"
+		+ "89999999999 4.9683818999999998 4.17365649999999988 0.67367697000000004 4.97142410000000012 4.18453219999999959 0.68469709000000001 4.9683818999999998 4.18616390000000038"
+		)
+		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
+		"pt[664:829]" (" 0.69463843000000003 4.95955279999999998 4.17839190000000027 0.702528 4.94580079999999978 4.1619767999999997 0.70759338000000005 4.928472 4.13852550000000008 0.70933877999999995 4.90926310000000043 4.11033340000000003 0.70759338000000005 4.8900541999999998 4.08016060000000014 0.70252793999999996 4.872726 4.05096010000000017 0.69463836999999995 4.85897350000000028 4.02559090000000008 0.68469696999999996 4.85014439999999958 4.00653550000000003 0.67367697000000004 4.84710220000000014 3.99565940000000008 0.66265689999999999 4.85014439999999958 3.99402809999999997 0.6527155 4.85897350000000028 4.00179960000000001 0.64482594000000004 4.872726 4.0182146999999997 0.63976060999999995 4.8900541999999998 4.04166649999999983 0.63801521000000005 4.90926310000000043 4.06985810000000026 0.64426731999999998 4.92023849999999996 4.10314129999999988 0.64886653000000005 4.93597220000000014 4.12965490000000024 0.65603 4.94845869999999977 4.15268950000000014 0.66505658999999995 4.9564762 4.16999150000000007 0.67506272 4.9592384999"
+		+ "9999966 4.1798668000000001 0.68506867000000005 4.9564762 4.1813482999999998 0.69409525000000005 4.94845869999999977 4.17429109999999959 0.70125890000000002 4.93597269999999977 4.15938660000000038 0.70585810999999998 4.92023849999999996 4.13809350000000009 0.70744288 4.90279669999999967 4.11249540000000025 0.70585810999999998 4.88535590000000042 4.08509920000000015 0.70125890000000002 4.8696218 4.05858559999999979 0.69409525000000005 4.85713479999999986 4.03555059999999965 0.68506867000000005 4.84911820000000038 4.018249 0.67506272 4.84635589999999983 4.00837369999999993 0.66505658999999995 4.84911820000000038 4.00689220000000024 0.65603 4.85713479999999986 4.01394889999999993 0.64886653000000005 4.8696218 4.02885389999999965 0.64426726000000001 4.88535590000000042 4.05014710000000022 0.64268243000000003 4.90279669999999967 4.07574460000000016 0.64938222999999995 4.91227440000000026 4.10559370000000001 0.65340220999999998 4.92602679999999982 4.12876750000000037 0.65966338000000002 4.93694019999999956 4.148901 "
+		+ "0.66755288999999995 4.9439472999999996 4.1640233999999996 0.67629850000000002 4.94636150000000008 4.1726542000000002 0.68504405000000002 4.9439472999999996 4.17394969999999965 0.69293355999999995 4.93694019999999956 4.16778139999999997 0.69919472999999999 4.92602679999999982 4.15475460000000041 0.70321458999999997 4.91227440000000026 4.13614320000000024 0.7045998 4.89703040000000023 4.11377 0.70321465000000005 4.88178589999999968 4.08982470000000031 0.69919472999999999 4.86803439999999998 4.06665130000000019 0.69293362000000003 4.85712049999999973 4.04651780000000016 0.68504405000000002 4.85011339999999969 4.03139540000000007 0.67629843999999995 4.84769869999999958 4.02276420000000012 0.66755288999999995 4.85011339999999969 4.02146910000000002 0.65966338000000002 4.85712049999999973 4.02763749999999998 0.65340220999999998 4.86803439999999998 4.04066420000000015 0.64938222999999995 4.88178589999999968 4.05927520000000008 0.64799713999999997 4.89703040000000023 4.08164879999999997 0.65497976999999996 4.90477709"
+		+ "999999956 4.10732889999999973 0.65832137999999996 4.91620830000000009 4.12659220000000015 0.66352588000000001 4.92528010000000016 4.14332770000000039 0.67008411999999995 4.93110509999999991 4.15589860000000044 0.67735398000000002 4.93311209999999978 4.16307310000000008 0.68462378000000002 4.93110509999999991 4.16414979999999968 0.69118195999999998 4.92528059999999979 4.15902230000000017 0.69638652000000001 4.91620830000000009 4.14819340000000025 0.69972813 4.90477709999999956 4.13272330000000032 0.70087957000000001 4.89210510000000021 4.11412530000000043 0.69972813 4.87943320000000025 4.09422059999999988 0.69638657999999998 4.86800190000000033 4.07495739999999973 0.69118195999999998 4.85892959999999974 4.05822129999999959 0.68462378000000002 4.85310509999999962 4.045651 0.67735403999999999 4.85109809999999975 4.0384764999999998 0.67008411999999995 4.85310509999999962 4.03739980000000021 0.66352588000000001 4.85892959999999974 4.04252669999999981 0.65832131999999999 4.86800190000000033 4.05335570000000001 0.65"
+		+ "497976999999996 4.87943320000000025 4.06882620000000017 0.65382832000000002 4.89210510000000021 4.08742430000000034 0.66092187000000002 4.89793009999999995 4.10830309999999965 0.66350275000000003 4.90675930000000005 4.12318129999999972 0.66752272999999995 4.91376640000000009 4.13610789999999984 0.67258810999999996 4.91826529999999984 4.14581680000000041 0.67820311 4.91981550000000034 4.15135860000000001 0.68381815999999995 4.91826529999999984 4.15218970000000009 0.68888353999999996 4.91376640000000009 4.14823010000000014 0.69290339999999995 4.90675930000000005 4.13986590000000021 0.69548434000000003 4.89793009999999995 4.12791680000000039 0.69637369999999998 4.88814260000000012 4.11355260000000023 0.69548434000000003 4.87835549999999962 4.09817840000000011 0.69290339999999995 4.86952590000000018 4.08330009999999977 0.68888353999999996 4.86251880000000014 4.070374 0.68381809999999998 4.85802029999999974 4.06066470000000024 0.67820311 4.85647010000000012 4.05512329999999999 0.67258810999999996 4.858020299999999"
+		+ "74 4.05429170000000028 0.66752272999999995 4.86251880000000014 4.05825190000000013 0.66350281 4.86952590000000018 4.06661560000000044 0.66092187000000002 4.87835549999999962 4.07856459999999998 0.66003257000000004 4.88814260000000012 4.09292940000000005 0.66706222000000004 4.89190240000000021 4.10849240000000027 0.66881900999999999 4.897912 4.11861989999999967 0.67155522000000001 4.90268179999999987 4.1274185000000001 0.67500311000000002 4.90574409999999972 4.13402750000000019 0.67882502 4.90679930000000031 4.13779930000000018 0.68264705000000003 4.90574409999999972 4.13836530000000025 0.68609481999999999 4.90268179999999987 4.13566919999999971 0.68883108999999998 4.897912 4.12997670000000028 0.69058781999999996 4.89190240000000021 4.1218433000000001 0.69119315999999997 4.88524060000000038 4.11206579999999988 0.69058788000000004 4.87857819999999975 4.10160109999999989 0.68883108999999998 4.87256860000000014 4.09147410000000011 0.68609481999999999 4.86779929999999972 4.08267549999999968 0.68264692999999999 4.8"
+		+ "64737 4.07606649999999959 0.67882507999999997 4.86368180000000017 4.0722946999999996 0.67500311000000002 4.864737 4.07172920000000005 0.67155527999999998 4.86779929999999972 4.07442430000000044 0.66881900999999999 4.87256860000000014 4.08011720000000011 0.66706228000000001 4.87857819999999975 4.08825060000000029 0.66645688000000003 4.88524060000000038 4.0980281999999999 0.67324972000000005 4.88684269999999987 4.10789350000000031 0.67413908 4.8898849000000002 4.11301990000000028 0.67552418000000003 4.8922996999999997 4.11747409999999991 0.67726964000000001 4.89384939999999968 4.12081959999999992 0.67920446000000001 4.89438390000000023 4.12272879999999997 0.68113922999999998 4.89384939999999968 4.12301539999999989 0.68288462999999999 4.89229920000000007 4.1216507 0.68426984999999996 4.8898849000000002 4.11876920000000002 0.68515915000000005 4.88684269999999987 4.11465169999999958 0.68546556999999997 4.88347010000000026 4.1097020999999998 0.68515915000000005 4.88009789999999999 4.10440439999999995 0.684269849999"
+		+ "99996 4.87705520000000003 4.099278 0.68288462999999999 4.87464049999999993 4.09482340000000011 0.68113917000000002 4.87309069999999966 4.09147790000000011 0.67920440000000004 4.87255669999999963 4.08956859999999978 0.67726958000000004 4.87309069999999966 4.089282 0.67552422999999995 4.87464049999999993 4.09064669999999975 0.67413908 4.87705520000000003 4.09352870000000024 0.67324972000000005 4.88009789999999999 4.09764619999999979 0.67294328999999997 4.88347010000000026 4.10259579999999957 0.65861809000000004 4.97953319999999966 4.04636189999999996 0.67933195999999996 4.882875 4.10651920000000015 0.90870249000000003 4.72270059999999958 3.7992992000000001 0.90959179000000001 4.72574279999999991 3.804426 0.91097700999999998 4.728157 3.8088801000000001 0.91272240999999998 4.7297072 3.8122256000000001 0.91465717999999996 4.73024130000000032 3.81413510000000011 0.916592 4.7297072 3.81442170000000003 0.91833746000000005 4.728157 3.81305689999999986 0.91972255999999997 4.72574279999999991 3.81017489999999981 0.92061"
+		+ "185999999995 4.72270059999999958 3.80605750000000009 0.92091835 4.71932789999999969 3.80110789999999987 0.92061192000000003 4.71595530000000007 3.79581049999999998 0.91972255999999997 4.712913 3.79068370000000021 0.91833739999999997 4.71049830000000025 3.78622959999999997 0.916592 4.70894809999999975 3.78288409999999997 0.91465717999999996 4.70841409999999971 3.78097459999999996 0.91272240999999998 4.70894809999999975 3.780688 0.91097700999999998 4.71049830000000025 3.78205280000000021 0.90959184999999998 4.712913 3.78493479999999982 0.90870249000000003 4.71595530000000007 3.789052 0.90839607 4.71932789999999969 3.79400160000000009 0.90327376000000004 4.72421929999999968 3.80210230000000005 0.90503054999999999 4.73022939999999981 3.81222960000000022 0.90776676000000001 4.73499870000000023 3.82102820000000021 0.91121452999999997 4.738061 3.827637 0.91503656 4.73911570000000015 3.831409 0.91885846999999998 4.738061 3.83197469999999996 0.92230635999999999 4.73499870000000023 3.82927920000000022 0.925042629999999"
+		+ "98 4.73022939999999981 3.82358619999999982 0.92679935999999996 4.72421929999999968 3.81545310000000004 0.92740469999999997 4.71755739999999957 3.80567549999999999"
+		)
+		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
+		"pt[830:995]" (" 0.92679935999999996 4.71089550000000035 3.79521109999999995 0.92504257000000001 4.70488549999999961 3.78508380000000022 0.92230641999999996 4.70011620000000008 3.77628489999999983 0.91885852999999995 4.69705390000000023 3.76967639999999982 0.91503656 4.69599909999999987 3.7659047000000001 0.91121459000000005 4.69705390000000023 3.76533840000000009 0.90776676000000001 4.70011660000000031 3.768034 0.90503054999999999 4.70488549999999961 3.77372720000000017 0.90327382000000001 4.71089550000000035 3.78186039999999979 0.90266842000000003 4.71755739999999957 3.79163790000000001 0.89837730000000005 4.724443 3.8055251000000001 0.90095818000000005 4.73327209999999976 3.82040360000000012 0.90497810000000001 4.7402791999999998 3.83332989999999985 0.91004348000000002 4.74477770000000021 3.84303930000000005 0.91565847 4.74632789999999982 3.84858060000000002 0.92127353000000001 4.74477770000000021 3.84941220000000017 0.92633891000000002 4.7402791999999998 3.8454518000000002 0.93035882999999997 4.73327209999999976 3.837088"
+		+ "09999999989 0.93293976999999995 4.724443 3.825139 0.93382913000000001 4.71465539999999983 3.81077459999999979 0.93293976999999995 4.70486779999999971 3.79540059999999979 0.93035882999999997 4.69603820000000027 3.78052229999999989 0.92633891000000002 4.68903159999999986 3.76759580000000005 0.92127347000000004 4.68453259999999982 3.75788659999999997 0.91565852999999997 4.68298240000000021 3.75234529999999999 0.91004348000000002 4.68453259999999982 3.75151369999999984 0.90497815999999998 4.68903159999999986 3.75547390000000014 0.90095818000000005 4.69603820000000027 3.76383780000000012 0.89837730000000005 4.70486779999999971 3.77578659999999999 0.89748793999999998 4.71465539999999983 3.79015140000000006 0.89413345 4.7233647999999997 3.80948310000000001 0.897475 4.73479649999999985 3.82874630000000016 0.90267967999999998 4.74386789999999969 3.84548230000000002 0.90923779999999998 4.74969290000000033 3.8580527 0.91650765999999995 4.7516999000000002 3.86522750000000004 0.92377746000000005 4.74969290000000033 3.8663"
+		+ "0390000000013 0.93033569999999999 4.74386789999999969 3.86117670000000013 0.93554026000000001 4.734796 3.850348 0.93888181000000004 4.7233647999999997 3.83487750000000016 0.94003331999999995 4.71069289999999974 3.81627960000000011 0.93888187000000001 4.69802090000000039 3.79637480000000016 0.93554026000000001 4.68658969999999986 3.77711180000000013 0.93033569999999999 4.67751740000000016 3.76037569999999999 0.92377746000000005 4.67169279999999976 3.74780539999999984 0.91650765999999995 4.6696863000000004 3.74063059999999981 0.90923779999999998 4.67169279999999976 3.73955420000000016 0.90267967999999998 4.67751740000000016 3.74468140000000016 0.897475 4.68658969999999986 3.75551009999999996 0.89413345 4.69802090000000039 3.77098060000000013 0.89298206999999996 4.71069289999999974 3.7895783999999999 0.89064699000000003 4.72101159999999975 3.813879 0.89466690999999998 4.73476409999999959 3.83705259999999981 0.90092802000000005 4.74567750000000022 3.85718609999999984 0.90881752999999998 4.75268460000000026 3.8723"
+		+ "0829999999981 0.91756314000000005 4.75509879999999985 3.88093950000000021 0.92630875000000001 4.75268460000000026 3.88223429999999992 0.93419825999999995 4.74567750000000022 3.87606640000000002 0.94045942999999999 4.73476409999999959 3.86303950000000018 0.94447935000000005 4.72101159999999975 3.84442830000000013 0.9458645 4.70576759999999972 3.82205510000000004 0.94447928999999997 4.69052310000000006 3.79810949999999981 0.94045942999999999 4.67677120000000013 3.77493619999999996 0.93419825999999995 4.66585729999999987 3.75480269999999994 0.92630875000000001 4.65885070000000034 3.73968029999999985 0.91756314000000005 4.65643639999999959 3.73104930000000001 0.90881752999999998 4.65885070000000034 3.72975419999999991 0.90092802000000005 4.66585729999999987 3.73592229999999992 0.89466690999999998 4.67677120000000013 3.74894930000000004 0.89064699000000003 4.69052310000000006 3.76756050000000009 0.88926183999999997 4.70576759999999972 3.78993370000000018 0.88800352999999999 4.71744249999999976 3.81860450000000018 "
+		+ "0.89260280000000003 4.73317619999999994 3.84511780000000014 0.89976626999999998 4.74566269999999957 3.86815290000000012 0.90879284999999999 4.75367979999999957 3.88545469999999993 0.91879891999999996 4.75644210000000012 3.89532970000000001 0.92880499000000005 4.75367979999999957 3.89681150000000009 0.93783152000000003 4.74566269999999957 3.8897545 0.94499511000000003 4.73317619999999994 3.87484979999999979 0.94959437999999996 4.71744249999999976 3.85355660000000011 0.95117921000000005 4.70000079999999976 3.82795880000000022 0.94959437999999996 4.68256 3.80056240000000001 0.94499511000000003 4.6668257999999998 3.774049 0.93783158 4.65433879999999967 3.751014 0.92880499000000005 4.64632229999999957 3.73371219999999981 0.91879898000000004 4.64355989999999963 3.7238370999999999 0.90879284999999999 4.64632229999999957 3.72235540000000009 0.89976632999999995 4.65433879999999967 3.7294122999999999 0.89260273999999995 4.6668257999999998 3.7443168 0.88800347000000002 4.68255949999999999 3.7656101999999998 0.8864187599"
+		+ "9999997 4.70000079999999976 3.791208 0.88626826000000003 4.71274380000000015 3.82354310000000019 0.89133364000000004 4.730072 3.85274340000000004 0.89922314999999997 4.743824 3.8781127999999998 0.90916454999999996 4.75265360000000037 3.89716839999999998 0.92018467000000004 4.75569579999999981 3.90804410000000013 0.93120473999999998 4.75265360000000037 3.90967580000000003 0.94114608 4.743824 3.9019039000000002 0.94903557999999999 4.730072 3.88548850000000012 0.95410103000000002 4.71274380000000015 3.86203740000000018 0.95584643000000002 4.6935349000000004 3.83384539999999996 0.95410103000000002 4.67432590000000037 3.80367260000000007 0.94903563999999996 4.65699720000000017 3.774472 0.94114608 4.64324519999999996 3.74910260000000006 0.93120473999999998 4.63441559999999964 3.730047 0.92018467000000004 4.6313734000000002 3.71917130000000018 0.90916448999999999 4.63441559999999964 3.7175395 0.89922321000000005 4.64324519999999996 3.72531180000000006 0.89133364000000004 4.65699720000000017 3.74172690000000019 0.886"
+		+ "26832 4.67432590000000037 3.76517819999999981 0.88452286000000002 4.6935349000000004 3.79337 0.88548386000000001 4.70703169999999993 3.82857320000000012 0.89089072000000002 4.72552820000000029 3.85974169999999983 0.89931190000000005 4.7402072000000004 3.886821 0.90992342999999998 4.7496318999999998 3.90716049999999981 0.92168611 4.75287870000000012 3.91876939999999996 0.93344903000000001 4.7496318999999998 3.92051119999999997 0.94406027000000003 4.7402072000000004 3.91221519999999989 0.95248157 4.72552820000000029 3.89469390000000004 0.95788830999999997 4.70703169999999993 3.869662 0.95975136999999999 4.6865281999999997 3.83957 0.95788835999999999 4.66602519999999998 3.80736350000000012 0.95248151000000003 4.6475282 3.776195 0.94406033 4.6328497000000004 3.74911569999999994 0.93344885 4.62342549999999974 3.72877619999999999 0.92168611 4.62017770000000016 3.71716740000000012 0.90992331999999998 4.62342549999999974 3.71542569999999994 0.89931190000000005 4.6328497000000004 3.72372170000000002 0.8908906599999999"
+		+ "5 4.6475282 3.74124290000000004 0.88548397999999995 4.66602519999999998 3.76627489999999998 0.88362092000000003 4.6865281999999997 3.79636670000000009 0.88566977000000002 4.70044709999999988 3.83357120000000018 0.89128476000000001 4.719656 3.86593989999999987 0.90003043000000005 4.73490050000000018 3.89406229999999987 0.91105049999999999 4.744688 3.91518550000000021 0.92326640999999998 4.74806069999999991 3.92724129999999994 0.93548226000000001 4.744688 3.92905019999999983 0.94650239000000003 4.73490050000000018 3.92043469999999994 0.95524788000000005 4.719656 3.90223839999999988 0.96086298999999997 4.70044709999999988 3.87624259999999987 0.96279775999999995 4.6791539000000002 3.84499140000000006 0.96086298999999997 4.65786120000000015 3.81154469999999979 0.95524794000000002 4.63865230000000039 3.77917579999999997 0.94650239000000003 4.62340779999999985 3.75105330000000015 0.93548226000000001 4.61362030000000001 3.7299304000000002 0.92326640999999998 4.61024760000000011 3.71787430000000008 0.91105049999999999"
+		+ " 4.61362030000000001 3.71606559999999986 0.90003043000000005 4.62340779999999985 3.72468069999999996 0.89128481999999998 4.63865230000000039 3.74287720000000013 0.88566982999999999 4.65786120000000015 3.76887319999999981 0.883735 4.6791539000000002 3.80012419999999995 0.88682132999999996 4.69315239999999978 3.83841369999999982 0.89250636000000005 4.71260070000000031 3.871186 0.90136092999999995 4.728035 3.89965889999999993 0.91251844000000004 4.73794409999999999 3.92104529999999984 0.92488658000000001 4.74135880000000043 3.93325160000000018 0.93725479 4.73794409999999999 3.93508289999999983 0.94841218000000005 4.728035 3.92636010000000013 0.95726681000000002 4.71260070000000031 3.907937 0.96295178000000003 4.69315239999999978 3.8816168000000002 0.96491075000000004 4.67159369999999985 3.84997649999999991 0.96295178000000003 4.65003540000000015 3.81611250000000002 0.95726675000000006 4.63058709999999962 3.78334020000000004 0.94841224000000002 4.61515279999999972 3.75486729999999991 0.93725473000000004 4.6052432"
+		+ "0000000031 3.73348089999999999 0.92488658000000001 4.60182860000000016 3.72127490000000005 0.91251844000000004 4.60524320000000031 3.71944359999999996"
+		)
+		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
+		"pt[996:1161]" (" 0.90136092999999995 4.61515279999999972 3.72816610000000015 0.89250636000000005 4.63058709999999962 3.74658919999999984 0.88682132999999996 4.65003540000000015 3.77290940000000008 0.88486248000000001 4.67159369999999985 3.80454990000000004 0.88891017000000005 4.68532659999999979 3.8429818 0.89452516999999998 4.70453550000000043 3.87535069999999982 0.90327071999999997 4.71977949999999957 3.90347290000000013 0.91429084999999999 4.72956709999999969 3.92459580000000008 0.92650670000000002 4.73293970000000019 3.9366519000000002 0.93872261000000001 4.72956709999999969 3.93846080000000009 0.94974267000000001 4.71977949999999957 3.92984530000000021 0.95848834999999999 4.70453550000000043 3.91164919999999983 0.96410333999999998 4.68532659999999979 3.88565329999999998 0.96603817000000003 4.66403340000000011 3.85440210000000016 0.96410333999999998 4.64274020000000043 3.82095530000000005 0.95848834999999999 4.62353129999999979 3.7885863999999998 0.94974272999999998 4.60828729999999975 3.76046419999999992 0.9387226699999"
+		+ "9998 4.59849979999999992 3.739341 0.92650675999999998 4.59512710000000002 3.72728510000000002 0.91429090000000002 4.59849979999999992 3.72547629999999996 0.90327078000000005 4.60828729999999975 3.7340914999999999 0.89452522999999995 4.62353129999999979 3.75228789999999979 0.88891017000000005 4.64274020000000043 3.77828380000000008 0.88697541000000002 4.66403340000000011 3.80953480000000022 0.89188480000000003 4.67716259999999995 3.84716270000000016 0.89729166000000005 4.6956591999999997 3.87833139999999998 0.90571283999999996 4.71033810000000042 3.9054104999999999 0.91632426 4.71976279999999981 3.92575 0.92808705999999996 4.72300960000000014 3.93735910000000011 0.93984984999999999 4.71976279999999981 3.93910049999999989 0.95046120999999995 4.71033810000000042 3.930805 0.95888251000000002 4.6956591999999997 3.9132836000000002 0.96428924999999999 4.67716259999999995 3.88825129999999985 0.96615231000000001 4.65665909999999972 3.85815950000000019 0.96428924999999999 4.6361561 3.825953 0.95888245000000005 4.617659"
+		+ "59999999964 3.79478479999999996 0.95046127000000002 4.60298060000000042 3.76770540000000009 0.93984979000000002 4.59355639999999976 3.747366 0.92808705999999996 4.59030869999999958 3.73575709999999983 0.91632420000000003 4.59355639999999976 3.73401519999999998 0.90571283999999996 4.60298060000000042 3.74231120000000006 0.89729159999999997 4.61765959999999964 3.75983260000000019 0.89188486 4.6361561 3.78486440000000002 0.89002186000000005 4.65665909999999972 3.8149563999999998 0.89567207999999998 4.66886189999999957 3.85085370000000005 0.90073751999999996 4.68619010000000014 3.88005420000000001 0.90862703 4.69994259999999997 3.90542390000000017 0.91856842999999999 4.70877169999999978 3.92447919999999995 0.92958856000000001 4.71181390000000011 3.9353549000000001 0.94060862000000001 4.70877169999999978 3.93698689999999996 0.95054996000000003 4.69994210000000034 3.92921470000000017 0.95843953000000004 4.68619010000000014 3.91279960000000004 0.96350484999999997 4.66886189999999957 3.889348 0.96525030999999994 4.64"
+		+ "9653 3.86115619999999993 0.96350491000000005 4.630444 3.83098340000000004 0.95843953000000004 4.61311529999999959 3.8017827999999998 0.95054996000000003 4.59936330000000027 3.77641340000000003 0.94060862000000001 4.59053369999999994 3.75735809999999981 0.92958856000000001 4.58749149999999961 3.74648210000000015 0.91856842999999999 4.59053419999999957 3.7448503999999998 0.90862703 4.59936330000000027 3.75262260000000003 0.90073751999999996 4.61311529999999959 3.76903770000000016 0.89567220000000003 4.630444 3.79248910000000006 0.89392680000000002 4.649653 3.82068090000000016 0.90017879000000001 4.66062829999999995 3.85396390000000011 0.904778 4.676362 3.88047720000000007 0.91194153 4.68884849999999975 3.90351250000000016 0.92096816999999997 4.69686559999999975 3.92081429999999997 0.93097419000000003 4.6996279000000003 3.93068930000000005 0.94098026000000001 4.69686559999999975 3.93217110000000014 0.95000684000000002 4.68884849999999975 3.92511419999999989 0.95717030999999997 4.676362 3.91020939999999984 0.9617"
+		+ "6958000000001 4.66062829999999995 3.888916 0.96335446999999996 4.64318659999999994 3.86331839999999982 0.96176963999999998 4.6257457999999998 3.835922 0.95717043000000002 4.61001159999999999 3.80940840000000014 0.95000684000000002 4.59752459999999985 3.78637360000000012 0.94098026000000001 4.58950809999999976 3.76907179999999986 0.93097425 4.58674569999999981 3.75919679999999978 0.92096816999999997 4.58950809999999976 3.757715 0.91194165000000005 4.59752459999999985 3.76477189999999995 0.90477806000000005 4.61001159999999999 3.77967640000000005 0.90017879000000001 4.62574530000000017 3.80096979999999984 0.89859401999999999 4.64318659999999994 3.82656740000000006 0.90529388 4.65266420000000025 3.85641649999999991 0.90931379999999995 4.66641619999999957 3.87959029999999983 0.91557491000000002 4.67733 3.89972379999999985 0.92346435999999998 4.68433670000000024 3.91484589999999999 0.93221003000000002 4.68675140000000034 3.92347720000000022 0.94095558000000001 4.68433670000000024 3.924772 0.94884515000000003 4.677"
+		+ "33 3.91860410000000003 0.95510638000000003 4.66641619999999957 3.90557720000000019 0.95912622999999997 4.65266420000000025 3.886966 0.96051138999999996 4.6374196999999997 3.86459280000000005 0.95912622999999997 4.62217569999999967 3.84064750000000021 0.95510631999999995 4.60842319999999983 3.81747360000000002 0.94884515000000003 4.59750990000000037 3.79734039999999995 0.94095563999999998 4.59050319999999967 3.782218 0.93221003000000002 4.58808849999999957 3.773587 0.92346441999999995 4.59050319999999967 3.77229189999999992 0.91557496999999999 4.59750990000000037 3.77846 0.90931373999999998 4.60842370000000034 3.791487 0.90529388 4.62217569999999967 3.81009790000000015 0.90390873000000005 4.6374196999999997 3.8324710999999998 0.91089129000000002 4.64516639999999992 3.85815140000000012 0.91423284999999999 4.65659810000000007 3.87741449999999999 0.91943752999999995 4.66566990000000015 3.89415049999999985 0.92599564999999995 4.67149449999999966 3.90672109999999995 0.93326551000000002 4.673502 3.91389580000000015 "
+		+ "0.94053531000000001 4.67149449999999966 3.91497209999999995 0.94709354999999995 4.66566990000000015 3.90984510000000007 0.95229810000000004 4.65659810000000007 3.89901609999999987 0.95563966 4.64516639999999992 3.88354560000000015 0.95679110000000001 4.63249490000000019 3.86494779999999993 0.95563971999999997 4.619823 3.84504320000000011 0.95229816 4.60839179999999971 3.82578020000000008 0.94709354999999995 4.59931950000000001 3.80904409999999993 0.94053531000000001 4.5934948999999996 3.79647369999999995 0.93326551000000002 4.59148789999999973 3.789299 0.92599571000000003 4.5934948999999996 3.78822260000000011 0.91943752999999995 4.59931950000000001 3.79334950000000015 0.91423290999999995 4.60839179999999971 3.80417849999999991 0.91089129000000002 4.619823 3.819649 0.90973990999999998 4.63249490000000019 3.83824679999999985 0.91683340000000002 4.63832 3.85912560000000004 0.91941434 4.64714910000000003 3.87400410000000006 0.92343432000000003 4.65415620000000008 3.88693070000000018 0.92849963999999996 4.6586546"
+		+ "9999999959 3.89663979999999999 0.93411469000000003 4.66020490000000009 3.90218139999999991 0.93972968999999995 4.65865469999999959 3.90301279999999995 0.94479513000000004 4.65415620000000008 3.89905260000000009 0.94881499000000002 4.64714910000000003 3.89068870000000011 0.95139587000000003 4.63832 3.87873940000000017 0.95228528999999995 4.6285324000000001 3.86437510000000017 0.95139593 4.61874490000000026 3.84900120000000001 0.94881499000000002 4.60991529999999994 3.83412290000000011 0.94479506999999996 4.60290860000000013 3.82119659999999994 0.93972962999999998 4.59840970000000038 3.81148720000000019 0.93411469000000003 4.59685990000000011 3.80594590000000021 0.92849957999999999 4.59840970000000038 3.80511430000000006 0.92343425999999995 4.60290860000000013 3.80907440000000008 0.91941434 4.60991529999999994 3.8174383999999999 0.91683345999999999 4.61874490000000026 3.82938720000000021 0.91594410000000004 4.6285324000000001 3.8437519 0.92297375000000004 4.63229229999999959 3.85931539999999984 0.92473059999999"
+		+ "996 4.63830179999999981 3.86944270000000001 0.92746675000000001 4.64307170000000013 3.87824109999999989 0.93091464000000002 4.64613340000000008 3.88484980000000002 0.93473660999999997 4.64718870000000006 3.88862180000000013 0.93855858000000003 4.64613340000000008 3.88918760000000008 0.94200640999999996 4.64307170000000013 3.88649230000000001 0.94474267999999995 4.63830179999999981 3.88079930000000006 0.94649934999999996 4.63229229999999959 3.87266589999999988 0.94710481000000002 4.62562989999999985 3.86288859999999978 0.94649934999999996 4.618968 3.85242389999999979 0.94474261999999998 4.612958 3.84229680000000018 0.94200640999999996 4.6081890999999997 3.833498 0.93855858000000003 4.60512690000000013 3.82688929999999994 0.93473660999999997 4.60407160000000015 3.82311749999999995 0.93091464000000002 4.60512690000000013 3.82255149999999988 0.92746687000000005 4.6081890999999997 3.825247 0.92473053999999999 4.61295840000000013 3.83094020000000013 0.92297381000000001 4.618968 3.83907340000000019 0.92236847 4.6256"
+		+ "2989999999985 3.848851 0.92916125000000005 4.62723260000000014 3.85871580000000014 0.93005066999999997 4.63027479999999958 3.86384270000000019"
+		)
+		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
+		"pt[1162:1327]" (" 0.93143575999999995 4.632689 3.86829659999999986 0.93318122999999997 4.63423919999999967 3.87164239999999982 0.93511599000000001 4.63477329999999998 3.87355179999999999 0.93705081999999995 4.63423919999999967 3.87383819999999979 0.93879621999999996 4.632689 3.87247370000000002 0.94018142999999998 4.63027479999999958 3.86959169999999997 0.94107068000000005 4.62723260000000014 3.86547419999999997 0.94137709999999997 4.62385990000000024 3.86052440000000008 0.94107074000000002 4.62048720000000035 3.85522719999999985 0.94018137000000002 4.617445 3.85010049999999993 0.93879621999999996 4.61503029999999992 3.84564640000000013 0.93705081999999995 4.61348010000000031 3.84230070000000001 0.93511593000000004 4.612946 3.8403912 0.93318122999999997 4.61348010000000031 3.84010480000000021 0.93143582000000003 4.61503029999999992 3.84146929999999998 0.93005061 4.617445 3.84435130000000003 0.92916131000000002 4.62048720000000035 3.84846850000000007 0.92885481999999997 4.62385990000000024 3.85341809999999985 0.914529680000000"
+		+ "01 4.719923 3.79718450000000018 0.93524348999999996 4.62326480000000029 3.85734179999999993 0.90870242999999995 4.217236 3.03138880000000022 0.90959179000000001 4.22027830000000037 3.03651569999999982 0.91097700999999998 4.222693 3.04096980000000006 0.91272235000000002 4.22424320000000009 3.04431530000000006 0.91465724000000004 4.22477669999999961 3.04622459999999995 0.91659193999999999 4.22424320000000009 3.04651119999999986 0.91833739999999997 4.222693 3.0451467000000001 0.91972255999999997 4.22027830000000037 3.04226470000000004 0.92061185999999995 4.217236 3.03814720000000005 0.92091829000000003 4.21386340000000015 3.03319759999999983 0.92061192000000003 4.21049070000000025 3.02790019999999993 0.91972255999999997 4.20744849999999992 3.0227735 0.91833735000000005 4.20503430000000034 3.01831940000000021 0.916592 4.20348409999999983 3.01497390000000021 0.91465724000000004 4.20294949999999989 3.0130640999999998 0.91272240999999998 4.20348409999999983 3.01277779999999984 0.91097695000000001 4.20503430000000034"
+		+ " 3.01414230000000005 0.90959179000000001 4.20744849999999992 3.0170243000000001 0.90870249000000003 4.21049070000000025 3.0211418000000001 0.90839601000000003 4.21386340000000015 3.02609130000000004 0.90327369999999996 4.21875520000000037 3.03419209999999984 0.90503054999999999 4.22476479999999999 3.04431940000000001 0.90776676000000001 4.22953410000000041 3.053118 0.91121459000000005 4.23259640000000026 3.05972650000000002 0.91503656 4.23365159999999996 3.0634986999999998 0.91885852999999995 4.23259640000000026 3.06406450000000019 0.92230635999999999 4.22953410000000041 3.06136890000000017 0.92504262999999998 4.22476479999999999 3.055676 0.92679929999999999 4.21875520000000037 3.04754259999999988 0.92740469999999997 4.21209290000000003 3.03776529999999978 0.92679929999999999 4.205431 3.02730059999999979 0.92504262999999998 4.19942089999999979 3.01717330000000006 0.92230641999999996 4.19465160000000026 3.00837470000000007 0.91885852999999995 4.19158980000000003 3.00176620000000005 0.91503656 4.190534099999999"
+		+ "82 2.99799419999999994 0.91121459000000005 4.19158980000000003 2.99742819999999988 0.90776676000000001 4.19465160000000026 3.00012370000000006 0.90503054999999999 4.1994214000000003 3.00581670000000001 0.90327376000000004 4.205431 3.01395010000000019 0.90266842000000003 4.21209290000000003 3.0237276999999998 0.89837730000000005 4.21897840000000013 3.03761480000000006 0.90095818000000005 4.227807 3.05249330000000008 0.90497810000000001 4.23481459999999998 3.06541970000000008 0.91004348000000002 4.23931310000000039 3.07512879999999988 0.91565852999999997 4.2408633 3.08067039999999981 0.92127353000000001 4.23931310000000039 3.08150170000000001 0.92633891000000002 4.23481459999999998 3.07754159999999999 0.93035882999999997 4.22780749999999994 3.06917790000000013 0.93293970999999998 4.21897840000000013 3.05722860000000018 0.93382913000000001 4.20919080000000001 3.04286430000000019 0.93293976999999995 4.19940330000000017 3.02749040000000003 0.93035882999999997 4.19057369999999985 3.01261210000000013 0.9263389100000"
+		+ "0002 4.183567 2.9996855 0.92127353000000001 4.17906859999999991 2.9899764000000002 0.91565847 4.17751789999999978 2.98443479999999983 0.91004348000000002 4.17906859999999991 2.98360350000000007 0.90497815999999998 4.183567 2.9875636000000001 0.90095818000000005 4.19057369999999985 2.99592759999999991 0.89837730000000005 4.19940330000000017 3.00787639999999978 0.89748793999999998 4.20919080000000001 3.02224110000000001 0.89413345 4.21790030000000016 3.04157279999999997 0.89747505999999999 4.2293314999999998 3.06083609999999995 0.90267962000000002 4.23840380000000039 3.07757190000000014 0.90923779999999998 4.2442283999999999 3.09014249999999979 0.91650772000000003 4.24623490000000015 3.09731719999999999 0.92377746000000005 4.2442283999999999 3.09839369999999992 0.93033564000000002 4.23840380000000039 3.09326649999999992 0.93554031999999998 4.2293314999999998 3.08243750000000016 0.93888181000000004 4.21790030000000016 3.066967 0.94003325999999998 4.20522829999999992 3.04836919999999978 0.93888187000000001 4.1925"
+		+ "5639999999996 3.02846459999999995 0.93554026000000001 4.18112469999999981 3.00920150000000008 0.93033569999999999 4.17205329999999996 2.99246549999999978 0.92377752000000002 4.16622830000000022 2.97989490000000012 0.91650772000000003 4.16422130000000035 2.97272010000000009 0.90923785999999995 4.16622830000000022 2.97164390000000012 0.90267967999999998 4.17205329999999996 2.97677110000000011 0.897475 4.18112469999999981 2.98759979999999992 0.89413350999999996 4.19255639999999996 3.00307039999999992 0.89298206999999996 4.20522829999999992 3.02166820000000014 0.89064699000000003 4.21554759999999984 3.04596879999999981 0.89466685000000001 4.22929910000000042 3.06914230000000021 0.90092808000000002 4.2402129000000004 3.08927560000000012 0.90881752999999998 4.24722 3.104398 0.91756314000000005 4.24963469999999965 3.11302920000000016 0.92630880999999998 4.24722 3.11432410000000015 0.93419832000000003 4.2402129000000004 3.10815619999999981 0.94045942999999999 4.22929910000000042 3.095129 0.94447935000000005 4.2155475"
+		+ "9999999984 3.07651809999999992 0.9458645 4.20030310000000018 3.05414459999999988 0.94447928999999997 4.18505859999999963 3.03019930000000004 0.94045942999999999 4.17130660000000031 3.0070256999999998 0.93419832000000003 4.16039319999999968 2.98689250000000017 0.92630880999999998 4.15338609999999964 2.97177 0.91756320000000002 4.15097190000000005 2.96313879999999985 0.90881758999999995 4.15338609999999964 2.961844 0.90092808000000002 4.16039319999999968 2.96801190000000004 0.89466690999999998 4.17130660000000031 2.981039 0.89064699000000003 4.18505910000000014 2.99965 0.88926178 4.20030310000000018 3.02202320000000002 0.88800352999999999 4.21197749999999971 3.05069420000000013 0.89260280000000003 4.22771170000000041 3.07720759999999993 0.89976632999999995 4.24019860000000026 3.10024260000000007 0.90879290999999995 4.24821519999999975 3.11754439999999988 0.91879891999999996 4.2509775000000003 3.1274194999999998 0.92880499000000005 4.24821519999999975 3.12890120000000005 0.93783158 4.24019860000000026 3.12184429"
+		+ "999999979 0.94499511000000003 4.22771170000000041 3.10693980000000014 0.94959431999999999 4.21197749999999971 3.08564619999999978 0.95117921000000005 4.19453619999999994 3.06004860000000001 0.94959437999999996 4.17709490000000017 3.03265209999999996 0.94499511000000003 4.16136119999999998 3.0061388 0.93783158 4.14887430000000013 2.98310379999999986 0.92880499000000005 4.14085769999999975 2.9658017000000001 0.91879891999999996 4.13809489999999958 2.95592670000000002 0.90879290999999995 4.14085769999999975 2.95444510000000005 0.89976632999999995 4.14887430000000013 2.96150210000000014 0.89260280000000003 4.16136119999999998 2.97640659999999979 0.88800352999999999 4.17709490000000017 2.9977 0.88641875999999997 4.19453619999999994 3.02329779999999992 0.88626826000000003 4.20727920000000033 3.05563260000000003 0.89133357999999996 4.22460750000000029 3.08483309999999999 0.89922321000000005 4.23835989999999985 3.11020260000000004 0.90916448999999999 4.247189 3.12925789999999981 0.92018467000000004 4.2502316999999996"
+		+ "1 3.14013389999999992 0.93120473999999998 4.247189 3.14176559999999983 0.94114613999999996 4.23835989999999985 3.13399340000000004 0.94903557999999999 4.22460750000000029 3.11757829999999991 0.95410103000000002 4.20727920000000033 3.09412719999999997 0.95584643000000002 4.18807029999999969 3.06593509999999991 0.95410103000000002 4.16886139999999994 3.03576230000000002 0.94903563999999996 4.15153309999999998 3.00656180000000006 0.94114608 4.13778070000000042 2.98119239999999985 0.93120473999999998 4.12895150000000033 2.96213669999999984 0.92018467000000004 4.1259093 2.951261 0.90916448999999999 4.12895150000000033 2.94962929999999979 0.89922321000000005 4.13778070000000042 2.9574012999999999 0.89133370000000001 4.15153309999999998 2.97381640000000003 0.88626832 4.16886139999999994 2.997268 0.88452286000000002 4.18807029999999969 3.02545980000000014 0.88548391999999998 4.20156720000000039 3.06066269999999996 0.89089065999999995 4.22006369999999986 3.09183120000000011 0.89931196000000002 4.23474220000000035 3.11"
+		+ "891059999999998 0.90992337000000001 4.24416689999999974 3.13925030000000005 0.92168611 4.2474141000000003 3.1508588999999998 0.93344897000000004 4.24416689999999974 3.15260080000000009"
+		)
+		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
+		"pt[1328:1493]" (" 0.94406027000000003 4.23474259999999969 3.144305 0.95248151000000003 4.22006369999999986 3.12678339999999988 0.95788835999999999 4.20156720000000039 3.10175160000000005 0.95975136999999999 4.18106370000000016 3.07165979999999994 0.95788835999999999 4.16056060000000016 3.03945329999999991 0.95248151000000003 4.1420640999999998 3.0082848000000002 0.94406027000000003 4.12738470000000035 2.98120550000000017 0.93344890999999997 4.11796049999999969 2.960866 0.92168611 4.11471319999999974 2.94925710000000008 0.90992331999999998 4.11796049999999969 2.94751550000000018 0.89931196000000002 4.1273850999999997 2.95581130000000014 0.89089065999999995 4.1420640999999998 2.97333259999999999 0.88548397999999995 4.16056060000000016 2.99836439999999982 0.88362092000000003 4.18106370000000016 3.02845640000000005 0.88566977000000002 4.19498250000000006 3.065661 0.89128481999999998 4.21419139999999981 3.09802989999999978 0.90003043000000005 4.22943590000000036 3.126152 0.91105049999999999 4.23922349999999959 3.14727520000000016 "
+		+ "0.92326640999999998 4.24259569999999986 3.15933080000000022 0.93548226000000001 4.23922349999999959 3.16114 0.94650239000000003 4.22943590000000036 3.15252450000000017 0.95524794000000002 4.21419139999999981 3.13432809999999984 0.96086298999999997 4.19498250000000006 3.10833240000000011 0.96279775999999995 4.17368980000000001 3.07708119999999985 0.96086298999999997 4.15239620000000009 3.04363440000000018 0.95524794000000002 4.13318779999999997 3.01126549999999993 0.94650239000000003 4.11794379999999993 2.98314309999999994 0.93548226000000001 4.10815570000000019 2.96201990000000004 0.92326640999999998 4.10478349999999992 2.949964 0.91105049999999999 4.10815570000000019 2.94815519999999998 0.90003043000000005 4.11794330000000031 2.95677039999999991 0.89128481999999998 4.13318779999999997 2.974967 0.88566982999999999 4.15239620000000009 3.000963 0.883735 4.17368980000000001 3.03221389999999991 0.88682132999999996 4.18768790000000024 3.07050350000000005 0.89250636000000005 4.20713619999999988 3.10327580000000003 "
+		+ "0.90136092999999995 4.22257040000000039 3.13174870000000016 0.91251837999999996 4.23247959999999956 3.15313510000000008 0.92488658000000001 4.23589419999999972 3.16534139999999997 0.93725473000000004 4.23248 3.16717270000000006 0.94841218000000005 4.22257040000000039 3.15844989999999992 0.95726681000000002 4.20713619999999988 3.14002679999999978 0.96295178000000003 4.18768790000000024 3.11370659999999999 0.96491068999999996 4.16612959999999966 3.08206610000000003 0.96295184 4.1445704000000001 3.04820229999999981 0.95726675000000006 4.12512209999999957 3.01543 0.94841218000000005 4.10968779999999967 2.98695710000000014 0.93725473000000004 4.09977869999999989 2.96557069999999978 0.92488658000000001 4.096364 2.95336460000000001 0.91251844000000004 4.09977869999999989 2.95153329999999992 0.90136092999999995 4.10968779999999967 2.96025589999999994 0.89250636000000005 4.12512209999999957 2.9786788999999998 0.88682139000000004 4.1445704000000001 3.00499889999999992 0.88486242000000004 4.16612959999999966 3.036639500"
+		+ "00000016 0.88891010999999998 4.179862 3.07507159999999979 0.89452516999999998 4.19907089999999972 3.10744050000000005 0.90327071999999997 4.21431540000000027 3.13556269999999992 0.91429090000000002 4.224103 3.15668579999999999 0.92650675999999998 4.22747519999999977 3.16874169999999999 0.93872261000000001 4.224103 3.17055059999999989 0.94974272999999998 4.21431540000000027 3.16193530000000012 0.95848829000000002 4.19907089999999972 3.14373870000000011 0.96410333999999998 4.179862 3.11774279999999981 0.96603817000000003 4.15856889999999968 3.08649180000000012 0.96410333999999998 4.1372757 3.05304479999999989 0.95848829000000002 4.11806729999999988 3.02067590000000008 0.94974267000000001 4.10282280000000021 2.99255370000000021 0.93872266999999998 4.0930352000000001 2.97143049999999986 0.92650675999999998 4.08966259999999959 2.95937489999999981 0.91429090000000002 4.0930352000000001 2.9575657999999998 0.90327078000000005 4.10282280000000021 2.96618130000000013 0.89452516999999998 4.11806729999999988 2.9843776000"
+		+ "0000019 0.88891010999999998 4.1372757 3.01037359999999987 0.88697541000000002 4.15856889999999968 3.04162450000000018 0.89188486 4.17169810000000041 3.07925249999999995 0.89729159999999997 4.19019510000000039 3.11042089999999982 0.90571283999999996 4.20487359999999999 3.1375 0.91632431999999997 4.21429779999999976 3.15783980000000009 0.92808705999999996 4.21754549999999995 3.16944859999999995 0.93984984999999999 4.21429779999999976 3.17119030000000013 0.95046120999999995 4.20487359999999999 3.16289469999999984 0.95888245000000005 4.19019510000000039 3.14537310000000003 0.96428930999999996 4.17169810000000041 3.12034130000000021 0.96615225000000005 4.151195 3.09024929999999998 0.96428924999999999 4.13069150000000018 3.05804279999999995 0.95888245000000005 4.112195 3.02687449999999991 0.95046120999999995 4.09751609999999999 2.99979519999999988 0.93984984999999999 4.08809139999999971 2.97945569999999993 0.92808705999999996 4.08484409999999976 2.96784690000000007 0.91632420000000003 4.08809139999999971 2.966105 0"
+		+ ".90571283999999996 4.09751609999999999 2.97440080000000018 0.89729159999999997 4.112195 2.99192239999999998 0.89188486 4.13069150000000018 3.01695419999999981 0.89002179999999997 4.151195 3.04704590000000008 0.89567207999999998 4.16339729999999975 3.0829434 0.90073745999999999 4.18072610000000022 3.112144 0.90862708999999997 4.194478 3.13751340000000001 0.91856842999999999 4.20330720000000024 3.15656880000000006 0.92958850000000004 4.20634979999999992 3.16744469999999989 0.94060862000000001 4.20330720000000024 3.16907639999999979 0.95055002 4.194478 3.16130420000000001 0.95843946999999996 4.18072610000000022 3.14488939999999983 0.96350484999999997 4.16339729999999975 3.12143779999999982 0.96525024999999998 4.14418839999999999 3.093246 0.96350484999999997 4.12497950000000024 3.06307289999999988 0.95843953000000004 4.10765120000000028 3.03387260000000003 0.95054996000000003 4.09389879999999984 3.00850319999999982 0.94060862000000001 4.08506970000000003 2.98944780000000021 0.92958856000000001 4.08202740000000031"
+		+ " 2.97857189999999994 0.91856842999999999 4.08506970000000003 2.97694020000000004 0.90862708999999997 4.09389879999999984 2.98471209999999987 0.90073758000000004 4.10765120000000028 3.00112719999999999 0.89567220000000003 4.12497950000000024 3.02457880000000001 0.89392674000000005 4.14418839999999999 3.05277060000000011 0.90017879000000001 4.15516329999999989 3.08605380000000018 0.90477806000000005 4.1708974999999997 3.11256719999999998 0.91194158999999997 4.18338439999999956 3.13560220000000012 0.92096816999999997 4.191401 3.152904 0.93097419000000003 4.19416329999999959 3.16277909999999984 0.94098026000000001 4.191401 3.16426089999999993 0.95000684000000002 4.18338439999999956 3.15720389999999984 0.95717037000000005 4.1708974999999997 3.14229920000000007 0.96176958000000001 4.15516329999999989 3.12100579999999983 0.96335446999999996 4.137722 3.09540820000000005 0.96176963999999998 4.12028070000000035 3.06801179999999984 0.95717043000000002 4.104547 3.04149819999999993 0.95000684000000002 4.09206010000000031 "
+		+ "3.01846339999999991 0.94098031999999998 4.08404349999999994 3.00116130000000014 0.93097419000000003 4.08128069999999976 2.99128630000000006 0.92096816999999997 4.08404349999999994 2.98980470000000009 0.91194165000000005 4.09206010000000031 2.99686170000000018 0.90477806000000005 4.104547 3.01176619999999984 0.90017879000000001 4.12028070000000035 3.03305960000000008 0.89859401999999999 4.137722 3.05865719999999985 0.90529388 4.14719960000000043 3.08850619999999987 0.90931373999999998 4.16095159999999975 3.11168 0.91557491000000002 4.1718655 3.13181330000000013 0.92346441999999995 4.17887260000000005 3.14693569999999978 0.93221003000000002 4.18128679999999964 3.15556690000000017 0.94095563999999998 4.17887260000000005 3.15686150000000021 0.94884515000000003 4.1718655 3.15069370000000015 0.95510631999999995 4.16095159999999975 3.13766670000000003 0.95912622999999997 4.14719960000000043 3.1190557000000001 0.96051138999999996 4.13195560000000039 3.0966825 0.95912622999999997 4.11671109999999985 3.0727372000000001"
+		+ "7 0.95510631999999995 4.10295919999999992 3.04956339999999981 0.94884515000000003 4.09204580000000018 3.02942989999999979 0.94095563999999998 4.08503870000000013 3.01430750000000014 0.93221003000000002 4.08262440000000026 3.00567649999999986 0.92346441999999995 4.08503870000000013 3.0043814000000002 0.91557496999999999 4.09204580000000018 3.01054950000000021 0.90931373999999998 4.10295919999999992 3.02357670000000001 0.90529388 4.11671109999999985 3.04218769999999994 0.90390873000000005 4.13195560000000039 3.06456090000000003 0.91089129000000002 4.13970229999999972 3.09024119999999991 0.91423290999999995 4.15113350000000025 3.10950419999999994 0.91943752999999995 4.16020539999999972 3.12624030000000008 0.92599571000000003 4.16603040000000036 3.13881090000000018 0.93326551000000002 4.16803689999999971 3.14598539999999982 0.94053531000000001 4.16603040000000036 3.14706209999999986 0.94709354999999995 4.16020539999999972 3.14193489999999986 0.95229816 4.15113350000000025 3.13110590000000011 0.95563971999999997 4"
+		+ ".13970229999999972 3.11563560000000006 0.95679110000000001 4.12703039999999977 3.09703760000000017 0.95563971999999997 4.11435840000000042 3.07713290000000006 0.95229816 4.10292670000000026 3.05786990000000003"
+		)
+		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
+		"pt[1494:1659]" (" 0.94709354999999995 4.09385490000000019 3.04113390000000017 0.94053531000000001 4.08803029999999978 3.02856330000000007 0.93326551000000002 4.08602329999999991 3.02138850000000003 0.92599571000000003 4.08803029999999978 3.02031209999999994 0.91943752999999995 4.09385490000000019 3.02543929999999994 0.91423290999999995 4.10292670000000026 3.03626819999999986 0.91089129000000002 4.11435840000000042 3.05173849999999991 0.90973990999999998 4.12703039999999977 3.07033660000000008 0.91683345999999999 4.1328554000000004 3.09121539999999984 0.91941434 4.14168450000000021 3.10609389999999985 0.92343425999999995 4.14869169999999965 3.11902020000000002 0.92849963999999996 4.15319009999999977 3.12872929999999982 0.93411469000000003 4.15474030000000027 3.13427090000000019 0.93972962999999998 4.15319009999999977 3.13510229999999979 0.94479506999999996 4.14869169999999965 3.13114209999999993 0.94881499000000002 4.14168450000000021 3.12277840000000007 0.95139587000000003 4.1328554000000004 3.11082910000000012 0.952285289999"
+		+ "99995 4.12306789999999967 3.09646489999999996 0.95139593 4.11328029999999956 3.08109089999999997 0.94881499000000002 4.10445119999999974 3.0662126999999999 0.94479506999999996 4.0974440999999997 3.05328609999999978 0.93972968999999995 4.09294560000000018 3.043577 0.93411462999999995 4.09139490000000006 3.03803540000000005 0.92849963999999996 4.09294560000000018 3.037204 0.92343425999999995 4.0974440999999997 3.04116419999999987 0.91941434 4.10445070000000012 3.04952809999999985 0.91683345999999999 4.11328029999999956 3.06147690000000017 0.91594410000000004 4.12306789999999967 3.07584169999999979 0.92297375000000004 4.12682769999999977 3.09140520000000008 0.92473053999999999 4.13283779999999989 3.1015324999999998 0.92746675000000001 4.1376065999999998 3.11033079999999984 0.93091464000000002 4.14066889999999965 3.11693949999999997 0.93473660999999997 4.14172410000000024 3.12071159999999992 0.93855858000000003 4.14066889999999965 3.12127759999999999 0.94200640999999996 4.1376065999999998 3.118582 0.9447426199999"
+		+ "9998 4.13283779999999989 3.11288909999999985 0.94649934999999996 4.12682769999999977 3.10475559999999984 0.94710475000000005 4.12016579999999966 3.09497810000000007 0.94649934999999996 4.1135035000000002 3.08451370000000002 0.94474261999999998 4.1074938999999997 3.07438639999999985 0.94200640999999996 4.10272409999999965 3.06558779999999986 0.93855858000000003 4.09966230000000031 3.058979 0.93473667000000005 4.0986066000000001 3.05520730000000018 0.93091464000000002 4.09966230000000031 3.05464119999999983 0.92746680999999997 4.10272409999999965 3.05733679999999985 0.92473059999999996 4.1074938999999997 3.0630297999999998 0.92297381000000001 4.1135035000000002 3.07116319999999998 0.92236847 4.12016579999999966 3.08094050000000008 0.92916131000000002 4.121768 3.09080550000000009 0.93005061 4.12481019999999976 3.09593220000000002 0.93143575999999995 4.12722489999999986 3.1003864000000001 0.93318122999999997 4.12877459999999985 3.10373210000000022 0.93511599000000001 4.12930870000000017 3.10564140000000011 0.9370"
+		+ "5081999999995 4.12877459999999985 3.10592790000000019 0.93879621999999996 4.12722489999999986 3.10456349999999981 0.94018137000000002 4.12481019999999976 3.1016815000000002 0.94107068000000005 4.121768 3.097564 0.94137716000000005 4.11839530000000043 3.09261439999999999 0.94107074000000002 4.11502269999999992 3.087317 0.94018137000000002 4.1119804000000002 3.08219030000000016 0.93879621999999996 4.1095657000000001 3.07773610000000009 0.93705081999999995 4.108016 3.07439039999999997 0.93511599000000001 4.10748149999999956 3.07248089999999996 0.93318122999999997 4.108016 3.0721946 0.93143582000000003 4.1095657000000001 3.073559 0.93005061 4.1119804000000002 3.076441 0.92916131000000002 4.11502269999999992 3.08055829999999986 0.92885488000000005 4.11839530000000043 3.0855081000000002 0.91452968000000001 4.21445850000000011 3.02927420000000014 0.93524348999999996 4.11780019999999958 3.08943149999999989 0.39687931999999998 4.21725510000000003 2.74096319999999993 0.39776867999999999 4.22029730000000036 2.7460898999"
+		+ "9999986 0.39915386000000003 4.22271160000000023 2.75054409999999994 0.40089923 4.22426179999999984 2.75388959999999994 0.40283408999999998 4.22479579999999988 2.75579909999999995 0.40476881999999997 4.22426179999999984 2.75608539999999991 0.40651426000000002 4.22271160000000023 2.75472090000000014 0.40789946999999999 4.22029730000000036 2.75183920000000004 0.40878873999999998 4.21725460000000041 2.74772170000000004 0.40909517000000001 4.21388240000000014 2.74277190000000015 0.40878880000000001 4.21050979999999964 2.73747439999999997 0.40789941000000002 4.2074676000000002 2.73234770000000005 0.40651422999999998 4.20505290000000009 2.72789359999999981 0.40476888 4.20350269999999959 2.72454809999999981 0.40283408999999998 4.20296860000000017 2.7226385999999998 0.40089929000000002 4.20350269999999959 2.72235229999999984 0.39915382999999999 4.20505290000000009 2.72371670000000021 0.39776865 4.2074676000000002 2.72659869999999982 0.39687937000000001 4.21050979999999964 2.730716 0.39657289000000001 4.213882400000000"
+		+ "14 2.73566559999999992 0.39145057999999999 4.21877380000000013 2.74376629999999988 0.39320739999999998 4.22478390000000026 2.75389360000000005 0.39594363999999999 4.22955319999999979 2.76269220000000004 0.39939147000000003 4.23261549999999964 2.76930090000000018 0.40321343999999998 4.23367019999999972 2.773073 0.40703540999999999 4.23261549999999964 2.77363869999999979 0.41048324000000003 4.22955319999999979 2.77094340000000017 0.41321951000000001 4.22478390000000026 2.76525040000000022 0.41497617999999997 4.21877380000000013 2.75711679999999992 0.41558158000000001 4.21211190000000002 2.74733949999999982 0.41497617999999997 4.20545010000000019 2.73687479999999983 0.41321951000000001 4.19944 2.72674780000000005 0.41048327000000001 4.19467069999999964 2.71794920000000007 0.40703540999999999 4.19160839999999979 2.71134040000000009 0.40321343999999998 4.19055369999999971 2.70756839999999999 0.39939147000000003 4.19160839999999979 2.70700260000000004 0.39594363999999999 4.19467069999999964 2.709698 0.3932073999999"
+		+ "9998 4.19944 2.71539090000000005 0.39145057999999999 4.20545010000000019 2.72352429999999979 0.39084530000000001 4.21211190000000002 2.73330189999999984 0.38655414999999999 4.218997 2.74718930000000006 0.38913509000000002 4.22782660000000021 2.76206759999999996 0.39315501000000003 4.23483370000000026 2.77499390000000012 0.39822038999999998 4.23933219999999977 2.784703 0.40383542 4.24088240000000027 2.79024459999999985 0.40945038 4.23933219999999977 2.79107620000000001 0.41451579 4.23483370000000026 2.78711609999999999 0.41853573999999999 4.22782660000000021 2.77875210000000017 0.42111659000000001 4.218997 2.766803 0.42200598 4.20920939999999977 2.75243849999999979 0.42111664999999998 4.19942240000000044 2.73706460000000007 0.41853571000000001 4.19059280000000012 2.72218630000000017 0.41451579 4.18358559999999979 2.70926 0.40945040999999999 4.17908719999999967 2.6995505999999998 0.40383535999999998 4.177537 2.69400929999999983 0.39822038999999998 4.17908719999999967 2.69317770000000012 0.39315501000000003 4.18"
+		+ "358610000000031 2.69713780000000014 0.38913509000000002 4.19059280000000012 2.70550179999999996 0.38655414999999999 4.19942189999999993 2.71745089999999978 0.38566482000000002 4.20920939999999977 2.73181530000000006 0.38231032999999998 4.21791930000000015 2.75114729999999996 0.38565195000000002 4.22935060000000007 2.77041029999999999 0.3908565 4.23842240000000015 2.78714610000000018 0.39741471 4.24424739999999989 2.79971689999999995 0.40468457000000002 4.24625439999999976 2.80689140000000004 0.41195433999999997 4.24424739999999989 2.80796789999999996 0.41851252 4.23842240000000015 2.80284069999999996 0.42371720000000002 4.22935060000000007 2.792012 0.42705873 4.21791930000000015 2.7765415 0.42821014000000002 4.20524740000000019 2.75794359999999994 0.42705875999999998 4.19257550000000023 2.738039 0.42371713999999999 4.18114420000000031 2.71877570000000013 0.41851258000000002 4.17207189999999972 2.70204 0.4119544 4.1662473999999996 2.68946929999999984 0.40468457000000002 4.16424039999999973 2.68229460000000008 "
+		+ "0.39741473999999999 4.1662473999999996 2.68121810000000016 0.39085656000000002 4.17207189999999972 2.68634530000000016 0.38565189 4.18114420000000031 2.6971740999999998 0.38231039 4.19257550000000023 2.71264459999999996 0.38115892000000001 4.20524740000000019 2.73124240000000018 0.37882385000000002 4.2155661999999996 2.755543 0.38284372999999999 4.22931860000000004 2.77871660000000009 0.38910493000000002 4.240232 2.79885010000000012 0.39699441000000002 4.24723909999999982 2.81397250000000021 0.40573998999999999 4.2496533000000003 2.82260350000000004 0.41448565999999998 4.2472386000000002 2.82389830000000019 0.42237517000000002 4.240232 2.81773039999999986 0.42863627999999998 4.22931860000000004 2.80470350000000002 0.43265622999999997 4.2155661999999996 2.78609229999999997 0.43404134999999999 4.20032219999999956 2.76371909999999987 0.43265617000000001 4.1850776999999999 2.73977380000000004 0.42863627999999998 4.17132620000000021 2.7166001999999998 0.42237517000000002 4.16041180000000033 2.69646670000000022 0.4"
+		+ "1448565999999998 4.15340519999999991 2.68134430000000012 0.40574005000000002 4.15099049999999981 2.67271329999999985 0.39699444 4.15340519999999991 2.67141820000000019"
+		)
+		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
+		"pt[1660:1825]" (" 0.38910493000000002 4.16041180000000033 2.67758610000000008 0.38284379000000002 4.17132569999999969 2.69061349999999999 0.37882381999999998 4.1850776999999999 2.70922449999999992 0.37743865999999998 4.20032219999999956 2.73159770000000002 0.37618041000000002 4.21199659999999998 2.76026840000000018 0.38077968000000001 4.22773079999999979 2.78678179999999998 0.38794320999999998 4.24021720000000002 2.80981680000000011 0.39696979999999998 4.24823430000000002 2.82711889999999988 0.40697578000000001 4.25099659999999968 2.83699389999999996 0.41698184999999999 4.24823380000000039 2.83847549999999993 0.42600845999999998 4.24021720000000002 2.83141849999999984 0.43317199000000001 4.22773030000000016 2.816514 0.43777120000000003 4.21199659999999998 2.79522059999999994 0.43935605999999999 4.19455530000000021 2.76962280000000005 0.43777126 4.17711450000000006 2.74222639999999984 0.43317199000000001 4.16137979999999974 2.715713 0.42600845999999998 4.1488934000000004 2.692678 0.41698188000000003 4.14087680000000002 2.67537"
+		+ "620000000009 0.40697578000000001 4.13811450000000036 2.66550110000000018 0.39696983000000002 4.14087680000000002 2.66401960000000004 0.38794320999999998 4.1488934000000004 2.67107630000000018 0.38077970999999999 4.16138030000000025 2.68598079999999984 0.37618044 4.17711450000000006 2.70727420000000008 0.37459561000000002 4.19455530000000021 2.732872 0.37444516999999999 4.20729829999999971 2.76520710000000003 0.37951048999999998 4.22462650000000028 2.79440739999999987 0.38740005999999999 4.2383784999999996 2.819777 0.39734140000000001 4.24720809999999993 2.83883239999999981 0.40836151999999998 4.25025030000000026 2.84970830000000008 0.41938159000000003 4.24720809999999993 2.85133979999999987 0.42932302 4.2383784999999996 2.8435678000000002 0.4372125 4.22462650000000028 2.82715270000000007 0.44227791 4.20729829999999971 2.80370140000000001 0.44402331 4.18808939999999996 2.77550959999999991 0.44227791 4.16888050000000021 2.74533650000000007 0.43721252999999999 4.15155169999999973 2.716136 0.42932292999999999 4.1"
+		+ "3779970000000041 2.6907665999999999 0.41938162000000001 4.12897010000000009 2.67171119999999984 0.40836151999999998 4.12592789999999976 2.66083550000000013 0.39734140000000001 4.12897010000000009 2.65920379999999978 0.38740008999999997 4.13779970000000041 2.66697570000000006 0.37951055 4.15155169999999973 2.68339090000000002 0.37444516999999999 4.16888050000000021 2.70684220000000009 0.37269976999999999 4.18808939999999996 2.735034 0.37366080000000002 4.20158620000000038 2.77023719999999996 0.37906753999999998 4.22008280000000013 2.80140540000000016 0.38748881000000002 4.23476169999999996 2.828485 0.39810020000000002 4.24418589999999973 2.84882450000000009 0.40986296999999999 4.24743319999999969 2.86043329999999996 0.42162581999999998 4.24418640000000025 2.862175 0.43223715000000001 4.23476120000000034 2.85387920000000017 0.44065839000000001 4.22008280000000013 2.83635780000000004 0.44606521999999998 4.20158620000000038 2.811326 0.44792821999999999 4.18108270000000015 2.781234 0.44606521999999998 4.1605791999"
+		+ "9999992 2.74902770000000007 0.44065836000000003 4.14208269999999956 2.7178593000000002 0.43223715000000001 4.12740419999999997 2.69077970000000022 0.42162579 4.11798 2.67044019999999982 0.409863 4.11473230000000001 2.65883139999999996 0.39810020000000002 4.11798 2.65708970000000022 0.38748884 4.12740419999999997 2.66538569999999986 0.37906753999999998 4.14208269999999956 2.68290709999999999 0.37366083 4.16057919999999992 2.70793889999999982 0.37179777000000003 4.18108270000000015 2.73803069999999993 0.37384667999999999 4.19500160000000033 2.77523520000000001 0.37946171000000001 4.21421050000000008 2.80760409999999982 0.38820728999999998 4.229455 2.83572649999999982 0.39922738000000002 4.23924259999999986 2.85684940000000021 0.41144325999999998 4.24261469999999985 2.86890530000000021 0.42365914999999998 4.23924259999999986 2.8707142000000001 0.43467924000000002 4.229455 2.86209870000000022 0.44342482 4.21421050000000008 2.84390259999999984 0.44903988 4.19500160000000033 2.81790660000000015 0.45097463999999998 "
+		+ "4.17370839999999976 2.78665539999999989 0.44903988 4.15241530000000036 2.75320859999999978 0.44342484999999998 4.13320639999999973 2.72083969999999997 0.43467924000000002 4.11796239999999969 2.69271729999999998 0.42365914999999998 4.10817479999999957 2.67159410000000008 0.41144325999999998 4.10480209999999968 2.65953850000000003 0.39922738000000002 4.10817479999999957 2.65772940000000002 0.38820728999999998 4.11796239999999969 2.66634489999999991 0.37946171000000001 4.13320639999999973 2.68454119999999996 0.37384667999999999 4.15241530000000036 2.71053720000000009 0.37191187999999997 4.17370839999999976 2.74178809999999995 0.37499818000000001 4.1877065 2.7800777000000001 0.38068318000000001 4.20715519999999987 2.81285020000000019 0.38953780999999998 4.22258949999999977 2.84132309999999988 0.40069528999999998 4.23249860000000044 2.86270930000000012 0.41306344 4.23591329999999999 2.87491560000000002 0.42543161000000002 4.23249860000000044 2.87674690000000011 0.43658902999999999 4.22258949999999977 2.86802409999"
+		+ "999997 0.44544366000000002 4.20715519999999987 2.849601 0.45112866000000001 4.1877065 2.823281 0.45308757 4.1661482000000003 2.79164030000000007 0.45112869 4.14458989999999972 2.75777669999999997 0.44544366000000002 4.12514160000000007 2.72500419999999988 0.43658902999999999 4.10970739999999957 2.69653130000000019 0.42543164 4.09979769999999988 2.67514509999999994 0.41306344 4.09638309999999972 2.66293880000000005 0.40069528999999998 4.09979769999999988 2.66110749999999996 0.38953780999999998 4.10970739999999957 2.6698303000000001 0.38068320999999999 4.12514160000000007 2.68825339999999979 0.37499823999999998 4.14458989999999972 2.71457339999999991 0.37303927999999997 4.1661482000000003 2.74621389999999987 0.377087 4.17988110000000024 2.78464579999999984 0.38270201999999998 4.19909 2.81701470000000009 0.39144762999999999 4.214334 2.84513710000000009 0.40246776000000001 4.22412160000000014 2.86626009999999987 0.41468364000000002 4.22749419999999976 2.87831590000000004 0.42689946000000001 4.22412160000000014 2."
+		+ "88012479999999993 0.43791962000000001 4.214334 2.8715096 0.44666514000000002 4.19909 2.8533132000000001 0.45228019000000003 4.17988110000000024 2.82731719999999997 0.45421502000000002 4.15858789999999967 2.79606630000000012 0.45228019000000003 4.13729480000000027 2.76261929999999989 0.44666517 4.11808589999999963 2.73025040000000008 0.43791955999999999 4.1028418999999996 2.7021278999999998 0.42689951999999998 4.09305430000000037 2.681005 0.41468364000000002 4.0896821000000001 2.66894909999999985 0.40246776000000001 4.09305430000000037 2.66714 0.39144765999999998 4.1028418999999996 2.67575550000000018 0.38270205000000002 4.11808589999999963 2.69395179999999979 0.37708702999999999 4.13729480000000027 2.71994779999999992 0.37515226000000002 4.15858789999999967 2.75119880000000006 0.38006174999999998 4.17171719999999979 2.78882690000000011 0.38546848 4.19021370000000015 2.81999520000000015 0.39388970000000001 4.20489259999999998 2.84707450000000017 0.40450113999999998 4.21431679999999975 2.8674141999999998 0.4162"
+		+ "6391000000001 4.2175640999999997 2.87902279999999999 0.42802674000000002 4.21431730000000027 2.88076469999999984 0.43863808999999998 4.20489219999999975 2.87246889999999988 0.44705932999999998 4.19021370000000015 2.85494760000000003 0.45246616000000001 4.17171719999999979 2.82991549999999981 0.45432913000000003 4.15121360000000017 2.79982350000000002 0.45246609999999998 4.13071059999999957 2.76761720000000011 0.44705929999999999 4.11221359999999958 2.73644879999999979 0.43863808999999998 4.09753509999999999 2.70936939999999993 0.42802674000000002 4.08811090000000021 2.68902989999999997 0.41626394 4.08486320000000003 2.67742110000000011 0.40450111 4.08811090000000021 2.67567919999999981 0.39388972999999999 4.09753509999999999 2.68397519999999989 0.38546848 4.11221359999999958 2.70149660000000003 0.38006171999999999 4.13071059999999957 2.72652839999999985 0.37819868000000001 4.15121360000000017 2.75662040000000008 0.38384899 4.16341640000000002 2.79251769999999988 0.38891438 4.1807445999999997 2.821718199999999"
+		+ "84 0.39680395000000002 4.19449659999999991 2.8470879 0.40674527999999999 4.20332620000000023 2.86614319999999978 0.41776538000000002 4.20636839999999967 2.87701889999999993 0.42878547 4.20332620000000023 2.87865070000000012 0.43872689999999998 4.19449659999999991 2.87087870000000001 0.44661637999999998 4.1807445999999997 2.85446359999999988 0.45168173 4.16341640000000002 2.83101219999999998 0.45342716999999999 4.14420750000000027 2.80282020000000021 0.45168173 4.12499859999999963 2.77264739999999987 0.44661641000000002 4.10766980000000004 2.74344710000000003 0.43872684000000001 4.09391779999999983 2.71807739999999987 0.42878553000000003 4.08508829999999978 2.69902210000000009 0.41776543999999999 4.082046 2.68814639999999994 0.40674527999999999 4.08508870000000002 2.6865146000000002 0.39680398 4.09391779999999983 2.69428659999999986 0.38891443999999997 4.10766980000000004 2.71070169999999999 0.38384905000000002 4.12499859999999963 2.734153 0.38210358999999999 4.14420750000000027 2.76234480000000016 0.388355700"
+		+ "00000003 4.15518240000000016 2.79562810000000006 0.39295498000000001 4.17091659999999997 2.82214140000000002"
+		)
+		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
+		"pt[1826:1991]" (" 0.40011849999999999 4.183403 2.8451765 0.40914506 4.1914201000000002 2.86247829999999981 0.41915107000000001 4.19418239999999987 2.87235329999999989 0.42915711000000001 4.19141959999999969 2.87383509999999998 0.43818374999999998 4.183403 2.86677809999999988 0.44534724999999997 4.17091610000000035 2.85187359999999979 0.44994645999999999 4.15518240000000016 2.83058 0.45153135 4.13774110000000039 2.8049824000000001 0.44994652000000002 4.12030030000000025 2.777586 0.44534728000000001 4.10456559999999993 2.75107260000000009 0.43818374999999998 4.09207919999999969 2.72803759999999995 0.42915716999999998 4.08406260000000021 2.71073580000000014 0.41915107000000001 4.08130029999999966 2.70086050000000011 0.40914508999999999 4.08406260000000021 2.699379 0.40011849999999999 4.09207919999999969 2.70643589999999978 0.39295498000000001 4.10456610000000044 2.72134039999999988 0.38835570000000003 4.12030030000000025 2.74263380000000012 0.38677089999999997 4.13774110000000039 2.76823160000000001 0.39347070000000001 4.1472186"
+		+ "9999999981 2.79808069999999987 0.39749062000000002 4.16097070000000002 2.8212543000000001 0.40375179 4.1718845 2.84138750000000018 0.41164129999999999 4.17889119999999981 2.85651020000000022 0.42038691 4.18130589999999991 2.86514120000000005 0.42913252000000002 4.17889119999999981 2.866436 0.43702203000000001 4.1718845 2.86026809999999987 0.44328317 4.16097070000000002 2.84724120000000003 0.44730309000000001 4.14721869999999981 2.82863 0.44868824000000002 4.13197420000000015 2.80625679999999988 0.44730309000000001 4.11673020000000012 2.78231140000000021 0.44328317 4.10297819999999991 2.75913789999999981 0.43702203000000001 4.09206439999999994 2.73900439999999978 0.42913252000000002 4.08505770000000012 2.723882 0.42038691 4.082643 2.71525069999999991 0.41164129999999999 4.08505770000000012 2.7139559000000002 0.40375179 4.09206439999999994 2.72012380000000009 0.39749062000000002 4.10297779999999968 2.733151 0.39347072999999999 4.11673020000000012 2.75176219999999994 0.39208555 4.13197420000000015 2.774135400000"
+		+ "00003 0.39906820999999998 4.13972090000000037 2.79981569999999991 0.40240976000000001 4.15115259999999964 2.81907839999999998 0.40761438 4.16022439999999971 2.83581450000000013 0.41417256000000002 4.166049 2.8483852999999999 0.42144239 4.16805649999999961 2.85555959999999986 0.42871221999999998 4.166049 2.85663629999999991 0.4352704 4.16022439999999971 2.85150909999999991 0.44047501999999999 4.15115259999999964 2.84068010000000015 0.44381657000000002 4.13972090000000037 2.82520989999999994 0.44496798999999998 4.127049 2.806612 0.44381657000000002 4.114377 2.78670719999999994 0.44047501999999999 4.10294630000000016 2.76744410000000007 0.4352704 4.093874 2.75070810000000021 0.42871221999999998 4.08804940000000006 2.73813750000000011 0.42144239 4.08604240000000019 2.73096279999999991 0.41417256000000002 4.08804940000000006 2.7298865000000001 0.40761438 4.093874 2.73501349999999999 0.40240976000000001 4.10294630000000016 2.74584250000000019 0.39906820999999998 4.1143774999999998 2.761313 0.39791679000000002 4.127"
+		+ "049 2.77991080000000013 0.40501030999999998 4.13287449999999978 2.8007898 0.40759125000000002 4.1417035999999996 2.8156680999999999 0.41161117000000003 4.14871069999999964 2.82859440000000006 0.41667651999999999 4.15320920000000005 2.83830360000000015 0.42229155000000002 4.15475939999999966 2.84384509999999979 0.42790654 4.15320920000000005 2.84467649999999983 0.43297194999999999 4.14871069999999964 2.84071659999999993 0.43699187 4.1417035999999996 2.83235260000000011 0.43957275000000001 4.132874 2.82040360000000012 0.44046214 4.12308689999999967 2.80603910000000001 0.43957280999999998 4.11329939999999983 2.79066510000000001 0.43699187 4.10446980000000039 2.77578689999999995 0.43297194999999999 4.09746270000000035 2.76286049999999994 0.42790656999999999 4.09296419999999994 2.75315120000000002 0.42229151999999998 4.091414 2.7476096000000001 0.41667651999999999 4.09296419999999994 2.74677820000000006 0.41161117000000003 4.09746270000000035 2.75073839999999992 0.40759125000000002 4.10446980000000039 2.7591022999"
+		+ "999999 0.40501030999999998 4.11329939999999983 2.77105140000000016 0.40412098000000002 4.12308689999999967 2.78541589999999983 0.41115066 4.12684630000000041 2.80097959999999979 0.41290742000000002 4.13285639999999965 2.81110669999999985 0.41564362999999999 4.1376261999999997 2.81990529999999984 0.41909149000000001 4.14068789999999964 2.82651379999999985 0.42291346000000002 4.14174319999999963 2.830286 0.42673549 4.14068789999999964 2.83085180000000003 0.43018326000000001 4.1376261999999997 2.82815620000000001 0.43291950000000001 4.13285639999999965 2.8224632999999999 0.43467623 4.12684630000000041 2.81433009999999983 0.43528159999999999 4.1201844000000003 2.80455260000000006 0.43467623 4.11352250000000019 2.79408810000000019 0.43291950000000001 4.10751250000000034 2.7839605999999999 0.43018329 4.10274360000000016 2.77516220000000002 0.42673543000000003 4.0996813999999997 2.76855349999999989 0.42291351999999999 4.09862609999999972 2.76478149999999978 0.41909149000000001 4.0996813999999997 2.76421550000000016 "
+		+ "0.41564366000000003 4.10274360000000016 2.766911 0.41290745000000001 4.10751250000000034 2.77260419999999996 0.41115066 4.11352250000000019 2.78073740000000003 0.41054531999999999 4.1201844000000003 2.7905148999999998 0.41733816000000001 4.12178660000000008 2.80038 0.41822748999999998 4.12482930000000003 2.80550670000000002 0.41961264999999998 4.12724349999999962 2.80996079999999981 0.42135808000000002 4.12879370000000012 2.81330629999999982 0.42329287999999998 4.12932780000000044 2.81521560000000015 0.42522767 4.12879370000000012 2.81550240000000018 0.42697309999999999 4.12724349999999962 2.81413769999999985 0.42835825999999999 4.12482930000000003 2.8112556999999998 0.42924755999999997 4.12178660000000008 2.80713819999999981 0.42955405000000002 4.11841390000000018 2.80218860000000003 0.42924762 4.11504169999999991 2.79689120000000013 0.42835825999999999 4.11199949999999959 2.7917645000000002 0.42697307000000001 4.10958480000000037 2.78731039999999997 0.42522767 4.10803459999999987 2.78396489999999996 0.42329"
+		+ "287999999998 4.10750059999999984 2.7820551 0.42135808000000002 4.10803459999999987 2.78176880000000004 0.41961268000000002 4.10958480000000037 2.78313349999999993 0.41822748999999998 4.11199949999999959 2.78601549999999998 0.41733819 4.11504169999999991 2.79013279999999986 0.41703173999999998 4.11841390000000018 2.79508260000000019 0.40270655999999999 4.21447709999999987 2.73884840000000018 0.42342036999999999 4.11781929999999985 2.79900569999999993 0.65279089999999995 3.95764449999999979 2.49178619999999995 0.65368020999999998 3.96068720000000019 2.496913 0.65506542000000001 3.96310189999999984 2.50136709999999995 0.65681076000000005 3.96465179999999995 2.50471259999999996 0.65874564999999996 3.96518589999999982 2.50662209999999996 0.66068041 3.96465179999999995 2.50690869999999988 0.66242582000000005 3.96310159999999989 2.50554390000000016 0.66381097 3.96068720000000019 2.50266190000000011 0.66470032999999995 3.95764449999999979 2.49854470000000006 0.66500676000000003 3.95427229999999996 2.49359509999999984"
+		+ " 0.66470039000000003 3.95089960000000007 2.48829769999999995 0.66381097 3.94785740000000018 2.48317070000000006 0.66242582000000005 3.9454429000000002 2.47871659999999983 0.66068041 3.94389270000000014 2.47537109999999982 0.65874564999999996 3.94335840000000015 2.47346159999999982 0.65681087999999999 3.943893 2.47317529999999985 0.65506536000000004 3.9454429000000002 2.47453980000000007 0.65368020999999998 3.94785740000000018 2.47742180000000012 0.65279089999999995 3.95089960000000007 2.481539 0.65248441999999995 3.95427229999999996 2.48648880000000005 0.64736223000000004 3.95916410000000019 2.49458959999999985 0.64911896000000002 3.9651736999999998 2.50471690000000002 0.65185517000000004 3.969943 2.51351550000000001 0.65530306000000005 3.97300530000000007 2.520124 0.65912503 3.97406050000000022 2.523896 0.662947 3.97300530000000007 2.52446169999999981 0.66639482999999999 3.969943 2.52176640000000019 0.66913104000000001 3.9651736999999998 2.51607350000000007 0.67088776999999999 3.95916390000000007 2.507940099"
+		+ "99999989 0.67149316999999997 3.952502 2.49816249999999984 0.67088776999999999 3.94583990000000018 2.4876980999999998 0.66913104000000001 3.9398301 2.47757080000000007 0.66639482999999999 3.93506050000000007 2.46877220000000008 0.662947 3.93199830000000006 2.46216340000000011 0.65912497000000003 3.930943 2.45839169999999996 0.65530306000000005 3.93199830000000006 2.45782569999999989 0.65185523000000001 3.93506050000000007 2.46052120000000007 0.64911890000000005 3.9398301 2.46621420000000002 0.64736216999999996 3.94583990000000018 2.4743476000000002 0.64675689000000003 3.952502 2.48412489999999986 0.64246570999999997 3.95938679999999987 2.49801230000000007 0.64504665000000005 3.96821620000000008 2.51289059999999997 0.64906657000000001 3.9752234999999998 2.5258172000000001 0.65413189000000005 3.97972230000000016 2.5355262999999999 0.65974694 3.98127219999999982 2.54106759999999987 0.665362 3.979722 2.541899"
+		)
+		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
+		"pt[1992:2157]" (" 0.67042738000000002 3.9752234999999998 2.5379391 0.67444729999999997 3.96821620000000008 2.52957529999999986 0.67702817999999998 3.95938679999999987 2.517626 0.67791754000000004 3.94959969999999982 2.50326160000000009 0.67702817999999998 3.93981219999999999 2.48788790000000004 0.67444729999999997 3.93098280000000022 2.47300930000000019 0.67042738000000002 3.92397589999999985 2.460083 0.665362 3.919477 2.45037359999999982 0.65974694 3.91792680000000004 2.44483229999999985 0.65413195000000002 3.919477 2.44400070000000014 0.64906657000000001 3.92397589999999985 2.44796110000000011 0.64504665000000005 3.93098280000000022 2.45632479999999997 0.64246570999999997 3.93981219999999999 2.4682738999999998 0.64157640999999999 3.94959969999999982 2.48263839999999991 0.63822192 3.95830919999999997 2.50197029999999998 0.64156352999999999 3.96974040000000006 2.52123330000000001 0.64676809000000002 3.97881250000000009 2.53796940000000015 0.65332632999999996 3.98463730000000016 2.55053969999999985 0.66059606999999998 3.986644"
+		+ " 2.55771470000000001 0.66786586999999997 3.98463730000000016 2.55879089999999998 0.67442411000000002 3.97881250000000009 2.55366369999999998 0.67962878999999998 3.96974040000000006 2.542835 0.68297028999999998 3.95830919999999997 2.52736450000000001 0.68412167000000002 3.94563720000000018 2.50876669999999979 0.68297034999999995 3.93296530000000022 2.488862 0.67962873000000001 3.92153380000000018 2.46959879999999998 0.67442411000000002 3.91246150000000004 2.45286269999999984 0.66786593000000005 3.90663740000000015 2.44029240000000014 0.66059612999999995 3.90463020000000016 2.4331176000000001 0.65332632999999996 3.90663740000000015 2.43204120000000001 0.64676814999999999 3.91246179999999999 2.43716860000000013 0.64156347999999996 3.92153380000000018 2.44799729999999993 0.63822197999999997 3.93296549999999989 2.4634678000000001 0.63707047999999999 3.94563720000000018 2.4820654000000002 0.63473541 3.9559565000000001 2.50636629999999982 0.63875526000000005 3.969708 2.52953960000000011 0.64501642999999997 3.9806221"
+		+ "0000000016 2.54967310000000014 0.65290594000000002 3.98762889999999981 2.56479549999999978 0.66165154999999998 3.9900433999999998 2.57342670000000018 0.67039722000000002 3.98762889999999981 2.57472160000000017 0.67828672999999995 3.98062180000000021 2.56855339999999988 0.68454784000000002 3.969708 2.55552650000000003 0.68856782000000005 3.9559565000000001 2.5369155000000001 0.68995291000000003 3.940712 2.51454209999999989 0.68856775999999997 3.9254677 2.49059680000000006 0.68454784000000002 3.91171550000000012 2.46742319999999982 0.67828672999999995 3.90080209999999994 2.44728989999999991 0.67039722000000002 3.89379479999999978 2.43216749999999982 0.66165160999999995 3.89138029999999979 2.42353629999999987 0.652906 3.89379479999999978 2.42224139999999988 0.64501649000000005 3.90080209999999994 2.42840930000000021 0.63875526000000005 3.91171550000000012 2.44143629999999989 0.63473541 3.9254677 2.46004749999999994 0.63335019000000004 3.940712 2.48242070000000004 0.632092 3.95238639999999997 2.51109150000000003 "
+		+ "0.63669120999999995 3.96812060000000022 2.53760479999999999 0.64385479999999995 3.98060679999999989 2.56063989999999997 0.65288137999999996 3.98862389999999989 2.5779418999999999 0.66288733 3.99138640000000011 2.587817 0.67289339999999997 3.98862410000000001 2.58929870000000006 0.68191999000000003 3.98060679999999989 2.58224149999999986 0.68908351999999995 3.96812060000000022 2.567337 0.69368273000000003 3.95238639999999997 2.54604359999999996 0.69526761999999998 3.93494529999999987 2.52044610000000002 0.69368278999999999 3.91750379999999998 2.49304959999999998 0.68908358000000003 3.90176960000000017 2.466536 0.68192005 3.88928340000000006 2.443501 0.67289346000000005 3.88126639999999989 2.42619920000000011 0.66288733 3.878504 2.4163241000000002 0.65288137999999996 3.88126639999999989 2.41484260000000006 0.64385479999999995 3.88928340000000006 2.42189960000000015 0.63669127000000003 3.90176960000000017 2.43680409999999981 0.632092 3.91750379999999998 2.45809750000000005 0.63050717000000001 3.93494529999999987"
+		+ " 2.483695 0.63035673000000003 3.94768810000000014 2.51603010000000005 0.63542204999999996 3.96501659999999978 2.54523039999999989 0.64331161999999997 3.97876880000000011 2.5706 0.65325295999999999 3.9875976999999998 2.58965539999999983 0.66427307999999996 3.9906404000000002 2.6005313000000001 0.67529315000000001 3.9875976999999998 2.60216309999999984 0.68523460999999997 3.97876880000000011 2.59439090000000006 0.69312412000000001 3.96501640000000011 2.57797570000000009 0.69818944000000005 3.94768810000000014 2.55452440000000003 0.69993490000000003 3.92847919999999995 2.52633259999999993 0.69818950000000002 3.9092703000000002 2.49615959999999992 0.69312412000000001 3.89194150000000016 2.4669591999999998 0.68523449000000003 3.87818979999999991 2.44158959999999992 0.67529320999999998 3.86936040000000014 2.42253419999999986 0.66427307999999996 3.86631819999999982 2.41165850000000015 0.65325295999999999 3.86936040000000014 2.4100267999999998 0.64331161999999997 3.87818959999999979 2.41779879999999991 0.635422110000"
+		+ "00004 3.89194150000000016 2.43421390000000004 0.63035673000000003 3.9092703000000002 2.45766520000000011 0.62861133000000002 3.92847919999999995 2.48585719999999988 0.62957238999999998 3.9419761000000002 2.52106019999999997 0.63497906999999998 3.96047279999999979 2.55222870000000013 0.64340037000000005 3.97515129999999983 2.579308 0.65401178999999998 3.98457570000000016 2.59964750000000011 0.66577452000000004 3.98782319999999979 2.61125639999999981 0.67753737999999997 3.98457570000000016 2.61299819999999983 0.68814874000000004 3.97515149999999995 2.60470250000000014 0.69656998000000003 3.96047260000000012 2.58718089999999989 0.70197672 3.9419761000000002 2.562149 0.70383978000000003 3.92147280000000009 2.532057 0.70197677999999997 3.900969 2.49985070000000009 0.69656991999999995 3.882473 2.46868230000000022 0.68814874000000004 3.86779379999999984 2.44160269999999979 0.67753737999999997 3.85836939999999995 2.42126349999999979 0.66577458 3.85512189999999988 2.40965460000000009 0.65401178999999998 3.858369399999"
+		+ "99995 2.40791269999999979 0.64340043000000002 3.86779379999999984 2.41620869999999988 0.63497912999999995 3.882473 2.43373010000000001 0.62957238999999998 3.900969 2.45876189999999983 0.62770932999999995 3.92147280000000009 2.48885390000000006 0.62975824000000002 3.93539169999999983 2.52605820000000003 0.63537323000000001 3.95460060000000002 2.55842729999999996 0.64411885000000002 3.96984480000000017 2.58654949999999983 0.65513896999999999 3.97963190000000022 2.60767250000000006 0.66735482000000002 3.98300460000000012 2.61972829999999979 0.67957067000000004 3.97963239999999985 2.62153720000000012 0.69059079999999995 3.96984480000000017 2.612922 0.69933641000000002 3.95460060000000002 2.59472540000000018 0.70495140999999995 3.93539169999999983 2.56872940000000005 0.70688622999999995 3.91409869999999982 2.53747839999999991 0.70495140999999995 3.89280509999999991 2.50403170000000008 0.69933641000000002 3.87359620000000016 2.47166279999999983 0.69059079999999995 3.85835190000000017 2.44354059999999995 0.679570730"
+		+ "00000001 3.84856489999999996 2.42241719999999994 0.66735482000000002 3.84519220000000006 2.41036150000000005 0.65513896999999999 3.84856489999999996 2.40855240000000004 0.64411885000000002 3.85835239999999979 2.41716789999999992 0.63537328999999998 3.87359620000000016 2.43536419999999998 0.62975824000000002 3.89280509999999991 2.46136050000000006 0.62782347000000005 3.91409869999999982 2.4926111999999998 0.63090974 3.92809680000000006 2.53090070000000011 0.63659476999999998 3.94754510000000014 2.56367330000000004 0.64544939999999995 3.9629793000000002 2.59214620000000018 0.65660684999999996 3.97288869999999994 2.61353230000000014 0.668975 3.9763033000000001 2.62573860000000003 0.68134313999999996 3.97288869999999994 2.62756990000000012 0.69250058999999997 3.9629793000000002 2.61884739999999994 0.70135521999999995 3.94754510000000014 2.6004242999999998 0.70704018999999996 3.92809680000000006 2.57410410000000001 0.70899915999999996 3.90653819999999996 2.54246350000000021 0.70704025000000004 3.88497920000000008 "
+		+ "2.50859979999999982 0.70135521999999995 3.86553119999999995 2.47582719999999989 0.69250058999999997 3.85009690000000004 2.4473543000000002 0.68134320000000004 3.84018749999999986 2.4259681999999998 0.668975 3.83677290000000015 2.4137618999999999 0.65660684999999996 3.84018749999999986 2.41193059999999981 0.64544939999999995 3.85009690000000004 2.42065330000000012 0.63659476999999998 3.86553119999999995 2.43907639999999981 0.63090979999999997 3.88497920000000008 2.46539639999999993 0.62895082999999996 3.90653819999999996 2.49703689999999989 0.63299859000000003 3.92027089999999978 2.53546909999999981 0.63861358000000001 3.93947979999999998 2.56783770000000011 0.64735918999999997 3.95472409999999996 2.5959601000000001 0.65837931999999999 3.96451140000000013 2.6170833 0.67059522999999999 3.96788380000000007 2.62913890000000006 0.68281102000000005 3.9645115999999998 2.63094779999999995 0.69383121000000003 3.95472430000000008 2.62233260000000001 0.70257676000000002 3.93947979999999998 2.60413620000000012 0.70819180"
+		+ "999999998 3.92027089999999978 2.57814029999999983 0.71012657999999995 3.898978 2.54688930000000013 0.70819175000000001 3.87768440000000014 2.51344229999999991 0.70257676000000002 3.85847540000000011 2.4810734000000001"
+		)
+		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
+		"pt[2158:2323]" (" 0.69383114999999995 3.84323119999999996 2.45295120000000022 0.68281108000000001 3.83344409999999991 2.431828 0.67059522999999999 3.83007140000000001 2.41977209999999987 0.65837931999999999 3.83344409999999991 2.41796329999999982 0.64735925000000005 3.84323170000000003 2.42657850000000019 0.63861358000000001 3.85847540000000011 2.44477490000000008 0.63299859000000003 3.87768440000000014 2.47077079999999993 0.63106382000000005 3.898978 2.502022 0.63597333 3.912107 2.53965 0.64138001 3.93060369999999981 2.57081839999999984 0.64980125 3.9452824999999998 2.59789750000000019 0.66041273 3.95470670000000002 2.6182373000000001 0.67217547 3.95795420000000009 2.62984609999999996 0.68393826000000002 3.95470670000000002 2.63158769999999986 0.69454967999999995 3.9452824999999998 2.623292 0.70297092000000005 3.93060369999999981 2.60577060000000005 0.70837766000000002 3.9121071999999999 2.58073880000000022 0.71024065999999997 3.89160389999999978 2.55064679999999999 0.70837766000000002 3.87109989999999993 2.51844020000000013"
+		+ " 0.70297085999999998 3.85260390000000008 2.487272 0.69454967999999995 3.83792469999999986 2.46019239999999995 0.68393831999999999 3.82850029999999997 2.439853 0.67217552999999997 3.825253 2.42824410000000013 0.66041267000000003 3.82850029999999997 2.42650219999999983 0.64980130999999997 3.837925 2.43479819999999991 0.64138006999999997 3.85260390000000008 2.4523199 0.63597327000000003 3.87109989999999993 2.47735139999999987 0.63411021000000001 3.89160389999999978 2.5074434000000001 0.63976060999999995 3.9038062 2.54334090000000002 0.64482594000000004 3.92113470000000008 2.57254119999999986 0.6527155 3.93488689999999997 2.59791090000000002 0.66265684000000002 3.9437158000000001 2.6169661999999998 0.67367690999999996 3.94675850000000006 2.62784189999999995 0.68469703000000004 3.9437158000000001 2.62947389999999981 0.69463849 3.93488689999999997 2.62170170000000002 0.702528 3.92113470000000008 2.6052865999999999 0.70759331999999997 3.9038062 2.58183529999999983 0.70933871999999998 3.88459729999999981 2.5536431999"
+		+ "9999978 0.70759331999999997 3.86538840000000006 2.52347039999999989 0.702528 3.84805969999999986 2.49427010000000005 0.69463836999999995 3.83430790000000021 2.46890039999999988 0.68469709000000001 3.82547859999999984 2.44984510000000011 0.67367703000000001 3.82243630000000012 2.43896939999999995 0.66265684000000002 3.82547859999999984 2.43733760000000022 0.6527155 3.83430790000000021 2.44510959999999988 0.64482598999999996 3.84805969999999986 2.46152470000000001 0.63976054999999998 3.86538840000000006 2.48497609999999991 0.63801514999999998 3.88459729999999981 2.51316790000000001 0.64426726000000001 3.89557220000000015 2.54645110000000008 0.64886646999999997 3.91130639999999996 2.57296440000000004 0.65603005999999997 3.92379260000000007 2.59599950000000002 0.66505665000000003 3.93180970000000007 2.61330149999999994 0.67506266000000004 3.93457219999999985 2.62317659999999986 0.68506867000000005 3.93180990000000019 2.62465809999999999 0.69409531000000002 3.92379260000000007 2.61760120000000018 0.701258840000000"
+		+ "05 3.91130639999999996 2.60269670000000009 0.70585805000000001 3.89557220000000015 2.58140329999999985 0.70744288 3.87813119999999989 2.55580570000000007 0.70585810999999998 3.86068960000000017 2.528409 0.70125884000000005 3.84495539999999991 2.50189569999999994 0.69409531000000002 3.8324691999999998 2.47886059999999997 0.68506873000000001 3.82445220000000008 2.46155880000000016 0.67506266000000004 3.82168980000000014 2.45168380000000008 0.66505665000000003 3.82445220000000008 2.45020220000000011 0.65603005999999997 3.8324691999999998 2.4572588999999998 0.64886653000000005 3.84495539999999991 2.47216369999999985 0.64426726000000001 3.86068960000000017 2.49345680000000014 0.64268249 3.87813119999999989 2.51905469999999987 0.64938229000000003 3.8876088000000002 2.54890369999999988 0.65340220999999998 3.90136050000000001 2.57207730000000012 0.65966338000000002 3.91227439999999982 2.59221080000000015 0.66755288999999995 3.91928149999999986 2.6073331999999998 0.67629850000000002 3.9216956999999999 2.61596440000000"
+		+ "019 0.68504405000000002 3.91928119999999991 2.617259 0.69293355999999995 3.91227439999999982 2.61109109999999989 0.69919472999999999 3.90136050000000001 2.59806420000000005 0.70321465000000005 3.8876088000000002 2.579453 0.7045998 3.87236450000000021 2.5570797999999999 0.70321465000000005 3.85712 2.53313450000000007 0.69919472999999999 3.84336810000000018 2.50996089999999983 0.69293362000000003 3.83245440000000004 2.4898273999999998 0.68504405000000002 3.82544709999999988 2.474705 0.67629850000000002 3.82303259999999989 2.466074 0.66755288999999995 3.82544709999999988 2.46477890000000022 0.65966338000000002 3.83245440000000004 2.47094680000000011 0.65340220999999998 3.84336810000000018 2.483974 0.64938229000000003 3.85712030000000006 2.50258519999999995 0.64799713999999997 3.87236450000000021 2.52495840000000005 0.65497976999999996 3.88011119999999998 2.55063869999999993 0.65832131999999999 3.89154219999999995 2.56990169999999996 0.66352593999999998 3.90061429999999998 2.58663769999999982 0.67008411999999995 "
+		+ "3.90643910000000005 2.5992080999999998 0.67735398000000002 3.90844579999999997 2.60638309999999995 0.68462378000000002 3.90643930000000017 2.60745929999999992 0.69118195999999998 3.90061429999999998 2.60233209999999993 0.69638657999999998 3.89154219999999995 2.59150340000000012 0.69972813 3.88011119999999998 2.57603289999999996 0.70087957000000001 3.86743930000000002 2.557435 0.69972813 3.85476729999999979 2.53753019999999996 0.69638657999999998 3.84333560000000007 2.51826719999999993 0.69118195999999998 3.83426359999999988 2.50153109999999979 0.68462378000000002 3.82843920000000004 2.48896050000000013 0.67735398000000002 3.826432 2.481786 0.67008411999999995 3.82843920000000004 2.48070959999999996 0.66352593999999998 3.83426359999999988 2.48583670000000012 0.65832131999999999 3.84333560000000007 2.49666569999999988 0.65497976999999996 3.85476729999999979 2.512136 0.65382832000000002 3.86743930000000002 2.53073380000000014 0.66092187000000002 3.87326380000000015 2.55161289999999985 0.66350281 3.88209319999999"
+		+ "991 2.56649109999999991 0.66752272999999995 3.88910059999999991 2.57941770000000004 0.67258804999999999 3.89359929999999999 2.58912679999999984 0.67820311 3.89514920000000009 2.59466840000000021 0.68381815999999995 3.893599 2.59549949999999985 0.68888353999999996 3.88910059999999991 2.59153959999999994 0.69290346000000003 3.88209319999999991 2.58317569999999996 0.69548427999999995 3.87326380000000015 2.57122660000000014 0.69637369999999998 3.86347679999999993 2.55686239999999998 0.69548434000000003 3.85368919999999981 2.54148839999999998 0.69290346000000003 3.84485980000000005 2.52660989999999996 0.68888353999999996 3.837853 2.5136835999999998 0.68381809999999998 3.833354 2.50397420000000004 0.67820305000000003 3.83180379999999987 2.49843290000000007 0.67258810999999996 3.833354 2.49760129999999991 0.66752272999999995 3.837853 2.50156160000000005 0.66350281 3.84485980000000005 2.5099254000000002 0.66092187000000002 3.85368919999999981 2.52187440000000018 0.66003257000000004 3.86347679999999993 2.5362388999999"
+		+ "9985 0.66706222000000004 3.86723660000000002 2.55180259999999981 0.66881900999999999 3.8732464000000002 2.56192969999999987 0.67155522000000001 3.87801550000000006 2.57072829999999986 0.67500305000000005 3.881078 2.577337 0.67882502 3.882133 2.581109 0.68264698999999995 3.88107779999999991 2.58167480000000005 0.68609481999999999 3.87801550000000006 2.57897949999999998 0.68883108999999998 3.8732464000000002 2.57328650000000003 0.69058781999999996 3.86723660000000002 2.56515309999999985 0.69119315999999997 3.86057469999999991 2.55537560000000008 0.69058781999999996 3.85391260000000013 2.5449111000000002 0.68883108999999998 3.84790279999999996 2.53478380000000003 0.68609481999999999 3.843133 2.52598520000000004 0.68264698999999995 3.84007070000000006 2.51937649999999991 0.67882502 3.83901570000000003 2.51560469999999992 0.67500305000000005 3.84007070000000006 2.51503869999999985 0.67155522000000001 3.843133 2.5177341000000002 0.66881900999999999 3.84790279999999996 2.52342719999999998 0.66706222000000004 3.85391"
+		+ "260000000013 2.5315607 0.66645688000000003 3.86057469999999991 2.541338 0.67324965999999997 3.86217640000000006 2.55120279999999999 0.67413908 3.86521910000000002 2.55632970000000004 0.67552422999999995 3.8676336 2.56078390000000011 0.67726964000000001 3.86918380000000006 2.56412940000000011 0.67920446000000001 3.86971759999999998 2.56603879999999984 0.68113922999999998 3.86918380000000006 2.5663254000000002 0.68288468999999996 3.8676336 2.564961 0.68426984999999996 3.86521910000000002 2.56207869999999982 0.68515908999999997 3.86217640000000006 2.55796150000000022 0.68546556999999997 3.8588041999999998 2.5530119 0.68515915000000005 3.85543160000000018 2.54771420000000015 0.68426984999999996 3.85238930000000002 2.54258749999999978 0.68288462999999999 3.84997489999999987 2.53813339999999998 0.68113922999999998 3.84842469999999981 2.53478789999999998 0.67920446000000001 3.84789039999999982 2.53287839999999997 0.67726964000000001 3.84842469999999981 2.53259180000000006 0.67552422999999995 3.84997489999999987 2.53"
+		+ "395649999999995 0.67413908 3.85238930000000002 2.5368385")
+		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
+		"pt[2324:2327]" " 0.67324972000000005 3.85543160000000018 2.54095579999999988 0.67294328999999997 3.8588041999999998 2.54590560000000021 0.65861809000000004 3.95486739999999992 2.48967170000000015 0.67933189999999999 3.85820909999999984 2.549829"
 		
 		2 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO|police_badge:police_badge_GEOShape" 
 		"vertexColorSource" " 2"
@@ -22770,24 +15631,15 @@ createNode reference -n "police_badgeRN";
 		"police_badgeRN.placeHolderList[1]" ""
 		5 4 "police_badgeRN" "police_badge:aiStandardSurface1SG.dagSetMembers" 
 		"police_badgeRN.placeHolderList[2]" ""
-		8 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "translateZ"
 		8 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "translateX"
 		8 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "translateY"
+		8 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "translateZ"
 		8 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "rotateX"
 		8 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "rotateY"
 		8 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "rotateZ"
 		8 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "scaleX"
 		8 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "scaleY"
-		8 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "scaleZ"
-		9 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "translateZ"
-		9 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "translateX"
-		9 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "translateY"
-		9 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "rotateX"
-		9 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "rotateY"
-		9 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "rotateZ"
-		9 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "scaleX"
-		9 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "scaleY"
-		9 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "scaleZ";
+		8 "|Swan|GEO|swan_base1|police_badge:police_badge_GEO" "scaleZ";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode skinCluster -n "skinCluster13";
@@ -25128,6 +17980,533 @@ createNode skinCluster -n "skinCluster13";
 		1 16 1
 		1 16 1;
 	setAttr -s 49 ".pm";
+	setAttr ".pm[0]" -type "matrix" 0.018635171000353772 -0.10210719647435636 0.99459883914568015 0
+		 0.98375061167217204 0.17954034096722452 -1.52655665885959e-16 0 -0.17857061470582106 0.97843721637799519 0.10379378194316485 0
+		 -2.3294605110677944 0.24741272539665177 0.016191311353530875 1;
+	setAttr ".pm[1]" -type "matrix" -0.044031851640286883 0.10851153655707287 -0.99311955094799675 0
+		 0.92661824458466446 0.37600349573220021 -3.2474023470285829e-15 0 0.37341642283643967 -0.92024269496214328 -0.1171048996620091 0
+		 -1.86910635077876 -1.4577691596190159 -0.025050845925889326 1;
+	setAttr ".pm[2]" -type "matrix" 0.022298772870656562 -0.025670122464623205 -0.99942173757684194 0
+		 0.6049260347494434 0.79625129418684504 -0.0069547816708678632 0 0.79596938208123214 -0.60442114565791416 0.033283952151095843 0
+		 -1.8583230822148191 -2.7994934276406691 0.030442618618246431 1;
+	setAttr ".pm[3]" -type "matrix" -0.026809585743133409 0.051450778528410207 -0.99831561317105599 0
+		 0.75335872902867851 0.65746803791561492 0.01365300390702882 0 0.65706306509236689 -0.75172375012913584 -0.056387338855567598 0
+		 -3.8290929009159766 -2.0712515851497622 0.029041022754618194 1;
+	setAttr ".pm[4]" -type "matrix" 0.048094737986099166 -0.16865896249238674 -0.98450040657637117 0
+		 0.96166470139538718 0.27422801113329204 -3.0531133177191805e-16 0 0.26997758845535619 -0.94675928951390331 0.17538229514680159 0
+		 -5.4902824267124446 0.27359399385002026 -0.31631495879421845 1;
+	setAttr ".pm[5]" -type "matrix" -0.046521848324449097 0.095223134157949862 0.99436827802862549 0
+		 0.89850229273692628 0.43896882571144702 -1.7763568394002501e-15 0 -0.43649667533093928 0.89344217763358968 -0.10597984549142327 0
+		 -5.4605563054467359 -5.0260884565664341 0.1706287651994127 1;
+	setAttr ".pm[6]" -type "matrix" 4.0568165544821682e-15 -2.8681947296708125e-14 -0.99999999999999978 0
+		 0.99245567979813598 0.1226039299387252 4.9605152357391211e-16 0 0.12260392993872564 -0.99245567979813587 2.8866841445420719e-14 0
+		 -10.786311994363892 0.62303140052027961 0.0023281917466973926 1;
+	setAttr ".pm[7]" -type "matrix" 9.6424682689692091e-15 -2.7315465710285541e-14 -0.99999999999999978 0
+		 0.94868276605266777 0.31622936200590118 4.9605152357391251e-16 0 0.31622936200590157 -0.94868276605266755 2.8866841445420726e-14 0
+		 -11.885004535272792 -1.7592942226387389 0.0023281917466960989 1;
+	setAttr ".pm[8]" -type "matrix" 0.99999999999999978 2.9904128453571014e-16 2.8892726131156467e-14 0
+		 -3.2951806988013838e-16 1 2.0539125955565254e-15 0 -2.8866841445420726e-14 -1.6098233857064857e-15 1 0
+		 -0.0023281917466973757 -13.614689466676804 -2.6837952921931847 1;
+	setAttr ".pm[9]" -type "matrix" 0.99999999999999978 2.9904128453571014e-16 2.8892726131156467e-14 0
+		 -3.2951806988013838e-16 1 2.0539125955565254e-15 0 -2.8866841445420726e-14 -1.6098233857064857e-15 1 0
+		 -0.58432143000784109 -12.694898453716112 -3.1641894298960724 1;
+	setAttr ".pm[10]" -type "matrix" 0.99999999999999978 2.9904128453571014e-16 2.8892726131156467e-14 0
+		 -3.2951806988013838e-16 1 2.0539125955565254e-15 0 -2.8866841445420726e-14 -1.6098233857064857e-15 1 0
+		 0.58147263106908187 -12.694898453716114 -3.1641894298960689 1;
+	setAttr ".pm[11]" -type "matrix" 9.6424682689692091e-15 -2.7315465710285541e-14 -0.99999999999999978 0
+		 0.94868276605266777 0.31622936200590118 4.9605152357391251e-16 0 0.31622936200590157 -0.94868276605266755 2.8866841445420726e-14 0
+		 -12.643065328431971 -0.38757276079116953 0.0023281917466430328 1;
+	setAttr ".pm[12]" -type "matrix" -1.2858868641136192e-16 2.8967142182783406e-14 -0.99999999999999978 0
+		 -0.99991344614169964 0.013156755870284418 4.9605152357391152e-16 0 0.01315675587028403 0.99991344614169952 2.8866841445420726e-14 0
+		 12.123307736548986 -4.053406893112883 0.0023281917466374119 1;
+	setAttr ".pm[13]" -type "matrix" 0.99999999999999978 7.317165606308225e-16 2.8960021768249446e-14 0
+		 -7.1809612849894303e-16 1 1.99666672084929e-15 0 -2.8866841445420726e-14 -1.5508427875232864e-15 0.99999999999999978 0
+		 -0.0023281917467078634 -12.093681469615253 -4.8097519572989684 1;
+	setAttr ".pm[14]" -type "matrix" 0.99999999999999978 2.9904128453577107e-16 2.8892726131156467e-14 0
+		 -3.2951806988013898e-16 1 -5.5511151231272162e-17 0 -2.8866841445420726e-14 4.9960036108131177e-16 1 0
+		 -0.0023281917466393834 -11.841195615647296 -3.897952556018724 1;
+	setAttr ".pm[15]" -type "matrix" 0.99999999999999978 2.9904128453577107e-16 2.8892726131156467e-14 0
+		 -3.2951806988013898e-16 1 -5.5511151231272162e-17 0 -2.8866841445420726e-14 4.9960036108131177e-16 1 0
+		 -0.0023281917466980617 -11.850616759009132 -4.6622931607321503 1;
+	setAttr ".pm[16]" -type "matrix" 1 -4.4687491510093857e-17 9.6745509875132466e-32 0
+		 -8.3266726846887234e-17 1 -2.164934898019056e-15 0 2.2204460492503118e-16 2.6726102228634458e-15 1.0000000000000004 0
+		 -0.6555472517445784 -4.4488711561834542 -3.2403968118825257 1;
+	setAttr ".pm[17]" -type "matrix" 1 -4.4687491510093857e-17 9.6745509875132466e-32 0
+		 -8.3266726846887234e-17 1 -2.164934898019056e-15 0 2.2204460492503118e-16 2.6726102228634458e-15 1.0000000000000004 0
+		 -0.720208625572618 -4.4488300000000081 -3.389549577196358 1;
+	setAttr ".pm[18]" -type "matrix" 0.58554230204754976 -0.46623669478901331 0.6631467084628202 0
+		 0.65751082371933312 0.75164077721044686 -0.052111982560632285 0 -0.47415158884557151 0.46653990876096824 0.74667314423951814 0
+		 -1.6827485469648518 -2.7087321107125941 -2.179455914981177 1;
+	setAttr ".pm[19]" -type "matrix" 0.9726336683832254 0.088657040497831421 -0.21476423421406951 0
+		 -0.090775195977710402 0.99587140926688344 -1.1900203045200899e-15 0 0.21387756058688837 0.019495265449787091 0.976665922259216 0
+		 -1.9861246525280902 -4.317860529017616 -0.81660229787675098 1;
+	setAttr ".pm[20]" -type "matrix" 0.70003099021280013 0.15032706094371448 0.6981105839977727 0
+		 -0.20995694193175823 0.97771063333414998 -3.4694469519536157e-16 0 -0.68255014121773616 -0.14657316334636517 0.71598995279982036 0
+		 -1.6969361742718345 -4.2502079053808384 -5.3673741626993712 1;
+	setAttr ".pm[21]" -type "matrix" -0.58774017307818738 -9.0719609140863041e-16 0.80904974442244437 0
+		 6.0287858659676738e-16 1.0000000000000002 1.6729956301517735e-15 0 -0.80904974442244459 2.3186761480786456e-15 -0.58774017307818782 0
+		 4.7240677438018883 -3.2591044466753809 -5.576062714723208 1;
+	setAttr ".pm[22]" -type "matrix" 1 -9.071960914086306e-16 -1.0547118733938979e-15 0
+		 9.992007221626399e-16 1.0000000000000002 -1.4710455076283344e-15 0 7.7715611723761224e-16 2.3186761480786456e-15 1.0000000000000004 0
+		 -7.622028337046876 -3.1848895801200627 -0.06474323961492652 1;
+	setAttr ".pm[23]" -type "matrix" -0.73831266871772583 -3.7420910776046637e-16 0.67445860007187186 0
+		 2.6893904030221751e-16 1.0000000000000002 1.1318127507755961e-15 0 -0.67445860007187208 1.8456910891971049e-15 -0.73831266871772627 0
+		 4.8947742910713572 -3.4436485830619725 -4.6881871080918467 1;
+	setAttr ".pm[24]" -type "matrix" 0.99999999999999978 -3.7420910776046632e-16 -1.3322676295501875e-15 0
+		 5.6479974286368753e-16 1 -1.017019941140788e-15 0 1.1657341758564154e-15 1.8456910891971049e-15 1.0000000000000002 0
+		 -7.4545702804855951 -3.077682338363954 0.73416931165264687 1;
+	setAttr ".pm[25]" -type "matrix" 0.99999999999999989 -8.2000597750227007e-16 -1.998401444325281e-15 0
+		 9.436895709313805e-16 1.0000000000000002 -1.4432899320127065e-15 0 1.7763568394002532e-15 2.3074248706709095e-15 1.0000000000000004 0
+		 -6.1911997181259144 -3.4286620379612369 0.69412219937840447 1;
+	setAttr ".pm[26]" -type "matrix" 0.99999999999999989 -8.2000597750227007e-16 -1.998401444325281e-15 0
+		 9.436895709313805e-16 1.0000000000000002 -1.4432899320127065e-15 0 1.7763568394002532e-15 2.3074248706709095e-15 1.0000000000000004 0
+		 -6.6688273439009942 -3.2652018832911551 0.94542788453333826 1;
+	setAttr ".pm[27]" -type "matrix" -0.58322327557414633 0.49078095193967852 0.64729025022917308 0
+		 0.6687031379056122 0.74247606959607304 0.039565128994546422 0 -0.46117970920645518 0.45592032559467061 -0.76121608793160611 0
+		 -1.7042787664932868 -2.691099994062947 2.2035776461553858 1;
+	setAttr ".pm[28]" -type "matrix" -0.97263354781877975 -0.088659119978576631 -0.21476392178873221 0
+		 -0.090777318755031963 0.99587121577021531 1.8249290967275991e-15 0 0.21387720789532394 0.019495692985298865 -0.97666599096002249 0
+		 -1.9224458745274733 -4.3525079885153808 0.87764060753043227 1;
+	setAttr ".pm[29]" -type "matrix" -0.71898739416136437 -0.15366504817552923 0.67782311852448762 0
+		 -0.20900410816080886 0.97791476252887422 1.1796119636642272e-15 0 -0.66285323398845597 -0.14166781637798748 -0.73522501317197941 0
+		 -1.7557292732510477 -4.3014153506395996 5.2794819632027279 1;
+	setAttr ".pm[30]" -type "matrix" -0.71898739416136437 -0.15366504817552923 0.67782311852448762 0
+		 -0.20900410816080886 0.97791476252887422 1.1796119636642272e-15 0 -0.66285323398845597 -0.14166781637798748 -0.73522501317197941 0
+		 -4.3186812880865091 -4.3014153506396005 5.2794819632027279 1;
+	setAttr ".pm[31]" -type "matrix" 0.99999999999999911 -1.7851672989623906e-15 5.3290705182007506e-15 0
+		 -1.7208456881690068e-15 -0.99999999999999956 3.1641356201816851e-15 0 5.2180482157382239e-15 -3.771253943428806e-15 -0.99999999999999978 0
+		 7.6149487913102991 3.2252098954430002 0.16035040152388347 1;
+	setAttr ".pm[32]" -type "matrix" -0.71898739416136437 -0.15366504817552923 0.67782311852448762 0
+		 -0.20900410816080886 0.97791476252887422 1.1796119636642272e-15 0 -0.66285323398845597 -0.14166781637798748 -0.73522501317197941 0
+		 -4.2869473991888594 -4.494659517213667 4.4307216890592649 1;
+	setAttr ".pm[33]" -type "matrix" 0.99999999999999933 -1.84067845019365e-15 5.2735593669694951e-15 0
+		 -1.7763568394002666e-15 -1 3.2196467714129437e-15 0 5.3845816694319982e-15 -3.7712539434288091e-15 -0.99999999999999978 0
+		 7.4151248304085753 3.1179529402311075 -0.63871051619036578 1;
+	setAttr ".pm[34]" -type "matrix" -0.71898739416136437 -0.15366504817552923 0.67782311852448762 0
+		 -0.20900410816080886 0.97791476252887422 1.1796119636642272e-15 0 -0.66285323398845597 -0.14166781637798748 -0.73522501317197941 0
+		 -4.0216231527187389 -4.4940063707148754 3.6803509809209327 1;
+	setAttr ".pm[35]" -type "matrix" 0.99999999999999933 -1.8406784501936496e-15 5.3845816694320092e-15 0
+		 -1.776356839400267e-15 -1 3.2196467714129429e-15 0 5.4956039718945123e-15 -3.7712539434288084e-15 -0.99999999999999956 0
+		 6.5857820588966298 3.2349778118104404 -0.88854531594566344 1;
+	setAttr ".pm[36]" -type "matrix" 0.027022459933108093 -0.00015105936546784944 0.99963481524016173 0
+		 0.0055900538151324791 0.99998437552711006 1.6022339704990794e-15 0 -0.99961919647309116 0.0055880124126728775 0.027022882151397799 0
+		 -1.5939099155402328 -3.0893239078332964 0.042620259789763068 1;
+	setAttr ".pm[37]" -type "matrix" 1.0000000000000002 6.6935509126113131e-17 -1.2663481374630662e-15 0
+		 -1.9108904916327919e-17 1 5.9984123994757031e-14 0 1.4190038033490304e-15 -5.9580878858358115e-14 1.0000000000000004 0
+		 -0.052568699999995368 -3.1090604075120942 3.5218213204825219 1;
+	setAttr ".pm[38]" -type "matrix" 1.0000000000000002 6.6935509126113131e-17 -1.2663481374630662e-15 0
+		 -1.9108904916327919e-17 1 5.9984123994757031e-14 0 1.4190038033490304e-15 -5.9580878858358115e-14 1.0000000000000004 0
+		 -0.052568699999995715 -2.3595315559214125 3.2448215275034098 1;
+	setAttr ".pm[39]" -type "matrix" 0.97437006478523547 6.7948297954725271e-17 0.22495105434386506 0
+		 -1.3512973905088483e-14 1.0000000000000002 5.8444005342268931e-14 0 -0.22495105434386495 -5.9580904442756133e-14 0.97437006478523569 0
+		 -0.76159871830132297 -1.7457869165754289 3.0651569716033071 1;
+	setAttr ".pm[40]" -type "matrix" 0.23662323082654821 0.95924938124237191 -0.15443468269573413 0
+		 -0.97089723499141012 0.23949646988219714 2.2898349882893844e-16 0 0.036986561333005721 0.14994020641606412 0.98800300039051892 0
+		 2.1937527999473421 -0.48970021284300758 0.65993562595786448 1;
+	setAttr ".pm[41]" -type "matrix" 0.010833394824092655 0.98627331865540835 -0.16476522225588741 0
+		 -0.99993713975942411 0.0102089866636242 -0.0046360674114832422 0 -0.0028903436347944172 0.16480508942307764 0.98632191926060542 0
+		 1.1011708332916905 -0.23574185039617623 0.66744463249821673 1;
+	setAttr ".pm[42]" -type "matrix" 0.25293894606021466 -0.001515060633293206 -0.96748105622654179 0
+		 -0.036900771251797936 0.9992560332616659 -0.011212184050531197 0 0.96677826963940927 0.038536795163038061 0.25269486099165483 0
+		 0.51401068262059069 -0.023131310637923976 0.48793755250683934 1;
+	setAttr ".pm[43]" -type "matrix" 0.32992089441454958 -0.01083339482409194 -0.94394641849274896 0
+		 0.00084570836926690463 0.999937139759424 -0.011180398342457083 0 0.9440082034633267 0.002890343634795609 0.32990931740042601 0
+		 -0.70288799077314479 0.0013969701351541791 0.43265522698312625 1;
+	setAttr ".pm[44]" -type "matrix" 0.99988646285503824 -0.010833394824091944 -0.010473726931010206 0
+		 0.010802479054255226 0.99993713975942422 -0.0030038268965175692 0 0.010505610192768933 0.0028903436347956098 0.99994063727210858 0
+		 -0.98456333786610728 0.001396970135153869 -1.4517550175017211 1;
+	setAttr ".pm[45]" -type "matrix" -0.012460827714085059 0.9897143196479633 -0.14251418615860095 0
+		 -0.99991686898226129 -0.012805921294011006 -0.0015044947731276818 0 -0.0033140454720271442 0.14248359155909884 0.98979161606826571 0
+		 1.1004059801794714 0.42442243078366415 0.56522459283098336 1;
+	setAttr ".pm[46]" -type "matrix" -0.25147759478683923 0.0031974694370025388 -0.96785783848116114 0
+		 -0.03691901126723468 0.99923507621135421 0.012893761124611741 0 0.96715872840360406 0.038974846479340887 -0.25116718618210415 0
+		 0.51594424304254782 -0.022297287787994287 -0.48437859183928322 1;
+	setAttr ".pm[47]" -type "matrix" -0.32843490731291425 0.01246082771408265 -0.94444440780335892 0
+		 0.00096244830397073169 0.99991686898226162 0.012858025430559035 0 0.94452611681817444 0.0033140454720278273 -0.32841959708730811 0
+		 -0.70064482666242878 0.0021592098205267161 -0.4292654364325284 1;
+	setAttr ".pm[48]" -type "matrix" 0.99984985046069341 -0.012460827714082835 -0.012041773391347134 0
+		 -0.01241994248834017 -0.99991686898226162 0.0034641237415892869 0 -0.012083938195593908 -0.0033140454720272917 -0.99992149468860536 0
+		 0.98061335440161934 -0.0021592098205270647 1.4507918629614511 1;
+	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr -s 49 ".ma";
+	setAttr -s 49 ".dpf[0:48]"  4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+		4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4;
+	setAttr -s 49 ".lw";
+	setAttr -s 49 ".lw";
+	setAttr ".mi" 1;
+	setAttr ".bm" 3;
+	setAttr ".ucm" yes;
+	setAttr -s 49 ".ifcl";
+	setAttr -s 49 ".ifcl";
+createNode tweak -n "tweak13";
+	rename -uid "66D1C371-44B2-D276-4216-3391287F29C9";
+createNode objectSet -n "skinCluster13Set";
+	rename -uid "F948FD8A-4C55-2D9F-B5FF-3392F55A2467";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "skinCluster13GroupId";
+	rename -uid "E11B1C6B-41FD-3812-E095-3CAE819B239E";
+	setAttr ".ihi" 0;
+createNode groupParts -n "skinCluster13GroupParts";
+	rename -uid "652A2158-4F37-BCB2-1D21-ED9192A82500";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode objectSet -n "tweakSet13";
+	rename -uid "2CAA0B1C-48B0-1DFE-DA98-659B82416251";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId36";
+	rename -uid "E629E243-4F75-8451-41A3-8DBC32DF6E30";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts36";
+	rename -uid "2B590D09-47DE-F8E1-F348-BBA81112F978";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode geomBind -n "geomBind6";
+	rename -uid "2414C209-45EE-756C-FD5A-4FAA2DC9EB5D";
+	setAttr ".mi" 1;
+createNode pairBlend -n "pairBlend1";
+	rename -uid "0950D87A-4FB7-D608-AF15-CDA4E46A2C4D";
+	setAttr ".rm" 2;
+createNode skinCluster -n "skinCluster14";
+	rename -uid "5D801398-407D-0DDF-92B6-1B96D245E5A2";
+	setAttr ".skm" 1;
+	setAttr -s 333 ".wl";
+	setAttr ".wl[0:332].w"
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1
+		1 8 1;
+	setAttr -s 49 ".pm";
 	setAttr ".pm[0]" -type "matrix" 0.018635171000353772 -0.10210719647435636 0.99459883914568015 -0
 		 0.98375061167217204 0.17954034096722452 -1.52655665885959e-16 0 -0.17857061470582106 0.97843721637799519 0.10379378194316485 -0
 		 -2.3294605110677944 0.24741272539665177 0.016191311353530875 1;
@@ -25178,10 +18557,10 @@ createNode skinCluster -n "skinCluster13";
 		 -0.0023281917466980617 -11.850616759009132 -4.6622931607321503 1;
 	setAttr ".pm[16]" -type "matrix" 1 -4.4687491510093857e-17 9.6745509875132466e-32 -0
 		 -8.3266726846887234e-17 1 -2.164934898019056e-15 0 2.2204460492503118e-16 2.6726102228634458e-15 1.0000000000000004 -0
-		 -0.6555472517445784 -4.4488711561834542 -3.2403968118825257 1;
+		 -0.65554725174457829 -4.7818479578637731 -3.2403968118825239 1;
 	setAttr ".pm[17]" -type "matrix" 1 -4.4687491510093857e-17 9.6745509875132466e-32 -0
 		 -8.3266726846887234e-17 1 -2.164934898019056e-15 0 2.2204460492503118e-16 2.6726102228634458e-15 1.0000000000000004 -0
-		 -0.720208625572618 -4.4488300000000081 -3.389549577196358 1;
+		 -0.72020862557261789 -4.781806801680327 -3.3895495771963562 1;
 	setAttr ".pm[18]" -type "matrix" 0.58554230204754976 -0.46623669478901331 0.6631467084628202 -0
 		 0.65751082371933312 0.75164077721044686 -0.052111982560632285 0 -0.47415158884557151 0.46653990876096824 0.74667314423951814 -0
 		 -1.6827485469648518 -2.7087321107125941 -2.179455914981177 1;
@@ -25286,36 +18665,366 @@ createNode skinCluster -n "skinCluster13";
 	setAttr ".ucm" yes;
 	setAttr -s 49 ".ifcl";
 	setAttr -s 49 ".ifcl";
-createNode tweak -n "tweak13";
-	rename -uid "66D1C371-44B2-D276-4216-3391287F29C9";
-createNode objectSet -n "skinCluster13Set";
-	rename -uid "F948FD8A-4C55-2D9F-B5FF-3392F55A2467";
+createNode tweak -n "tweak14";
+	rename -uid "3EC9C0DD-43FF-8613-7512-BC953B904445";
+createNode objectSet -n "skinCluster14Set";
+	rename -uid "A11FFEC8-4A78-8533-B5AB-B886D704EFBB";
 	setAttr ".ihi" 0;
 	setAttr ".vo" yes;
-createNode groupId -n "skinCluster13GroupId";
-	rename -uid "E11B1C6B-41FD-3812-E095-3CAE819B239E";
+createNode groupId -n "skinCluster14GroupId";
+	rename -uid "3FD72DEB-425F-2683-5DE3-B4B2D75AC59D";
 	setAttr ".ihi" 0;
-createNode groupParts -n "skinCluster13GroupParts";
-	rename -uid "652A2158-4F37-BCB2-1D21-ED9192A82500";
+createNode groupParts -n "skinCluster14GroupParts";
+	rename -uid "BF5CEF73-4536-96D1-7552-3FA56EFE5438";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "vtx[*]";
-createNode objectSet -n "tweakSet13";
-	rename -uid "2CAA0B1C-48B0-1DFE-DA98-659B82416251";
+createNode objectSet -n "tweakSet14";
+	rename -uid "A1A6847A-4966-32BA-E864-BD80DDF3BB96";
 	setAttr ".ihi" 0;
 	setAttr ".vo" yes;
-createNode groupId -n "groupId36";
-	rename -uid "E629E243-4F75-8451-41A3-8DBC32DF6E30";
+createNode groupId -n "groupId38";
+	rename -uid "47EEF853-4569-7D53-152D-3A96DAC49FAC";
 	setAttr ".ihi" 0;
-createNode groupParts -n "groupParts36";
-	rename -uid "2B590D09-47DE-F8E1-F348-BBA81112F978";
+createNode groupParts -n "groupParts38";
+	rename -uid "DD92550B-4F97-C047-2EAC-75A217DB4C8B";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "vtx[*]";
-createNode geomBind -n "geomBind6";
-	rename -uid "2414C209-45EE-756C-FD5A-4FAA2DC9EB5D";
+createNode dagPose -n "bindPose5";
+	rename -uid "11BF51DA-4682-7088-F0FD-139D3C32FCD1";
+	setAttr -s 52 ".wm";
+	setAttr ".wm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wm[1]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wm[2]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wm[3]" -type "matrix" 0.018635171000353723 0.98375061167217215 -0.17857061470582111 0
+		 -0.10210719647435648 0.17954034096722449 0.9784372163779953 0 0.99459883914568037 -2.2204460492503136e-16 0.1037937819431648 0
+		 0.052568655248183591 2.2471876375517685 -0.65973157116790793 1;
+	setAttr ".wm[4]" -type "matrix" -0.044031851640286959 0.92661824458466457 0.37341642283643933 0
+		 0.10851153655707292 0.37600349573220049 -0.92024269496214317 0 -0.99311955094799687 -3.1728291520925483e-15 -0.11710489966200899 0
+		 0.051006073061577138 2.2800743456880048 -0.64647998947042595 1;
+	setAttr ".wm[5]" -type "matrix" 0.022298772870656472 0.60492603474944329 0.79596938208123169 0
+		 -0.025670122464623191 0.79625129418684526 -0.60442114565791416 0 -0.99942173757684216 -0.0069547816708678337 0.033283952151095919 0
+		 -2.0816681711721685e-16 3.3534600000000041 -0.2139179999999985 1;
+	setAttr ".wm[6]" -type "matrix" -0.026809585743133503 0.7533587290286784 0.65706306509236645 0
+		 0.051450778528410263 0.65746803791561537 -0.75172375012913606 0 -0.99831561317105644 0.013653003907028886 -0.056387338855567522 0
+		 0.032903218577019673 4.2460657796876848 0.96058405494035326 1;
+	setAttr ".wm[7]" -type "matrix" 0.048094737986099111 0.96166470139538707 0.26997758845535563 0
+		 -0.16865896249238665 0.27422801113329248 -0.94675928951390309 0 -0.98450040657637139 -3.6255720647915268e-16 0.17538229514680162 0
+		 -0.0012144316097839336 5.2047836736692581 1.7967569081979557 1;
+	setAttr ".wm[8]" -type "matrix" -0.046521848324449083 0.89850229273692661 -0.43649667533093961 0
+		 0.095223134157949807 0.43896882571144669 0.89344217763358946 0 0.99436827802862582 -1.754696250847575e-15 -0.10597984549142336 0
+		 0.054896891746750505 7.1126185077637976 2.125087953001088 1;
+	setAttr ".wm[9]" -type "matrix" 4.0314973581700997e-15 0.99245567979813587 0.1226039299387252 0
+		 -2.8588242884097781e-14 0.12260392993872564 -0.99245567979813598 0 -1.0000000000000002 5.0969117452310715e-16 2.8962943154908771e-14 0
+		 0.0023281917467586899 10.628550504702188 1.9407752921931605 1;
+	setAttr ".wm[10]" -type "matrix" 9.5991383848996422e-15 0.94868276605266755 0.31622936200590118 0
+		 -2.7228608932823694e-14 0.31622936200590157 -0.94868276605266777 0 -1.0000000000000002 5.0969117452310715e-16 2.8962943154908771e-14 0
+		 0.0023281917467622816 11.831439466676807 2.0893752921931599 1;
+	setAttr ".wm[11]" -type "matrix" 1.0000000000000002 -2.9904128453575668e-16 -2.8892726131156474e-14 0
+		 3.2951806988007912e-16 1 -2.0539125955565349e-15 0 2.8866841445420732e-14 1.609823385706477e-15 1 0
+		 0.0023281917467793353 13.614689466676808 2.6837952921931567 1;
+	setAttr ".wm[12]" -type "matrix" 1.0000000000000002 -2.9904128453575668e-16 -2.8892726131156474e-14 0
+		 3.2951806988007912e-16 1 -2.0539125955565349e-15 0 2.8866841445420732e-14 1.609823385706477e-15 1 0
+		 0.58432143000793679 12.694898453716117 3.1641894298960294 1;
+	setAttr ".wm[13]" -type "matrix" 1.0000000000000002 -2.9904128453575668e-16 -2.8892726131156474e-14 0
+		 3.2951806988007912e-16 1 -2.0539125955565349e-15 0 2.8866841445420732e-14 1.609823385706477e-15 1 0
+		 -0.58147263106898639 12.694898453716119 3.1641894298960596 1;
+	setAttr ".wm[14]" -type "matrix" 9.5991383848996422e-15 0.94868276605266755 0.31622936200590118 0
+		 -2.7228608932823694e-14 0.31622936200590157 -0.94868276605266777 0 -1.0000000000000002 5.0969117452310715e-16 2.8962943154908771e-14 0
+		 0.0023281917467538426 12.116820074037278 3.6304248838549364 1;
+	setAttr ".wm[15]" -type "matrix" -1.1621460275702186e-16 -0.99991344614169975 0.01315675587028442 0
+		 2.8870869337711432e-14 0.013156755870284031 0.99991344614169986 0 -1.0000000000000002 5.0969117452310715e-16 2.8962943154908771e-14 0
+		 0.0023281917467558462 12.175588102424637 3.8935526548769182 1;
+	setAttr ".wm[16]" -type "matrix" 1.0000000000000002 -7.3171656063086746e-16 -2.8960021768249459e-14 0
+		 7.1809612849888544e-16 1 -1.9966667208493113e-15 0 2.8866841445420738e-14 1.5508427875232655e-15 1.0000000000000002 0
+		 0.0023281917468553908 12.093681469615259 4.8097519572989453 1;
+	setAttr ".wm[17]" -type "matrix" 1.0000000000000002 -2.9904128453575668e-16 -2.8892726131156474e-14 0
+		 3.2951806988014065e-16 1 5.5511151231262646e-17 0 2.8866841445420732e-14 -4.9960036108132044e-16 1 0
+		 0.0023281917467558072 11.841195615647294 3.8979525560187245 1;
+	setAttr ".wm[18]" -type "matrix" 1.0000000000000002 -2.9904128453575668e-16 -2.8892726131156474e-14 0
+		 3.2951806988014065e-16 1 5.5511151231262646e-17 0 2.8866841445420732e-14 -4.9960036108132044e-16 1 0
+		 0.0023281917468365525 11.85061675900913 4.6622931607321512 1;
+	setAttr ".wm[19]" -type "matrix" 1 4.468749151009385e-17 0 0 8.3266726846886741e-17 1 2.1649348980190553e-15 0
+		 -2.2204460492503131e-16 -2.6726102228634446e-15 0.99999999999999967 0 0.65554725174457795 4.7818479578637643 3.2403968118825328 1;
+	setAttr ".wm[20]" -type "matrix" 1 4.468749151009385e-17 0 0 8.3266726846886741e-17 1 2.1649348980190553e-15 0
+		 -2.2204460492503131e-16 -2.6726102228634446e-15 0.99999999999999967 0 0.72020862557261744 4.7818068016803181 3.3895495771963651 1;
+	setAttr ".wm[21]" -type "matrix" 0.58554230204754976 0.65751082371933334 -0.47415158884557163 0
+		 -0.46623669478901325 0.75164077721044653 0.46653990876096746 0 0.66314670846281998 -0.052111982560632708 0.74667314423951758 0
+		 1.1677091678490523 3.0288431235451116 2.0931949353892048 1;
+	setAttr ".wm[22]" -type "matrix" 0.97263366838322562 -0.090775195977710693 0.21387756058688823 0
+		 0.088657040497831324 0.99587140926688333 0.019495265449786206 0 -0.21476423421406959 -2.0157486790850498e-15 0.97666592225921545 0
+		 2.139203475278908 4.1197429954812215 1.3065129692673332 1;
+	setAttr ".wm[23]" -type "matrix" 0.70003099021280013 -0.20995694193175768 -0.68255014121773538 0
+		 0.15032706094371437 0.97771063333414976 -0.14657316334636589 0 0.69811058399777293 -1.0518480507313079e-15 0.71598995279981992 0
+		 5.5738498844756901 3.7991899331682131 2.0617755304519694 1;
+	setAttr ".wm[24]" -type "matrix" -0.58774017307818749 1.3427287572210809e-15 -0.80904974442244393 0
+		 -9.9920072216264089e-16 0.99999999999999989 1.4710455076283324e-15 0 0.80904974442244415 2.0967458864791993e-15 -0.58774017307818704 0
+		 7.2878365076055314 3.2591044466753853 0.54472973571099015 1;
+	setAttr ".wm[25]" -type "matrix" 1 9.0719609140862804e-16 1.0547118733938987e-15 0
+		 -9.9920072216264089e-16 0.99999999999999989 1.4710455076283324e-15 0 -7.7715611723760958e-16 -2.3186761480786448e-15 0.99999999999999956 0
+		 7.6220283370468715 3.184889580120069 0.064743239614939219 1;
+	setAttr ".wm[26]" -type "matrix" -0.73831266871772627 9.685589031758983e-16 -0.67445860007187186 0
+		 -5.6479974286368881e-16 0.99999999999999989 1.0170199411407869e-15 0 0.67445860007187208 1.6150856646479087e-15 -0.73831266871772583 0
+		 6.775861983410433 3.4436485830619747 -0.16002531919954865 1;
+	setAttr ".wm[27]" -type "matrix" 1.0000000000000002 3.7420910776046391e-16 1.3322676295501878e-15 0
+		 -5.6479974286368881e-16 0.99999999999999989 1.0170199411407869e-15 0 -1.1657341758564144e-15 -1.8456910891971045e-15 0.99999999999999967 0
+		 7.454570280485596 3.0776823383639571 -0.73416931165263377 1;
+	setAttr ".wm[28]" -type "matrix" 1.0000000000000002 8.2000597750226543e-16 1.9984014443252818e-15 0
+		 -9.4368957093138306e-16 0.99999999999999989 1.4432899320127035e-15 0 -1.7763568394002505e-15 -2.3074248706709095e-15 0.99999999999999956 0
+		 6.1911997181259126 3.4286620379612427 -0.69412219937838682 1;
+	setAttr ".wm[29]" -type "matrix" 1.0000000000000002 8.2000597750226543e-16 1.9984014443252818e-15 0
+		 -9.4368957093138306e-16 0.99999999999999989 1.4432899320127035e-15 0 -1.7763568394002505e-15 -2.3074248706709095e-15 0.99999999999999956 0
+		 6.6688273439009942 3.2652018832911618 -0.94542788453331972 1;
+	setAttr ".wm[30]" -type "matrix" -0.58322327557414677 0.66870313790561253 -0.46117970920645568 0
+		 0.49078095193967891 0.74247606959607282 0.45592032559467027 0 0.64729025022917375 0.039565128994546853 -0.76121608793160644 0
+		 -1.0995887538139368 3.0505490716822017 2.1183471548228234 1;
+	setAttr ".wm[31]" -type "matrix" -0.97263354781878086 -0.090777318755032033 0.21387720789532427 0
+		 -0.088659119978576825 0.99587121577021587 0.019495692985298293 0 -0.21476392178873233 2.4286128663675299e-15 -0.97666599096002304 0
+		 -2.0672393405984533 4.1600229402311086 1.3531842490944412 1;
+	setAttr ".wm[32]" -type "matrix" -0.71898739416136548 -0.20900410816080855 -0.6628532339884563 0
+		 -0.15366504817552951 0.97791476252887477 -0.14166781637798811 0 0.67782311852448862 1.5430300107032367e-15 -0.73522501317197997 0
+		 -5.5018793405984576 3.8394629402311127 2.1084442490944273 1;
+	setAttr ".wm[33]" -type "matrix" -0.71898739416136548 -0.20900410816080855 -0.6628532339884563 0
+		 -0.15366504817552951 0.97791476252887477 -0.14166781637798811 0 0.67782311852448862 1.5430300107032367e-15 -0.73522501317197997 0
+		 -7.3446095311056272 3.3037954401114797 0.4095832175035119 1;
+	setAttr ".wm[34]" -type "matrix" 1.0000000000000009 -1.7851672989624131e-15 5.3290705182007514e-15 0
+		 -1.7208456881689926e-15 -1.0000000000000004 -3.1641356201816961e-15 0 5.2180482157382357e-15 3.7712539434287989e-15 -1.0000000000000002 0
+		 -7.6149487913103009 3.2252098954430148 0.16035040152385313 1;
+	setAttr ".wm[35]" -type "matrix" -0.71898739416136548 -0.20900410816080855 -0.6628532339884563 0
+		 -0.15366504817552951 0.97791476252887477 -0.14166781637798811 0 0.67782311852448862 1.5430300107032367e-15 -0.73522501317197997 0
+		 -6.7761788032871229 3.4994042765243778 -0.22078813445696355 1;
+	setAttr ".wm[36]" -type "matrix" 1.0000000000000007 -1.8406784501936709e-15 5.2735593669694936e-15 0
+		 -1.7763568394002505e-15 -1 -3.219646771412954e-15 0 5.3845816694320092e-15 3.7712539434287997e-15 -1.0000000000000002 0
+		 -7.4151248304085708 3.117952940231123 -0.63871051619039498 1;
+	setAttr ".wm[37]" -type "matrix" -0.71898739416136548 -0.20900410816080855 -0.6628532339884563 0
+		 -0.15366504817552951 0.97791476252887477 -0.14166781637798811 0 0.67782311852448862 1.5430300107032367e-15 -0.73522501317197997 0
+		 -6.0766950354817864 3.5542194124280431 -0.59651588356530905 1;
+	setAttr ".wm[38]" -type "matrix" 1.0000000000000007 -1.8406784501936709e-15 5.3845816694320092e-15 0
+		 -1.7763568394002505e-15 -1 -3.219646771412954e-15 0 5.4956039718945249e-15 3.7712539434287997e-15 -1.0000000000000004 0
+		 -6.5857820588966245 3.234977811810456 -0.88854531594568886 1;
+	setAttr ".wm[39]" -type "matrix" 0.027022459933108187 0.0055900538151328807 -0.99961919647309039 0
+		 -0.00015105936546789818 0.99998437552710984 0.0055880124126724698 0 0.99963481524016129 1.5431261420782894e-15 0.02702288215139767 0
+		 2.1510571102112408e-16 3.0981856809799924 -1.5771914909366411 1;
+	setAttr ".wm[40]" -type "matrix" 0.99999999999999967 -6.6935509126037647e-17 1.2663481374630692e-15 0
+		 1.9108904916413026e-17 0.99999999999999989 -5.9984123994757006e-14 0 -1.4190038033490282e-15 5.958087885835809e-14 0.99999999999999956 0
+		 0.052568700000000405 3.1090604075118837 -3.5218213204827071 1;
+	setAttr ".wm[41]" -type "matrix" 0.99999999999999967 -6.6935509126037647e-17 1.2663481374630692e-15 0
+		 1.9108904916413026e-17 0.99999999999999989 -5.9984123994757006e-14 0 -1.4190038033490282e-15 5.958087885835809e-14 0.99999999999999956 0
+		 0.052568700000000343 2.3595315559212189 -3.2448215275035501 1;
+	setAttr ".wm[42]" -type "matrix" 0.97437006478523513 -1.3468994060639251e-14 -0.22495105434386495 0
+		 1.9596637520387511e-17 0.99999999999999989 -5.9985846998925977e-14 0 0.22495105434386484 5.8038564680585396e-14 0.97437006478523491 0
+		 0.052568700000000308 1.7457869165752407 -3.1579196316669522 1;
+	setAttr ".wm[43]" -type "matrix" 0.2366232308265484 -0.97089723499141045 0.036986561333005791 0
+		 0.95924938124237247 0.23949646988219714 0.14994020641606404 0 -0.15443468269573424 1.5011369661783348e-16 0.98800300039051903 0
+		 0.052568700000000003 2.2471899999999998 -0.65973199999999999 1;
+	setAttr ".wm[44]" -type "matrix" 0.010833394824092664 -0.99993713975942422 -0.0028903436347943352 0
+		 0.98627331865540901 0.010208986663624188 0.16480508942307764 0 -0.16476522225588755 -0.0046360674114833246 0.98632191926060542 0
+		 0.33054814194744758 1.1066026171446419 -0.61628105208170125 1;
+	setAttr ".wm[45]" -type "matrix" 0.25293894606021472 -0.036900771251797998 0.96677826963940927 0
+		 -0.0015150606332932021 0.9992560332616659 0.038536795163037992 0 -0.96748105622654224 -0.011212184050531218 0.25269486099165483 0
+		 0.34202197300802306 0.047552337976430659 -0.61934226374352386 1;
+	setAttr ".wm[46]" -type "matrix" 0.32992089441454975 0.00084570836926685172 0.9440082034633267 0
+		 -0.010833394824091944 0.99993713975942422 0.002890343634795553 0 -0.94394641849274974 -0.011180398342457109 0.32990931740042617 0
+		 0.64031592047104313 0.0040348137177961541 0.52079100107823606 1;
+	setAttr ".wm[47]" -type "matrix" 0.99988646285503857 0.010802479054255227 0.010505610192768799 0
+		 -0.010833394824091944 0.99993713975942422 0.002890343634795553 0 -0.010473726931010341 -0.0030038268965176273 0.99994063727210847 0
+		 0.96926140166068664 0.004878021744885051 1.4620082382776265 1;
+	setAttr ".wm[48]" -type "matrix" -0.012460827714085054 -0.99991686898226173 -0.0033140454720270588 0
+		 0.98971431964796386 -0.012805921294011037 0.14248359155909879 0 -0.14251418615860109 -0.0015044947731277639 0.98979161606826571 0
+		 -0.32579246514768967 1.1066 -0.61628100000000063 1;
+	setAttr ".wm[49]" -type "matrix" -0.25147759478683934 -0.036919011267234771 0.96715872840360384 0
+		 0.0031974694370025822 0.99923507621135454 0.038974846479340811 0 -0.96785783848116147 0.012893761124611722 -0.2511671861821041 0
+		 -0.33898990472343088 0.047573845241347223 -0.61979095261887029 1;
+	setAttr ".wm[50]" -type "matrix" -0.32843490731291436 0.00096244830397066231 0.94452611681817433 0
+		 0.012460827714082691 0.99991686898226162 0.0033140454720277657 0 -0.94444440780335903 0.012858025430559018 -0.328419597087308 0
+		 -0.6355604651476896 0.0040348099999997153 0.52079099999999934 1;
+	setAttr ".wm[51]" -type "matrix" 0.99984985046069386 -0.012419942488340135 -0.012083938195593946 0
+		 -0.012460827714082877 -0.99991686898226162 -0.0033140454720272305 0 -0.012041773391347099 0.0034641237415893472 -0.99992149468860525 0
+		 -0.96302291444799837 0.0049944086051598394 1.4625204835433148 1;
+	setAttr -s 52 ".xm";
+	setAttr ".xm[0]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr ".xm[1]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr ".xm[2]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr ".xm[3]" -type "matrix" "xform" 1 1 1 -5.5511151231257827e-17 -1.5407439555097887e-33
+		 -5.5511151231257827e-17 0 0.052568655248183591 2.2471876375517685 -0.65973157116790793 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.42874848340547056 0.51407961154467741 0.47581988976281414 0.57051934540178895 1
+		 1 1 yes;
+	setAttr ".xm[4]" -type "matrix" "xform" 1 1 1 -1.5146304349622494e-16 1.5135462327897644e-16
+		 2.2204460492503131e-16 0 0.029956857169113338 0.01902988238709441 -0.00017871064775802983 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.96020070172540795 0.27923067322360939 -0.00068506107479910923 0.0066613983853225965 1
+		 1 1 yes;
+	setAttr ".xm[5]" -type "matrix" "xform" 1 1 1 -0.00033395125491627686 -0.0119359179101704
+		 0.055942106848020832 0 1.1583903733658081 2.2204460492503131e-16 -2.5326962749261384e-15 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.062220595682772384 0.050443686360440276 -0.29053605270813188 0.95350555009188498 1
+		 1 1 yes;
+	setAttr ".xm[6]" -type "matrix" "xform" 1 1 1 -0.0019412384837387178 0.033789756941954123
+		 -0.11476397968888349 0 1.4755618512226758 -5.1514662874364002e-16 -2.3255057653615781e-17 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.037827543721810318 -0.040321793539068403 0.15878624156796028 0.98576374420572443 1
+		 1 1 yes;
+	setAttr ".xm[7]" -type "matrix" "xform" 1 1 1 -0.010687348134815366 -0.0017816249807230565
+		 0.061476181242780571 0 1.2725914720835168 -3.9367729606306581e-16 5.6775595223472868e-17 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.10859744007894694 0.054848786251107159 0.18736306330212757 0.97472728963804156 1
+		 1 1 yes;
+	setAttr ".xm[8]" -type "matrix" "xform" 1 1 1 4.1980308118638702e-16 4.5709963591988877e-16
+		 -7.7715611723760928e-16 0 1.9260380991271058 0.2028676078400006 0.0023418315474737035 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.93315010770253914 0.35777417146637108 -0.0030920297215020643 0.034913580144303895 1
+		 1 1 yes;
+	setAttr ".xm[9]" -type "matrix" "xform" 1 1 1 4.1459891075845699e-16 -3.05311331771918e-16
+		 -3.3306690738754706e-16 0 3.2419704171083357 1.3737060785670636 -0.032739220382664233 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.95726932398582854 0.28428784773540572 0.0087562355579536271 0.052337265161061873 1
+		 1 1 yes;
+	setAttr ".xm[10]" -type "matrix" "xform" 1 1 1 -1.6653345369377348e-16 -5.5511151231257827e-17
+		 4.622231866529366e-33 0 1.2120329264670895 -1.3615172632703004e-16 1.2944672086325584e-15 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 -0.099255825925948504 0.99506194833274464 1
+		 1 1 yes;
+	setAttr ".xm[11]" -type "matrix" "xform" 1 1 1 0 0 0 0 1.8797115999269673 -4.3741186228224244e-16
+		 9.8990260433140202e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.41345212479623833 0.57363519810196073 -0.41345212479623827 0.57363519810196084 1
+		 1 1 yes;
+	setAttr ".xm[12]" -type "matrix" "xform" 1 1 1 0 0 0 0 1.1590364492381946 -0.74660656455878438
+		 -0.58199323826114302 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.41345212479623833 0.57363519810196073 -0.41345212479623827 0.57363519810196084 1
+		 1 1 yes;
+	setAttr ".xm[13]" -type "matrix" "xform" 1 1 1 0 0 0 0 1.1590364492381953 -0.74660656455878016
+		 0.58380082281577994 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.41345212479623833 0.57363519810196073 -0.41345212479623827 0.57363519810196084 1
+		 1 1 yes;
+	setAttr ".xm[14]" -type "matrix" "xform" 1 1 1 0 0 0 0 0.75806079315918073 -1.3717214618475697
+		 5.3065858216563626e-14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr ".xm[15]" -type "matrix" "xform" 1 1 1 2.2204460492503131e-16 0 0 0 0.13896094288229754
+		 -0.23104060551512756 5.621417363560744e-15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+		0 0 -0.98601219601585943 0.16667318112996554 1 1 1 yes;
+	setAttr ".xm[16]" -type "matrix" "xform" 1 1 1 2.4980018043972769e-16 -7.4211925667200251e-13
+		 2.7201157992706716e-13 0 0.093953754024779124 0.91504237626540053 -7.3137312081541115e-14 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.4966999205077744 0.50327844079353379 0.49669992050777428 0.5032784407935339 1
+		 1 1 yes;
+	setAttr ".xm[17]" -type "matrix" "xform" 1 1 1 -5.5511151231401276e-17 -9.8254737679326338e-15
+		 2.9198865547641617e-14 0 -0.17688006848990057 -0.34095943865386064 5.6214173635607693e-15 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.41345212479623894 0.57363519810196029 -0.41345212479623888 0.5736351981019604 1
+		 1 1 yes;
+	setAttr ".xm[18]" -type "matrix" "xform" 1 1 1 0 0 0 0 5.8678198979917556e-14
+		 0.0094211433618358598 0.76434060471342624 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+		0 0 0 1 1 1 1 yes;
+	setAttr ".xm[19]" -type "matrix" "xform" 1 1 1 -2.2204460492503131e-16 5.5511151231257839e-17
+		 1.1102230246251565e-16 0 0.014614852025387925 -1.5935290538282056 -0.39339326461244239 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.38680887777622414 0.51253072542053257 -0.46180611354425916 0.61190380050016657 1
+		 1 1 yes;
+	setAttr ".xm[20]" -type "matrix" "xform" 1 1 1 0 0 0 0 0.064661373828039492
+		 -4.1156183446133809e-05 0.14915276531383226 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+		0 0 0 1 1 1 1 yes;
+	setAttr ".xm[21]" -type "matrix" "xform" 1 1 1 0 0 0 0 -0.20323221391062093
+		 -1.5933088403598463 -1.2133781562650825 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.66209092444641582 0.64347312496828424 -0.043524701294597901 0.38168513933143572 1
+		 1 1 yes;
+	setAttr ".xm[22]" -type "matrix" "xform" 1 1 1 -0.056089668419984084 -0.015296932916133016
+		 0.023141464957851247 0 1.659135990743438 3.9803893540237137e-16 1.1834018199534041e-15 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.13162604768434866 -0.42914553865384003 -0.33849997624963601 0.82699846209258399 1
+		 1 1 yes;
+	setAttr ".xm[23]" -type "matrix" "xform" 1 1 1 7.3552275381416611e-16 3.1311758741381398e-16
+		 -7.7715611723760948e-16 0 3.531284717817833 3.8493243737772255e-16 1.9674438326683829e-16 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.071506109659361938 0.46926535667584529 -0.053054767393304211 0.87855682398016666 1
+		 1 1 yes;
+	setAttr ".xm[24]" -type "matrix" "xform" 1 1 1 7.2164496600635175e-15 -1.1275702593848871e-16
+		 -1.0408340855860847e-15 0 2.348698271561064 -0.048030550425048446 0.11036265546578417 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.069065037907404384 0.65056510446553539 0.07984174266493739 0.75207736405161263 1
+		 1 1 yes;
+	setAttr ".xm[25]" -type "matrix" "xform" 1 1 1 0 0 0 0 0.19191498831556508 -0.074214866555317727
+		 0.55248516048827145 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0.89099387570234967 0 -0.45401532293624841 1
+		 1 1 yes;
+	setAttr ".xm[26]" -type "matrix" "xform" 1 1 1 -1.2392864512378311e-14 -3.4000580129145843e-16
+		 -6.8001160258290641e-16 0 2.4325845781509781 0.15873476632186101 -0.7516497171128691 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.076774338925055474 0.7231836445238029 0.072459535021596175 0.68253991308958961 1
+		 1 1 yes;
+	setAttr ".xm[27]" -type "matrix" "xform" 1 1 1 0 0 0 0 -0.11386258070484345
+		 -0.36596624469801897 0.88165843119876541 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0.93228554336043601 0 -0.3617231892499243 1
+		 1 1 yes;
+	setAttr ".xm[28]" -type "matrix" "xform" 1 1 1 -7.9103390504542492e-16 2.1328425137134839e-15
+		 -8.4307560932472914e-16 0 2.390997303813287 0.1344759710962542 -1.542216632601884 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.039781918250727813 -0.37472979942937956 0.09778590038046224 0.92110417113738641 1
+		 1 1 yes;
+	setAttr ".xm[29]" -type "matrix" "xform" 1 1 1 0 0 0 0 0.47762762577508067 -0.16346015467008179
+		 -0.25130568515493379 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr ".xm[30]" -type "matrix" "xform" 1 1 1 0 0 0 0 -0.10956793597871894
+		 -1.7145996371691734 1.0489788433159142 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.64195848543219114 -0.62390521582494574 -0.050494535043399069 0.44281134423000723 1
+		 1 1 yes;
+	setAttr ".xm[31]" -type "matrix" "xform" 1 1 1 0.06209969124180225 -0.0052844018225304875
+		 0.0031899520982898899 0 1.6591426085180248 6.9200987930679193e-16 -5.3117809654858546e-16 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.13162532903596566 0.4291428793995869 -0.33850243377118938 0.82699895051190186 1
+		 1 1 yes;
+	setAttr ".xm[32]" -type "matrix" "xform" 1 1 1 -1.1657341758564144e-15 -5.2041704279308018e-18
+		 -6.5225602696727947e-16 0 3.53127856601543 -7.0946093997862791e-16 -1.2602652839421572e-15 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.06942355438743314 -0.45709048630310084 -0.053017360479625852 0.88512022737884777 1
+		 1 1 yes;
+	setAttr ".xm[33]" -type "matrix" "xform" 1 1 1 0 0 0 0 2.562952014835461 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr ".xm[34]" -type "matrix" "xform" 1 1 1 -8.8817841970012247e-16 -5.3290705182007514e-15
+		 -9.6450625264310218e-16 0 0.376 -8.8817841970012523e-16 -8.8817841970012523e-16 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.36183641165432839 -0.038234861254197991 -0.92630005530905379 0.097881122390557865 1
+		 1 1 yes;
+	setAttr ".xm[35]" -type "matrix" "xform" 1 1 1 0 0 0 0 2.5312181259378121 0.19324416657406723
+		 0.84876027414346222 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr ".xm[36]" -type "matrix" "xform" 1 1 1 0 0 0 0 0.81614023768668975 -0.215637069672697
+		 -0.12582540005746479 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.36183641165432834 -0.038234861254197984 -0.9263000553090539 0.097881122390557879 1
+		 1 1 yes;
+	setAttr ".xm[37]" -type "matrix" "xform" 1 1 1 0 0 0 0 2.2658938794676908 0.19259102007527595
+		 1.5991309822817952 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr ".xm[38]" -type "matrix" "xform" 1 1 1 0 0 0 0 0.62632261206445561 -0.19259102007527612
+		 -0.13036361054292422 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.36183641165432828 -0.038234861254197977 -0.9263000553090539 0.097881122390557879 1
+		 1 1 yes;
+	setAttr ".xm[39]" -type "matrix" "xform" 1 1 1 9.3675067702747583e-16 6.9388939039072543e-17
+		 -5.5511151231257827e-16 0 0.41277982165463273 1.158558434947804 0.15964600536801024 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.56031202501315691 -0.82704965388346596 -0.025119391528401275 0.037527600591266037 1
+		 1 1 yes;
+	setAttr ".xm[40]" -type "matrix" "xform" 1 1 1 -2.3632137913232043e-14 1.3322777939455474e-15
+		 -6.3881192002847499e-16 0 1.9453706335444658 -1.4259426972529354e-15 -4.2327252813834093e-16 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.0019495034368303898 -0.69748459363677107 -0.0020029160728826522 0.71659432694021741 1
+		 1 1 yes;
+	setAttr ".xm[41]" -type "matrix" "xform" 1 1 1 -2.3632137913232043e-14 1.3322777939455474e-15
+		 -6.3881192002847499e-16 0 1.6642864164470421 -0.74796926231596861 0.0074853327616356546 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.0019495034368303898 -0.69748459363677107 -0.0020029160728826522 0.71659432694021741 1
+		 1 1 yes;
+	setAttr ".xm[42]" -type "matrix" "xform" 1 1 1 -2.4252828864551673e-14 0.22689280275926421
+		 -6.0940905754641037e-15 0 1.5739867475961808 -1.3612187033528484 0.0098336724515600618 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.0019495034368303898 -0.69748459363677107 -0.0020029160728826522 0.71659432694021741 1
+		 1 1 yes;
+	setAttr ".xm[43]" -type "matrix" "xform" 1 1 1 -2.246689559234959e-16 9.6904997895435234e-17
+		 -1.1120833314381413e-17 0 2.4014706605851482e-06 1.0587911840678754e-22 -7.411538288475128e-22 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.022225827994302186 -0.72459092365665811 -0.67351760709219133 0.14438849975384876 1
+		 1 1 yes;
+	setAttr ".xm[44]" -type "matrix" "xform" 1 1 1 0.010513417298825918 0.0045287355558065109
+		 0.010257342339479607 0 1.1747766310874792 1.5612511283791264e-17 -2.3592239273284576e-16 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 -0.12062911134670119 0.99269764656500781 1
+		 1 1 yes;
+	setAttr ".xm[45]" -type "matrix" "xform" 1 1 1 0 0 0 0 1.0591168555085464 -1.0654679393101354e-16
+		 -1.105927624620274e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.39149982060057148 -0.37733147825237473 0.58240775807339884 0.60427646762513876 1
+		 1 1 yes;
+	setAttr ".xm[46]" -type "matrix" "xform" 1 1 1 0 0 0 0 1.1793120518182612 -3.0531133177191805e-16
+		 2.2204460492503131e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.00074365792926067503 0.04035387327640038 0.01841027332934676 0.99901555229156225 1
+		 1 1 yes;
+	setAttr ".xm[47]" -type "matrix" "xform" 1 1 1 0 0 0 0 0.99704349363310973 3.0824782898846124e-16
+		 -6.106226635438361e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0.57453896556741846 0 0.81847723062081623 1
+		 1 1 yes;
+	setAttr ".xm[48]" -type "matrix" "xform" 1 1 1 -0.012072305181761757 0.001349903305617
+		 -0.01282350186445085 0 1.0194737390187893 -0.6295949402280151 0.10136180485393928 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 -0.12062911134670118 0.99269764656500781 1
+		 1 1 yes;
+	setAttr ".xm[49]" -type "matrix" "xform" 1 1 1 3.219102402863612e-32 3.0827496079007425e-20
+		 -2.8312505756363778e-16 0 1.0591141999999998 -2.2087832354345335e-16 -2.2579165878911083e-17 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.53656586804825346 -0.51714758049980514 0.46274853151368678 0.48012419831825626 1
+		 1 1 yes;
+	setAttr ".xm[50]" -type "matrix" "xform" 1 1 1 0 0 0 0 1.179312060287683 -6.8695049648681561e-16
+		 1.1102230246251565e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.00074366849032130738 -0.040354407542784493 0.018410290635546757 0.9990155303836683 1
+		 1 1 yes;
+	setAttr ".xm[51]" -type "matrix" "xform" 1 1 1 0 0 0 0 0.9970391149328095 6.1313117280213447e-16
+		 1.3877787807814457e-15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.57453844878509752 1.6275349648931507e-16 -0.81847759338152548 2.3185583210781696e-16 1
+		 1 1 yes;
+	setAttr -s 52 ".m";
+	setAttr -s 52 ".p";
+	setAttr -s 52 ".g[0:51]" yes yes yes no no no no no no no no no no 
+		no no no no no no no no no no no no no no no no no no no no no no no no no no no 
+		no no no no no no no no no no no no;
+	setAttr ".bp" yes;
+createNode geomBind -n "geomBind7";
+	rename -uid "F288D633-4213-C607-CEF7-D4AA37CA0E8D";
 	setAttr ".mi" 1;
-createNode pairBlend -n "pairBlend1";
-	rename -uid "0950D87A-4FB7-D608-AF15-CDA4E46A2C4D";
-	setAttr ".rm" 2;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -25356,99 +19065,26 @@ connectAttr "duck_baseRN.phl[10]" "groupParts18.ig";
 connectAttr "duck_baseRN.phl[11]" "groupParts21.ig";
 connectAttr "duck_baseRN.phl[12]" "groupParts32.ig";
 connectAttr "duck_baseRN.phl[13]" "polySurface2ShapeDeformed.iog.og[2].gco";
-connectAttr "duck_eyesShapeDeformed.iog" "duck_baseRN.phl[14]";
-connectAttr "polySurface2ShapeDeformed.iog.og[2]" "duck_baseRN.phl[15]";
-connectAttr "duck_baseRN.phl[16]" "duck_baseRN.phl[17]";
-connectAttr "duck_baseRN.phl[18]" "polySurface2ShapeDeformed.iog.og[2].gid";
-connectAttr "transformGeometry1.og" "police_hatRN.phl[1]";
-connectAttr "police_hatRN.phl[2]" "groupParts34.ig";
-connectAttr "police_hatRN.phl[3]" "pCubeShape1Deformed.uvst[0].uvtw";
-connectAttr "police_hatRN.phl[4]" "pCubeShape1Deformed.iog.og[2].gco";
-connectAttr "pCubeShape1Deformed.iog.og[2]" "police_hatRN.phl[5]";
-connectAttr "police_hatRN.phl[6]" "police_hatRN.phl[7]";
-connectAttr "police_hatRN.phl[8]" "pCubeShape1Deformed.iog.og[3].gco";
-connectAttr "pCubeShape1Deformed.iog.og[3]" "police_hatRN.phl[9]";
-connectAttr "police_hatRN.phl[10]" "police_hatRN.phl[11]";
-connectAttr "police_hatRN.phl[12]" "pCubeShape1Deformed.iog.og[2].gid";
-connectAttr "police_hatRN.phl[13]" "pCubeShape1Deformed.iog.og[3].gid";
-connectAttr "police_hatRN.phl[14]" "pCubeShape1Deformed.iog.og[4].gco";
-connectAttr "pCubeShape1Deformed.iog.og[4]" "police_hatRN.phl[15]";
-connectAttr "police_hatRN.phl[16]" "police_hatRN.phl[17]";
-connectAttr "police_hatRN.phl[18]" "pCubeShape1Deformed.iog.og[4].gid";
-connectAttr "police_hatRN.phl[19]" "transformGeometry1.ig";
+connectAttr "polySurface2ShapeDeformed.iog.og[2]" "duck_baseRN.phl[14]";
+connectAttr "duck_baseRN.phl[15]" "duck_baseRN.phl[16]";
+connectAttr "duck_baseRN.phl[17]" "polySurface2ShapeDeformed.iog.og[2].gid";
+connectAttr "police_hatRN.phl[20]" "groupParts38.ig";
+connectAttr "police_hatRN.phl[21]" "police_hatShapeDeformed.iog.og[2].gco";
+connectAttr "police_hatShapeDeformed.iog.og[2]" "police_hatRN.phl[22]";
+connectAttr "police_hatRN.phl[23]" "police_hatRN.phl[24]";
+connectAttr "police_hatRN.phl[25]" "police_hatShapeDeformed.iog.og[3].gco";
+connectAttr "police_hatShapeDeformed.iog.og[3]" "police_hatRN.phl[26]";
+connectAttr "police_hatRN.phl[27]" "police_hatRN.phl[28]";
+connectAttr "police_hatRN.phl[29]" "police_hatRN.phl[30]";
+connectAttr "police_hatRN.phl[31]" "police_hatShapeDeformed.iog.og[4].gco";
+connectAttr "police_hatShapeDeformed.iog.og[4]" "police_hatRN.phl[32]";
+connectAttr "police_hatRN.phl[33]" "police_hatRN.phl[34]";
+connectAttr "police_hatRN.phl[35]" "police_hatRN.phl[36]";
+connectAttr "police_hatRN.phl[37]" "police_hatShapeDeformed.iog.og[2].gid";
+connectAttr "police_hatRN.phl[38]" "police_hatShapeDeformed.iog.og[3].gid";
+connectAttr "police_hatRN.phl[39]" "police_hatShapeDeformed.iog.og[4].gid";
 connectAttr "police_badgeRN.phl[1]" "groupParts36.ig";
 connectAttr "police_badge_GEOShapeDeformed.iog" "police_badgeRN.phl[2]";
-connectAttr "skinCluster4GroupId.id" "duck_eyesShapeDeformed.iog.og[0].gid";
-connectAttr "skinCluster4Set.mwc" "duck_eyesShapeDeformed.iog.og[0].gco";
-connectAttr "groupId10.id" "duck_eyesShapeDeformed.iog.og[1].gid";
-connectAttr "tweakSet4.mwc" "duck_eyesShapeDeformed.iog.og[1].gco";
-connectAttr "skinCluster4.og[0]" "duck_eyesShapeDeformed.i";
-connectAttr "tweak4.vl[0].vt[0]" "duck_eyesShapeDeformed.twl";
-connectAttr "skinCluster11GroupId.id" "polySurface2ShapeDeformed.iog.og[0].gid";
-connectAttr "skinCluster11Set.mwc" "polySurface2ShapeDeformed.iog.og[0].gco";
-connectAttr "groupId32.id" "polySurface2ShapeDeformed.iog.og[1].gid";
-connectAttr "tweakSet11.mwc" "polySurface2ShapeDeformed.iog.og[1].gco";
-connectAttr "skinCluster11.og[0]" "polySurface2ShapeDeformed.i";
-connectAttr "tweak11.vl[0].vt[0]" "polySurface2ShapeDeformed.twl";
-connectAttr "skinCluster8GroupId.id" "l_duck_wingShapeDeformed.iog.og[0].gid";
-connectAttr "skinCluster8Set.mwc" "l_duck_wingShapeDeformed.iog.og[0].gco";
-connectAttr "groupId21.id" "l_duck_wingShapeDeformed.iog.og[1].gid";
-connectAttr "tweakSet8.mwc" "l_duck_wingShapeDeformed.iog.og[1].gco";
-connectAttr "groupId22.id" "l_duck_wingShapeDeformed.iog.og[2].gid";
-connectAttr ":initialShadingGroup.mwc" "l_duck_wingShapeDeformed.iog.og[2].gco";
-connectAttr "groupParts22.og" "l_duck_wingShapeDeformed.i";
-connectAttr "tweak8.vl[0].vt[0]" "l_duck_wingShapeDeformed.twl";
-connectAttr "skinCluster7GroupId.id" "r__duck_wingShapeDeformed.iog.og[0].gid";
-connectAttr "skinCluster7Set.mwc" "r__duck_wingShapeDeformed.iog.og[0].gco";
-connectAttr "groupId18.id" "r__duck_wingShapeDeformed.iog.og[1].gid";
-connectAttr "tweakSet7.mwc" "r__duck_wingShapeDeformed.iog.og[1].gco";
-connectAttr "groupId19.id" "r__duck_wingShapeDeformed.iog.og[2].gid";
-connectAttr ":initialShadingGroup.mwc" "r__duck_wingShapeDeformed.iog.og[2].gco"
-		;
-connectAttr "groupParts19.og" "r__duck_wingShapeDeformed.i";
-connectAttr "tweak7.vl[0].vt[0]" "r__duck_wingShapeDeformed.twl";
-connectAttr "skinCluster6GroupId.id" "l_legShapeDeformed.iog.og[0].gid";
-connectAttr "skinCluster6Set.mwc" "l_legShapeDeformed.iog.og[0].gco";
-connectAttr "groupId15.id" "l_legShapeDeformed.iog.og[1].gid";
-connectAttr "tweakSet6.mwc" "l_legShapeDeformed.iog.og[1].gco";
-connectAttr "groupId16.id" "l_legShapeDeformed.iog.og[2].gid";
-connectAttr ":initialShadingGroup.mwc" "l_legShapeDeformed.iog.og[2].gco";
-connectAttr "groupParts16.og" "l_legShapeDeformed.i";
-connectAttr "tweak6.vl[0].vt[0]" "l_legShapeDeformed.twl";
-connectAttr "skinCluster5GroupId.id" "r_legShapeDeformed.iog.og[0].gid";
-connectAttr "skinCluster5Set.mwc" "r_legShapeDeformed.iog.og[0].gco";
-connectAttr "groupId12.id" "r_legShapeDeformed.iog.og[1].gid";
-connectAttr "tweakSet5.mwc" "r_legShapeDeformed.iog.og[1].gco";
-connectAttr "groupId13.id" "r_legShapeDeformed.iog.og[2].gid";
-connectAttr ":initialShadingGroup.mwc" "r_legShapeDeformed.iog.og[2].gco";
-connectAttr "groupParts13.og" "r_legShapeDeformed.i";
-connectAttr "tweak5.vl[0].vt[0]" "r_legShapeDeformed.twl";
-connectAttr "skinCluster10GroupId.id" "duck_beakShapeDeformed.iog.og[4].gid";
-connectAttr "skinCluster10Set.mwc" "duck_beakShapeDeformed.iog.og[4].gco";
-connectAttr "groupId30.id" "duck_beakShapeDeformed.iog.og[5].gid";
-connectAttr "tweakSet10.mwc" "duck_beakShapeDeformed.iog.og[5].gco";
-connectAttr "skinCluster10.og[0]" "duck_beakShapeDeformed.i";
-connectAttr "tweak10.vl[0].vt[0]" "duck_beakShapeDeformed.twl";
-connectAttr "skinCluster2GroupId.id" "duck_bodyShapeDeformed.iog.og[0].gid";
-connectAttr "skinCluster2Set.mwc" "duck_bodyShapeDeformed.iog.og[0].gco";
-connectAttr "groupId5.id" "duck_bodyShapeDeformed.iog.og[1].gid";
-connectAttr "tweakSet2.mwc" "duck_bodyShapeDeformed.iog.og[1].gco";
-connectAttr "groupId6.id" "duck_bodyShapeDeformed.iog.og[2].gid";
-connectAttr ":initialShadingGroup.mwc" "duck_bodyShapeDeformed.iog.og[2].gco";
-connectAttr "groupId28.id" "duck_bodyShapeDeformed.iog.og[6].gid";
-connectAttr "groupParts28.og" "duck_bodyShapeDeformed.i";
-connectAttr "tweak2.vl[0].vt[0]" "duck_bodyShapeDeformed.twl";
-connectAttr "skinCluster1GroupId.id" "duck_wings_folded1ShapeDeformed.iog.og[0].gid"
-		;
-connectAttr "skinCluster1Set.mwc" "duck_wings_folded1ShapeDeformed.iog.og[0].gco"
-		;
-connectAttr "groupId2.id" "duck_wings_folded1ShapeDeformed.iog.og[1].gid";
-connectAttr "tweakSet1.mwc" "duck_wings_folded1ShapeDeformed.iog.og[1].gco";
-connectAttr "groupId3.id" "duck_wings_folded1ShapeDeformed.iog.og[2].gid";
-connectAttr ":initialShadingGroup.mwc" "duck_wings_folded1ShapeDeformed.iog.og[2].gco"
-		;
-connectAttr "groupParts3.og" "duck_wings_folded1ShapeDeformed.i";
-connectAttr "tweak1.vl[0].vt[0]" "duck_wings_folded1ShapeDeformed.twl";
 connectAttr "root_parentConstraint1.ctx" "root.tx";
 connectAttr "root_parentConstraint1.cty" "root.ty";
 connectAttr "root_parentConstraint1.ctz" "root.tz";
@@ -25873,14 +19509,6 @@ connectAttr "r_wing_elbow_CTRL_scaleY.o" "|Swan|RIG|CTRLs|master_CTRL|whole_body
 		;
 connectAttr "r_wing_elbow_CTRL_scaleZ.o" "|Swan|RIG|CTRLs|master_CTRL|whole_body_sansFeet_CTRL_GRP|whole_body_sansFeet_CTRL|chest_CTRL_GRP|chest_CTRL|l_wing_shoulder_CTRL_GRP|l_wing_shoulder_CTRL|r_wing_elbow_CTRL_GRP|r_wing_elbow_CTRL.sz"
 		;
-connectAttr "l_foot_CTRL_ToeBend.o" "l_foot_CTRL.ToeBend";
-connectAttr "l_foot_CTRL_translateX.o" "l_foot_CTRL.tx";
-connectAttr "l_foot_CTRL_translateY.o" "l_foot_CTRL.ty";
-connectAttr "l_foot_CTRL_translateZ.o" "l_foot_CTRL.tz";
-connectAttr "l_foot_CTRL_rotateX.o" "l_foot_CTRL.rx";
-connectAttr "l_foot_CTRL_rotateY.o" "l_foot_CTRL.ry";
-connectAttr "l_foot_CTRL_rotateZ.o" "l_foot_CTRL.rz";
-connectAttr "l_foot_CTRL_visibility.o" "l_foot_CTRL.v";
 connectAttr "r_leg.msg" "r_foot_IK.hsj";
 connectAttr "effector1.hp" "r_foot_IK.hee";
 connectAttr "ikRPsolver.msg" "r_foot_IK.hsv";
@@ -25953,12 +19581,77 @@ connectAttr "spine2.msg" "spine_spline_IK.hsj";
 connectAttr "effector3.hp" "spine_spline_IK.hee";
 connectAttr "ikSplineSolver.msg" "spine_spline_IK.hsv";
 connectAttr "spine_spline_curveShape.ws" "spine_spline_IK.ic";
-connectAttr "skinCluster12GroupId.id" "pCubeShape1Deformed.iog.og[0].gid";
-connectAttr "skinCluster12Set.mwc" "pCubeShape1Deformed.iog.og[0].gco";
-connectAttr "groupId34.id" "pCubeShape1Deformed.iog.og[1].gid";
-connectAttr "tweakSet12.mwc" "pCubeShape1Deformed.iog.og[1].gco";
-connectAttr "skinCluster12.og[0]" "pCubeShape1Deformed.i";
-connectAttr "tweak12.vl[0].vt[0]" "pCubeShape1Deformed.twl";
+connectAttr "skinCluster11GroupId.id" "polySurface2ShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster11Set.mwc" "polySurface2ShapeDeformed.iog.og[0].gco";
+connectAttr "groupId32.id" "polySurface2ShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet11.mwc" "polySurface2ShapeDeformed.iog.og[1].gco";
+connectAttr "skinCluster11.og[0]" "polySurface2ShapeDeformed.i";
+connectAttr "tweak11.vl[0].vt[0]" "polySurface2ShapeDeformed.twl";
+connectAttr "skinCluster8GroupId.id" "l_duck_wingShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster8Set.mwc" "l_duck_wingShapeDeformed.iog.og[0].gco";
+connectAttr "groupId21.id" "l_duck_wingShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet8.mwc" "l_duck_wingShapeDeformed.iog.og[1].gco";
+connectAttr "groupId22.id" "l_duck_wingShapeDeformed.iog.og[2].gid";
+connectAttr ":initialShadingGroup.mwc" "l_duck_wingShapeDeformed.iog.og[2].gco";
+connectAttr "groupParts22.og" "l_duck_wingShapeDeformed.i";
+connectAttr "tweak8.vl[0].vt[0]" "l_duck_wingShapeDeformed.twl";
+connectAttr "skinCluster7GroupId.id" "r__duck_wingShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster7Set.mwc" "r__duck_wingShapeDeformed.iog.og[0].gco";
+connectAttr "groupId18.id" "r__duck_wingShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet7.mwc" "r__duck_wingShapeDeformed.iog.og[1].gco";
+connectAttr "groupId19.id" "r__duck_wingShapeDeformed.iog.og[2].gid";
+connectAttr ":initialShadingGroup.mwc" "r__duck_wingShapeDeformed.iog.og[2].gco"
+		;
+connectAttr "groupParts19.og" "r__duck_wingShapeDeformed.i";
+connectAttr "tweak7.vl[0].vt[0]" "r__duck_wingShapeDeformed.twl";
+connectAttr "skinCluster6GroupId.id" "l_legShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster6Set.mwc" "l_legShapeDeformed.iog.og[0].gco";
+connectAttr "groupId15.id" "l_legShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet6.mwc" "l_legShapeDeformed.iog.og[1].gco";
+connectAttr "groupId16.id" "l_legShapeDeformed.iog.og[2].gid";
+connectAttr ":initialShadingGroup.mwc" "l_legShapeDeformed.iog.og[2].gco";
+connectAttr "groupParts16.og" "l_legShapeDeformed.i";
+connectAttr "tweak6.vl[0].vt[0]" "l_legShapeDeformed.twl";
+connectAttr "skinCluster5GroupId.id" "r_legShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster5Set.mwc" "r_legShapeDeformed.iog.og[0].gco";
+connectAttr "groupId12.id" "r_legShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet5.mwc" "r_legShapeDeformed.iog.og[1].gco";
+connectAttr "groupId13.id" "r_legShapeDeformed.iog.og[2].gid";
+connectAttr ":initialShadingGroup.mwc" "r_legShapeDeformed.iog.og[2].gco";
+connectAttr "groupParts13.og" "r_legShapeDeformed.i";
+connectAttr "tweak5.vl[0].vt[0]" "r_legShapeDeformed.twl";
+connectAttr "skinCluster10GroupId.id" "duck_beakShapeDeformed.iog.og[4].gid";
+connectAttr "skinCluster10Set.mwc" "duck_beakShapeDeformed.iog.og[4].gco";
+connectAttr "groupId30.id" "duck_beakShapeDeformed.iog.og[5].gid";
+connectAttr "tweakSet10.mwc" "duck_beakShapeDeformed.iog.og[5].gco";
+connectAttr "skinCluster10.og[0]" "duck_beakShapeDeformed.i";
+connectAttr "tweak10.vl[0].vt[0]" "duck_beakShapeDeformed.twl";
+connectAttr "skinCluster2GroupId.id" "duck_bodyShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster2Set.mwc" "duck_bodyShapeDeformed.iog.og[0].gco";
+connectAttr "groupId5.id" "duck_bodyShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet2.mwc" "duck_bodyShapeDeformed.iog.og[1].gco";
+connectAttr "groupId6.id" "duck_bodyShapeDeformed.iog.og[2].gid";
+connectAttr ":initialShadingGroup.mwc" "duck_bodyShapeDeformed.iog.og[2].gco";
+connectAttr "groupId28.id" "duck_bodyShapeDeformed.iog.og[6].gid";
+connectAttr "groupParts28.og" "duck_bodyShapeDeformed.i";
+connectAttr "tweak2.vl[0].vt[0]" "duck_bodyShapeDeformed.twl";
+connectAttr "skinCluster1GroupId.id" "duck_wings_folded1ShapeDeformed.iog.og[0].gid"
+		;
+connectAttr "skinCluster1Set.mwc" "duck_wings_folded1ShapeDeformed.iog.og[0].gco"
+		;
+connectAttr "groupId2.id" "duck_wings_folded1ShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet1.mwc" "duck_wings_folded1ShapeDeformed.iog.og[1].gco";
+connectAttr "groupId3.id" "duck_wings_folded1ShapeDeformed.iog.og[2].gid";
+connectAttr ":initialShadingGroup.mwc" "duck_wings_folded1ShapeDeformed.iog.og[2].gco"
+		;
+connectAttr "groupParts3.og" "duck_wings_folded1ShapeDeformed.i";
+connectAttr "tweak1.vl[0].vt[0]" "duck_wings_folded1ShapeDeformed.twl";
+connectAttr "skinCluster14GroupId.id" "police_hatShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster14Set.mwc" "police_hatShapeDeformed.iog.og[0].gco";
+connectAttr "groupId38.id" "police_hatShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet14.mwc" "police_hatShapeDeformed.iog.og[1].gco";
+connectAttr "skinCluster14.og[0]" "police_hatShapeDeformed.i";
+connectAttr "tweak14.vl[0].vt[0]" "police_hatShapeDeformed.twl";
 connectAttr "skinCluster13GroupId.id" "police_badge_GEOShapeDeformed.iog.og[0].gid"
 		;
 connectAttr "skinCluster13Set.mwc" "police_badge_GEOShapeDeformed.iog.og[0].gco"
@@ -26370,137 +20063,6 @@ connectAttr "tweak2.msg" "tweakSet2.ub[0]";
 connectAttr "groupId5.id" "groupParts5.gi";
 connectAttr "skinCluster2.og[0]" "groupParts6.ig";
 connectAttr "groupId6.id" "groupParts6.gi";
-connectAttr "skinCluster4GroupParts.og" "skinCluster4.ip[0].ig";
-connectAttr "skinCluster4GroupId.id" "skinCluster4.ip[0].gi";
-connectAttr "root.wm" "skinCluster4.ma[0]";
-connectAttr "spine1.wm" "skinCluster4.ma[1]";
-connectAttr "spine2.wm" "skinCluster4.ma[2]";
-connectAttr "spine3.wm" "skinCluster4.ma[3]";
-connectAttr "spine4.wm" "skinCluster4.ma[4]";
-connectAttr "neck1.wm" "skinCluster4.ma[5]";
-connectAttr "neck2.wm" "skinCluster4.ma[6]";
-connectAttr "head.wm" "skinCluster4.ma[7]";
-connectAttr "head_top.wm" "skinCluster4.ma[8]";
-connectAttr "beak_top_end.wm" "skinCluster4.ma[9]";
-connectAttr "beak_bot_end.wm" "skinCluster4.ma[10]";
-connectAttr "l_eye.wm" "skinCluster4.ma[11]";
-connectAttr "r_eye.wm" "skinCluster4.ma[12]";
-connectAttr "l_breast.wm" "skinCluster4.ma[13]";
-connectAttr "l_shoulder.wm" "skinCluster4.ma[14]";
-connectAttr "l_wing.wm" "skinCluster4.ma[15]";
-connectAttr "l_finger1_tip.wm" "skinCluster4.ma[16]";
-connectAttr "l_finger2_tip.wm" "skinCluster4.ma[17]";
-connectAttr "l_finger3_tip.wm" "skinCluster4.ma[18]";
-connectAttr "r_breast.wm" "skinCluster4.ma[19]";
-connectAttr "r_shoulder.wm" "skinCluster4.ma[20]";
-connectAttr "r_wing.wm" "skinCluster4.ma[21]";
-connectAttr "r_finger1_tip.wm" "skinCluster4.ma[22]";
-connectAttr "r_finger2_tip.wm" "skinCluster4.ma[23]";
-connectAttr "r_finger3_tip.wm" "skinCluster4.ma[24]";
-connectAttr "butt.wm" "skinCluster4.ma[25]";
-connectAttr "top_tail.wm" "skinCluster4.ma[26]";
-connectAttr "mid_tail.wm" "skinCluster4.ma[27]";
-connectAttr "bot_tail.wm" "skinCluster4.ma[28]";
-connectAttr "pelvis.wm" "skinCluster4.ma[29]";
-connectAttr "l_leg.wm" "skinCluster4.ma[30]";
-connectAttr "l_foot.wm" "skinCluster4.ma[31]";
-connectAttr "l_phalanges.wm" "skinCluster4.ma[32]";
-connectAttr "l_tips_of_toes.wm" "skinCluster4.ma[33]";
-connectAttr "r_leg.wm" "skinCluster4.ma[34]";
-connectAttr "r_foot.wm" "skinCluster4.ma[35]";
-connectAttr "r_phalanges.wm" "skinCluster4.ma[36]";
-connectAttr "r_tips_of_toes.wm" "skinCluster4.ma[37]";
-connectAttr "root.liw" "skinCluster4.lw[0]";
-connectAttr "spine1.liw" "skinCluster4.lw[1]";
-connectAttr "spine2.liw" "skinCluster4.lw[2]";
-connectAttr "spine3.liw" "skinCluster4.lw[3]";
-connectAttr "spine4.liw" "skinCluster4.lw[4]";
-connectAttr "neck1.liw" "skinCluster4.lw[5]";
-connectAttr "neck2.liw" "skinCluster4.lw[6]";
-connectAttr "head.liw" "skinCluster4.lw[7]";
-connectAttr "head_top.liw" "skinCluster4.lw[8]";
-connectAttr "beak_top_end.liw" "skinCluster4.lw[9]";
-connectAttr "beak_bot_end.liw" "skinCluster4.lw[10]";
-connectAttr "l_eye.liw" "skinCluster4.lw[11]";
-connectAttr "r_eye.liw" "skinCluster4.lw[12]";
-connectAttr "l_breast.liw" "skinCluster4.lw[13]";
-connectAttr "l_shoulder.liw" "skinCluster4.lw[14]";
-connectAttr "l_wing.liw" "skinCluster4.lw[15]";
-connectAttr "l_finger1_tip.liw" "skinCluster4.lw[16]";
-connectAttr "l_finger2_tip.liw" "skinCluster4.lw[17]";
-connectAttr "l_finger3_tip.liw" "skinCluster4.lw[18]";
-connectAttr "r_breast.liw" "skinCluster4.lw[19]";
-connectAttr "r_shoulder.liw" "skinCluster4.lw[20]";
-connectAttr "r_wing.liw" "skinCluster4.lw[21]";
-connectAttr "r_finger1_tip.liw" "skinCluster4.lw[22]";
-connectAttr "r_finger2_tip.liw" "skinCluster4.lw[23]";
-connectAttr "r_finger3_tip.liw" "skinCluster4.lw[24]";
-connectAttr "butt.liw" "skinCluster4.lw[25]";
-connectAttr "top_tail.liw" "skinCluster4.lw[26]";
-connectAttr "mid_tail.liw" "skinCluster4.lw[27]";
-connectAttr "bot_tail.liw" "skinCluster4.lw[28]";
-connectAttr "pelvis.liw" "skinCluster4.lw[29]";
-connectAttr "l_leg.liw" "skinCluster4.lw[30]";
-connectAttr "l_foot.liw" "skinCluster4.lw[31]";
-connectAttr "l_phalanges.liw" "skinCluster4.lw[32]";
-connectAttr "l_tips_of_toes.liw" "skinCluster4.lw[33]";
-connectAttr "r_leg.liw" "skinCluster4.lw[34]";
-connectAttr "r_foot.liw" "skinCluster4.lw[35]";
-connectAttr "r_phalanges.liw" "skinCluster4.lw[36]";
-connectAttr "r_tips_of_toes.liw" "skinCluster4.lw[37]";
-connectAttr "root.obcc" "skinCluster4.ifcl[0]";
-connectAttr "spine1.obcc" "skinCluster4.ifcl[1]";
-connectAttr "spine2.obcc" "skinCluster4.ifcl[2]";
-connectAttr "spine3.obcc" "skinCluster4.ifcl[3]";
-connectAttr "spine4.obcc" "skinCluster4.ifcl[4]";
-connectAttr "neck1.obcc" "skinCluster4.ifcl[5]";
-connectAttr "neck2.obcc" "skinCluster4.ifcl[6]";
-connectAttr "head.obcc" "skinCluster4.ifcl[7]";
-connectAttr "head_top.obcc" "skinCluster4.ifcl[8]";
-connectAttr "beak_top_end.obcc" "skinCluster4.ifcl[9]";
-connectAttr "beak_bot_end.obcc" "skinCluster4.ifcl[10]";
-connectAttr "l_eye.obcc" "skinCluster4.ifcl[11]";
-connectAttr "r_eye.obcc" "skinCluster4.ifcl[12]";
-connectAttr "l_breast.obcc" "skinCluster4.ifcl[13]";
-connectAttr "l_shoulder.obcc" "skinCluster4.ifcl[14]";
-connectAttr "l_wing.obcc" "skinCluster4.ifcl[15]";
-connectAttr "l_finger1_tip.obcc" "skinCluster4.ifcl[16]";
-connectAttr "l_finger2_tip.obcc" "skinCluster4.ifcl[17]";
-connectAttr "l_finger3_tip.obcc" "skinCluster4.ifcl[18]";
-connectAttr "r_breast.obcc" "skinCluster4.ifcl[19]";
-connectAttr "r_shoulder.obcc" "skinCluster4.ifcl[20]";
-connectAttr "r_wing.obcc" "skinCluster4.ifcl[21]";
-connectAttr "r_finger1_tip.obcc" "skinCluster4.ifcl[22]";
-connectAttr "r_finger2_tip.obcc" "skinCluster4.ifcl[23]";
-connectAttr "r_finger3_tip.obcc" "skinCluster4.ifcl[24]";
-connectAttr "butt.obcc" "skinCluster4.ifcl[25]";
-connectAttr "top_tail.obcc" "skinCluster4.ifcl[26]";
-connectAttr "mid_tail.obcc" "skinCluster4.ifcl[27]";
-connectAttr "bot_tail.obcc" "skinCluster4.ifcl[28]";
-connectAttr "pelvis.obcc" "skinCluster4.ifcl[29]";
-connectAttr "l_leg.obcc" "skinCluster4.ifcl[30]";
-connectAttr "l_foot.obcc" "skinCluster4.ifcl[31]";
-connectAttr "l_phalanges.obcc" "skinCluster4.ifcl[32]";
-connectAttr "l_tips_of_toes.obcc" "skinCluster4.ifcl[33]";
-connectAttr "r_leg.obcc" "skinCluster4.ifcl[34]";
-connectAttr "r_foot.obcc" "skinCluster4.ifcl[35]";
-connectAttr "r_phalanges.obcc" "skinCluster4.ifcl[36]";
-connectAttr "r_tips_of_toes.obcc" "skinCluster4.ifcl[37]";
-connectAttr "bindPose1.msg" "skinCluster4.bp";
-connectAttr "geomBind1.scs" "skinCluster4.gb";
-connectAttr "root.msg" "skinCluster4.ptt";
-connectAttr "groupParts10.og" "tweak4.ip[0].ig";
-connectAttr "groupId10.id" "tweak4.ip[0].gi";
-connectAttr "skinCluster4GroupId.msg" "skinCluster4Set.gn" -na;
-connectAttr "duck_eyesShapeDeformed.iog.og[0]" "skinCluster4Set.dsm" -na;
-connectAttr "skinCluster4.msg" "skinCluster4Set.ub[0]";
-connectAttr "tweak4.og[0]" "skinCluster4GroupParts.ig";
-connectAttr "skinCluster4GroupId.id" "skinCluster4GroupParts.gi";
-connectAttr "groupId10.msg" "tweakSet4.gn" -na;
-connectAttr "duck_eyesShapeDeformed.iog.og[1]" "tweakSet4.dsm" -na;
-connectAttr "tweak4.msg" "tweakSet4.ub[0]";
-connectAttr "duck_baseRN.phl[4]" "groupParts10.ig";
-connectAttr "groupId10.id" "groupParts10.gi";
 connectAttr "skinCluster5GroupParts.og" "skinCluster5.ip[0].ig";
 connectAttr "skinCluster5GroupId.id" "skinCluster5.ip[0].gi";
 connectAttr "root.wm" "skinCluster5.ma[0]";
@@ -27540,164 +21102,10 @@ connectAttr "r_eye_CTRL.sy" "r_eye_scaleY.i";
 connectAttr "r_eye_CTRL.sx" "animCurveUU1.i";
 connectAttr "r_foot_CTRL.ToeBend" "unitConversion1.i";
 connectAttr "l_foot_CTRL.ToeBend" "unitConversion2.i";
+connectAttr "transformGeometry1.og" "police_hatRN.phl[1]";
+connectAttr "police_hatRN.phl[6]" "police_hatRN.phl[7]";
 connectAttr "police_hatRNfosterParent1.msg" "police_hatRN.fp";
-connectAttr "skinCluster12GroupParts.og" "skinCluster12.ip[0].ig";
-connectAttr "skinCluster12GroupId.id" "skinCluster12.ip[0].gi";
-connectAttr "bindPose4.msg" "skinCluster12.bp";
-connectAttr "root.wm" "skinCluster12.ma[0]";
-connectAttr "spine1.wm" "skinCluster12.ma[1]";
-connectAttr "spine2.wm" "skinCluster12.ma[2]";
-connectAttr "spine3.wm" "skinCluster12.ma[3]";
-connectAttr "spine4.wm" "skinCluster12.ma[4]";
-connectAttr "neck1.wm" "skinCluster12.ma[5]";
-connectAttr "neck2.wm" "skinCluster12.ma[6]";
-connectAttr "head.wm" "skinCluster12.ma[7]";
-connectAttr "head_top.wm" "skinCluster12.ma[8]";
-connectAttr "l_eye.wm" "skinCluster12.ma[9]";
-connectAttr "r_eye.wm" "skinCluster12.ma[10]";
-connectAttr "mouth.wm" "skinCluster12.ma[11]";
-connectAttr "beak_top.wm" "skinCluster12.ma[12]";
-connectAttr "beak_top_end.wm" "skinCluster12.ma[13]";
-connectAttr "beak_bot.wm" "skinCluster12.ma[14]";
-connectAttr "beak_bot_end.wm" "skinCluster12.ma[15]";
-connectAttr "l_breast.wm" "skinCluster12.ma[16]";
-connectAttr "l_shoulder.wm" "skinCluster12.ma[17]";
-connectAttr "l_wing.wm" "skinCluster12.ma[18]";
-connectAttr "l_finger1.wm" "skinCluster12.ma[19]";
-connectAttr "l_finger1_tip.wm" "skinCluster12.ma[20]";
-connectAttr "l_finger2.wm" "skinCluster12.ma[21]";
-connectAttr "l_finger2_tip.wm" "skinCluster12.ma[22]";
-connectAttr "l_finger3.wm" "skinCluster12.ma[23]";
-connectAttr "l_finger3_tip.wm" "skinCluster12.ma[24]";
-connectAttr "r_breast.wm" "skinCluster12.ma[25]";
-connectAttr "r_shoulder.wm" "skinCluster12.ma[26]";
-connectAttr "r_wing.wm" "skinCluster12.ma[27]";
-connectAttr "r_finger1.wm" "skinCluster12.ma[28]";
-connectAttr "r_finger1_tip.wm" "skinCluster12.ma[29]";
-connectAttr "r_finger2.wm" "skinCluster12.ma[30]";
-connectAttr "r_finger2_tip.wm" "skinCluster12.ma[31]";
-connectAttr "r_finger3.wm" "skinCluster12.ma[32]";
-connectAttr "r_finger3_tip.wm" "skinCluster12.ma[33]";
-connectAttr "butt.wm" "skinCluster12.ma[34]";
-connectAttr "top_tail.wm" "skinCluster12.ma[35]";
-connectAttr "mid_tail.wm" "skinCluster12.ma[36]";
-connectAttr "bot_tail.wm" "skinCluster12.ma[37]";
-connectAttr "pelvis.wm" "skinCluster12.ma[38]";
-connectAttr "l_leg.wm" "skinCluster12.ma[39]";
-connectAttr "l_foot.wm" "skinCluster12.ma[40]";
-connectAttr "l_phalanges.wm" "skinCluster12.ma[41]";
-connectAttr "l_tips_of_toes.wm" "skinCluster12.ma[42]";
-connectAttr "r_leg.wm" "skinCluster12.ma[43]";
-connectAttr "r_foot.wm" "skinCluster12.ma[44]";
-connectAttr "r_phalanges.wm" "skinCluster12.ma[45]";
-connectAttr "r_tips_of_toes.wm" "skinCluster12.ma[46]";
-connectAttr "root.liw" "skinCluster12.lw[0]";
-connectAttr "spine1.liw" "skinCluster12.lw[1]";
-connectAttr "spine2.liw" "skinCluster12.lw[2]";
-connectAttr "spine3.liw" "skinCluster12.lw[3]";
-connectAttr "spine4.liw" "skinCluster12.lw[4]";
-connectAttr "neck1.liw" "skinCluster12.lw[5]";
-connectAttr "neck2.liw" "skinCluster12.lw[6]";
-connectAttr "head.liw" "skinCluster12.lw[7]";
-connectAttr "head_top.liw" "skinCluster12.lw[8]";
-connectAttr "l_eye.liw" "skinCluster12.lw[9]";
-connectAttr "r_eye.liw" "skinCluster12.lw[10]";
-connectAttr "mouth.liw" "skinCluster12.lw[11]";
-connectAttr "beak_top.liw" "skinCluster12.lw[12]";
-connectAttr "beak_top_end.liw" "skinCluster12.lw[13]";
-connectAttr "beak_bot.liw" "skinCluster12.lw[14]";
-connectAttr "beak_bot_end.liw" "skinCluster12.lw[15]";
-connectAttr "l_breast.liw" "skinCluster12.lw[16]";
-connectAttr "l_shoulder.liw" "skinCluster12.lw[17]";
-connectAttr "l_wing.liw" "skinCluster12.lw[18]";
-connectAttr "l_finger1.liw" "skinCluster12.lw[19]";
-connectAttr "l_finger1_tip.liw" "skinCluster12.lw[20]";
-connectAttr "l_finger2.liw" "skinCluster12.lw[21]";
-connectAttr "l_finger2_tip.liw" "skinCluster12.lw[22]";
-connectAttr "l_finger3.liw" "skinCluster12.lw[23]";
-connectAttr "l_finger3_tip.liw" "skinCluster12.lw[24]";
-connectAttr "r_breast.liw" "skinCluster12.lw[25]";
-connectAttr "r_shoulder.liw" "skinCluster12.lw[26]";
-connectAttr "r_wing.liw" "skinCluster12.lw[27]";
-connectAttr "r_finger1.liw" "skinCluster12.lw[28]";
-connectAttr "r_finger1_tip.liw" "skinCluster12.lw[29]";
-connectAttr "r_finger2.liw" "skinCluster12.lw[30]";
-connectAttr "r_finger2_tip.liw" "skinCluster12.lw[31]";
-connectAttr "r_finger3.liw" "skinCluster12.lw[32]";
-connectAttr "r_finger3_tip.liw" "skinCluster12.lw[33]";
-connectAttr "butt.liw" "skinCluster12.lw[34]";
-connectAttr "top_tail.liw" "skinCluster12.lw[35]";
-connectAttr "mid_tail.liw" "skinCluster12.lw[36]";
-connectAttr "bot_tail.liw" "skinCluster12.lw[37]";
-connectAttr "pelvis.liw" "skinCluster12.lw[38]";
-connectAttr "l_leg.liw" "skinCluster12.lw[39]";
-connectAttr "l_foot.liw" "skinCluster12.lw[40]";
-connectAttr "l_phalanges.liw" "skinCluster12.lw[41]";
-connectAttr "l_tips_of_toes.liw" "skinCluster12.lw[42]";
-connectAttr "r_leg.liw" "skinCluster12.lw[43]";
-connectAttr "r_foot.liw" "skinCluster12.lw[44]";
-connectAttr "r_phalanges.liw" "skinCluster12.lw[45]";
-connectAttr "r_tips_of_toes.liw" "skinCluster12.lw[46]";
-connectAttr "root.obcc" "skinCluster12.ifcl[0]";
-connectAttr "spine1.obcc" "skinCluster12.ifcl[1]";
-connectAttr "spine2.obcc" "skinCluster12.ifcl[2]";
-connectAttr "spine3.obcc" "skinCluster12.ifcl[3]";
-connectAttr "spine4.obcc" "skinCluster12.ifcl[4]";
-connectAttr "neck1.obcc" "skinCluster12.ifcl[5]";
-connectAttr "neck2.obcc" "skinCluster12.ifcl[6]";
-connectAttr "head.obcc" "skinCluster12.ifcl[7]";
-connectAttr "head_top.obcc" "skinCluster12.ifcl[8]";
-connectAttr "l_eye.obcc" "skinCluster12.ifcl[9]";
-connectAttr "r_eye.obcc" "skinCluster12.ifcl[10]";
-connectAttr "mouth.obcc" "skinCluster12.ifcl[11]";
-connectAttr "beak_top.obcc" "skinCluster12.ifcl[12]";
-connectAttr "beak_top_end.obcc" "skinCluster12.ifcl[13]";
-connectAttr "beak_bot.obcc" "skinCluster12.ifcl[14]";
-connectAttr "beak_bot_end.obcc" "skinCluster12.ifcl[15]";
-connectAttr "l_breast.obcc" "skinCluster12.ifcl[16]";
-connectAttr "l_shoulder.obcc" "skinCluster12.ifcl[17]";
-connectAttr "l_wing.obcc" "skinCluster12.ifcl[18]";
-connectAttr "l_finger1.obcc" "skinCluster12.ifcl[19]";
-connectAttr "l_finger1_tip.obcc" "skinCluster12.ifcl[20]";
-connectAttr "l_finger2.obcc" "skinCluster12.ifcl[21]";
-connectAttr "l_finger2_tip.obcc" "skinCluster12.ifcl[22]";
-connectAttr "l_finger3.obcc" "skinCluster12.ifcl[23]";
-connectAttr "l_finger3_tip.obcc" "skinCluster12.ifcl[24]";
-connectAttr "r_breast.obcc" "skinCluster12.ifcl[25]";
-connectAttr "r_shoulder.obcc" "skinCluster12.ifcl[26]";
-connectAttr "r_wing.obcc" "skinCluster12.ifcl[27]";
-connectAttr "r_finger1.obcc" "skinCluster12.ifcl[28]";
-connectAttr "r_finger1_tip.obcc" "skinCluster12.ifcl[29]";
-connectAttr "r_finger2.obcc" "skinCluster12.ifcl[30]";
-connectAttr "r_finger2_tip.obcc" "skinCluster12.ifcl[31]";
-connectAttr "r_finger3.obcc" "skinCluster12.ifcl[32]";
-connectAttr "r_finger3_tip.obcc" "skinCluster12.ifcl[33]";
-connectAttr "butt.obcc" "skinCluster12.ifcl[34]";
-connectAttr "top_tail.obcc" "skinCluster12.ifcl[35]";
-connectAttr "mid_tail.obcc" "skinCluster12.ifcl[36]";
-connectAttr "bot_tail.obcc" "skinCluster12.ifcl[37]";
-connectAttr "pelvis.obcc" "skinCluster12.ifcl[38]";
-connectAttr "l_leg.obcc" "skinCluster12.ifcl[39]";
-connectAttr "l_foot.obcc" "skinCluster12.ifcl[40]";
-connectAttr "l_phalanges.obcc" "skinCluster12.ifcl[41]";
-connectAttr "l_tips_of_toes.obcc" "skinCluster12.ifcl[42]";
-connectAttr "r_leg.obcc" "skinCluster12.ifcl[43]";
-connectAttr "r_foot.obcc" "skinCluster12.ifcl[44]";
-connectAttr "r_phalanges.obcc" "skinCluster12.ifcl[45]";
-connectAttr "r_tips_of_toes.obcc" "skinCluster12.ifcl[46]";
-connectAttr "geomBind5.scs" "skinCluster12.gb";
-connectAttr "head_top.msg" "skinCluster12.ptt";
-connectAttr "groupParts34.og" "tweak12.ip[0].ig";
-connectAttr "groupId34.id" "tweak12.ip[0].gi";
-connectAttr "skinCluster12GroupId.msg" "skinCluster12Set.gn" -na;
-connectAttr "pCubeShape1Deformed.iog.og[0]" "skinCluster12Set.dsm" -na;
-connectAttr "skinCluster12.msg" "skinCluster12Set.ub[0]";
-connectAttr "tweak12.og[0]" "skinCluster12GroupParts.ig";
-connectAttr "skinCluster12GroupId.id" "skinCluster12GroupParts.gi";
-connectAttr "groupId34.msg" "tweakSet12.gn" -na;
-connectAttr "pCubeShape1Deformed.iog.og[1]" "tweakSet12.dsm" -na;
-connectAttr "tweak12.msg" "tweakSet12.ub[0]";
-connectAttr "groupId34.id" "groupParts34.gi";
+connectAttr "police_hatRN.phl[19]" "transformGeometry1.ig";
 connectAttr "Swan.msg" "bindPose4.m[0]";
 connectAttr "RIG.msg" "bindPose4.m[1]";
 connectAttr "JOINTs.msg" "bindPose4.m[2]";
@@ -27804,7 +21212,6 @@ connectAttr "bindPose4.m[7]" "bindPose4.p[50]";
 connectAttr "badge.msg" "bindPose4.p[51]";
 connectAttr "badge.bps" "bindPose4.wm[50]";
 connectAttr "badge_end.bps" "bindPose4.wm[51]";
-connectAttr "bindPose1.msg" "geomBind5.bp";
 connectAttr "police_badgeRNfosterParent1.msg" "police_badgeRN.fp";
 connectAttr "skinCluster13GroupParts.og" "skinCluster13.ip[0].ig";
 connectAttr "skinCluster13GroupId.id" "skinCluster13.ip[0].gi";
@@ -27982,6 +21389,274 @@ connectAttr "badge_parentConstraint2.ctz" "pairBlend1.itz2";
 connectAttr "badge_parentConstraint2.crx" "pairBlend1.irx2";
 connectAttr "badge_parentConstraint2.cry" "pairBlend1.iry2";
 connectAttr "badge_parentConstraint2.crz" "pairBlend1.irz2";
+connectAttr "skinCluster14GroupParts.og" "skinCluster14.ip[0].ig";
+connectAttr "skinCluster14GroupId.id" "skinCluster14.ip[0].gi";
+connectAttr "bindPose5.msg" "skinCluster14.bp";
+connectAttr "root.wm" "skinCluster14.ma[0]";
+connectAttr "spine1.wm" "skinCluster14.ma[1]";
+connectAttr "spine2.wm" "skinCluster14.ma[2]";
+connectAttr "spine3.wm" "skinCluster14.ma[3]";
+connectAttr "spine4.wm" "skinCluster14.ma[4]";
+connectAttr "neck1.wm" "skinCluster14.ma[5]";
+connectAttr "neck2.wm" "skinCluster14.ma[6]";
+connectAttr "head.wm" "skinCluster14.ma[7]";
+connectAttr "head_top.wm" "skinCluster14.ma[8]";
+connectAttr "l_eye.wm" "skinCluster14.ma[9]";
+connectAttr "r_eye.wm" "skinCluster14.ma[10]";
+connectAttr "mouth.wm" "skinCluster14.ma[11]";
+connectAttr "beak_top.wm" "skinCluster14.ma[12]";
+connectAttr "beak_top_end.wm" "skinCluster14.ma[13]";
+connectAttr "beak_bot.wm" "skinCluster14.ma[14]";
+connectAttr "beak_bot_end.wm" "skinCluster14.ma[15]";
+connectAttr "badge.wm" "skinCluster14.ma[16]";
+connectAttr "badge_end.wm" "skinCluster14.ma[17]";
+connectAttr "l_breast.wm" "skinCluster14.ma[18]";
+connectAttr "l_shoulder.wm" "skinCluster14.ma[19]";
+connectAttr "l_wing.wm" "skinCluster14.ma[20]";
+connectAttr "l_finger1.wm" "skinCluster14.ma[21]";
+connectAttr "l_finger1_tip.wm" "skinCluster14.ma[22]";
+connectAttr "l_finger2.wm" "skinCluster14.ma[23]";
+connectAttr "l_finger2_tip.wm" "skinCluster14.ma[24]";
+connectAttr "l_finger3.wm" "skinCluster14.ma[25]";
+connectAttr "l_finger3_tip.wm" "skinCluster14.ma[26]";
+connectAttr "r_breast.wm" "skinCluster14.ma[27]";
+connectAttr "r_shoulder.wm" "skinCluster14.ma[28]";
+connectAttr "r_wing.wm" "skinCluster14.ma[29]";
+connectAttr "r_finger1.wm" "skinCluster14.ma[30]";
+connectAttr "r_finger1_tip.wm" "skinCluster14.ma[31]";
+connectAttr "r_finger2.wm" "skinCluster14.ma[32]";
+connectAttr "r_finger2_tip.wm" "skinCluster14.ma[33]";
+connectAttr "r_finger3.wm" "skinCluster14.ma[34]";
+connectAttr "r_finger3_tip.wm" "skinCluster14.ma[35]";
+connectAttr "butt.wm" "skinCluster14.ma[36]";
+connectAttr "top_tail.wm" "skinCluster14.ma[37]";
+connectAttr "mid_tail.wm" "skinCluster14.ma[38]";
+connectAttr "bot_tail.wm" "skinCluster14.ma[39]";
+connectAttr "pelvis.wm" "skinCluster14.ma[40]";
+connectAttr "l_leg.wm" "skinCluster14.ma[41]";
+connectAttr "l_foot.wm" "skinCluster14.ma[42]";
+connectAttr "l_phalanges.wm" "skinCluster14.ma[43]";
+connectAttr "l_tips_of_toes.wm" "skinCluster14.ma[44]";
+connectAttr "r_leg.wm" "skinCluster14.ma[45]";
+connectAttr "r_foot.wm" "skinCluster14.ma[46]";
+connectAttr "r_phalanges.wm" "skinCluster14.ma[47]";
+connectAttr "r_tips_of_toes.wm" "skinCluster14.ma[48]";
+connectAttr "root.liw" "skinCluster14.lw[0]";
+connectAttr "spine1.liw" "skinCluster14.lw[1]";
+connectAttr "spine2.liw" "skinCluster14.lw[2]";
+connectAttr "spine3.liw" "skinCluster14.lw[3]";
+connectAttr "spine4.liw" "skinCluster14.lw[4]";
+connectAttr "neck1.liw" "skinCluster14.lw[5]";
+connectAttr "neck2.liw" "skinCluster14.lw[6]";
+connectAttr "head.liw" "skinCluster14.lw[7]";
+connectAttr "head_top.liw" "skinCluster14.lw[8]";
+connectAttr "l_eye.liw" "skinCluster14.lw[9]";
+connectAttr "r_eye.liw" "skinCluster14.lw[10]";
+connectAttr "mouth.liw" "skinCluster14.lw[11]";
+connectAttr "beak_top.liw" "skinCluster14.lw[12]";
+connectAttr "beak_top_end.liw" "skinCluster14.lw[13]";
+connectAttr "beak_bot.liw" "skinCluster14.lw[14]";
+connectAttr "beak_bot_end.liw" "skinCluster14.lw[15]";
+connectAttr "badge.liw" "skinCluster14.lw[16]";
+connectAttr "badge_end.liw" "skinCluster14.lw[17]";
+connectAttr "l_breast.liw" "skinCluster14.lw[18]";
+connectAttr "l_shoulder.liw" "skinCluster14.lw[19]";
+connectAttr "l_wing.liw" "skinCluster14.lw[20]";
+connectAttr "l_finger1.liw" "skinCluster14.lw[21]";
+connectAttr "l_finger1_tip.liw" "skinCluster14.lw[22]";
+connectAttr "l_finger2.liw" "skinCluster14.lw[23]";
+connectAttr "l_finger2_tip.liw" "skinCluster14.lw[24]";
+connectAttr "l_finger3.liw" "skinCluster14.lw[25]";
+connectAttr "l_finger3_tip.liw" "skinCluster14.lw[26]";
+connectAttr "r_breast.liw" "skinCluster14.lw[27]";
+connectAttr "r_shoulder.liw" "skinCluster14.lw[28]";
+connectAttr "r_wing.liw" "skinCluster14.lw[29]";
+connectAttr "r_finger1.liw" "skinCluster14.lw[30]";
+connectAttr "r_finger1_tip.liw" "skinCluster14.lw[31]";
+connectAttr "r_finger2.liw" "skinCluster14.lw[32]";
+connectAttr "r_finger2_tip.liw" "skinCluster14.lw[33]";
+connectAttr "r_finger3.liw" "skinCluster14.lw[34]";
+connectAttr "r_finger3_tip.liw" "skinCluster14.lw[35]";
+connectAttr "butt.liw" "skinCluster14.lw[36]";
+connectAttr "top_tail.liw" "skinCluster14.lw[37]";
+connectAttr "mid_tail.liw" "skinCluster14.lw[38]";
+connectAttr "bot_tail.liw" "skinCluster14.lw[39]";
+connectAttr "pelvis.liw" "skinCluster14.lw[40]";
+connectAttr "l_leg.liw" "skinCluster14.lw[41]";
+connectAttr "l_foot.liw" "skinCluster14.lw[42]";
+connectAttr "l_phalanges.liw" "skinCluster14.lw[43]";
+connectAttr "l_tips_of_toes.liw" "skinCluster14.lw[44]";
+connectAttr "r_leg.liw" "skinCluster14.lw[45]";
+connectAttr "r_foot.liw" "skinCluster14.lw[46]";
+connectAttr "r_phalanges.liw" "skinCluster14.lw[47]";
+connectAttr "r_tips_of_toes.liw" "skinCluster14.lw[48]";
+connectAttr "root.obcc" "skinCluster14.ifcl[0]";
+connectAttr "spine1.obcc" "skinCluster14.ifcl[1]";
+connectAttr "spine2.obcc" "skinCluster14.ifcl[2]";
+connectAttr "spine3.obcc" "skinCluster14.ifcl[3]";
+connectAttr "spine4.obcc" "skinCluster14.ifcl[4]";
+connectAttr "neck1.obcc" "skinCluster14.ifcl[5]";
+connectAttr "neck2.obcc" "skinCluster14.ifcl[6]";
+connectAttr "head.obcc" "skinCluster14.ifcl[7]";
+connectAttr "head_top.obcc" "skinCluster14.ifcl[8]";
+connectAttr "l_eye.obcc" "skinCluster14.ifcl[9]";
+connectAttr "r_eye.obcc" "skinCluster14.ifcl[10]";
+connectAttr "mouth.obcc" "skinCluster14.ifcl[11]";
+connectAttr "beak_top.obcc" "skinCluster14.ifcl[12]";
+connectAttr "beak_top_end.obcc" "skinCluster14.ifcl[13]";
+connectAttr "beak_bot.obcc" "skinCluster14.ifcl[14]";
+connectAttr "beak_bot_end.obcc" "skinCluster14.ifcl[15]";
+connectAttr "badge.obcc" "skinCluster14.ifcl[16]";
+connectAttr "badge_end.obcc" "skinCluster14.ifcl[17]";
+connectAttr "l_breast.obcc" "skinCluster14.ifcl[18]";
+connectAttr "l_shoulder.obcc" "skinCluster14.ifcl[19]";
+connectAttr "l_wing.obcc" "skinCluster14.ifcl[20]";
+connectAttr "l_finger1.obcc" "skinCluster14.ifcl[21]";
+connectAttr "l_finger1_tip.obcc" "skinCluster14.ifcl[22]";
+connectAttr "l_finger2.obcc" "skinCluster14.ifcl[23]";
+connectAttr "l_finger2_tip.obcc" "skinCluster14.ifcl[24]";
+connectAttr "l_finger3.obcc" "skinCluster14.ifcl[25]";
+connectAttr "l_finger3_tip.obcc" "skinCluster14.ifcl[26]";
+connectAttr "r_breast.obcc" "skinCluster14.ifcl[27]";
+connectAttr "r_shoulder.obcc" "skinCluster14.ifcl[28]";
+connectAttr "r_wing.obcc" "skinCluster14.ifcl[29]";
+connectAttr "r_finger1.obcc" "skinCluster14.ifcl[30]";
+connectAttr "r_finger1_tip.obcc" "skinCluster14.ifcl[31]";
+connectAttr "r_finger2.obcc" "skinCluster14.ifcl[32]";
+connectAttr "r_finger2_tip.obcc" "skinCluster14.ifcl[33]";
+connectAttr "r_finger3.obcc" "skinCluster14.ifcl[34]";
+connectAttr "r_finger3_tip.obcc" "skinCluster14.ifcl[35]";
+connectAttr "butt.obcc" "skinCluster14.ifcl[36]";
+connectAttr "top_tail.obcc" "skinCluster14.ifcl[37]";
+connectAttr "mid_tail.obcc" "skinCluster14.ifcl[38]";
+connectAttr "bot_tail.obcc" "skinCluster14.ifcl[39]";
+connectAttr "pelvis.obcc" "skinCluster14.ifcl[40]";
+connectAttr "l_leg.obcc" "skinCluster14.ifcl[41]";
+connectAttr "l_foot.obcc" "skinCluster14.ifcl[42]";
+connectAttr "l_phalanges.obcc" "skinCluster14.ifcl[43]";
+connectAttr "l_tips_of_toes.obcc" "skinCluster14.ifcl[44]";
+connectAttr "r_leg.obcc" "skinCluster14.ifcl[45]";
+connectAttr "r_foot.obcc" "skinCluster14.ifcl[46]";
+connectAttr "r_phalanges.obcc" "skinCluster14.ifcl[47]";
+connectAttr "r_tips_of_toes.obcc" "skinCluster14.ifcl[48]";
+connectAttr "geomBind7.scs" "skinCluster14.gb";
+connectAttr "head_top.msg" "skinCluster14.ptt";
+connectAttr "groupParts38.og" "tweak14.ip[0].ig";
+connectAttr "groupId38.id" "tweak14.ip[0].gi";
+connectAttr "skinCluster14GroupId.msg" "skinCluster14Set.gn" -na;
+connectAttr "police_hatShapeDeformed.iog.og[0]" "skinCluster14Set.dsm" -na;
+connectAttr "skinCluster14.msg" "skinCluster14Set.ub[0]";
+connectAttr "tweak14.og[0]" "skinCluster14GroupParts.ig";
+connectAttr "skinCluster14GroupId.id" "skinCluster14GroupParts.gi";
+connectAttr "groupId38.msg" "tweakSet14.gn" -na;
+connectAttr "police_hatShapeDeformed.iog.og[1]" "tweakSet14.dsm" -na;
+connectAttr "tweak14.msg" "tweakSet14.ub[0]";
+connectAttr "groupId38.id" "groupParts38.gi";
+connectAttr "Swan.msg" "bindPose5.m[0]";
+connectAttr "RIG.msg" "bindPose5.m[1]";
+connectAttr "JOINTs.msg" "bindPose5.m[2]";
+connectAttr "root.msg" "bindPose5.m[3]";
+connectAttr "spine1.msg" "bindPose5.m[4]";
+connectAttr "spine2.msg" "bindPose5.m[5]";
+connectAttr "spine3.msg" "bindPose5.m[6]";
+connectAttr "spine4.msg" "bindPose5.m[7]";
+connectAttr "neck1.msg" "bindPose5.m[8]";
+connectAttr "neck2.msg" "bindPose5.m[9]";
+connectAttr "head.msg" "bindPose5.m[10]";
+connectAttr "head_top.msg" "bindPose5.m[11]";
+connectAttr "l_eye.msg" "bindPose5.m[12]";
+connectAttr "r_eye.msg" "bindPose5.m[13]";
+connectAttr "mouth.msg" "bindPose5.m[14]";
+connectAttr "beak_top.msg" "bindPose5.m[15]";
+connectAttr "beak_top_end.msg" "bindPose5.m[16]";
+connectAttr "beak_bot.msg" "bindPose5.m[17]";
+connectAttr "beak_bot_end.msg" "bindPose5.m[18]";
+connectAttr "badge.msg" "bindPose5.m[19]";
+connectAttr "badge_end.msg" "bindPose5.m[20]";
+connectAttr "l_breast.msg" "bindPose5.m[21]";
+connectAttr "l_shoulder.msg" "bindPose5.m[22]";
+connectAttr "l_wing.msg" "bindPose5.m[23]";
+connectAttr "l_finger1.msg" "bindPose5.m[24]";
+connectAttr "l_finger1_tip.msg" "bindPose5.m[25]";
+connectAttr "l_finger2.msg" "bindPose5.m[26]";
+connectAttr "l_finger2_tip.msg" "bindPose5.m[27]";
+connectAttr "l_finger3.msg" "bindPose5.m[28]";
+connectAttr "l_finger3_tip.msg" "bindPose5.m[29]";
+connectAttr "r_breast.msg" "bindPose5.m[30]";
+connectAttr "r_shoulder.msg" "bindPose5.m[31]";
+connectAttr "r_wing.msg" "bindPose5.m[32]";
+connectAttr "r_finger1.msg" "bindPose5.m[33]";
+connectAttr "r_finger1_tip.msg" "bindPose5.m[34]";
+connectAttr "r_finger2.msg" "bindPose5.m[35]";
+connectAttr "r_finger2_tip.msg" "bindPose5.m[36]";
+connectAttr "r_finger3.msg" "bindPose5.m[37]";
+connectAttr "r_finger3_tip.msg" "bindPose5.m[38]";
+connectAttr "butt.msg" "bindPose5.m[39]";
+connectAttr "top_tail.msg" "bindPose5.m[40]";
+connectAttr "mid_tail.msg" "bindPose5.m[41]";
+connectAttr "bot_tail.msg" "bindPose5.m[42]";
+connectAttr "pelvis.msg" "bindPose5.m[43]";
+connectAttr "l_leg.msg" "bindPose5.m[44]";
+connectAttr "l_foot.msg" "bindPose5.m[45]";
+connectAttr "l_phalanges.msg" "bindPose5.m[46]";
+connectAttr "l_tips_of_toes.msg" "bindPose5.m[47]";
+connectAttr "r_leg.msg" "bindPose5.m[48]";
+connectAttr "r_foot.msg" "bindPose5.m[49]";
+connectAttr "r_phalanges.msg" "bindPose5.m[50]";
+connectAttr "r_tips_of_toes.msg" "bindPose5.m[51]";
+connectAttr "bindPose5.w" "bindPose5.p[0]";
+connectAttr "bindPose5.m[0]" "bindPose5.p[1]";
+connectAttr "bindPose5.m[1]" "bindPose5.p[2]";
+connectAttr "bindPose5.m[2]" "bindPose5.p[3]";
+connectAttr "bindPose5.m[3]" "bindPose5.p[4]";
+connectAttr "bindPose5.m[4]" "bindPose5.p[5]";
+connectAttr "bindPose5.m[5]" "bindPose5.p[6]";
+connectAttr "bindPose5.m[6]" "bindPose5.p[7]";
+connectAttr "bindPose5.m[7]" "bindPose5.p[8]";
+connectAttr "bindPose5.m[8]" "bindPose5.p[9]";
+connectAttr "bindPose5.m[9]" "bindPose5.p[10]";
+connectAttr "bindPose5.m[10]" "bindPose5.p[11]";
+connectAttr "bindPose5.m[10]" "bindPose5.p[12]";
+connectAttr "bindPose5.m[10]" "bindPose5.p[13]";
+connectAttr "bindPose5.m[10]" "bindPose5.p[14]";
+connectAttr "bindPose5.m[14]" "bindPose5.p[15]";
+connectAttr "bindPose5.m[15]" "bindPose5.p[16]";
+connectAttr "bindPose5.m[14]" "bindPose5.p[17]";
+connectAttr "bindPose5.m[17]" "bindPose5.p[18]";
+connectAttr "bindPose5.m[7]" "bindPose5.p[19]";
+connectAttr "bindPose5.m[19]" "bindPose5.p[20]";
+connectAttr "bindPose5.m[6]" "bindPose5.p[21]";
+connectAttr "bindPose5.m[21]" "bindPose5.p[22]";
+connectAttr "bindPose5.m[22]" "bindPose5.p[23]";
+connectAttr "bindPose5.m[23]" "bindPose5.p[24]";
+connectAttr "bindPose5.m[24]" "bindPose5.p[25]";
+connectAttr "bindPose5.m[23]" "bindPose5.p[26]";
+connectAttr "bindPose5.m[26]" "bindPose5.p[27]";
+connectAttr "bindPose5.m[23]" "bindPose5.p[28]";
+connectAttr "bindPose5.m[28]" "bindPose5.p[29]";
+connectAttr "bindPose5.m[6]" "bindPose5.p[30]";
+connectAttr "bindPose5.m[30]" "bindPose5.p[31]";
+connectAttr "bindPose5.m[31]" "bindPose5.p[32]";
+connectAttr "bindPose5.m[32]" "bindPose5.p[33]";
+connectAttr "bindPose5.m[33]" "bindPose5.p[34]";
+connectAttr "bindPose5.m[32]" "bindPose5.p[35]";
+connectAttr "bindPose5.m[35]" "bindPose5.p[36]";
+connectAttr "bindPose5.m[32]" "bindPose5.p[37]";
+connectAttr "bindPose5.m[37]" "bindPose5.p[38]";
+connectAttr "bindPose5.m[4]" "bindPose5.p[39]";
+connectAttr "bindPose5.m[39]" "bindPose5.p[40]";
+connectAttr "bindPose5.m[39]" "bindPose5.p[41]";
+connectAttr "bindPose5.m[39]" "bindPose5.p[42]";
+connectAttr "bindPose5.m[3]" "bindPose5.p[43]";
+connectAttr "bindPose5.m[43]" "bindPose5.p[44]";
+connectAttr "bindPose5.m[44]" "bindPose5.p[45]";
+connectAttr "bindPose5.m[45]" "bindPose5.p[46]";
+connectAttr "bindPose5.m[46]" "bindPose5.p[47]";
+connectAttr "bindPose5.m[43]" "bindPose5.p[48]";
+connectAttr "bindPose5.m[48]" "bindPose5.p[49]";
+connectAttr "bindPose5.m[49]" "bindPose5.p[50]";
+connectAttr "bindPose5.m[50]" "bindPose5.p[51]";
+connectAttr "bindPose1.msg" "geomBind7.bp";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "duck_wings_folded1ShapeDeformed.iog.og[2]" ":initialShadingGroup.dsm"
 		 -na;
