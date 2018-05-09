@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: scene_04_briefcase_fly_camera_42.ma
-//Last modified: Wed, May 09, 2018 01:34:30 PM
+//Last modified: Wed, May 09, 2018 01:52:28 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "Briefcase" -rfn "BriefcaseRN" -op "v=0;" -typ "mayaAscii" "/Users/diana/Documents/GuidoNSalvator//assets/Briefcase.ma";
 file -rdi 1 -ns "OverallParkScene" -rfn "OverallParkSceneRN" -op "VERS|2018|UVER|undef|MADE|undef|CHNG|Tue, May 01, 2018 01:18:01 PM|ICON|undef|INFO|undef|OBJN|582|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|TDUR|141120000|"
@@ -57,18 +57,18 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "28EFC7A0-EC43-EF49-4BC5-F58D8DA41D8F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.353119389906976 33.319286396166234 26.951977388694843 ;
-	setAttr ".r" -type "double3" -41.138352729612492 -6.5999999999885048 -4.0022169818863382e-16 ;
+	setAttr ".t" -type "double3" -11.887514238668354 5.9984268014057314 -2.3388584312694878 ;
+	setAttr ".r" -type "double3" -11.138352729612089 -371.39999999996866 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "9DD8BCD6-5444-AD11-5FD1-C78C55639B18";
 	setAttr -k off ".v" no;
 	setAttr ".ovr" 1.3;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 79.995618538422491;
+	setAttr ".coi" 26.08857946911165;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 12.655882768267809 9.3375426607085696 -13.396805383973501 ;
+	setAttr ".tp" -type "double3" 12.963497754922212 5.2008657281805579 -14.252282977100151 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dr" yes;
 	setAttr ".ai_translator" -type "string" "perspective";
@@ -199,16 +199,16 @@ createNode nParticle -n "Crumb_Explode:explodeParticleShape" -p "Crumb_Explode:e
 	setAttr ".acc0" -type "vectorArray" 0 ;
 	setAttr ".mas0" -type "doubleArray" 0 ;
 	setAttr ".id0" -type "doubleArray" 0 ;
-	setAttr ".nid" 62;
+	setAttr ".nid" 2630;
 	setAttr ".bt0" -type "doubleArray" 0 ;
 	setAttr ".ag0" -type "doubleArray" 0 ;
 	setAttr ".irbx" -type "string" "";
 	setAttr ".irax" -type "string" "";
 	setAttr ".icx" -type "string" "";
 	setAttr ".mxc" 50;
-	setAttr ".cts" 92;
+	setAttr ".cts" 262;
 	setAttr ".stf" 12;
-	setAttr ".chw" 150;
+	setAttr ".chw" 76;
 	setAttr -s 4 ".idt";
 	setAttr ".idt[0].iam" -type "stringArray" 6 "age" "age" "position" "worldPosition" "id" "particleId"  ;
 	setAttr ".idt[1].iam" -type "stringArray" 4 "age" "age" "position" "worldPosition"  ;
@@ -269,16 +269,16 @@ createNode nParticle -n "nParticleShape1" -p "nParticle1";
 	setAttr ".acc0" -type "vectorArray" 0 ;
 	setAttr ".mas0" -type "doubleArray" 0 ;
 	setAttr ".id0" -type "doubleArray" 0 ;
-	setAttr ".nid" 312;
+	setAttr ".nid" 9062;
 	setAttr ".bt0" -type "doubleArray" 0 ;
 	setAttr ".ag0" -type "doubleArray" 0 ;
 	setAttr ".irbx" -type "string" "";
 	setAttr ".irax" -type "string" "";
 	setAttr ".icx" -type "string" "";
 	setAttr ".mxc" 300;
-	setAttr ".cts" 92;
+	setAttr ".cts" 262;
 	setAttr ".stf" 12;
-	setAttr ".chw" 150;
+	setAttr ".chw" 76;
 	setAttr ".idt[0].iam" -type "stringArray" 6 "age" "age" "position" "worldPosition" "id" "particleId"  ;
 	setAttr ".cofl" 1;
 	setAttr ".scld" no;
@@ -340,14 +340,14 @@ createNode nRigid -n "nRigidShape1" -p "nRigid1";
 	setAttr -k off ".mxc";
 	setAttr -k off ".lod";
 	setAttr -k off ".inh";
-	setAttr ".cts" 92;
+	setAttr ".cts" 262;
 	setAttr -k off ".stf";
 	setAttr -k off ".igs";
 	setAttr -k off ".ecfh";
 	setAttr -k off ".tgs";
 	setAttr -k off ".gsm";
 	setAttr -k off ".chd";
-	setAttr ".chw" 150;
+	setAttr ".chw" 76;
 	setAttr -k off ".trd";
 	setAttr -k off ".prt";
 	setAttr ".thss" 0.046338163316249847;
@@ -370,11 +370,11 @@ createNode transform -n "duck_police_officer_RIG_textured1:duck_base1" -p "duck_
 	setAttr ".sp" -type "double3" -2.6226043701171875e-06 5.0166320838034153 0.48407173156738281 ;
 createNode transform -n "camera41";
 	rename -uid "2B18B793-984C-603C-A998-60914CBE09FE";
-	setAttr ".t" -type "double3" 13.304607419525269 7.9652273422429296 -4.5266830183990958 ;
+	setAttr ".t" -type "double3" -59.877875821275168 21.712061671533966 68.635906641122205 ;
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" 2.3999153349560824 17.600000000000268 0 ;
+	setAttr ".r" -type "double3" -11.399597841042455 -38.800000000000345 -5.1013726146127021e-16 ;
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
 	setAttr -l on ".rz";
@@ -385,7 +385,7 @@ createNode camera -n "cameraShape41" -p "camera41";
 	setAttr ".cap" -type "double2" 1.4173 0.9449 ;
 	setAttr ".ff" 0;
 	setAttr ".ovr" 1.3;
-	setAttr ".coi" 8.2490518335716452;
+	setAttr ".coi" 42.081347643331426;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "camera41";
 	setAttr ".den" -type "string" "camera41_depth";
@@ -577,7 +577,7 @@ createNode instancer -n "instancer1";
 createNode instancer -n "instancer2";
 	rename -uid "76F30836-E64E-3130-43ED-9DBBA1A874B5";
 createNode fosterParent -n "BriefcaseRNfosterParent1";
-	rename -uid "B8D395A0-0242-6075-3010-B6821A60A8B8";
+	rename -uid "5967FABD-C94E-8F71-33E0-8A91400C8574";
 createNode transform -n "camera2_aim" -p "BriefcaseRNfosterParent1";
 	rename -uid "A5B0AC43-194D-F2FD-8D79-918D0E62CCD5";
 	setAttr ".t" -type "double3" 3.3147159274201679 9.8358001437406735 20.039978438962201 ;
@@ -598,7 +598,7 @@ createNode pointEmitter -n "Crumb_Explode4" -p "BriefcaseRNfosterParent1";
 	setAttr ".srnd" 4.5731707281864633;
 	setAttr ".pc" -type "float3" 0.48051947 0.48051947 0.48051947 ;
 createNode fosterParent -n "duck_police_officer_RIG_textured1:duck_baseRNfosterParent1";
-	rename -uid "ADB7E133-F443-4BBC-B5D4-6FAB3208641E";
+	rename -uid "15A7A314-8947-1FFA-D92E-CCA0BBB3BA0E";
 createNode mesh -n "duck_police_officer_RIG_textured1:polySurface2ShapeDeformed" 
 		-p "duck_police_officer_RIG_textured1:duck_baseRNfosterParent1";
 	rename -uid "94193516-AF46-BA94-E679-AE988AD09D23";
@@ -708,7 +708,7 @@ createNode mesh -n "duck_police_officer_RIG_textured1:duck_wings_folded1ShapeDef
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode fosterParent -n "duck_police_officer_RIG_textured1:police_hatRNfosterParent1";
-	rename -uid "266E3CF3-4E49-8807-172B-ACAC18027CAB";
+	rename -uid "31F9D4D6-8A4C-3209-4699-E4A18D2B6632";
 createNode mesh -n "duck_police_officer_RIG_textured1:police_hatShapeDeformed" -p
 		 "duck_police_officer_RIG_textured1:police_hatRNfosterParent1";
 	rename -uid "B395E148-BC44-43BC-7715-C08D5EAAD4E5";
@@ -748,17 +748,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera41\" \n            -useInteractiveMode 0\n            -displayLights \"all\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n"
 		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
 		+ "            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 0\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 0\n            -particleInstancers 1\n            -fluids 1\n"
-		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 0\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 587\n            -height 469\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 0\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 787\n            -height 469\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 359\n            -height 212\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 390\n            -height 212\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 359\n            -height 212\n"
+		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 390\n            -height 212\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"all\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 0\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 359\n            -height 213\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 390\n            -height 213\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n"
 		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
 		+ "            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n"
@@ -787,13 +787,13 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n"
 		+ "                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
 		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera41\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 0\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 0\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 587\\n    -height 469\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera41\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 0\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 0\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 587\\n    -height 469\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera41\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 0\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 0\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 787\\n    -height 469\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera41\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 0\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 0\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 787\\n    -height 469\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "7B288924-834E-62E1-56B6-0EB8927402FA";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 150 -ast 1 -aet 150 ";
+	setAttr ".b" -type "string" "playbackOptions -min 225 -max 300 -ast 1 -aet 500 ";
 	setAttr ".st" 6;
 createNode reference -n "BriefcaseRN";
 	rename -uid "418A3F54-9C44-9668-8BC0-D0A088229FF3";
@@ -1170,10 +1170,53 @@ createNode geoConnector -n "geoConnector1";
 	rename -uid "1AEF7F42-EB4B-A227-3CC0-CC9A7D87369B";
 createNode reference -n "OverallParkSceneRN";
 	rename -uid "324362ED-8640-79B9-D918-618DF9A417A4";
+	setAttr -s 42 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"OverallParkSceneRN"
 		"OverallParkSceneRN" 0
-		"OverallParkSceneRN" 6
+		"OverallParkSceneRN" 48
 		2 "|environment|OverallParkScene:pPlane1|OverallParkScene:pPlaneShape1" "uvPivot" 
 		" -type \"double2\" 0.70000001788139343 0.3333333432674408"
 		2 "|environment|OverallParkScene:RoadHillScene" "visibility" " 1"
@@ -1184,7 +1227,91 @@ createNode reference -n "OverallParkSceneRN";
 		2 "|environment|OverallParkScene:RoundBench_simple:bottom1|OverallParkScene:RoundBench_simple:bottomShape2" 
 		"orthographicWidth" " 173.39458614962785532"
 		2 "|environment|OverallParkScene:RoundBench_simple:ParkBench" "visibility" 
-		" 0";
+		" 0"
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.visibility" 
+		"OverallParkSceneRN.placeHolderList[1]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.visibility" 
+		"OverallParkSceneRN.placeHolderList[2]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.translateX" 
+		"OverallParkSceneRN.placeHolderList[3]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.translateX" 
+		"OverallParkSceneRN.placeHolderList[4]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.translateY" 
+		"OverallParkSceneRN.placeHolderList[5]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.translateY" 
+		"OverallParkSceneRN.placeHolderList[6]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.translateZ" 
+		"OverallParkSceneRN.placeHolderList[7]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.translateZ" 
+		"OverallParkSceneRN.placeHolderList[8]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.rotateX" 
+		"OverallParkSceneRN.placeHolderList[9]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.rotateX" 
+		"OverallParkSceneRN.placeHolderList[10]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.rotateY" 
+		"OverallParkSceneRN.placeHolderList[11]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.rotateY" 
+		"OverallParkSceneRN.placeHolderList[12]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.rotateZ" 
+		"OverallParkSceneRN.placeHolderList[13]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.rotateZ" 
+		"OverallParkSceneRN.placeHolderList[14]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.rotateOrder" 
+		"OverallParkSceneRN.placeHolderList[15]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.scaleX" 
+		"OverallParkSceneRN.placeHolderList[16]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.scaleX" 
+		"OverallParkSceneRN.placeHolderList[17]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.scaleY" 
+		"OverallParkSceneRN.placeHolderList[18]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.scaleY" 
+		"OverallParkSceneRN.placeHolderList[19]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.scaleZ" 
+		"OverallParkSceneRN.placeHolderList[20]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:pPlane1.scaleZ" 
+		"OverallParkSceneRN.placeHolderList[21]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.visibility" 
+		"OverallParkSceneRN.placeHolderList[22]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.visibility" 
+		"OverallParkSceneRN.placeHolderList[23]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.translateX" 
+		"OverallParkSceneRN.placeHolderList[24]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.translateX" 
+		"OverallParkSceneRN.placeHolderList[25]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.translateY" 
+		"OverallParkSceneRN.placeHolderList[26]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.translateY" 
+		"OverallParkSceneRN.placeHolderList[27]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.translateZ" 
+		"OverallParkSceneRN.placeHolderList[28]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.translateZ" 
+		"OverallParkSceneRN.placeHolderList[29]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.rotateX" 
+		"OverallParkSceneRN.placeHolderList[30]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.rotateX" 
+		"OverallParkSceneRN.placeHolderList[31]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.rotateY" 
+		"OverallParkSceneRN.placeHolderList[32]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.rotateY" 
+		"OverallParkSceneRN.placeHolderList[33]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.rotateZ" 
+		"OverallParkSceneRN.placeHolderList[34]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.rotateZ" 
+		"OverallParkSceneRN.placeHolderList[35]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.rotateOrder" 
+		"OverallParkSceneRN.placeHolderList[36]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.scaleX" 
+		"OverallParkSceneRN.placeHolderList[37]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.scaleX" 
+		"OverallParkSceneRN.placeHolderList[38]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.scaleY" 
+		"OverallParkSceneRN.placeHolderList[39]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.scaleY" 
+		"OverallParkSceneRN.placeHolderList[40]" ""
+		5 3 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.scaleZ" 
+		"OverallParkSceneRN.placeHolderList[41]" ""
+		5 4 "OverallParkSceneRN" "|environment|OverallParkScene:RoadHillScene|OverallParkScene:ChrisZ_RoadHill.scaleZ" 
+		"OverallParkSceneRN.placeHolderList[42]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "duck_police_officer_RIG_texturedRN";
@@ -1835,355 +1962,7 @@ createNode nodeGraphEditorInfo -n "duck_police_officer_RIG_textured1:hyperShadeP
 	setAttr ".tgi[0].ni[9].nvs" 1923;
 createNode reference -n "duck_police_officer_RIG_texturedRN1";
 	rename -uid "2C90B612-E348-F8F4-745E-85A5DBA78871";
-	setAttr -s 47 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
-	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
-	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
-	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
-	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
-	setAttr ".phl[23]" 0;
-	setAttr ".phl[24]" 0;
-	setAttr ".phl[25]" 0;
-	setAttr ".phl[26]" 0;
-	setAttr ".phl[27]" 0;
-	setAttr ".phl[28]" 0;
-	setAttr ".phl[29]" 0;
-	setAttr ".phl[30]" 0;
-	setAttr ".phl[31]" 0;
-	setAttr ".phl[32]" 0;
-	setAttr ".phl[33]" 0;
-	setAttr ".phl[34]" 0;
-	setAttr ".phl[35]" 0;
-	setAttr ".phl[36]" 0;
-	setAttr ".phl[37]" 0;
-	setAttr ".phl[38]" 0;
-	setAttr ".phl[39]" 0;
-	setAttr ".phl[40]" 0;
-	setAttr ".phl[41]" 0;
-	setAttr ".phl[42]" 0;
-	setAttr ".phl[43]" 0;
-	setAttr ".phl[44]" 0;
-	setAttr ".phl[45]" 0;
-	setAttr ".phl[46]" 0;
-	setAttr ".phl[47]" 0;
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"duck_police_officer_RIG_texturedRN1"
-		"duck_police_officer_RIG_textured:police_hatRN" 0
-		"duck_police_officer_RIG_textured:duck_baseRN" 0
-		"duck_police_officer_RIG_texturedRN1" 0
-		"duck_police_officer_RIG_texturedRN1" 69
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
-		"visibility" " -av 1"
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
-		"translateY" " -k 0 0.5467367056907424"
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
-		"rotate" " -type \"double3\" -4.38637120403974823 0 0"
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
-		"rotateZ" " -av"
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
-		"rotateX" " -av"
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
-		"rotateY" " -av"
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
-		"scaleX" " -k 0 2.70074952338132634"
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
-		"scaleY" " -k 0 2.70074952338132634"
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
-		"scaleZ" " -k 0 2.70074952338132634"
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
-		"rotatePivot" " -type \"double3\" 0 -1.03200382683792213 -0.53431140263566013"
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
-		"scalePivot" " -type \"double3\" 0 -0.38211756325549873 -0.19783819195743282"
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
-		"scalePivotTranslate" " -type \"double3\" 0 -0.6498862635824233 -0.33647321067822722"
-		
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL" 
-		"visibility" " -av 1"
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL" 
-		"EyeScaleX" " -av -k 1 1"
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL" 
-		"EyeScaleY" " -av -k 1 1"
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL" 
-		"EyeScaleZ" " -av -k 1 1"
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL" 
-		"EyeScaleX" " -av -k 1 1"
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL" 
-		"EyeScaleY" " -av -k 1 1"
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL" 
-		"EyeScaleZ" " -av -k 1 1"
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:IKs|duck_police_officer_RIG_textured:spine_spline_IK" 
-		"translate" " -type \"double3\" 13.2380506618735474 5.20478367366925809 -14.42198035951608937"
-		
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:IKs|duck_police_officer_RIG_textured:spine_spline_IK" 
-		"rotate" " -type \"double3\" -158.95041890476838375 -18.28209813371261561 127.49493862690579249"
-		
-		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:GEO" 
-		"translate" " -type \"double3\" 0 0 0"
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.translateX" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[1]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.translateX" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[2]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.translateZ" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[3]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.translateZ" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[4]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.translateY" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[5]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.translateY" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[6]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.rotateY" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[7]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.rotateY" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[8]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.rotateX" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[9]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.rotateX" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[10]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.rotateZ" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[11]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.rotateZ" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[12]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.rotateOrder" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[13]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.scaleX" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[14]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.scaleX" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[15]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.scaleY" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[16]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.scaleY" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[17]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.scaleZ" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[18]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.scaleZ" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[19]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.visibility" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[20]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.visibility" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[21]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL.rotateZ" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[22]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL.rotateZ" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[23]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL.rotateX" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[24]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL.rotateX" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[25]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL.rotateY" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[26]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL.rotateY" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[27]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL.rotateOrder" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[28]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL.visibility" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[29]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL.visibility" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[30]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL.EyeScaleX" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[31]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL.EyeScaleX" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[32]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL.EyeScaleY" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[33]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL.EyeScaleY" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[34]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL.EyeScaleZ" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[35]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL.EyeScaleZ" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[36]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL.visibility" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[37]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL.visibility" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[38]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL.EyeScaleX" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[39]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL.EyeScaleX" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[40]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL.EyeScaleY" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[41]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL.EyeScaleY" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[42]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL.EyeScaleZ" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[43]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL.EyeScaleZ" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[44]" ""
-		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL.visibility" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[45]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL.visibility" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[46]" ""
-		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:GEO.drawOverride" 
-		"duck_police_officer_RIG_texturedRN1.placeHolderList[47]" "";
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode displayLayer -n "duckie";
-	rename -uid "A810E587-4E4B-2008-211F-ED93980B1863";
-	setAttr ".dt" 2;
-	setAttr ".do" 6;
-createNode displayLayer -n "enviro";
-	rename -uid "60439967-EC45-BCD1-A404-3B9C13E46339";
-	setAttr ".do" 7;
-createNode animLayer -n "AnimLayer1";
-	rename -uid "2D91E61B-554E-804B-3689-5FB8FDBDCD1B";
-	setAttr -s 58 ".dsm";
-	setAttr -s 46 ".bnds";
-	setAttr ".pref" yes;
-	setAttr ".slct" yes;
-createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured:master_CTRL_visibility_AnimLayer1";
-	rename -uid "85483CB7-364A-67A4-9CC2-D68542241E34";
-	setAttr ".ia" yes;
-	setAttr ".ib" yes;
-	setAttr ".o" yes;
-createNode animBlendNodeAdditiveDL -n "duck_police_officer_RIG_textured:master_CTRL_translateX_AnimLayer1";
-	rename -uid "55AFACF5-A944-C8D5-9FE8-BA99C67469AC";
-	setAttr ".ia" 14.781569782047296;
-	setAttr ".o" 14.781569782047296;
-createNode animBlendNodeAdditiveDL -n "duck_police_officer_RIG_textured:master_CTRL_translateY_AnimLayer1";
-	rename -uid "31A7AA1D-FF4F-A9AB-C125-F4A73E4675F7";
-createNode animBlendNodeAdditiveDL -n "duck_police_officer_RIG_textured:master_CTRL_translateZ_AnimLayer1";
-	rename -uid "77A90823-1845-B1D2-5266-A3B40E57FEBF";
-	setAttr ".ia" -15.341700745100358;
-	setAttr ".o" -15.341700745100358;
-createNode animBlendNodeAdditiveRotation -n "duck_police_officer_RIG_textured:master_CTRL_rotate_AnimLayer1";
-	rename -uid "2D1082AB-3E4E-2654-EFC3-499976C2B25B";
-	setAttr ".ia" -type "double3" 0 -59.172275970159035 0 ;
-	setAttr ".o" -type "double3" 0 -59.172275970159035 0 ;
-createNode animBlendNodeAdditiveScale -n "duck_police_officer_RIG_textured:master_CTRL_scaleX_AnimLayer1";
-	rename -uid "5487C3D9-4B4A-157C-FCBC-E692E5BBDE92";
-	setAttr ".ia" 1;
-	setAttr ".ib" 1;
-	setAttr ".o" 1;
-createNode animBlendNodeAdditiveScale -n "duck_police_officer_RIG_textured:master_CTRL_scaleY_AnimLayer1";
-	rename -uid "4F038695-E144-8903-D2C7-B2AD2EB505B5";
-	setAttr ".ia" 1;
-	setAttr ".ib" 1;
-	setAttr ".o" 1;
-createNode animBlendNodeAdditiveScale -n "duck_police_officer_RIG_textured:master_CTRL_scaleZ_AnimLayer1";
-	rename -uid "AF217802-0F40-B577-FBFB-D2B8255D679E";
-	setAttr ".ia" 1;
-	setAttr ".ib" 1;
-	setAttr ".o" 1;
-createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured:head_CTRL_visibility_AnimLayer1";
-	rename -uid "AD9F9C8F-4447-C89E-39FB-368D4CC13DAA";
-	setAttr ".ia" yes;
-	setAttr ".o" yes;
-createNode animBlendNodeAdditiveRotation -n "duck_police_officer_RIG_textured:head_CTRL_rotate_AnimLayer1";
-	rename -uid "7A754966-B24D-73ED-9F68-298CD02335E4";
-	setAttr ".o" -type "double3" -4.3863712040397482 0 0 ;
-createNode animCurveTU -n "head_CTRL_visibility_AnimLayer1_inputB";
-	rename -uid "C09B5458-D341-BB3E-FCDB-A39D0F81C157";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 40 1 100 1;
-	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
-createNode animCurveTA -n "head_CTRL_rotate_AnimLayer1_inputBX";
-	rename -uid "0F8B098B-934F-4387-C377-B0A9FC70BF47";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  100 -4.3863712040397482;
-createNode animCurveTA -n "head_CTRL_rotate_AnimLayer1_inputBY";
-	rename -uid "17CE8B31-6E49-B62E-F143-7C9EFC3BC529";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  100 0;
-createNode animCurveTA -n "head_CTRL_rotate_AnimLayer1_inputBZ";
-	rename -uid "156A4738-2843-B0C7-90C9-22B64CB51A30";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  100 0;
-createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured:l_eye_CTRL_visibility_AnimLayer1";
-	rename -uid "9E82C7EF-1C43-8F49-EE92-92AAEE05E061";
-	setAttr ".ia" yes;
-	setAttr ".o" yes;
-createNode animBlendNodeAdditive -n "duck_police_officer_RIG_textured:l_eye_CTRL_EyeScaleX_AnimLayer1";
-	rename -uid "6F43E5FC-D443-A7F8-8E3C-FDAD0931059B";
-	setAttr ".ia" 1;
-	setAttr ".o" 1;
-createNode animBlendNodeAdditive -n "duck_police_officer_RIG_textured:l_eye_CTRL_EyeScaleY_AnimLayer1";
-	rename -uid "F5888D64-BE45-1E7C-F519-FEB8B0EDE1D3";
-	setAttr ".ia" 1;
-	setAttr ".o" 1;
-createNode animBlendNodeAdditive -n "duck_police_officer_RIG_textured:l_eye_CTRL_EyeScaleZ_AnimLayer1";
-	rename -uid "2B3A3B87-584A-0F1D-C493-A681EEF622BC";
-	setAttr ".ia" 1;
-	setAttr ".o" 1;
-createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured:r_eye_CTRL_visibility_AnimLayer1";
-	rename -uid "660C1F79-6A49-F7C7-F76F-68A74927D12A";
-	setAttr ".ia" yes;
-	setAttr ".o" yes;
-createNode animBlendNodeAdditive -n "duck_police_officer_RIG_textured:r_eye_CTRL_EyeScaleX_AnimLayer1";
-	rename -uid "8C2FAED7-004C-6556-964B-97B125127F4A";
-	setAttr ".ia" 1;
-	setAttr ".o" 1;
-createNode animBlendNodeAdditive -n "duck_police_officer_RIG_textured:r_eye_CTRL_EyeScaleY_AnimLayer1";
-	rename -uid "354E9162-E641-8101-1E0C-9A8ADBB356B3";
-	setAttr ".ia" 1;
-	setAttr ".o" 1;
-createNode animBlendNodeAdditive -n "duck_police_officer_RIG_textured:r_eye_CTRL_EyeScaleZ_AnimLayer1";
-	rename -uid "509198E2-C842-FEA5-83D3-6D8020028E37";
-	setAttr ".ia" 1;
-	setAttr ".o" 1;
-createNode animCurveTU -n "l_eye_CTRL_visibility_AnimLayer1_inputB";
-	rename -uid "306AE937-D74C-5BC6-1634-84B3F8650369";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  100 1 110 1 116 1;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
-createNode animCurveTU -n "l_eye_CTRL_EyeScaleX_AnimLayer1_inputB";
-	rename -uid "B0F76A35-9F4C-AEB7-53A6-19B8B534EB71";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  100 0 110 0 116 1;
-createNode animCurveTU -n "l_eye_CTRL_EyeScaleY_AnimLayer1_inputB";
-	rename -uid "825F9824-424F-9990-286C-85AB439CDA82";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  100 0 110 0 116 1;
-createNode animCurveTU -n "l_eye_CTRL_EyeScaleZ_AnimLayer1_inputB";
-	rename -uid "AA9424D8-CB46-80E1-CDEB-D1B496A691B5";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  100 0 110 0 116 0;
-createNode animCurveTU -n "r_eye_CTRL_visibility_AnimLayer1_inputB";
-	rename -uid "CBA7C533-2742-B2BB-F827-5F93EA85ABC3";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  100 1 110 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
-createNode animCurveTU -n "r_eye_CTRL_EyeScaleX_AnimLayer1_inputB";
-	rename -uid "9DF3BF9A-C646-3D02-C87B-83A9FD313772";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  100 0 110 0;
-createNode animCurveTU -n "r_eye_CTRL_EyeScaleY_AnimLayer1_inputB";
-	rename -uid "CC06A63C-BD41-9FF7-CE11-D385B452FA28";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  100 0 110 0;
-createNode animCurveTU -n "r_eye_CTRL_EyeScaleZ_AnimLayer1_inputB";
-	rename -uid "1F1D6610-4742-24D5-6D64-67832C600F82";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  100 0 110 0;
-createNode reference -n "duck_police_officer_RIG_texturedRN2";
-	rename -uid "8127D45D-A04E-6B33-8F74-2BA05B3CD43C";
-	setAttr -s 77 ".phl";
+	setAttr -s 116 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -2261,12 +2040,922 @@ createNode reference -n "duck_police_officer_RIG_texturedRN2";
 	setAttr ".phl[75]" 0;
 	setAttr ".phl[76]" 0;
 	setAttr ".phl[77]" 0;
+	setAttr ".phl[78]" 0;
+	setAttr ".phl[79]" 0;
+	setAttr ".phl[80]" 0;
+	setAttr ".phl[81]" 0;
+	setAttr ".phl[82]" 0;
+	setAttr ".phl[83]" 0;
+	setAttr ".phl[84]" 0;
+	setAttr ".phl[85]" 0;
+	setAttr ".phl[86]" 0;
+	setAttr ".phl[87]" 0;
+	setAttr ".phl[88]" 0;
+	setAttr ".phl[89]" 0;
+	setAttr ".phl[90]" 0;
+	setAttr ".phl[91]" 0;
+	setAttr ".phl[92]" 0;
+	setAttr ".phl[93]" 0;
+	setAttr ".phl[94]" 0;
+	setAttr ".phl[95]" 0;
+	setAttr ".phl[96]" 0;
+	setAttr ".phl[97]" 0;
+	setAttr ".phl[98]" 0;
+	setAttr ".phl[99]" 0;
+	setAttr ".phl[100]" 0;
+	setAttr ".phl[101]" 0;
+	setAttr ".phl[102]" 0;
+	setAttr ".phl[103]" 0;
+	setAttr ".phl[104]" 0;
+	setAttr ".phl[105]" 0;
+	setAttr ".phl[106]" 0;
+	setAttr ".phl[107]" 0;
+	setAttr ".phl[108]" 0;
+	setAttr ".phl[109]" 0;
+	setAttr ".phl[110]" 0;
+	setAttr ".phl[111]" 0;
+	setAttr ".phl[112]" 0;
+	setAttr ".phl[113]" 0;
+	setAttr ".phl[114]" 0;
+	setAttr ".phl[115]" 0;
+	setAttr ".phl[116]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"duck_police_officer_RIG_texturedRN1"
+		"duck_police_officer_RIG_textured:police_hatRN" 0
+		"duck_police_officer_RIG_textured:duck_baseRN" 0
+		"duck_police_officer_RIG_texturedRN1" 0
+		"duck_police_officer_RIG_texturedRN1" 297
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:JOINTs|duck_police_officer_RIG_textured:root|duck_police_officer_RIG_textured:spine1|duck_police_officer_RIG_textured:spine_spline_curve" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:JOINTs|duck_police_officer_RIG_textured:root|duck_police_officer_RIG_textured:spine1|duck_police_officer_RIG_textured:spine_spline_curve" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:JOINTs|duck_police_officer_RIG_textured:root|duck_police_officer_RIG_textured:spine1|duck_police_officer_RIG_textured:spine_spline_curve" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL" 
+		"visibility" " -av 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL" 
+		"translate" " -type \"double3\" 14.78156978204729555 0 -15.34170074510035775"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL" 
+		"translateX" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL" 
+		"translateZ" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL" 
+		"translateY" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL" 
+		"rotate" " -type \"double3\" 0 -59.17227597015903484 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL" 
+		"rotateY" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL" 
+		"rotateX" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL" 
+		"rotateZ" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL" 
+		"scaleX" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL" 
+		"scaleY" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL" 
+		"scaleZ" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL" 
+		"visibility" " -av 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL" 
+		"translateX" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL" 
+		"translateY" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL" 
+		"translateZ" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL" 
+		"rotate" " -type \"double3\" 13.01163883971795343 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL" 
+		"rotateX" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL" 
+		"rotateY" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL" 
+		"rotateZ" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL" 
+		"scaleX" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL" 
+		"scaleY" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL" 
+		"scaleZ" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL" 
+		"rotatePivot" " -type \"double3\" -0.0015626269384228716 0.032884345688004579 0.013252010529574032"
+		
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL" 
+		"scalePivot" " -type \"double3\" -0.0015626269384228716 0.032884345688004579 0.013252010529574032"
+		
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL" 
+		"visibility" " -av 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL" 
+		"rotateZ" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL" 
+		"rotateY" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL" 
+		"rotateX" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL" 
+		"rotatePivot" " -type \"double3\" 0.041991120368338818 0.10427302019571849 -0.35085858290819605"
+		
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL" 
+		"scalePivot" " -type \"double3\" 0.041991120368338818 0.10427302019571849 -0.35085858290819605"
+		
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL" 
+		"visibility" " -av 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL" 
+		"rotate" " -type \"double3\" 0 0 -3.17794724509360904"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL" 
+		"rotateZ" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL" 
+		"rotateX" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL" 
+		"rotateY" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL" 
+		"rotatePivot" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL" 
+		"scalePivot" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL" 
+		"rotatePivot" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL" 
+		"scalePivot" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL" 
+		"rotatePivot" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL" 
+		"scalePivot" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
+		"visibility" " -av 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
+		"translateY" " -k 0 0.5467367056907424"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
+		"rotate" " -type \"double3\" -4.38637120403974823 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
+		"rotateZ" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
+		"rotateX" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
+		"rotateY" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
+		"scaleX" " -k 0 2.70074952338132634"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
+		"scaleY" " -k 0 2.70074952338132634"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
+		"scaleZ" " -k 0 2.70074952338132634"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
+		"rotatePivot" " -type \"double3\" 0 -1.03200382683792213 -0.53431140263566013"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
+		"scalePivot" " -type \"double3\" 0 -0.38211756325549873 -0.19783819195743282"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL" 
+		"scalePivotTranslate" " -type \"double3\" 0 -0.6498862635824233 -0.33647321067822722"
+		
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL" 
+		"visibility" " -av 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL" 
+		"EyeScaleX" " -av -k 1 2"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL" 
+		"EyeScaleY" " -av -k 1 2"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL" 
+		"EyeScaleZ" " -av -k 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL" 
+		"EyeScaleX" " -av -k 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL" 
+		"EyeScaleY" " -av -k 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL" 
+		"EyeScaleZ" " -av -k 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:top_beak_CTRL_GRP|duck_police_officer_RIG_textured:top_beak_CTRL" 
+		"visibility" " -av 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:top_beak_CTRL_GRP|duck_police_officer_RIG_textured:top_beak_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:top_beak_CTRL_GRP|duck_police_officer_RIG_textured:top_beak_CTRL" 
+		"rotateX" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:top_beak_CTRL_GRP|duck_police_officer_RIG_textured:top_beak_CTRL" 
+		"rotateY" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:top_beak_CTRL_GRP|duck_police_officer_RIG_textured:top_beak_CTRL" 
+		"rotateZ" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:bot_beak_CTRL_GRP|duck_police_officer_RIG_textured:bot_beak_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:bot_beak_CTRL_GRP|duck_police_officer_RIG_textured:bot_beak_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:hat_CTRL_GEO|duck_police_officer_RIG_textured:hat_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:hat_CTRL_GEO|duck_police_officer_RIG_textured:hat_CTRL" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:hat_CTRL_GEO|duck_police_officer_RIG_textured:hat_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:hat_CTRL_GEO|duck_police_officer_RIG_textured:hat_CTRL" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL" 
+		"visibility" " -av 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL" 
+		"translateX" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL" 
+		"translateY" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL" 
+		"translateZ" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL" 
+		"rotate" " -type \"double3\" 42.49857101362982092 -48.69958267527449181 -112.4872252887764148"
+		
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL" 
+		"rotateX" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL" 
+		"rotateY" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL" 
+		"rotateZ" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL" 
+		"scaleX" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL" 
+		"scaleY" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL" 
+		"scaleZ" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:r_feathers_CTRL_GRP|duck_police_officer_RIG_textured:r_feathers_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:r_feathers_CTRL_GRP|duck_police_officer_RIG_textured:r_feathers_CTRL" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:r_feathers_CTRL_GRP|duck_police_officer_RIG_textured:r_feathers_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:r_feathers_CTRL_GRP|duck_police_officer_RIG_textured:r_feathers_CTRL" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:r_feathers_CTRL_GRP|duck_police_officer_RIG_textured:r_feathers_CTRL|duck_police_officer_RIG_textured:r_wing_front_feather_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_front_feather_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:r_feathers_CTRL_GRP|duck_police_officer_RIG_textured:r_feathers_CTRL|duck_police_officer_RIG_textured:r_wing_front_feather_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_front_feather_CTRL" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:r_feathers_CTRL_GRP|duck_police_officer_RIG_textured:r_feathers_CTRL|duck_police_officer_RIG_textured:r_wing_front_feather_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_front_feather_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:r_feathers_CTRL_GRP|duck_police_officer_RIG_textured:r_feathers_CTRL|duck_police_officer_RIG_textured:r_wing_front_feather_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_front_feather_CTRL" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:r_feathers_CTRL_GRP|duck_police_officer_RIG_textured:r_feathers_CTRL|duck_police_officer_RIG_textured:r_wing_mid_feather_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_mid_feather_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:r_feathers_CTRL_GRP|duck_police_officer_RIG_textured:r_feathers_CTRL|duck_police_officer_RIG_textured:r_wing_mid_feather_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_mid_feather_CTRL" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:r_feathers_CTRL_GRP|duck_police_officer_RIG_textured:r_feathers_CTRL|duck_police_officer_RIG_textured:r_wing_mid_feather_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_mid_feather_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:r_feathers_CTRL_GRP|duck_police_officer_RIG_textured:r_feathers_CTRL|duck_police_officer_RIG_textured:r_wing_mid_feather_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_mid_feather_CTRL" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:r_feathers_CTRL_GRP|duck_police_officer_RIG_textured:r_feathers_CTRL|duck_police_officer_RIG_textured:r_wing_back_feather_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_back_feather_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:r_feathers_CTRL_GRP|duck_police_officer_RIG_textured:r_feathers_CTRL|duck_police_officer_RIG_textured:r_wing_back_feather_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_back_feather_CTRL" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:r_feathers_CTRL_GRP|duck_police_officer_RIG_textured:r_feathers_CTRL|duck_police_officer_RIG_textured:r_wing_back_feather_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_back_feather_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:r_feathers_CTRL_GRP|duck_police_officer_RIG_textured:r_feathers_CTRL|duck_police_officer_RIG_textured:r_wing_back_feather_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_back_feather_CTRL" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL" 
+		"visibility" " -av 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL" 
+		"rotate" " -type \"double3\" -31.23936631453479507 50.05035343999700359 -98.30596328843363096"
+		
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL" 
+		"rotateY" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL" 
+		"rotateX" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL" 
+		"rotateZ" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL" 
+		"rotatePivot" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL" 
+		"scalePivot" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL" 
+		"visibility" " -av 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL" 
+		"translateX" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL" 
+		"translateY" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL" 
+		"translateZ" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL" 
+		"rotateX" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL" 
+		"rotateY" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL" 
+		"rotateZ" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL" 
+		"scaleX" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL" 
+		"scaleY" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL" 
+		"scaleZ" " -av"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:l_feathers_CTRL_GRP|duck_police_officer_RIG_textured:l_feathers_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:l_feathers_CTRL_GRP|duck_police_officer_RIG_textured:l_feathers_CTRL" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:l_feathers_CTRL_GRP|duck_police_officer_RIG_textured:l_feathers_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:l_feathers_CTRL_GRP|duck_police_officer_RIG_textured:l_feathers_CTRL" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:l_feathers_CTRL_GRP|duck_police_officer_RIG_textured:l_feathers_CTRL|duck_police_officer_RIG_textured:l_wing_front_feather_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_front_feather_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:l_feathers_CTRL_GRP|duck_police_officer_RIG_textured:l_feathers_CTRL|duck_police_officer_RIG_textured:l_wing_front_feather_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_front_feather_CTRL" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:l_feathers_CTRL_GRP|duck_police_officer_RIG_textured:l_feathers_CTRL|duck_police_officer_RIG_textured:l_wing_front_feather_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_front_feather_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:l_feathers_CTRL_GRP|duck_police_officer_RIG_textured:l_feathers_CTRL|duck_police_officer_RIG_textured:l_wing_front_feather_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_front_feather_CTRL" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:l_feathers_CTRL_GRP|duck_police_officer_RIG_textured:l_feathers_CTRL|duck_police_officer_RIG_textured:l_wing_mid_feather_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_mid_feather_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:l_feathers_CTRL_GRP|duck_police_officer_RIG_textured:l_feathers_CTRL|duck_police_officer_RIG_textured:l_wing_mid_feather_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_mid_feather_CTRL" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:l_feathers_CTRL_GRP|duck_police_officer_RIG_textured:l_feathers_CTRL|duck_police_officer_RIG_textured:l_wing_mid_feather_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_mid_feather_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:l_feathers_CTRL_GRP|duck_police_officer_RIG_textured:l_feathers_CTRL|duck_police_officer_RIG_textured:l_wing_mid_feather_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_mid_feather_CTRL" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:l_feathers_CTRL_GRP|duck_police_officer_RIG_textured:l_feathers_CTRL|duck_police_officer_RIG_textured:l_wing_back_feather_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_back_feather_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:l_feathers_CTRL_GRP|duck_police_officer_RIG_textured:l_feathers_CTRL|duck_police_officer_RIG_textured:l_wing_back_feather_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_back_feather_CTRL" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:l_feathers_CTRL_GRP|duck_police_officer_RIG_textured:l_feathers_CTRL|duck_police_officer_RIG_textured:l_wing_back_feather_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_back_feather_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL|duck_police_officer_RIG_textured:r_wing_elbow_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_elbow_CTRL|duck_police_officer_RIG_textured:l_feathers_CTRL_GRP|duck_police_officer_RIG_textured:l_feathers_CTRL|duck_police_officer_RIG_textured:l_wing_back_feather_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_back_feather_CTRL" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:butt_CTRL_GRP|duck_police_officer_RIG_textured:butt_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:butt_CTRL_GRP|duck_police_officer_RIG_textured:butt_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:butt_CTRL_GRP|duck_police_officer_RIG_textured:butt_CTRL|duck_police_officer_RIG_textured:tail_CTRL_GRP|duck_police_officer_RIG_textured:tail_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:butt_CTRL_GRP|duck_police_officer_RIG_textured:butt_CTRL|duck_police_officer_RIG_textured:tail_CTRL_GRP|duck_police_officer_RIG_textured:tail_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:butt_CTRL_GRP|duck_police_officer_RIG_textured:butt_CTRL|duck_police_officer_RIG_textured:tail_CTRL_GRP|duck_police_officer_RIG_textured:tail_CTRL|duck_police_officer_RIG_textured:bot_tail_CTRL_GRP|duck_police_officer_RIG_textured:bot_tail_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:butt_CTRL_GRP|duck_police_officer_RIG_textured:butt_CTRL|duck_police_officer_RIG_textured:tail_CTRL_GRP|duck_police_officer_RIG_textured:tail_CTRL|duck_police_officer_RIG_textured:bot_tail_CTRL_GRP|duck_police_officer_RIG_textured:bot_tail_CTRL" 
+		"rotate" " -type \"double3\" 0 12.99999999999999645 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:butt_CTRL_GRP|duck_police_officer_RIG_textured:butt_CTRL|duck_police_officer_RIG_textured:tail_CTRL_GRP|duck_police_officer_RIG_textured:tail_CTRL|duck_police_officer_RIG_textured:mid_tail_CTRL_GRP|duck_police_officer_RIG_textured:mid_tail_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:butt_CTRL_GRP|duck_police_officer_RIG_textured:butt_CTRL|duck_police_officer_RIG_textured:tail_CTRL_GRP|duck_police_officer_RIG_textured:tail_CTRL|duck_police_officer_RIG_textured:mid_tail_CTRL_GRP|duck_police_officer_RIG_textured:mid_tail_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:butt_CTRL_GRP|duck_police_officer_RIG_textured:butt_CTRL|duck_police_officer_RIG_textured:tail_CTRL_GRP|duck_police_officer_RIG_textured:tail_CTRL|duck_police_officer_RIG_textured:top_tail_CTRL_GRP|duck_police_officer_RIG_textured:top_tail_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:butt_CTRL_GRP|duck_police_officer_RIG_textured:butt_CTRL|duck_police_officer_RIG_textured:tail_CTRL_GRP|duck_police_officer_RIG_textured:tail_CTRL|duck_police_officer_RIG_textured:top_tail_CTRL_GRP|duck_police_officer_RIG_textured:top_tail_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:r_foot_CTRL_GRP|duck_police_officer_RIG_textured:r_foot_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:r_foot_CTRL_GRP|duck_police_officer_RIG_textured:r_foot_CTRL" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:r_foot_CTRL_GRP|duck_police_officer_RIG_textured:r_foot_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:r_foot_CTRL_GRP|duck_police_officer_RIG_textured:r_foot_CTRL" 
+		"ToeBend" " -k 1 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:r_foot_CTRL_GRP|duck_police_officer_RIG_textured:r_foot_CTRL|duck_police_officer_RIG_textured:r_foot_poleVector_GRP|duck_police_officer_RIG_textured:r_foot_poleVector" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:r_foot_CTRL_GRP|duck_police_officer_RIG_textured:r_foot_CTRL|duck_police_officer_RIG_textured:r_foot_poleVector_GRP|duck_police_officer_RIG_textured:r_foot_poleVector" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:r_foot_CTRL_GRP|duck_police_officer_RIG_textured:r_foot_CTRL|duck_police_officer_RIG_textured:r_foot_poleVector_GRP|duck_police_officer_RIG_textured:r_foot_poleVector" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:r_foot_CTRL_GRP|duck_police_officer_RIG_textured:r_foot_CTRL|duck_police_officer_RIG_textured:r_foot_poleVector_GRP|duck_police_officer_RIG_textured:r_foot_poleVector" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:l_foot_CTRL_GRP|duck_police_officer_RIG_textured:l_foot_CTRL" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:l_foot_CTRL_GRP|duck_police_officer_RIG_textured:l_foot_CTRL" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:l_foot_CTRL_GRP|duck_police_officer_RIG_textured:l_foot_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:l_foot_CTRL_GRP|duck_police_officer_RIG_textured:l_foot_CTRL" 
+		"ToeBend" " -k 1 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:l_foot_CTRL_GRP|duck_police_officer_RIG_textured:l_foot_CTRL|duck_police_officer_RIG_textured:l_foot_poleVector_GRP|duck_police_officer_RIG_textured:l_foot_poleVector" 
+		"visibility" " 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:l_foot_CTRL_GRP|duck_police_officer_RIG_textured:l_foot_CTRL|duck_police_officer_RIG_textured:l_foot_poleVector_GRP|duck_police_officer_RIG_textured:l_foot_poleVector" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:l_foot_CTRL_GRP|duck_police_officer_RIG_textured:l_foot_CTRL|duck_police_officer_RIG_textured:l_foot_poleVector_GRP|duck_police_officer_RIG_textured:l_foot_poleVector" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:l_foot_CTRL_GRP|duck_police_officer_RIG_textured:l_foot_CTRL|duck_police_officer_RIG_textured:l_foot_poleVector_GRP|duck_police_officer_RIG_textured:l_foot_poleVector" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:IKs|duck_police_officer_RIG_textured:spine_spline_IK" 
+		"translate" " -type \"double3\" 12.72646127149268835 4.57959756374195148 -14.1166762661635854"
+		
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:IKs|duck_police_officer_RIG_textured:spine_spline_IK" 
+		"rotate" " -type \"double3\" -163.888759435794924 -23.07729011885473014 140.42720904717720032"
+		
+		2 "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:GEO" 
+		"translate" " -type \"double3\" 0 0 0"
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.translateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[1]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.translateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[2]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.translateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[3]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.translateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[4]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.translateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[5]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.translateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[6]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.rotateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[7]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.rotateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[8]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.rotateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[9]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.rotateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[10]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.rotateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[11]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.rotateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[12]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.rotateOrder" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[13]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.scaleX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[14]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.scaleX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[15]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.scaleY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[16]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.scaleY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[17]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.scaleZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[18]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.scaleZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[19]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[20]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[21]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.translateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[22]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.translateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[23]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.translateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[24]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.translateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[25]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.translateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[26]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.translateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[27]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.rotateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[28]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.rotateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[29]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.rotateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[30]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.rotateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[31]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.rotateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[32]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.rotateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[33]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.rotateOrder" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[34]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.scaleX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[35]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.scaleX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[36]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.scaleY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[37]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.scaleY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[38]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.scaleZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[39]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.scaleZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[40]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[41]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[42]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL.rotateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[43]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL.rotateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[44]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL.rotateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[45]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL.rotateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[46]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL.rotateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[47]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL.rotateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[48]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[49]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[50]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL.rotateOrder" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[51]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL.rotateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[52]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL.rotateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[53]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL.rotateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[54]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL.rotateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[55]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL.rotateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[56]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL.rotateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[57]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL.rotateOrder" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[58]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[59]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[60]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL.rotateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[61]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL.rotateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[62]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL.rotateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[63]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL.rotateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[64]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL.rotateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[65]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL.rotateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[66]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL.rotateOrder" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[67]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[68]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[69]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL.EyeScaleX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[70]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL.EyeScaleX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[71]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL.EyeScaleY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[72]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL.EyeScaleY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[73]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL.EyeScaleZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[74]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL.EyeScaleZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[75]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[76]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:l_eye_CTRL_GRP|duck_police_officer_RIG_textured:l_eye_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[77]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL.EyeScaleX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[78]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL.EyeScaleX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[79]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL.EyeScaleY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[80]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL.EyeScaleY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[81]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL.EyeScaleZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[82]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL.EyeScaleZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[83]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[84]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured:bot_neck_CTRL|duck_police_officer_RIG_textured:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured:mid_neck_CTRL|duck_police_officer_RIG_textured:top_neck_CTRL_GRP|duck_police_officer_RIG_textured:top_neck_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:head_CTRL|duck_police_officer_RIG_textured:eyes_CTRL_GRP|duck_police_officer_RIG_textured:eyes_CTRL|duck_police_officer_RIG_textured:r_eye_CTRL_GRP|duck_police_officer_RIG_textured:r_eye_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[85]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.rotateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[86]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.rotateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[87]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.rotateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[88]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.rotateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[89]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.rotateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[90]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.rotateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[91]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.rotateOrder" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[92]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[93]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[94]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.translateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[95]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.translateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[96]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.translateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[97]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.translateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[98]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.translateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[99]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.translateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[100]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.scaleX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[101]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.scaleX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[102]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.scaleY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[103]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.scaleY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[104]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.scaleZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[105]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:r_wing_shoulder_CTRL.scaleZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[106]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL.rotateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[107]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL.rotateY" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[108]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL.rotateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[109]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL.rotateX" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[110]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL.rotateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[111]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL.rotateZ" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[112]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL.rotateOrder" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[113]" ""
+		5 3 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[114]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:RIG|duck_police_officer_RIG_textured:CTRLs|duck_police_officer_RIG_textured:master_CTRL|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured:chest_CTRL_GRP|duck_police_officer_RIG_textured:chest_CTRL|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured:l_wing_shoulder_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[115]" ""
+		5 4 "duck_police_officer_RIG_texturedRN1" "|duck_police_officer_RIG_textured:PoliceDuck|duck_police_officer_RIG_textured:GEO.drawOverride" 
+		"duck_police_officer_RIG_texturedRN1.placeHolderList[116]" "";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode displayLayer -n "duckie";
+	rename -uid "A810E587-4E4B-2008-211F-ED93980B1863";
+	setAttr ".dt" 2;
+	setAttr ".do" 6;
+createNode displayLayer -n "enviro";
+	rename -uid "60439967-EC45-BCD1-A404-3B9C13E46339";
+	setAttr ".dt" 2;
+	setAttr ".do" 7;
+createNode animLayer -n "AnimLayer1";
+	rename -uid "2D91E61B-554E-804B-3689-5FB8FDBDCD1B";
+	setAttr -s 124 ".dsm";
+	setAttr -s 94 ".bnds";
+	setAttr ".pref" yes;
+	setAttr ".slct" yes;
+createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured:master_CTRL_visibility_AnimLayer1";
+	rename -uid "85483CB7-364A-67A4-9CC2-D68542241E34";
+	setAttr ".ia" yes;
+	setAttr ".o" yes;
+createNode animBlendNodeAdditiveDL -n "duck_police_officer_RIG_textured:master_CTRL_translateX_AnimLayer1";
+	rename -uid "55AFACF5-A944-C8D5-9FE8-BA99C67469AC";
+	setAttr ".ia" 14.781569782047296;
+	setAttr ".o" 14.781569782047296;
+createNode animBlendNodeAdditiveDL -n "duck_police_officer_RIG_textured:master_CTRL_translateY_AnimLayer1";
+	rename -uid "31A7AA1D-FF4F-A9AB-C125-F4A73E4675F7";
+createNode animBlendNodeAdditiveDL -n "duck_police_officer_RIG_textured:master_CTRL_translateZ_AnimLayer1";
+	rename -uid "77A90823-1845-B1D2-5266-A3B40E57FEBF";
+	setAttr ".ia" -15.341700745100358;
+	setAttr ".o" -15.341700745100358;
+createNode animBlendNodeAdditiveRotation -n "duck_police_officer_RIG_textured:master_CTRL_rotate_AnimLayer1";
+	rename -uid "2D1082AB-3E4E-2654-EFC3-499976C2B25B";
+	setAttr ".ia" -type "double3" 0 -59.172275970159035 0 ;
+	setAttr ".o" -type "double3" 0 -59.172275970159035 0 ;
+createNode animBlendNodeAdditiveScale -n "duck_police_officer_RIG_textured:master_CTRL_scaleX_AnimLayer1";
+	rename -uid "5487C3D9-4B4A-157C-FCBC-E692E5BBDE92";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "duck_police_officer_RIG_textured:master_CTRL_scaleY_AnimLayer1";
+	rename -uid "4F038695-E144-8903-D2C7-B2AD2EB505B5";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "duck_police_officer_RIG_textured:master_CTRL_scaleZ_AnimLayer1";
+	rename -uid "AF217802-0F40-B577-FBFB-D2B8255D679E";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured:head_CTRL_visibility_AnimLayer1";
+	rename -uid "AD9F9C8F-4447-C89E-39FB-368D4CC13DAA";
+	setAttr ".ia" yes;
+	setAttr ".o" yes;
+createNode animBlendNodeAdditiveRotation -n "duck_police_officer_RIG_textured:head_CTRL_rotate_AnimLayer1";
+	rename -uid "7A754966-B24D-73ED-9F68-298CD02335E4";
+	setAttr ".o" -type "double3" -4.3863712040397482 0 0 ;
+createNode animCurveTU -n "head_CTRL_visibility_AnimLayer1_inputB";
+	rename -uid "C09B5458-D341-BB3E-FCDB-A39D0F81C157";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 10 ".ktv[0:9]"  1 1 10 1 40 1 100 1 235 1 245 1 255 1 265 1
+		 275 1 285 1;
+	setAttr -s 10 ".kot[0:9]"  5 5 5 5 5 5 5 5 
+		5 5;
+createNode animCurveTA -n "head_CTRL_rotate_AnimLayer1_inputBX";
+	rename -uid "0F8B098B-934F-4387-C377-B0A9FC70BF47";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  100 -4.3863712040397482 235 -4.3863712040397482
+		 245 -4.3863712040397482 255 -4.3863712040397482 265 -4.3863712040397482 275 -4.3863712040397482
+		 285 -4.3863712040397482;
+createNode animCurveTA -n "head_CTRL_rotate_AnimLayer1_inputBY";
+	rename -uid "17CE8B31-6E49-B62E-F143-7C9EFC3BC529";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  100 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTA -n "head_CTRL_rotate_AnimLayer1_inputBZ";
+	rename -uid "156A4738-2843-B0C7-90C9-22B64CB51A30";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  100 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured:l_eye_CTRL_visibility_AnimLayer1";
+	rename -uid "9E82C7EF-1C43-8F49-EE92-92AAEE05E061";
+	setAttr ".ia" yes;
+	setAttr ".o" yes;
+createNode animBlendNodeAdditive -n "duck_police_officer_RIG_textured:l_eye_CTRL_EyeScaleX_AnimLayer1";
+	rename -uid "6F43E5FC-D443-A7F8-8E3C-FDAD0931059B";
+	setAttr ".ia" 1;
+	setAttr ".o" 2;
+createNode animBlendNodeAdditive -n "duck_police_officer_RIG_textured:l_eye_CTRL_EyeScaleY_AnimLayer1";
+	rename -uid "F5888D64-BE45-1E7C-F519-FEB8B0EDE1D3";
+	setAttr ".ia" 1;
+	setAttr ".o" 2;
+createNode animBlendNodeAdditive -n "duck_police_officer_RIG_textured:l_eye_CTRL_EyeScaleZ_AnimLayer1";
+	rename -uid "2B3A3B87-584A-0F1D-C493-A681EEF622BC";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured:r_eye_CTRL_visibility_AnimLayer1";
+	rename -uid "660C1F79-6A49-F7C7-F76F-68A74927D12A";
+	setAttr ".ia" yes;
+	setAttr ".o" yes;
+createNode animBlendNodeAdditive -n "duck_police_officer_RIG_textured:r_eye_CTRL_EyeScaleX_AnimLayer1";
+	rename -uid "8C2FAED7-004C-6556-964B-97B125127F4A";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeAdditive -n "duck_police_officer_RIG_textured:r_eye_CTRL_EyeScaleY_AnimLayer1";
+	rename -uid "354E9162-E641-8101-1E0C-9A8ADBB356B3";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeAdditive -n "duck_police_officer_RIG_textured:r_eye_CTRL_EyeScaleZ_AnimLayer1";
+	rename -uid "509198E2-C842-FEA5-83D3-6D8020028E37";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animCurveTU -n "l_eye_CTRL_visibility_AnimLayer1_inputB";
+	rename -uid "306AE937-D74C-5BC6-1634-84B3F8650369";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  100 1 110 1 116 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
+createNode animCurveTU -n "l_eye_CTRL_EyeScaleX_AnimLayer1_inputB";
+	rename -uid "B0F76A35-9F4C-AEB7-53A6-19B8B534EB71";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  100 0 110 0 116 1;
+createNode animCurveTU -n "l_eye_CTRL_EyeScaleY_AnimLayer1_inputB";
+	rename -uid "825F9824-424F-9990-286C-85AB439CDA82";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  100 0 110 0 116 1;
+createNode animCurveTU -n "l_eye_CTRL_EyeScaleZ_AnimLayer1_inputB";
+	rename -uid "AA9424D8-CB46-80E1-CDEB-D1B496A691B5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  100 0 110 0 116 0;
+createNode animCurveTU -n "r_eye_CTRL_visibility_AnimLayer1_inputB";
+	rename -uid "CBA7C533-2742-B2BB-F827-5F93EA85ABC3";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  100 1 110 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTU -n "r_eye_CTRL_EyeScaleX_AnimLayer1_inputB";
+	rename -uid "9DF3BF9A-C646-3D02-C87B-83A9FD313772";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  100 0 110 0;
+createNode animCurveTU -n "r_eye_CTRL_EyeScaleY_AnimLayer1_inputB";
+	rename -uid "CC06A63C-BD41-9FF7-CE11-D385B452FA28";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  100 0 110 0;
+createNode animCurveTU -n "r_eye_CTRL_EyeScaleZ_AnimLayer1_inputB";
+	rename -uid "1F1D6610-4742-24D5-6D64-67832C600F82";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  100 0 110 0;
+createNode reference -n "duck_police_officer_RIG_texturedRN2";
+	rename -uid "8127D45D-A04E-6B33-8F74-2BA05B3CD43C";
+	setAttr -s 107 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".phl[49]" 0;
+	setAttr ".phl[50]" 0;
+	setAttr ".phl[51]" 0;
+	setAttr ".phl[52]" 0;
+	setAttr ".phl[53]" 0;
+	setAttr ".phl[54]" 0;
+	setAttr ".phl[55]" 0;
+	setAttr ".phl[56]" 0;
+	setAttr ".phl[57]" 0;
+	setAttr ".phl[58]" 0;
+	setAttr ".phl[59]" 0;
+	setAttr ".phl[60]" 0;
+	setAttr ".phl[61]" 0;
+	setAttr ".phl[62]" 0;
+	setAttr ".phl[63]" 0;
+	setAttr ".phl[64]" 0;
+	setAttr ".phl[65]" 0;
+	setAttr ".phl[66]" 0;
+	setAttr ".phl[67]" 0;
+	setAttr ".phl[68]" 0;
+	setAttr ".phl[69]" 0;
+	setAttr ".phl[70]" 0;
+	setAttr ".phl[71]" 0;
+	setAttr ".phl[72]" 0;
+	setAttr ".phl[73]" 0;
+	setAttr ".phl[74]" 0;
+	setAttr ".phl[75]" 0;
+	setAttr ".phl[76]" 0;
+	setAttr ".phl[77]" 0;
+	setAttr ".phl[78]" 0;
+	setAttr ".phl[79]" 0;
+	setAttr ".phl[80]" 0;
+	setAttr ".phl[81]" 0;
+	setAttr ".phl[82]" 0;
+	setAttr ".phl[83]" 0;
+	setAttr ".phl[84]" 0;
+	setAttr ".phl[85]" 0;
+	setAttr ".phl[86]" 0;
+	setAttr ".phl[87]" 0;
+	setAttr ".phl[88]" 0;
+	setAttr ".phl[89]" 0;
+	setAttr ".phl[90]" 0;
+	setAttr ".phl[91]" 0;
+	setAttr ".phl[92]" 0;
+	setAttr ".phl[93]" 0;
+	setAttr ".phl[94]" 0;
+	setAttr ".phl[95]" 0;
+	setAttr ".phl[96]" 0;
+	setAttr ".phl[97]" 0;
+	setAttr ".phl[98]" 0;
+	setAttr ".phl[99]" 0;
+	setAttr ".phl[100]" 0;
+	setAttr ".phl[101]" 0;
+	setAttr ".phl[102]" 0;
+	setAttr ".phl[103]" 0;
+	setAttr ".phl[104]" 0;
+	setAttr ".phl[105]" 0;
+	setAttr ".phl[106]" 0;
+	setAttr ".phl[107]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"duck_police_officer_RIG_texturedRN2"
 		"duck_police_officer_RIG_texturedRN2" 0
 		"duck_police_officer_RIG_textured2:police_hatRN" 0
 		"duck_police_officer_RIG_textured2:duck_baseRN" 0
-		"duck_police_officer_RIG_texturedRN2" 112
+		"duck_police_officer_RIG_texturedRN2" 148
 		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG" 
 		"rotatePivot" " -type \"double3\" 0.13998659183131146 6.69896725756425848 -35.81016355299672682"
 		
@@ -2295,7 +2984,7 @@ createNode reference -n "duck_police_officer_RIG_texturedRN2";
 		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL" 
-		"scale" " -type \"double3\" 1 1 1"
+		"rotateX" " -av"
 		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL" 
 		"rotatePivot" " -type \"double3\" -0.0015626269384228716 0.032884345688004579 0.013252010529574032"
 		
@@ -2310,8 +2999,20 @@ createNode reference -n "duck_police_officer_RIG_texturedRN2";
 		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL" 
 		"scalePivot" " -type \"double3\" 0.041991120368338818 0.10427302019571849 -0.35085858290819605"
 		
+		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL" 
+		"rotateX" " -av"
+		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL" 
+		"rotateY" " -av"
+		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL" 
+		"rotateZ" " -av"
+		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL" 
+		"rotatePivot" " -type \"double3\" 0 0 0"
+		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL" 
+		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL" 
-		"rotate" " -type \"double3\" -3.25465350023791045 0 0"
+		"rotate" " -type \"double3\" -23.55799457535036368 0 0"
 		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL" 
 		"rotateX" " -av"
 		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL" 
@@ -2319,17 +3020,17 @@ createNode reference -n "duck_police_officer_RIG_texturedRN2";
 		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL" 
-		"EyeScaleX" " -av -k 1 1"
+		"EyeScaleX" " -av -k 1 2"
 		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL" 
-		"EyeScaleY" " -av -k 1 1"
+		"EyeScaleY" " -av -k 1 2"
 		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL" 
-		"EyeScaleZ" " -av -k 1 1"
+		"EyeScaleZ" " -av -k 1 2"
 		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL" 
-		"EyeScaleX" " -av -k 1 1"
+		"EyeScaleX" " -av -k 1 2"
 		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL" 
-		"EyeScaleY" " -av -k 1 1"
+		"EyeScaleY" " -av -k 1 2"
 		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL" 
-		"EyeScaleZ" " -av -k 1 1"
+		"EyeScaleZ" " -av -k 1 2"
 		2 "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL" 
 		"rotate" " -type \"double3\" 24.95453830170746201 -36.31424938354240339 -97.61431316353981913"
 		
@@ -2391,118 +3092,178 @@ createNode reference -n "duck_police_officer_RIG_texturedRN2";
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[20]" ""
 		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG.rotateOrder" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[21]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL.rotateZ" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.translateX" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[22]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL.rotateZ" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.translateX" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[23]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL.rotateX" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.translateY" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[24]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL.rotateX" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.translateY" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[25]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL.rotateY" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.translateZ" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[26]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL.rotateY" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.translateZ" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[27]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL.rotateOrder" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.rotateX" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[28]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL.visibility" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.rotateX" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[29]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL.visibility" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.rotateY" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[30]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL.EyeScaleX" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.rotateY" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[31]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL.EyeScaleX" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.rotateZ" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[32]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL.EyeScaleY" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.rotateZ" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[33]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL.EyeScaleY" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.rotateOrder" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[34]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL.EyeScaleZ" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.scaleX" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[35]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL.EyeScaleZ" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.scaleX" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[36]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL.visibility" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.scaleY" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[37]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL.visibility" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.scaleY" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[38]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL.EyeScaleX" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.scaleZ" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[39]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL.EyeScaleX" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.scaleZ" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[40]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL.EyeScaleY" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.visibility" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[41]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL.EyeScaleY" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL.visibility" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[42]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL.EyeScaleZ" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL.rotateX" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[43]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL.EyeScaleZ" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL.rotateX" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[44]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL.visibility" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL.rotateY" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[45]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL.visibility" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL.rotateY" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[46]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.rotateX" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL.rotateZ" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[47]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.rotateX" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL.rotateZ" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[48]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.rotateY" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL.rotateOrder" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[49]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.rotateY" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL.visibility" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[50]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.rotateZ" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL.visibility" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[51]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.rotateZ" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL.rotateZ" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[52]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.rotateOrder" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL.rotateZ" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[53]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.visibility" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL.rotateX" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[54]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.visibility" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL.rotateX" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[55]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.translateX" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL.rotateY" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[56]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.translateX" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL.rotateY" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[57]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.translateY" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL.rotateOrder" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[58]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.translateY" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL.visibility" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[59]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.translateZ" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL.visibility" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[60]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.translateZ" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL.EyeScaleX" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[61]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.scaleX" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL.EyeScaleX" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[62]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.scaleX" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL.EyeScaleY" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[63]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.scaleY" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL.EyeScaleY" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[64]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.scaleY" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL.EyeScaleZ" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[65]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.scaleZ" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL.EyeScaleZ" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[66]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.scaleZ" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL.visibility" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[67]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL.rotateY" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:l_eye_CTRL_GRP|duck_police_officer_RIG_textured2:l_eye_CTRL.visibility" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[68]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL.rotateY" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL.EyeScaleX" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[69]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL.rotateX" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL.EyeScaleX" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[70]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL.rotateX" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL.EyeScaleY" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[71]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL.rotateZ" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL.EyeScaleY" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[72]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL.rotateZ" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL.EyeScaleZ" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[73]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL.rotateOrder" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL.EyeScaleZ" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[74]" ""
-		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL.visibility" 
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL.visibility" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[75]" ""
-		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL.visibility" 
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:bot_neck_CTRL_GRP|duck_police_officer_RIG_textured2:bot_neck_CTRL|duck_police_officer_RIG_textured2:mid_neck_CTRL_GRP|duck_police_officer_RIG_textured2:mid_neck_CTRL|duck_police_officer_RIG_textured2:top_neck_CTRL_GRP|duck_police_officer_RIG_textured2:top_neck_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:head_CTRL|duck_police_officer_RIG_textured2:eyes_CTRL_GRP|duck_police_officer_RIG_textured2:eyes_CTRL|duck_police_officer_RIG_textured2:r_eye_CTRL_GRP|duck_police_officer_RIG_textured2:r_eye_CTRL.visibility" 
 		"duck_police_officer_RIG_texturedRN2.placeHolderList[76]" ""
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.rotateX" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[77]" ""
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.rotateX" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[78]" ""
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.rotateY" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[79]" ""
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.rotateY" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[80]" ""
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.rotateZ" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[81]" ""
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.rotateZ" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[82]" ""
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.rotateOrder" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[83]" ""
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[84]" ""
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[85]" ""
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.translateX" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[86]" ""
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.translateX" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[87]" ""
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.translateY" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[88]" ""
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.translateY" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[89]" ""
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.translateZ" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[90]" ""
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.translateZ" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[91]" ""
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.scaleX" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[92]" ""
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.scaleX" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[93]" ""
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.scaleY" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[94]" ""
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.scaleY" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[95]" ""
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.scaleZ" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[96]" ""
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL.scaleZ" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[97]" ""
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL.rotateY" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[98]" ""
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL.rotateY" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[99]" ""
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL.rotateX" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[100]" ""
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL.rotateX" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[101]" ""
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL.rotateZ" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[102]" ""
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL.rotateZ" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[103]" ""
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL.rotateOrder" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[104]" ""
+		5 3 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[105]" ""
+		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:RIG|duck_police_officer_RIG_textured2:CTRLs|duck_police_officer_RIG_textured2:master_CTRL|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_GRP|duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL|duck_police_officer_RIG_textured2:chest_CTRL_GRP|duck_police_officer_RIG_textured2:chest_CTRL|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_GRP|duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL.visibility" 
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[106]" ""
 		5 4 "duck_police_officer_RIG_texturedRN2" "|duck_police_officer_RIG_textured2:PoliceDuck|duck_police_officer_RIG_textured2:GEO.drawOverride" 
-		"duck_police_officer_RIG_texturedRN2.placeHolderList[77]" "";
+		"duck_police_officer_RIG_texturedRN2.placeHolderList[107]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured2:RIG_visibility_AnimLayer1";
@@ -2571,53 +3332,64 @@ createNode animCurveTA -n "r_wing_shoulder_CTRL_rotate_AnimLayer1_inputBX";
 	rename -uid "9C641579-9D47-3C20-8190-F882E0094CD5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 15 ".ktv[0:14]"  1 0 225 0 230 0 235 0 239 0 243 0 247 0
+		 251 0 255 0 259 0 268 0 274 0 280 0 285 0 290 0;
 createNode animCurveTA -n "r_wing_shoulder_CTRL_rotate_AnimLayer1_inputBY";
 	rename -uid "38890EE5-5F46-1008-B37D-29AE9173EF99";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 15 ".ktv[0:14]"  1 0 225 0 230 0 235 0 239 0 243 0 247 0
+		 251 0 255 0 259 0 268 0 274 0 280 0 285 0 290 0;
 createNode animCurveTA -n "r_wing_shoulder_CTRL_rotate_AnimLayer1_inputBZ";
 	rename -uid "757D71E3-0349-384F-6963-E2A685D1C59A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 15 ".ktv[0:14]"  1 0 225 0 230 0 235 0 239 0 243 0 247 0
+		 251 0 255 0 259 0 268 0 274 0 280 0 285 0 290 0;
 createNode animCurveTU -n "r_wing_shoulder_CTRL_visibility_AnimLayer1_inputB";
 	rename -uid "5BA9E11E-8E45-6A12-DA8C-1F8E2C8617FA";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 15 ".ktv[0:14]"  1 1 225 1 230 1 235 1 239 1 243 1 247 1
+		 251 1 255 1 259 1 268 1 274 1 280 1 285 1 290 1;
+	setAttr -s 15 ".kot[0:14]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5;
 createNode animCurveTL -n "r_wing_shoulder_CTRL_translateX_AnimLayer1_inputB";
 	rename -uid "3F3D7970-F543-3817-EF76-F3A08A7B9BEC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 15 ".ktv[0:14]"  1 0 225 0 230 0 235 0 239 0 243 0 247 0
+		 251 0 255 0 259 0 268 0 274 0 280 0 285 0 290 0;
 createNode animCurveTL -n "r_wing_shoulder_CTRL_translateY_AnimLayer1_inputB";
 	rename -uid "DB1C7322-684D-78AB-9E1E-82825D57B83C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 15 ".ktv[0:14]"  1 0 225 0 230 0 235 0 239 0 243 0 247 0
+		 251 0 255 0 259 0 268 0 274 0 280 0 285 0 290 0;
 createNode animCurveTL -n "r_wing_shoulder_CTRL_translateZ_AnimLayer1_inputB";
 	rename -uid "C2E24B35-5146-E89F-4D4C-DA82E5B9A124";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 15 ".ktv[0:14]"  1 0 225 0 230 0 235 0 239 0 243 0 247 0
+		 251 0 255 0 259 0 268 0 274 0 280 0 285 0 290 0;
 createNode animCurveTU -n "r_wing_shoulder_CTRL_scaleX_AnimLayer1_inputB";
 	rename -uid "C1EC0750-394C-BDE8-B94C-A2A49EB145AE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 15 ".ktv[0:14]"  1 1 225 1 230 1 235 1 239 1 243 1 247 1
+		 251 1 255 1 259 1 268 1 274 1 280 1 285 1 290 1;
 createNode animCurveTU -n "r_wing_shoulder_CTRL_scaleY_AnimLayer1_inputB";
 	rename -uid "4101DD86-4E43-64B4-C977-B8B9223F6D5A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 15 ".ktv[0:14]"  1 1 225 1 230 1 235 1 239 1 243 1 247 1
+		 251 1 255 1 259 1 268 1 274 1 280 1 285 1 290 1;
 createNode animCurveTU -n "r_wing_shoulder_CTRL_scaleZ_AnimLayer1_inputB";
 	rename -uid "B4D57088-BF4C-5796-9FFD-EA9536833490";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 15 ".ktv[0:14]"  1 1 225 1 230 1 235 1 239 1 243 1 247 1
+		 251 1 255 1 259 1 268 1 274 1 280 1 285 1 290 1;
 createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_visibility_AnimLayer1";
 	rename -uid "8EBF3A89-4346-07D3-ED3A-D7B8D6070272";
 	setAttr ".ia" yes;
@@ -2630,51 +3402,64 @@ createNode animCurveTA -n "l_wing_shoulder_CTRL_rotate_AnimLayer1_inputBX";
 	rename -uid "8A3A03AE-B746-73E3-AECC-1799335C055B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 15 ".ktv[0:14]"  1 0 225 0 230 0 235 0 239 0 243 0 247 0
+		 251 0 255 0 259 0 268 0 274 0 280 0 285 0 290 0;
 createNode animCurveTA -n "l_wing_shoulder_CTRL_rotate_AnimLayer1_inputBY";
 	rename -uid "E53CAA91-954E-E3EF-8379-E78425F0708E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 15 ".ktv[0:14]"  1 0 225 0 230 0 235 0 239 0 243 0 247 0
+		 251 0 255 0 259 0 268 0 274 0 280 0 285 0 290 0;
 createNode animCurveTA -n "l_wing_shoulder_CTRL_rotate_AnimLayer1_inputBZ";
 	rename -uid "08E22F0B-6749-9A50-3380-808A08FB6DD6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 15 ".ktv[0:14]"  1 0 225 0 230 0 235 0 239 0 243 0 247 0
+		 251 0 255 0 259 0 268 0 274 0 280 0 285 0 290 0;
 createNode animCurveTU -n "l_wing_shoulder_CTRL_visibility_AnimLayer1_inputB";
 	rename -uid "F1E8B998-5844-230D-5C7D-F283FE087D50";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 15 ".ktv[0:14]"  1 1 225 1 230 1 235 1 239 1 243 1 247 1
+		 251 1 255 1 259 1 268 1 274 1 280 1 285 1 290 1;
+	setAttr -s 15 ".kot[0:14]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5;
 createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured2:mid_neck_CTRL_visibility_AnimLayer1";
 	rename -uid "22491FD5-8C46-6C52-6530-95BD16FF081B";
 	setAttr ".ia" yes;
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveRotation -n "duck_police_officer_RIG_textured2:mid_neck_CTRL_rotate_AnimLayer1";
 	rename -uid "8FD324A2-5440-68A0-8153-3CAF8B80E86D";
-	setAttr ".o" -type "double3" -3.2546535002379104 0 0 ;
+	setAttr ".o" -type "double3" -23.557994575350364 0 0 ;
 createNode animCurveTA -n "mid_neck_CTRL_rotate_AnimLayer1_inputBX";
 	rename -uid "F5F20CAE-5F45-5388-528C-62958D54C987";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 60 20.280033111404443 121 -23.557994575350364;
+	setAttr -s 17 ".ktv[0:16]"  1 0 60 20.280033111404443 121 -23.557994575350364
+		 225 -23.557994575350364 230 -23.557994575350364 235 -23.557994575350364 239 -23.557994575350364
+		 243 -23.557994575350364 247 -23.557994575350364 251 -23.557994575350364 255 -23.557994575350364
+		 259 -23.557994575350364 268 -23.557994575350364 274 -23.557994575350364 280 -23.557994575350364
+		 285 -23.557994575350364 290 -23.557994575350364;
 createNode animCurveTA -n "mid_neck_CTRL_rotate_AnimLayer1_inputBY";
 	rename -uid "658C0D34-144F-1935-1214-F59FD5EB2C10";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 60 0 121 0;
+	setAttr -s 17 ".ktv[0:16]"  1 0 60 0 121 0 225 0 230 0 235 0 239 0 243 0
+		 247 0 251 0 255 0 259 0 268 0 274 0 280 0 285 0 290 0;
 createNode animCurveTA -n "mid_neck_CTRL_rotate_AnimLayer1_inputBZ";
 	rename -uid "B6556503-8A49-A410-7692-E0BB771872BE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 60 0 121 0;
+	setAttr -s 17 ".ktv[0:16]"  1 0 60 0 121 0 225 0 230 0 235 0 239 0 243 0
+		 247 0 251 0 255 0 259 0 268 0 274 0 280 0 285 0 290 0;
 createNode animCurveTU -n "mid_neck_CTRL_visibility_AnimLayer1_inputB";
 	rename -uid "1D01F849-114F-1235-5D13-628D420BAE8D";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 60 1 121 1;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
+	setAttr -s 17 ".ktv[0:16]"  1 1 60 1 121 1 225 1 230 1 235 1 239 1 243 1
+		 247 1 251 1 255 1 259 1 268 1 274 1 280 1 285 1 290 1;
+	setAttr -s 17 ".kot[0:16]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5 5 5;
 createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured2:r_eye_CTRL_visibility_AnimLayer1";
 	rename -uid "279F47F1-8F43-C1FB-0A0B-4993519B93B8";
 	setAttr ".ia" yes;
@@ -2682,15 +3467,15 @@ createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured2:r_eye_CTRL
 createNode animBlendNodeAdditive -n "duck_police_officer_RIG_textured2:r_eye_CTRL_EyeScaleX_AnimLayer1";
 	rename -uid "943C27D7-3A46-8510-AEFE-9F9BF7AC697C";
 	setAttr ".ia" 1;
-	setAttr ".o" 1;
+	setAttr ".o" 2;
 createNode animBlendNodeAdditive -n "duck_police_officer_RIG_textured2:r_eye_CTRL_EyeScaleY_AnimLayer1";
 	rename -uid "486DB190-9E4E-81CB-0456-6EBE6713CC77";
 	setAttr ".ia" 1;
-	setAttr ".o" 1;
+	setAttr ".o" 2;
 createNode animBlendNodeAdditive -n "duck_police_officer_RIG_textured2:r_eye_CTRL_EyeScaleZ_AnimLayer1";
 	rename -uid "E82C5FAA-A548-A268-EF42-5B9C81EA123A";
 	setAttr ".ia" 1;
-	setAttr ".o" 1;
+	setAttr ".o" 2;
 createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured2:l_eye_CTRL_visibility_AnimLayer1";
 	rename -uid "6AF9EAD5-E44B-5BE5-1BAD-37AFF6C6542B";
 	setAttr ".ia" yes;
@@ -2698,15 +3483,15 @@ createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured2:l_eye_CTRL
 createNode animBlendNodeAdditive -n "duck_police_officer_RIG_textured2:l_eye_CTRL_EyeScaleX_AnimLayer1";
 	rename -uid "0D5B3BB3-1A4C-CEBE-002E-4A9ED560C24B";
 	setAttr ".ia" 1;
-	setAttr ".o" 1;
+	setAttr ".o" 2;
 createNode animBlendNodeAdditive -n "duck_police_officer_RIG_textured2:l_eye_CTRL_EyeScaleY_AnimLayer1";
 	rename -uid "F9DA73AC-1A48-AF4C-676F-B2BB576641FF";
 	setAttr ".ia" 1;
-	setAttr ".o" 1;
+	setAttr ".o" 2;
 createNode animBlendNodeAdditive -n "duck_police_officer_RIG_textured2:l_eye_CTRL_EyeScaleZ_AnimLayer1";
 	rename -uid "551BBE45-E141-D022-B9D6-68AC1B24DA3E";
 	setAttr ".ia" 1;
-	setAttr ".o" 1;
+	setAttr ".o" 2;
 createNode animCurveTU -n "r_eye_CTRL_visibility_AnimLayer1_inputB1";
 	rename -uid "F85B886A-624D-A2C2-C3E5-BC8EF8619024";
 	setAttr ".tan" 9;
@@ -2821,9 +3606,573 @@ createNode groupId -n "bread_crumb:groupId5";
 createNode groupId -n "bread_crumb:groupId6";
 	rename -uid "61D47B1E-7D4E-F2D0-BB75-6880ED7126B1";
 	setAttr ".ihi" 0;
+createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_visibility_AnimLayer1";
+	rename -uid "3DF847C4-9348-9BA8-013E-5EA206E4A9CF";
+	setAttr ".ia" yes;
+	setAttr ".o" yes;
+createNode animBlendNodeAdditiveDL -n "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_translateX_AnimLayer1";
+	rename -uid "2C7DC276-634F-D6F7-1683-AAA7196A21D6";
+createNode animBlendNodeAdditiveDL -n "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_translateY_AnimLayer1";
+	rename -uid "53063CB9-4448-4E9E-CB95-B8B3701DA861";
+createNode animBlendNodeAdditiveDL -n "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_translateZ_AnimLayer1";
+	rename -uid "61B51072-5544-6D17-427F-818E69C759A2";
+createNode animBlendNodeAdditiveRotation -n "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_rotate_AnimLayer1";
+	rename -uid "2939CEBA-294E-144F-59C3-97A5CA751A54";
+	setAttr ".o" -type "double3" 13.011638839717953 0 0 ;
+createNode animBlendNodeAdditiveScale -n "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleX_AnimLayer1";
+	rename -uid "5999EE9E-D345-9768-521D-7DA2A092524C";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleY_AnimLayer1";
+	rename -uid "CFDCAE94-EB4B-74BD-59A9-BFB7E6AA229B";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleZ_AnimLayer1";
+	rename -uid "F68C43C5-C744-FC35-D4D0-36AAE324F711";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_visibility_AnimLayer1";
+	rename -uid "91813180-2242-FE9F-1EDA-47A8705A5002";
+	setAttr ".ia" yes;
+	setAttr ".o" yes;
+createNode animBlendNodeAdditiveDL -n "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_translateX_AnimLayer1";
+	rename -uid "957A5F39-134A-906A-2F89-B885D0305123";
+createNode animBlendNodeAdditiveDL -n "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_translateY_AnimLayer1";
+	rename -uid "A5C6B117-E346-AD14-0EF9-19BD4234A38A";
+createNode animBlendNodeAdditiveDL -n "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_translateZ_AnimLayer1";
+	rename -uid "6EA5980B-4C43-B750-0F32-41816ADFEF15";
+createNode animBlendNodeAdditiveRotation -n "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_rotate_AnimLayer1";
+	rename -uid "5A079B10-094A-FD29-4EAE-4483C573EABA";
+	setAttr ".ia" -type "double3" 42.498571013629821 -48.699582675274492 -112.48722528877641 ;
+	setAttr ".o" -type "double3" 42.498571013629821 -48.699582675274492 -112.48722528877641 ;
+createNode animBlendNodeAdditiveScale -n "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleX_AnimLayer1";
+	rename -uid "31EC6320-BE4C-9879-8F67-BB96652278A9";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleY_AnimLayer1";
+	rename -uid "7CF57574-904D-832F-B89C-B1996F2EE595";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleZ_AnimLayer1";
+	rename -uid "336F1EA2-994C-6C2A-40E5-C78C05D3B92E";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_visibility_AnimLayer1";
+	rename -uid "A2BB3A45-2A44-C2E2-B582-E4B61F9F005F";
+	setAttr ".ia" yes;
+	setAttr ".o" yes;
+createNode animBlendNodeAdditiveRotation -n "duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_rotate_AnimLayer1";
+	rename -uid "775E9515-4E4D-C419-0253-B388E800DB4E";
+	setAttr ".ia" -type "double3" -31.239366314534795 50.050353439997004 -98.305963288433631 ;
+	setAttr ".o" -type "double3" -31.239366314534795 50.050353439997004 -98.305963288433631 ;
+createNode animBlendNodeBoolean -n "OverallParkScene:ChrisZ_RoadHill_visibility_AnimLayer1";
+	rename -uid "D2733BE7-854A-2B59-DE5D-E4849F7DE776";
+	setAttr ".ia" yes;
+	setAttr ".o" yes;
+createNode animBlendNodeAdditiveDL -n "OverallParkScene:ChrisZ_RoadHill_translateX_AnimLayer1";
+	rename -uid "88AE834F-1F49-751B-67FD-D1B0B975E513";
+createNode animBlendNodeAdditiveDL -n "OverallParkScene:ChrisZ_RoadHill_translateY_AnimLayer1";
+	rename -uid "C107F8A2-F84F-37EF-9D4B-5D8275549BA7";
+createNode animBlendNodeAdditiveDL -n "OverallParkScene:ChrisZ_RoadHill_translateZ_AnimLayer1";
+	rename -uid "1CADFFD6-1246-47E8-17B2-48B640749E82";
+createNode animBlendNodeAdditiveRotation -n "OverallParkScene:ChrisZ_RoadHill_rotate_AnimLayer1";
+	rename -uid "93969D0F-3345-9034-53E5-08AE000011DA";
+createNode animBlendNodeAdditiveScale -n "OverallParkScene:ChrisZ_RoadHill_scaleX_AnimLayer1";
+	rename -uid "13F6E624-0742-82CE-AA98-17B33547BBE1";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "OverallParkScene:ChrisZ_RoadHill_scaleY_AnimLayer1";
+	rename -uid "D1B39C5D-DF47-9ED1-558C-3BA7F31A9D13";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "OverallParkScene:ChrisZ_RoadHill_scaleZ_AnimLayer1";
+	rename -uid "B19D349C-9E46-0E49-5DC5-D4AAF637ED12";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeBoolean -n "OverallParkScene:pPlane1_visibility_AnimLayer1";
+	rename -uid "0C9C5D59-1947-E69F-D3F1-D4B32D989543";
+	setAttr ".ia" yes;
+	setAttr ".o" yes;
+createNode animBlendNodeAdditiveDL -n "OverallParkScene:pPlane1_translateX_AnimLayer1";
+	rename -uid "3A398E39-DD48-A20B-A49F-62908F675CAF";
+createNode animBlendNodeAdditiveDL -n "OverallParkScene:pPlane1_translateY_AnimLayer1";
+	rename -uid "B9318B24-4C44-C94F-5AB1-A6A7F584280A";
+	setAttr ".ia" 1.2311288648823271;
+	setAttr ".o" 1.2311288648823271;
+createNode animBlendNodeAdditiveDL -n "OverallParkScene:pPlane1_translateZ_AnimLayer1";
+	rename -uid "A378C878-244F-CC7F-21FE-B6BE54179AFE";
+createNode animBlendNodeAdditiveRotation -n "OverallParkScene:pPlane1_rotate_AnimLayer1";
+	rename -uid "E683EB9B-0544-D5A1-039F-F3B660DF8DB5";
+createNode animBlendNodeAdditiveScale -n "OverallParkScene:pPlane1_scaleX_AnimLayer1";
+	rename -uid "C9B572C9-CC4A-927F-C0BD-D58ADC67A128";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "OverallParkScene:pPlane1_scaleY_AnimLayer1";
+	rename -uid "441C0644-4648-F4B7-3B79-1198C890F189";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "OverallParkScene:pPlane1_scaleZ_AnimLayer1";
+	rename -uid "637F27EA-024D-C838-25C3-CD960E7ED374";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animCurveTA -n "l_wing_shoulder_CTRL_rotate_AnimLayer1_inputBX1";
+	rename -uid "9F606524-6749-1AAE-C907-349F91A39884";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTA -n "l_wing_shoulder_CTRL_rotate_AnimLayer1_inputBY1";
+	rename -uid "FED702B7-EE48-9A22-08DE-4AA9D42E31C9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTA -n "l_wing_shoulder_CTRL_rotate_AnimLayer1_inputBZ1";
+	rename -uid "C406C41C-BF43-E925-BE1C-3E8D23CDFD49";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTA -n "r_wing_shoulder_CTRL_rotate_AnimLayer1_inputBX1";
+	rename -uid "3B242D98-C34A-80AF-0620-DBA17022FD42";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTA -n "r_wing_shoulder_CTRL_rotate_AnimLayer1_inputBY1";
+	rename -uid "6D8D4010-784E-B9C0-4644-6197F57D1048";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTA -n "r_wing_shoulder_CTRL_rotate_AnimLayer1_inputBZ1";
+	rename -uid "139076F5-C242-515C-A007-D39C4B02CDEA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTA -n "ChrisZ_RoadHill_rotate_AnimLayer1_inputBX";
+	rename -uid "DA064022-5741-68C1-2374-66B31ADD87D8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  225 0;
+createNode animCurveTA -n "ChrisZ_RoadHill_rotate_AnimLayer1_inputBY";
+	rename -uid "BD78BC78-0B41-1DEF-1882-BD9EAC4E86AE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  225 0;
+createNode animCurveTA -n "ChrisZ_RoadHill_rotate_AnimLayer1_inputBZ";
+	rename -uid "AB9DF8D2-9442-0459-F07F-FDBA5529D93C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  225 0;
+createNode animCurveTA -n "pPlane1_rotate_AnimLayer1_inputBX";
+	rename -uid "E190DA8E-8343-44B8-3B7C-BBB1F4E539A8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  225 0;
+createNode animCurveTA -n "pPlane1_rotate_AnimLayer1_inputBY";
+	rename -uid "09C3462E-A64A-6AAC-FFF8-3593A09D7127";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  225 0;
+createNode animCurveTA -n "pPlane1_rotate_AnimLayer1_inputBZ";
+	rename -uid "5BCA477B-A74A-CD74-6988-CAAC1AD5484B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  225 0;
+createNode animCurveTU -n "r_wing_shoulder_CTRL_visibility_AnimLayer1_inputB1";
+	rename -uid "B4946C39-B14D-6D9E-A9FA-A4A50791D332";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 1 235 1 245 1 255 1 265 1 275 1 285 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
+createNode animCurveTL -n "r_wing_shoulder_CTRL_translateX_AnimLayer1_inputB1";
+	rename -uid "FD2EB7F3-A940-1C56-949D-C3B6D798BD95";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTL -n "r_wing_shoulder_CTRL_translateY_AnimLayer1_inputB1";
+	rename -uid "1017EA9A-DA41-4F96-9DCF-7288D610D8CB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTL -n "r_wing_shoulder_CTRL_translateZ_AnimLayer1_inputB1";
+	rename -uid "754DB26F-BB4C-C339-7BA3-A494E623AC41";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTU -n "r_wing_shoulder_CTRL_scaleX_AnimLayer1_inputB1";
+	rename -uid "103C12C8-584A-4F61-C711-2D85271C24B9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 1 235 1 245 1 255 1 265 1 275 1 285 1;
+createNode animCurveTU -n "r_wing_shoulder_CTRL_scaleY_AnimLayer1_inputB1";
+	rename -uid "70E0BDC7-4248-4995-60E9-13BA480C421A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 1 235 1 245 1 255 1 265 1 275 1 285 1;
+createNode animCurveTU -n "r_wing_shoulder_CTRL_scaleZ_AnimLayer1_inputB1";
+	rename -uid "F2FC5B36-9740-F4C5-EA6E-85ADD8C96706";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 1 235 1 245 1 255 1 265 1 275 1 285 1;
+createNode animCurveTU -n "l_wing_shoulder_CTRL_visibility_AnimLayer1_inputB1";
+	rename -uid "3F98E711-EE40-5610-2A93-E2A938D08BBA";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 1 235 1 245 1 255 1 265 1 275 1 285 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
+createNode animCurveTU -n "ChrisZ_RoadHill_visibility_AnimLayer1_inputB";
+	rename -uid "0CCD9D75-5A4A-38F2-2DBA-48AC8FEECD68";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  225 1 233 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "ChrisZ_RoadHill_translateX_AnimLayer1_inputB";
+	rename -uid "7F70C3F6-C542-CCCD-8448-49931AD01B02";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  225 0 233 0;
+createNode animCurveTL -n "ChrisZ_RoadHill_translateY_AnimLayer1_inputB";
+	rename -uid "D7C9BD3D-6B41-8F11-03B2-07948CDA0EA5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  225 0 233 0;
+createNode animCurveTL -n "ChrisZ_RoadHill_translateZ_AnimLayer1_inputB";
+	rename -uid "0846E6AD-5D4F-3640-933B-97910D1F0D46";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  225 0 233 0;
+createNode animCurveTU -n "ChrisZ_RoadHill_scaleX_AnimLayer1_inputB";
+	rename -uid "655A2628-D446-88F6-7E91-F19B8C9FAA90";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  225 1 233 1;
+createNode animCurveTU -n "ChrisZ_RoadHill_scaleY_AnimLayer1_inputB";
+	rename -uid "8F491E02-F847-21AD-8C5D-E992BB7DE97A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  225 1 233 1;
+createNode animCurveTU -n "ChrisZ_RoadHill_scaleZ_AnimLayer1_inputB";
+	rename -uid "832DCD2C-4640-2F46-B309-688E241F47B2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  225 1 233 1;
+createNode animCurveTU -n "pPlane1_visibility_AnimLayer1_inputB";
+	rename -uid "A84B4AA1-1044-ABDA-3991-EB932D2BE03D";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  225 1 233 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "pPlane1_translateX_AnimLayer1_inputB";
+	rename -uid "17975D63-8741-38CD-BA3F-E8BAA3BB7520";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  225 0 233 0;
+createNode animCurveTL -n "pPlane1_translateY_AnimLayer1_inputB";
+	rename -uid "4AA59442-254B-E330-5F72-BB926468B2AA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  225 0 233 0;
+createNode animCurveTL -n "pPlane1_translateZ_AnimLayer1_inputB";
+	rename -uid "F7F1AEE6-AE49-3F15-E74A-03B2C76EEAE8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  225 0 233 0;
+createNode animCurveTU -n "pPlane1_scaleX_AnimLayer1_inputB";
+	rename -uid "5CC6DC94-6443-B6B1-1ED8-7D96C9AB514C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  225 1 233 1;
+createNode animCurveTU -n "pPlane1_scaleY_AnimLayer1_inputB";
+	rename -uid "EB6F1003-4245-92E7-DF46-49B3E2582A17";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  225 1 233 1;
+createNode animCurveTU -n "pPlane1_scaleZ_AnimLayer1_inputB";
+	rename -uid "D102DD24-0345-D8BD-8640-15AA5A28DBEB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  225 1 233 1;
+createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured:chest_CTRL_visibility_AnimLayer1";
+	rename -uid "5C755B03-F545-5943-0239-F496934E1AC1";
+	setAttr ".ia" yes;
+	setAttr ".o" yes;
+createNode animBlendNodeAdditiveRotation -n "duck_police_officer_RIG_textured:chest_CTRL_rotate_AnimLayer1";
+	rename -uid "ACFE9A84-804E-4B95-1237-DB8D0D32FD0F";
+createNode animCurveTU -n "chest_CTRL_visibility_AnimLayer1_inputB";
+	rename -uid "607F28BF-6B4C-AB5A-D275-88A0BA6B4E5E";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 1 235 1 245 1 255 1 265 1 275 1 285 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
+createNode animCurveTA -n "chest_CTRL_rotate_AnimLayer1_inputBX";
+	rename -uid "2ED6984E-C846-6F0B-ECB1-7D982B0430B2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTA -n "chest_CTRL_rotate_AnimLayer1_inputBY";
+	rename -uid "908E9C89-4F44-9929-AC06-34821463EE3E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTA -n "chest_CTRL_rotate_AnimLayer1_inputBZ";
+	rename -uid "1DB0B9B8-314A-2CE9-82E3-839021888BBB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTA -n "whole_body_sansFeet_CTRL_rotate_AnimLayer1_inputBX";
+	rename -uid "B4B14AD4-A74B-AC43-ED45-5B8A7AB3142B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 60.239068702397844 245 0 255 60.239068702397844
+		 265 0 275 60.239068702397844 285 0;
+createNode animCurveTA -n "whole_body_sansFeet_CTRL_rotate_AnimLayer1_inputBY";
+	rename -uid "3FAFF479-6D43-B34A-1163-0EAEB4AD8688";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTA -n "whole_body_sansFeet_CTRL_rotate_AnimLayer1_inputBZ";
+	rename -uid "A72D6904-1F44-FA05-A911-5DBEB317439B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTU -n "whole_body_sansFeet_CTRL_visibility_AnimLayer1_inputB";
+	rename -uid "4A60CC1D-0E45-E8BD-6179-E9BDAAA66518";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 1 235 1 245 1 255 1 265 1 275 1 285 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
+createNode animCurveTL -n "whole_body_sansFeet_CTRL_translateX_AnimLayer1_inputB";
+	rename -uid "7C88FD91-2A49-FC4C-B2F1-54A920F58341";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTL -n "whole_body_sansFeet_CTRL_translateY_AnimLayer1_inputB";
+	rename -uid "6C107FA9-FC40-53C2-9BB9-CDB329D72661";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTL -n "whole_body_sansFeet_CTRL_translateZ_AnimLayer1_inputB";
+	rename -uid "7F5881AA-9543-C8BD-70DE-C680517005FB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTU -n "whole_body_sansFeet_CTRL_scaleX_AnimLayer1_inputB";
+	rename -uid "43A04FCB-3740-61EE-703A-148E6C675FD3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 1 235 1 245 1 255 1 265 1 275 1 285 1;
+createNode animCurveTU -n "whole_body_sansFeet_CTRL_scaleY_AnimLayer1_inputB";
+	rename -uid "21FF9566-DD44-F87F-AC2E-C09FFB308623";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 1 235 1 245 1 255 1 265 1 275 1 285 1;
+createNode animCurveTU -n "whole_body_sansFeet_CTRL_scaleZ_AnimLayer1_inputB";
+	rename -uid "DD744F25-9942-3CA1-762D-489F5541C666";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 1 235 1 245 1 255 1 265 1 275 1 285 1;
+createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured:bot_neck_CTRL_visibility_AnimLayer1";
+	rename -uid "38BF036B-1641-415B-4683-4B98CED9D6E5";
+	setAttr ".ia" yes;
+	setAttr ".o" yes;
+createNode animBlendNodeAdditiveRotation -n "duck_police_officer_RIG_textured:bot_neck_CTRL_rotate_AnimLayer1";
+	rename -uid "FED7A28C-244D-DB1E-1B0E-208FB50969EE";
+	setAttr ".o" -type "double3" 0 0 -3.177947245093609 ;
+createNode animCurveTA -n "bot_neck_CTRL_rotate_AnimLayer1_inputBX";
+	rename -uid "0338C057-D94E-8902-9DB4-B68DDBF7E34D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTA -n "bot_neck_CTRL_rotate_AnimLayer1_inputBY";
+	rename -uid "AB8207D1-D54A-BB1C-4A50-15BE3D61A210";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTA -n "bot_neck_CTRL_rotate_AnimLayer1_inputBZ";
+	rename -uid "88BBBD98-AE48-D3AE-5A14-BAA7D59707E5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 0 235 -14.712718727285202 245 0 255 -14.712718727285202
+		 265 0 275 -14.712718727285202 285 0;
+createNode animCurveTU -n "bot_neck_CTRL_visibility_AnimLayer1_inputB";
+	rename -uid "42144C17-2547-E537-9EAC-FA846C4CA026";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  225 1 235 1 245 1 255 1 265 1 275 1 285 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
+createNode animCurveTA -n "master_CTRL_rotate_AnimLayer1_inputBX";
+	rename -uid "D6340D3A-734E-2131-76F8-339E6856BBBF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTA -n "master_CTRL_rotate_AnimLayer1_inputBY";
+	rename -uid "89778E7E-1C4C-6A9D-C242-71B462A58457";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTA -n "master_CTRL_rotate_AnimLayer1_inputBZ";
+	rename -uid "7FEB7598-C04A-78A8-BB52-348FD62DAAB8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTU -n "master_CTRL_visibility_AnimLayer1_inputB";
+	rename -uid "8C9AC641-C74F-6386-F91E-A3A02044E8D7";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  235 1 245 1 255 1 265 1 275 1 285 1;
+	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
+createNode animCurveTL -n "master_CTRL_translateX_AnimLayer1_inputB";
+	rename -uid "B21E6063-1340-9C87-07CB-33B0CC4737EA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTL -n "master_CTRL_translateY_AnimLayer1_inputB";
+	rename -uid "49F316F1-6648-64AE-8879-7B8B7A382423";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTL -n "master_CTRL_translateZ_AnimLayer1_inputB";
+	rename -uid "5C21C9B6-BA42-DC1E-1E45-8A9BDDC586E1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  235 0 245 0 255 0 265 0 275 0 285 0;
+createNode animCurveTU -n "master_CTRL_scaleX_AnimLayer1_inputB";
+	rename -uid "C5204336-7340-A10B-4698-8BAB8B0FF5A1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  235 1 245 1 255 1 265 1 275 1 285 1;
+createNode animCurveTU -n "master_CTRL_scaleY_AnimLayer1_inputB";
+	rename -uid "52D0EF62-E943-BF0D-409E-0C80420A8EB3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  235 1 245 1 255 1 265 1 275 1 285 1;
+createNode animCurveTU -n "master_CTRL_scaleZ_AnimLayer1_inputB";
+	rename -uid "6BD3224A-4349-0EE0-E194-C1A84150625C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  235 1 245 1 255 1 265 1 275 1 285 1;
+createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_visibility_AnimLayer1";
+	rename -uid "19434836-3940-8EC1-9D0F-1D94AFFE2420";
+	setAttr ".ia" yes;
+	setAttr ".o" yes;
+createNode animBlendNodeAdditiveDL -n "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_translateX_AnimLayer1";
+	rename -uid "AF05B947-D546-A383-26C9-8DB9547FA381";
+createNode animBlendNodeAdditiveDL -n "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_translateY_AnimLayer1";
+	rename -uid "55D5D339-9245-5389-DE56-239C576B0143";
+createNode animBlendNodeAdditiveDL -n "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_translateZ_AnimLayer1";
+	rename -uid "E6082C00-7F4C-5604-8597-B98B8DF674A1";
+createNode animBlendNodeAdditiveRotation -n "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_rotate_AnimLayer1";
+	rename -uid "1D6DE24F-024A-C2DA-74EC-9CBA41BE2248";
+createNode animBlendNodeAdditiveScale -n "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleX_AnimLayer1";
+	rename -uid "9E48A78D-094E-2A6C-AA27-B3B19E4E0EFD";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleY_AnimLayer1";
+	rename -uid "C6EEDF0C-E146-3AD0-7F24-76B0DF6E3E57";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleZ_AnimLayer1";
+	rename -uid "47F1B746-564C-5DBA-B927-6B908421E44A";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animCurveTL -n "whole_body_sansFeet_CTRL_translateX_AnimLayer1_inputB1";
+	rename -uid "9FE4B97D-9149-0F83-43DF-89B86C00A24C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  225 0 230 0 235 0 239 0 243 0 247 0 251 0
+		 255 0 259 0 268 0 274 0 280 0 285 0 290 0;
+createNode animCurveTL -n "whole_body_sansFeet_CTRL_translateY_AnimLayer1_inputB1";
+	rename -uid "0E4BD65A-2D40-59B1-6C0B-91A9681905D1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  225 0 230 0 235 0 239 0 243 0 247 0 251 0
+		 255 0 259 0 268 0 274 0 280 0 285 0 290 0;
+createNode animCurveTL -n "whole_body_sansFeet_CTRL_translateZ_AnimLayer1_inputB1";
+	rename -uid "72C7033F-B64D-D05E-4E4B-EFAD2C6E68AF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  225 0 230 0 235 0 239 0 243 0 247 0 251 0
+		 255 0 259 0 268 0 274 0 280 0 285 0 290 0;
+createNode animCurveTU -n "whole_body_sansFeet_CTRL_visibility_AnimLayer1_inputB1";
+	rename -uid "65E1D071-5D49-622E-C89D-29A45EA24B15";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  225 1 230 1 235 1 239 1 243 1 247 1 251 1
+		 255 1 259 1 268 1 274 1 280 1 285 1 290 1;
+	setAttr -s 14 ".kot[0:13]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5;
+createNode animCurveTA -n "whole_body_sansFeet_CTRL_rotate_AnimLayer1_inputBX1";
+	rename -uid "B55FD0BD-4544-10CA-B766-F29083A7993D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  225 0 230 66.68868864118501 235 0 239 66.68868864118501
+		 243 0 247 66.68868864118501 251 0 255 66.68868864118501 259 0 268 0 274 66.68868864118501
+		 280 0 285 66.68868864118501 290 0;
+createNode animCurveTA -n "whole_body_sansFeet_CTRL_rotate_AnimLayer1_inputBY1";
+	rename -uid "5E65BC13-DB4B-9898-EB5B-42B8F30B1046";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  225 0 230 0 235 0 239 0 243 0 247 0 251 0
+		 255 0 259 0 268 0 274 0 280 0 285 0 290 0;
+createNode animCurveTA -n "whole_body_sansFeet_CTRL_rotate_AnimLayer1_inputBZ1";
+	rename -uid "FA18E274-FB48-B6C8-E1FF-0197BE9C048E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  225 0 230 0 235 0 239 0 243 0 247 0 251 0
+		 255 0 259 0 268 0 274 0 280 0 285 0 290 0;
+createNode animCurveTU -n "whole_body_sansFeet_CTRL_scaleX_AnimLayer1_inputB1";
+	rename -uid "0EB24EB4-BB4B-8B5F-686A-3A999F89AD1A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  225 1 230 1 235 1 239 1 243 1 247 1 251 1
+		 255 1 259 1 268 1 274 1 280 1 285 1 290 1;
+createNode animCurveTU -n "whole_body_sansFeet_CTRL_scaleY_AnimLayer1_inputB1";
+	rename -uid "D2E84A89-E94D-F670-4494-1A9CAF438FC1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  225 1 230 1 235 1 239 1 243 1 247 1 251 1
+		 255 1 259 1 268 1 274 1 280 1 285 1 290 1;
+createNode animCurveTU -n "whole_body_sansFeet_CTRL_scaleZ_AnimLayer1_inputB1";
+	rename -uid "5E276E53-EA4B-52F9-F250-80B27E7E342E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  225 1 230 1 235 1 239 1 243 1 247 1 251 1
+		 255 1 259 1 268 1 274 1 280 1 285 1 290 1;
+createNode animBlendNodeBoolean -n "duck_police_officer_RIG_textured2:bot_neck_CTRL_visibility_AnimLayer1";
+	rename -uid "8D75A76F-4E42-86CF-8FD5-BA85D101F986";
+	setAttr ".ia" yes;
+	setAttr ".o" yes;
+createNode animBlendNodeAdditiveRotation -n "duck_police_officer_RIG_textured2:bot_neck_CTRL_rotate_AnimLayer1";
+	rename -uid "32A58DBD-BC46-D8B6-909E-37BE8B65B6DC";
+createNode animCurveTU -n "bot_neck_CTRL_visibility_AnimLayer1_inputB1";
+	rename -uid "1726E615-A14D-52CE-F227-1DBB22170FE7";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  225 1 230 1 235 1 239 1 243 1 247 1 251 1
+		 255 1 259 1 268 1 274 1 280 1 285 1 290 1;
+	setAttr -s 14 ".kot[0:13]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5;
+createNode animCurveTA -n "bot_neck_CTRL_rotate_AnimLayer1_inputBX1";
+	rename -uid "79FB1190-EE41-9B92-386C-87BCF4781A7E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  225 0 230 -0.030893556428292779 235 0 239 -0.030893556428292779
+		 243 0 247 -0.030893556428292779 251 0 255 -0.030893556428292779 259 0 268 0 274 -0.030893556428292779
+		 280 0 285 -0.030893556428292779 290 0;
+createNode animCurveTA -n "bot_neck_CTRL_rotate_AnimLayer1_inputBY1";
+	rename -uid "0CD135D9-604E-A621-F943-51B0A4031D6E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  225 0 230 0.089738952946302269 235 0 239 0.089738952946302269
+		 243 0 247 0.089738952946302269 251 0 255 0.089738952946302269 259 0 268 0 274 0.089738952946302269
+		 280 0 285 0.089738952946302269 290 0;
+createNode animCurveTA -n "bot_neck_CTRL_rotate_AnimLayer1_inputBZ1";
+	rename -uid "36DBA9C4-F748-80CB-E49E-C7B61737A8BC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  225 0 230 -12.591635509858685 235 0 239 -12.591635509858685
+		 243 0 247 -12.591635509858685 251 0 255 -12.591635509858685 259 0 268 0 274 -12.591635509858685
+		 280 0 285 -12.591635509858685 290 0;
 select -ne :time1;
-	setAttr ".o" 92;
-	setAttr ".unw" 92;
+	setAttr ".o" 262;
+	setAttr ".unw" 262;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -2889,6 +4238,70 @@ connectAttr "r_CTRL_visibility_Merged_Layer1_inputB.o" "BriefcaseRN.phl[20]";
 connectAttr "l_CTRL_rotateZ_Merged_Layer1_inputB.o" "BriefcaseRN.phl[21]";
 connectAttr "l_CTRL_visibility_Merged_Layer1_inputB.o" "BriefcaseRN.phl[22]";
 connectAttr "BriefcaseRN.phl[23]" "groupParts1.ig";
+connectAttr "OverallParkSceneRN.phl[1]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:pPlane1_visibility_AnimLayer1.o" "OverallParkSceneRN.phl[2]"
+		;
+connectAttr "OverallParkSceneRN.phl[3]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:pPlane1_translateX_AnimLayer1.o" "OverallParkSceneRN.phl[4]"
+		;
+connectAttr "OverallParkSceneRN.phl[5]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:pPlane1_translateY_AnimLayer1.o" "OverallParkSceneRN.phl[6]"
+		;
+connectAttr "OverallParkSceneRN.phl[7]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:pPlane1_translateZ_AnimLayer1.o" "OverallParkSceneRN.phl[8]"
+		;
+connectAttr "OverallParkSceneRN.phl[9]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:pPlane1_rotate_AnimLayer1.ox" "OverallParkSceneRN.phl[10]"
+		;
+connectAttr "OverallParkSceneRN.phl[11]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:pPlane1_rotate_AnimLayer1.oy" "OverallParkSceneRN.phl[12]"
+		;
+connectAttr "OverallParkSceneRN.phl[13]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:pPlane1_rotate_AnimLayer1.oz" "OverallParkSceneRN.phl[14]"
+		;
+connectAttr "OverallParkSceneRN.phl[15]" "OverallParkScene:pPlane1_rotate_AnimLayer1.ro"
+		;
+connectAttr "OverallParkSceneRN.phl[16]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:pPlane1_scaleX_AnimLayer1.o" "OverallParkSceneRN.phl[17]"
+		;
+connectAttr "OverallParkSceneRN.phl[18]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:pPlane1_scaleY_AnimLayer1.o" "OverallParkSceneRN.phl[19]"
+		;
+connectAttr "OverallParkSceneRN.phl[20]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:pPlane1_scaleZ_AnimLayer1.o" "OverallParkSceneRN.phl[21]"
+		;
+connectAttr "OverallParkSceneRN.phl[22]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:ChrisZ_RoadHill_visibility_AnimLayer1.o" "OverallParkSceneRN.phl[23]"
+		;
+connectAttr "OverallParkSceneRN.phl[24]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:ChrisZ_RoadHill_translateX_AnimLayer1.o" "OverallParkSceneRN.phl[25]"
+		;
+connectAttr "OverallParkSceneRN.phl[26]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:ChrisZ_RoadHill_translateY_AnimLayer1.o" "OverallParkSceneRN.phl[27]"
+		;
+connectAttr "OverallParkSceneRN.phl[28]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:ChrisZ_RoadHill_translateZ_AnimLayer1.o" "OverallParkSceneRN.phl[29]"
+		;
+connectAttr "OverallParkSceneRN.phl[30]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:ChrisZ_RoadHill_rotate_AnimLayer1.ox" "OverallParkSceneRN.phl[31]"
+		;
+connectAttr "OverallParkSceneRN.phl[32]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:ChrisZ_RoadHill_rotate_AnimLayer1.oy" "OverallParkSceneRN.phl[33]"
+		;
+connectAttr "OverallParkSceneRN.phl[34]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:ChrisZ_RoadHill_rotate_AnimLayer1.oz" "OverallParkSceneRN.phl[35]"
+		;
+connectAttr "OverallParkSceneRN.phl[36]" "OverallParkScene:ChrisZ_RoadHill_rotate_AnimLayer1.ro"
+		;
+connectAttr "OverallParkSceneRN.phl[37]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:ChrisZ_RoadHill_scaleX_AnimLayer1.o" "OverallParkSceneRN.phl[38]"
+		;
+connectAttr "OverallParkSceneRN.phl[39]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:ChrisZ_RoadHill_scaleY_AnimLayer1.o" "OverallParkSceneRN.phl[40]"
+		;
+connectAttr "OverallParkSceneRN.phl[41]" "AnimLayer1.dsm" -na;
+connectAttr "OverallParkScene:ChrisZ_RoadHill_scaleZ_AnimLayer1.o" "OverallParkSceneRN.phl[42]"
+		;
 connectAttr "duck_police_officer_RIG_textured1:duck_baseRN.phl[5]" "duck_police_officer_RIG_textured1:groupParts2.ig"
 		;
 connectAttr "duck_police_officer_RIG_textured1:duck_baseRN.phl[6]" "duck_police_officer_RIG_textured1:groupParts5.ig"
@@ -2976,44 +4389,150 @@ connectAttr "duck_police_officer_RIG_texturedRN1.phl[20]" "AnimLayer1.dsm" -na;
 connectAttr "duck_police_officer_RIG_textured:master_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[21]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN1.phl[22]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured:head_CTRL_rotate_AnimLayer1.oz" "duck_police_officer_RIG_texturedRN1.phl[23]"
+connectAttr "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_translateX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[23]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN1.phl[24]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured:head_CTRL_rotate_AnimLayer1.ox" "duck_police_officer_RIG_texturedRN1.phl[25]"
+connectAttr "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_translateY_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[25]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN1.phl[26]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured:head_CTRL_rotate_AnimLayer1.oy" "duck_police_officer_RIG_texturedRN1.phl[27]"
+connectAttr "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_translateZ_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[27]"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN1.phl[28]" "duck_police_officer_RIG_textured:head_CTRL_rotate_AnimLayer1.ro"
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[28]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_rotate_AnimLayer1.ox" "duck_police_officer_RIG_texturedRN1.phl[29]"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN1.phl[29]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured:head_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[30]"
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[30]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_rotate_AnimLayer1.oy" "duck_police_officer_RIG_texturedRN1.phl[31]"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN1.phl[31]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured:l_eye_CTRL_EyeScaleX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[32]"
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[32]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_rotate_AnimLayer1.oz" "duck_police_officer_RIG_texturedRN1.phl[33]"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN1.phl[33]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured:l_eye_CTRL_EyeScaleY_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[34]"
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[34]" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_rotate_AnimLayer1.ro"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN1.phl[35]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured:l_eye_CTRL_EyeScaleZ_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[36]"
+connectAttr "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[36]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN1.phl[37]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured:l_eye_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[38]"
+connectAttr "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleY_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[38]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN1.phl[39]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured:r_eye_CTRL_EyeScaleX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[40]"
+connectAttr "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleZ_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[40]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN1.phl[41]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured:r_eye_CTRL_EyeScaleY_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[42]"
+connectAttr "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[42]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN1.phl[43]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured:r_eye_CTRL_EyeScaleZ_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[44]"
+connectAttr "duck_police_officer_RIG_textured:chest_CTRL_rotate_AnimLayer1.oz" "duck_police_officer_RIG_texturedRN1.phl[44]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN1.phl[45]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured:r_eye_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[46]"
+connectAttr "duck_police_officer_RIG_textured:chest_CTRL_rotate_AnimLayer1.oy" "duck_police_officer_RIG_texturedRN1.phl[46]"
 		;
-connectAttr "duckie.di" "duck_police_officer_RIG_texturedRN1.phl[47]";
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[47]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:chest_CTRL_rotate_AnimLayer1.ox" "duck_police_officer_RIG_texturedRN1.phl[48]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[49]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:chest_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[50]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[51]" "duck_police_officer_RIG_textured:chest_CTRL_rotate_AnimLayer1.ro"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[52]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:bot_neck_CTRL_rotate_AnimLayer1.oz" "duck_police_officer_RIG_texturedRN1.phl[53]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[54]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:bot_neck_CTRL_rotate_AnimLayer1.ox" "duck_police_officer_RIG_texturedRN1.phl[55]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[56]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:bot_neck_CTRL_rotate_AnimLayer1.oy" "duck_police_officer_RIG_texturedRN1.phl[57]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[58]" "duck_police_officer_RIG_textured:bot_neck_CTRL_rotate_AnimLayer1.ro"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[59]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:bot_neck_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[60]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[61]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:head_CTRL_rotate_AnimLayer1.oz" "duck_police_officer_RIG_texturedRN1.phl[62]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[63]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:head_CTRL_rotate_AnimLayer1.ox" "duck_police_officer_RIG_texturedRN1.phl[64]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[65]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:head_CTRL_rotate_AnimLayer1.oy" "duck_police_officer_RIG_texturedRN1.phl[66]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[67]" "duck_police_officer_RIG_textured:head_CTRL_rotate_AnimLayer1.ro"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[68]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:head_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[69]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[70]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:l_eye_CTRL_EyeScaleX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[71]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[72]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:l_eye_CTRL_EyeScaleY_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[73]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[74]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:l_eye_CTRL_EyeScaleZ_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[75]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[76]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:l_eye_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[77]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[78]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:r_eye_CTRL_EyeScaleX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[79]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[80]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:r_eye_CTRL_EyeScaleY_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[81]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[82]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:r_eye_CTRL_EyeScaleZ_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[83]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[84]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:r_eye_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[85]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[86]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_rotate_AnimLayer1.ox" "duck_police_officer_RIG_texturedRN1.phl[87]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[88]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_rotate_AnimLayer1.oy" "duck_police_officer_RIG_texturedRN1.phl[89]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[90]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_rotate_AnimLayer1.oz" "duck_police_officer_RIG_texturedRN1.phl[91]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[92]" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_rotate_AnimLayer1.ro"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[93]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[94]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[95]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_translateX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[96]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[97]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_translateY_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[98]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[99]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_translateZ_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[100]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[101]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[102]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[103]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleY_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[104]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[105]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleZ_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[106]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[107]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_rotate_AnimLayer1.oy" "duck_police_officer_RIG_texturedRN1.phl[108]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[109]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_rotate_AnimLayer1.ox" "duck_police_officer_RIG_texturedRN1.phl[110]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[111]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_rotate_AnimLayer1.oz" "duck_police_officer_RIG_texturedRN1.phl[112]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[113]" "duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_rotate_AnimLayer1.ro"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN1.phl[114]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN1.phl[115]"
+		;
+connectAttr "duckie.di" "duck_police_officer_RIG_texturedRN1.phl[116]";
 connectAttr "duck_police_officer_RIG_texturedRN2.phl[1]" "AnimLayer1.dsm" -na;
 connectAttr "duck_police_officer_RIG_textured2:RIG_scaleX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[2]"
 		;
@@ -3047,90 +4566,136 @@ connectAttr "duck_police_officer_RIG_textured2:RIG_visibility_AnimLayer1.o" "duc
 connectAttr "duck_police_officer_RIG_texturedRN2.phl[21]" "duck_police_officer_RIG_textured2:RIG_rotate_AnimLayer1.ro"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN2.phl[22]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:mid_neck_CTRL_rotate_AnimLayer1.oz" "duck_police_officer_RIG_texturedRN2.phl[23]"
+connectAttr "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_translateX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[23]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN2.phl[24]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:mid_neck_CTRL_rotate_AnimLayer1.ox" "duck_police_officer_RIG_texturedRN2.phl[25]"
+connectAttr "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_translateY_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[25]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN2.phl[26]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:mid_neck_CTRL_rotate_AnimLayer1.oy" "duck_police_officer_RIG_texturedRN2.phl[27]"
+connectAttr "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_translateZ_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[27]"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN2.phl[28]" "duck_police_officer_RIG_textured2:mid_neck_CTRL_rotate_AnimLayer1.ro"
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[28]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_rotate_AnimLayer1.ox" "duck_police_officer_RIG_texturedRN2.phl[29]"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN2.phl[29]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:mid_neck_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[30]"
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[30]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_rotate_AnimLayer1.oy" "duck_police_officer_RIG_texturedRN2.phl[31]"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN2.phl[31]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:l_eye_CTRL_EyeScaleX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[32]"
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[32]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_rotate_AnimLayer1.oz" "duck_police_officer_RIG_texturedRN2.phl[33]"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN2.phl[33]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:l_eye_CTRL_EyeScaleY_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[34]"
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[34]" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_rotate_AnimLayer1.ro"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN2.phl[35]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:l_eye_CTRL_EyeScaleZ_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[36]"
+connectAttr "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[36]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN2.phl[37]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:l_eye_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[38]"
+connectAttr "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleY_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[38]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN2.phl[39]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:r_eye_CTRL_EyeScaleX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[40]"
+connectAttr "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleZ_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[40]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN2.phl[41]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:r_eye_CTRL_EyeScaleY_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[42]"
+connectAttr "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[42]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN2.phl[43]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:r_eye_CTRL_EyeScaleZ_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[44]"
+connectAttr "duck_police_officer_RIG_textured2:bot_neck_CTRL_rotate_AnimLayer1.ox" "duck_police_officer_RIG_texturedRN2.phl[44]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN2.phl[45]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:r_eye_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[46]"
+connectAttr "duck_police_officer_RIG_textured2:bot_neck_CTRL_rotate_AnimLayer1.oy" "duck_police_officer_RIG_texturedRN2.phl[46]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN2.phl[47]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_rotate_AnimLayer1.ox" "duck_police_officer_RIG_texturedRN2.phl[48]"
+connectAttr "duck_police_officer_RIG_textured2:bot_neck_CTRL_rotate_AnimLayer1.oz" "duck_police_officer_RIG_texturedRN2.phl[48]"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN2.phl[49]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_rotate_AnimLayer1.oy" "duck_police_officer_RIG_texturedRN2.phl[50]"
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[49]" "duck_police_officer_RIG_textured2:bot_neck_CTRL_rotate_AnimLayer1.ro"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN2.phl[51]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_rotate_AnimLayer1.oz" "duck_police_officer_RIG_texturedRN2.phl[52]"
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[50]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:bot_neck_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[51]"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN2.phl[53]" "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_rotate_AnimLayer1.ro"
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[52]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:mid_neck_CTRL_rotate_AnimLayer1.oz" "duck_police_officer_RIG_texturedRN2.phl[53]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN2.phl[54]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[55]"
+connectAttr "duck_police_officer_RIG_textured2:mid_neck_CTRL_rotate_AnimLayer1.ox" "duck_police_officer_RIG_texturedRN2.phl[55]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN2.phl[56]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_translateX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[57]"
+connectAttr "duck_police_officer_RIG_textured2:mid_neck_CTRL_rotate_AnimLayer1.oy" "duck_police_officer_RIG_texturedRN2.phl[57]"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN2.phl[58]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_translateY_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[59]"
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[58]" "duck_police_officer_RIG_textured2:mid_neck_CTRL_rotate_AnimLayer1.ro"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN2.phl[60]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_translateZ_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[61]"
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[59]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:mid_neck_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[60]"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN2.phl[62]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_scaleX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[63]"
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[61]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:l_eye_CTRL_EyeScaleX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[62]"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN2.phl[64]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_scaleY_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[65]"
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[63]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:l_eye_CTRL_EyeScaleY_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[64]"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN2.phl[66]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_scaleZ_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[67]"
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[65]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:l_eye_CTRL_EyeScaleZ_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[66]"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN2.phl[68]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_rotate_AnimLayer1.oy" "duck_police_officer_RIG_texturedRN2.phl[69]"
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[67]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:l_eye_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[68]"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN2.phl[70]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_rotate_AnimLayer1.ox" "duck_police_officer_RIG_texturedRN2.phl[71]"
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[69]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:r_eye_CTRL_EyeScaleX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[70]"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN2.phl[72]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_rotate_AnimLayer1.oz" "duck_police_officer_RIG_texturedRN2.phl[73]"
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[71]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:r_eye_CTRL_EyeScaleY_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[72]"
 		;
-connectAttr "duck_police_officer_RIG_texturedRN2.phl[74]" "duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_rotate_AnimLayer1.ro"
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[73]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:r_eye_CTRL_EyeScaleZ_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[74]"
 		;
 connectAttr "duck_police_officer_RIG_texturedRN2.phl[75]" "AnimLayer1.dsm" -na;
-connectAttr "duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[76]"
+connectAttr "duck_police_officer_RIG_textured2:r_eye_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[76]"
 		;
-connectAttr "duckie.di" "duck_police_officer_RIG_texturedRN2.phl[77]";
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[77]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_rotate_AnimLayer1.ox" "duck_police_officer_RIG_texturedRN2.phl[78]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[79]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_rotate_AnimLayer1.oy" "duck_police_officer_RIG_texturedRN2.phl[80]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[81]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_rotate_AnimLayer1.oz" "duck_police_officer_RIG_texturedRN2.phl[82]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[83]" "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_rotate_AnimLayer1.ro"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[84]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[85]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[86]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_translateX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[87]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[88]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_translateY_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[89]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[90]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_translateZ_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[91]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[92]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_scaleX_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[93]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[94]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_scaleY_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[95]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[96]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:r_wing_shoulder_CTRL_scaleZ_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[97]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[98]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_rotate_AnimLayer1.oy" "duck_police_officer_RIG_texturedRN2.phl[99]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[100]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_rotate_AnimLayer1.ox" "duck_police_officer_RIG_texturedRN2.phl[101]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[102]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_rotate_AnimLayer1.oz" "duck_police_officer_RIG_texturedRN2.phl[103]"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[104]" "duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_rotate_AnimLayer1.ro"
+		;
+connectAttr "duck_police_officer_RIG_texturedRN2.phl[105]" "AnimLayer1.dsm" -na;
+connectAttr "duck_police_officer_RIG_textured2:l_wing_shoulder_CTRL_visibility_AnimLayer1.o" "duck_police_officer_RIG_texturedRN2.phl[106]"
+		;
+connectAttr "duckie.di" "duck_police_officer_RIG_texturedRN2.phl[107]";
 connectAttr "layer1.di" "pPlane1.do";
 connectAttr "polyPlane1.out" "pPlaneShape1.i";
 connectAttr "enviro.di" "environment.do";
@@ -3610,21 +5175,125 @@ connectAttr "duck_police_officer_RIG_textured2:l_eye_CTRL_EyeScaleY_AnimLayer1.m
 		;
 connectAttr "duck_police_officer_RIG_textured2:l_eye_CTRL_EyeScaleZ_AnimLayer1.msg" "AnimLayer1.bnds[63]"
 		;
+connectAttr "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_visibility_AnimLayer1.msg" "AnimLayer1.bnds[64]"
+		;
+connectAttr "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_translateX_AnimLayer1.msg" "AnimLayer1.bnds[65]"
+		;
+connectAttr "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_translateY_AnimLayer1.msg" "AnimLayer1.bnds[66]"
+		;
+connectAttr "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_translateZ_AnimLayer1.msg" "AnimLayer1.bnds[67]"
+		;
+connectAttr "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_rotate_AnimLayer1.msg" "AnimLayer1.bnds[71]"
+		;
+connectAttr "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleX_AnimLayer1.msg" "AnimLayer1.bnds[72]"
+		;
+connectAttr "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleY_AnimLayer1.msg" "AnimLayer1.bnds[73]"
+		;
+connectAttr "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleZ_AnimLayer1.msg" "AnimLayer1.bnds[74]"
+		;
+connectAttr "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_visibility_AnimLayer1.msg" "AnimLayer1.bnds[75]"
+		;
+connectAttr "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_translateX_AnimLayer1.msg" "AnimLayer1.bnds[76]"
+		;
+connectAttr "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_translateY_AnimLayer1.msg" "AnimLayer1.bnds[77]"
+		;
+connectAttr "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_translateZ_AnimLayer1.msg" "AnimLayer1.bnds[78]"
+		;
+connectAttr "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_rotate_AnimLayer1.msg" "AnimLayer1.bnds[82]"
+		;
+connectAttr "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleX_AnimLayer1.msg" "AnimLayer1.bnds[83]"
+		;
+connectAttr "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleY_AnimLayer1.msg" "AnimLayer1.bnds[84]"
+		;
+connectAttr "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleZ_AnimLayer1.msg" "AnimLayer1.bnds[85]"
+		;
+connectAttr "duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_visibility_AnimLayer1.msg" "AnimLayer1.bnds[86]"
+		;
+connectAttr "duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_rotate_AnimLayer1.msg" "AnimLayer1.bnds[90]"
+		;
+connectAttr "OverallParkScene:ChrisZ_RoadHill_visibility_AnimLayer1.msg" "AnimLayer1.bnds[91]"
+		;
+connectAttr "OverallParkScene:ChrisZ_RoadHill_translateX_AnimLayer1.msg" "AnimLayer1.bnds[92]"
+		;
+connectAttr "OverallParkScene:ChrisZ_RoadHill_translateY_AnimLayer1.msg" "AnimLayer1.bnds[93]"
+		;
+connectAttr "OverallParkScene:ChrisZ_RoadHill_translateZ_AnimLayer1.msg" "AnimLayer1.bnds[94]"
+		;
+connectAttr "OverallParkScene:ChrisZ_RoadHill_rotate_AnimLayer1.msg" "AnimLayer1.bnds[98]"
+		;
+connectAttr "OverallParkScene:ChrisZ_RoadHill_scaleX_AnimLayer1.msg" "AnimLayer1.bnds[99]"
+		;
+connectAttr "OverallParkScene:ChrisZ_RoadHill_scaleY_AnimLayer1.msg" "AnimLayer1.bnds[100]"
+		;
+connectAttr "OverallParkScene:ChrisZ_RoadHill_scaleZ_AnimLayer1.msg" "AnimLayer1.bnds[101]"
+		;
+connectAttr "OverallParkScene:pPlane1_visibility_AnimLayer1.msg" "AnimLayer1.bnds[102]"
+		;
+connectAttr "OverallParkScene:pPlane1_translateX_AnimLayer1.msg" "AnimLayer1.bnds[103]"
+		;
+connectAttr "OverallParkScene:pPlane1_translateY_AnimLayer1.msg" "AnimLayer1.bnds[104]"
+		;
+connectAttr "OverallParkScene:pPlane1_translateZ_AnimLayer1.msg" "AnimLayer1.bnds[105]"
+		;
+connectAttr "OverallParkScene:pPlane1_rotate_AnimLayer1.msg" "AnimLayer1.bnds[109]"
+		;
+connectAttr "OverallParkScene:pPlane1_scaleX_AnimLayer1.msg" "AnimLayer1.bnds[110]"
+		;
+connectAttr "OverallParkScene:pPlane1_scaleY_AnimLayer1.msg" "AnimLayer1.bnds[111]"
+		;
+connectAttr "OverallParkScene:pPlane1_scaleZ_AnimLayer1.msg" "AnimLayer1.bnds[112]"
+		;
+connectAttr "duck_police_officer_RIG_textured:chest_CTRL_visibility_AnimLayer1.msg" "AnimLayer1.bnds[113]"
+		;
+connectAttr "duck_police_officer_RIG_textured:chest_CTRL_rotate_AnimLayer1.msg" "AnimLayer1.bnds[117]"
+		;
+connectAttr "duck_police_officer_RIG_textured:bot_neck_CTRL_visibility_AnimLayer1.msg" "AnimLayer1.bnds[118]"
+		;
+connectAttr "duck_police_officer_RIG_textured:bot_neck_CTRL_rotate_AnimLayer1.msg" "AnimLayer1.bnds[122]"
+		;
+connectAttr "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_visibility_AnimLayer1.msg" "AnimLayer1.bnds[123]"
+		;
+connectAttr "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_translateX_AnimLayer1.msg" "AnimLayer1.bnds[124]"
+		;
+connectAttr "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_translateY_AnimLayer1.msg" "AnimLayer1.bnds[125]"
+		;
+connectAttr "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_translateZ_AnimLayer1.msg" "AnimLayer1.bnds[126]"
+		;
+connectAttr "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_rotate_AnimLayer1.msg" "AnimLayer1.bnds[130]"
+		;
+connectAttr "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleX_AnimLayer1.msg" "AnimLayer1.bnds[131]"
+		;
+connectAttr "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleY_AnimLayer1.msg" "AnimLayer1.bnds[132]"
+		;
+connectAttr "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleZ_AnimLayer1.msg" "AnimLayer1.bnds[133]"
+		;
+connectAttr "duck_police_officer_RIG_textured2:bot_neck_CTRL_visibility_AnimLayer1.msg" "AnimLayer1.bnds[134]"
+		;
+connectAttr "duck_police_officer_RIG_textured2:bot_neck_CTRL_rotate_AnimLayer1.msg" "AnimLayer1.bnds[138]"
+		;
 connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:master_CTRL_visibility_AnimLayer1.wa"
 		;
 connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:master_CTRL_visibility_AnimLayer1.wb"
+		;
+connectAttr "master_CTRL_visibility_AnimLayer1_inputB.o" "duck_police_officer_RIG_textured:master_CTRL_visibility_AnimLayer1.ib"
 		;
 connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:master_CTRL_translateX_AnimLayer1.wa"
 		;
 connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:master_CTRL_translateX_AnimLayer1.wb"
 		;
+connectAttr "master_CTRL_translateX_AnimLayer1_inputB.o" "duck_police_officer_RIG_textured:master_CTRL_translateX_AnimLayer1.ib"
+		;
 connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:master_CTRL_translateY_AnimLayer1.wa"
 		;
 connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:master_CTRL_translateY_AnimLayer1.wb"
 		;
+connectAttr "master_CTRL_translateY_AnimLayer1_inputB.o" "duck_police_officer_RIG_textured:master_CTRL_translateY_AnimLayer1.ib"
+		;
 connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:master_CTRL_translateZ_AnimLayer1.wa"
 		;
 connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:master_CTRL_translateZ_AnimLayer1.wb"
+		;
+connectAttr "master_CTRL_translateZ_AnimLayer1_inputB.o" "duck_police_officer_RIG_textured:master_CTRL_translateZ_AnimLayer1.ib"
 		;
 connectAttr "AnimLayer1.oram" "duck_police_officer_RIG_textured:master_CTRL_rotate_AnimLayer1.acm"
 		;
@@ -3632,11 +5301,19 @@ connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:master_CTRL_rota
 		;
 connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:master_CTRL_rotate_AnimLayer1.wb"
 		;
+connectAttr "master_CTRL_rotate_AnimLayer1_inputBX.o" "duck_police_officer_RIG_textured:master_CTRL_rotate_AnimLayer1.ibx"
+		;
+connectAttr "master_CTRL_rotate_AnimLayer1_inputBY.o" "duck_police_officer_RIG_textured:master_CTRL_rotate_AnimLayer1.iby"
+		;
+connectAttr "master_CTRL_rotate_AnimLayer1_inputBZ.o" "duck_police_officer_RIG_textured:master_CTRL_rotate_AnimLayer1.ibz"
+		;
 connectAttr "AnimLayer1.sam" "duck_police_officer_RIG_textured:master_CTRL_scaleX_AnimLayer1.acm"
 		;
 connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:master_CTRL_scaleX_AnimLayer1.wa"
 		;
 connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:master_CTRL_scaleX_AnimLayer1.wb"
+		;
+connectAttr "master_CTRL_scaleX_AnimLayer1_inputB.o" "duck_police_officer_RIG_textured:master_CTRL_scaleX_AnimLayer1.ib"
 		;
 connectAttr "AnimLayer1.sam" "duck_police_officer_RIG_textured:master_CTRL_scaleY_AnimLayer1.acm"
 		;
@@ -3644,11 +5321,15 @@ connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:master_CTRL_scal
 		;
 connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:master_CTRL_scaleY_AnimLayer1.wb"
 		;
+connectAttr "master_CTRL_scaleY_AnimLayer1_inputB.o" "duck_police_officer_RIG_textured:master_CTRL_scaleY_AnimLayer1.ib"
+		;
 connectAttr "AnimLayer1.sam" "duck_police_officer_RIG_textured:master_CTRL_scaleZ_AnimLayer1.acm"
 		;
 connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:master_CTRL_scaleZ_AnimLayer1.wa"
 		;
 connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:master_CTRL_scaleZ_AnimLayer1.wb"
+		;
+connectAttr "master_CTRL_scaleZ_AnimLayer1_inputB.o" "duck_police_officer_RIG_textured:master_CTRL_scaleZ_AnimLayer1.ib"
 		;
 connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:head_CTRL_visibility_AnimLayer1.wa"
 		;
@@ -3939,6 +5620,366 @@ connectAttr "bread_crumb:bread_top.msg" "bread_crumb:hyperShadePrimaryNodeEditor
 connectAttr "bread_crumb:bread_bottom.msg" "bread_crumb:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
 connectAttr "bread_crumb:aiStandardSurface2SG.msg" "bread_crumb:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_visibility_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_visibility_AnimLayer1.wb"
+		;
+connectAttr "whole_body_sansFeet_CTRL_visibility_AnimLayer1_inputB.o" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_visibility_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_translateX_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_translateX_AnimLayer1.wb"
+		;
+connectAttr "whole_body_sansFeet_CTRL_translateX_AnimLayer1_inputB.o" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_translateX_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_translateY_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_translateY_AnimLayer1.wb"
+		;
+connectAttr "whole_body_sansFeet_CTRL_translateY_AnimLayer1_inputB.o" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_translateY_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_translateZ_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_translateZ_AnimLayer1.wb"
+		;
+connectAttr "whole_body_sansFeet_CTRL_translateZ_AnimLayer1_inputB.o" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_translateZ_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.oram" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_rotate_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_rotate_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_rotate_AnimLayer1.wb"
+		;
+connectAttr "whole_body_sansFeet_CTRL_rotate_AnimLayer1_inputBX.o" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_rotate_AnimLayer1.ibx"
+		;
+connectAttr "whole_body_sansFeet_CTRL_rotate_AnimLayer1_inputBY.o" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_rotate_AnimLayer1.iby"
+		;
+connectAttr "whole_body_sansFeet_CTRL_rotate_AnimLayer1_inputBZ.o" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_rotate_AnimLayer1.ibz"
+		;
+connectAttr "AnimLayer1.sam" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleX_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleX_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleX_AnimLayer1.wb"
+		;
+connectAttr "whole_body_sansFeet_CTRL_scaleX_AnimLayer1_inputB.o" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleX_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.sam" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleY_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleY_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleY_AnimLayer1.wb"
+		;
+connectAttr "whole_body_sansFeet_CTRL_scaleY_AnimLayer1_inputB.o" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleY_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.sam" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleZ_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleZ_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleZ_AnimLayer1.wb"
+		;
+connectAttr "whole_body_sansFeet_CTRL_scaleZ_AnimLayer1_inputB.o" "duck_police_officer_RIG_textured:whole_body_sansFeet_CTRL_scaleZ_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_visibility_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_visibility_AnimLayer1.wb"
+		;
+connectAttr "r_wing_shoulder_CTRL_visibility_AnimLayer1_inputB1.o" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_visibility_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_translateX_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_translateX_AnimLayer1.wb"
+		;
+connectAttr "r_wing_shoulder_CTRL_translateX_AnimLayer1_inputB1.o" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_translateX_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_translateY_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_translateY_AnimLayer1.wb"
+		;
+connectAttr "r_wing_shoulder_CTRL_translateY_AnimLayer1_inputB1.o" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_translateY_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_translateZ_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_translateZ_AnimLayer1.wb"
+		;
+connectAttr "r_wing_shoulder_CTRL_translateZ_AnimLayer1_inputB1.o" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_translateZ_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.oram" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_rotate_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_rotate_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_rotate_AnimLayer1.wb"
+		;
+connectAttr "r_wing_shoulder_CTRL_rotate_AnimLayer1_inputBX1.o" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_rotate_AnimLayer1.ibx"
+		;
+connectAttr "r_wing_shoulder_CTRL_rotate_AnimLayer1_inputBY1.o" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_rotate_AnimLayer1.iby"
+		;
+connectAttr "r_wing_shoulder_CTRL_rotate_AnimLayer1_inputBZ1.o" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_rotate_AnimLayer1.ibz"
+		;
+connectAttr "AnimLayer1.sam" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleX_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleX_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleX_AnimLayer1.wb"
+		;
+connectAttr "r_wing_shoulder_CTRL_scaleX_AnimLayer1_inputB1.o" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleX_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.sam" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleY_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleY_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleY_AnimLayer1.wb"
+		;
+connectAttr "r_wing_shoulder_CTRL_scaleY_AnimLayer1_inputB1.o" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleY_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.sam" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleZ_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleZ_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleZ_AnimLayer1.wb"
+		;
+connectAttr "r_wing_shoulder_CTRL_scaleZ_AnimLayer1_inputB1.o" "duck_police_officer_RIG_textured:r_wing_shoulder_CTRL_scaleZ_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_visibility_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_visibility_AnimLayer1.wb"
+		;
+connectAttr "l_wing_shoulder_CTRL_visibility_AnimLayer1_inputB1.o" "duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_visibility_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.oram" "duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_rotate_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_rotate_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_rotate_AnimLayer1.wb"
+		;
+connectAttr "l_wing_shoulder_CTRL_rotate_AnimLayer1_inputBX1.o" "duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_rotate_AnimLayer1.ibx"
+		;
+connectAttr "l_wing_shoulder_CTRL_rotate_AnimLayer1_inputBY1.o" "duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_rotate_AnimLayer1.iby"
+		;
+connectAttr "l_wing_shoulder_CTRL_rotate_AnimLayer1_inputBZ1.o" "duck_police_officer_RIG_textured:l_wing_shoulder_CTRL_rotate_AnimLayer1.ibz"
+		;
+connectAttr "AnimLayer1.bgwt" "OverallParkScene:ChrisZ_RoadHill_visibility_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "OverallParkScene:ChrisZ_RoadHill_visibility_AnimLayer1.wb"
+		;
+connectAttr "ChrisZ_RoadHill_visibility_AnimLayer1_inputB.o" "OverallParkScene:ChrisZ_RoadHill_visibility_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "OverallParkScene:ChrisZ_RoadHill_translateX_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "OverallParkScene:ChrisZ_RoadHill_translateX_AnimLayer1.wb"
+		;
+connectAttr "ChrisZ_RoadHill_translateX_AnimLayer1_inputB.o" "OverallParkScene:ChrisZ_RoadHill_translateX_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "OverallParkScene:ChrisZ_RoadHill_translateY_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "OverallParkScene:ChrisZ_RoadHill_translateY_AnimLayer1.wb"
+		;
+connectAttr "ChrisZ_RoadHill_translateY_AnimLayer1_inputB.o" "OverallParkScene:ChrisZ_RoadHill_translateY_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "OverallParkScene:ChrisZ_RoadHill_translateZ_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "OverallParkScene:ChrisZ_RoadHill_translateZ_AnimLayer1.wb"
+		;
+connectAttr "ChrisZ_RoadHill_translateZ_AnimLayer1_inputB.o" "OverallParkScene:ChrisZ_RoadHill_translateZ_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.oram" "OverallParkScene:ChrisZ_RoadHill_rotate_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "OverallParkScene:ChrisZ_RoadHill_rotate_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "OverallParkScene:ChrisZ_RoadHill_rotate_AnimLayer1.wb"
+		;
+connectAttr "ChrisZ_RoadHill_rotate_AnimLayer1_inputBX.o" "OverallParkScene:ChrisZ_RoadHill_rotate_AnimLayer1.ibx"
+		;
+connectAttr "ChrisZ_RoadHill_rotate_AnimLayer1_inputBY.o" "OverallParkScene:ChrisZ_RoadHill_rotate_AnimLayer1.iby"
+		;
+connectAttr "ChrisZ_RoadHill_rotate_AnimLayer1_inputBZ.o" "OverallParkScene:ChrisZ_RoadHill_rotate_AnimLayer1.ibz"
+		;
+connectAttr "AnimLayer1.sam" "OverallParkScene:ChrisZ_RoadHill_scaleX_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "OverallParkScene:ChrisZ_RoadHill_scaleX_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "OverallParkScene:ChrisZ_RoadHill_scaleX_AnimLayer1.wb"
+		;
+connectAttr "ChrisZ_RoadHill_scaleX_AnimLayer1_inputB.o" "OverallParkScene:ChrisZ_RoadHill_scaleX_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.sam" "OverallParkScene:ChrisZ_RoadHill_scaleY_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "OverallParkScene:ChrisZ_RoadHill_scaleY_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "OverallParkScene:ChrisZ_RoadHill_scaleY_AnimLayer1.wb"
+		;
+connectAttr "ChrisZ_RoadHill_scaleY_AnimLayer1_inputB.o" "OverallParkScene:ChrisZ_RoadHill_scaleY_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.sam" "OverallParkScene:ChrisZ_RoadHill_scaleZ_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "OverallParkScene:ChrisZ_RoadHill_scaleZ_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "OverallParkScene:ChrisZ_RoadHill_scaleZ_AnimLayer1.wb"
+		;
+connectAttr "ChrisZ_RoadHill_scaleZ_AnimLayer1_inputB.o" "OverallParkScene:ChrisZ_RoadHill_scaleZ_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "OverallParkScene:pPlane1_visibility_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "OverallParkScene:pPlane1_visibility_AnimLayer1.wb"
+		;
+connectAttr "pPlane1_visibility_AnimLayer1_inputB.o" "OverallParkScene:pPlane1_visibility_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "OverallParkScene:pPlane1_translateX_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "OverallParkScene:pPlane1_translateX_AnimLayer1.wb"
+		;
+connectAttr "pPlane1_translateX_AnimLayer1_inputB.o" "OverallParkScene:pPlane1_translateX_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "OverallParkScene:pPlane1_translateY_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "OverallParkScene:pPlane1_translateY_AnimLayer1.wb"
+		;
+connectAttr "pPlane1_translateY_AnimLayer1_inputB.o" "OverallParkScene:pPlane1_translateY_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "OverallParkScene:pPlane1_translateZ_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "OverallParkScene:pPlane1_translateZ_AnimLayer1.wb"
+		;
+connectAttr "pPlane1_translateZ_AnimLayer1_inputB.o" "OverallParkScene:pPlane1_translateZ_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.oram" "OverallParkScene:pPlane1_rotate_AnimLayer1.acm";
+connectAttr "AnimLayer1.bgwt" "OverallParkScene:pPlane1_rotate_AnimLayer1.wa";
+connectAttr "AnimLayer1.fgwt" "OverallParkScene:pPlane1_rotate_AnimLayer1.wb";
+connectAttr "pPlane1_rotate_AnimLayer1_inputBX.o" "OverallParkScene:pPlane1_rotate_AnimLayer1.ibx"
+		;
+connectAttr "pPlane1_rotate_AnimLayer1_inputBY.o" "OverallParkScene:pPlane1_rotate_AnimLayer1.iby"
+		;
+connectAttr "pPlane1_rotate_AnimLayer1_inputBZ.o" "OverallParkScene:pPlane1_rotate_AnimLayer1.ibz"
+		;
+connectAttr "AnimLayer1.sam" "OverallParkScene:pPlane1_scaleX_AnimLayer1.acm";
+connectAttr "AnimLayer1.bgwt" "OverallParkScene:pPlane1_scaleX_AnimLayer1.wa";
+connectAttr "AnimLayer1.fgwt" "OverallParkScene:pPlane1_scaleX_AnimLayer1.wb";
+connectAttr "pPlane1_scaleX_AnimLayer1_inputB.o" "OverallParkScene:pPlane1_scaleX_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.sam" "OverallParkScene:pPlane1_scaleY_AnimLayer1.acm";
+connectAttr "AnimLayer1.bgwt" "OverallParkScene:pPlane1_scaleY_AnimLayer1.wa";
+connectAttr "AnimLayer1.fgwt" "OverallParkScene:pPlane1_scaleY_AnimLayer1.wb";
+connectAttr "pPlane1_scaleY_AnimLayer1_inputB.o" "OverallParkScene:pPlane1_scaleY_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.sam" "OverallParkScene:pPlane1_scaleZ_AnimLayer1.acm";
+connectAttr "AnimLayer1.bgwt" "OverallParkScene:pPlane1_scaleZ_AnimLayer1.wa";
+connectAttr "AnimLayer1.fgwt" "OverallParkScene:pPlane1_scaleZ_AnimLayer1.wb";
+connectAttr "pPlane1_scaleZ_AnimLayer1_inputB.o" "OverallParkScene:pPlane1_scaleZ_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:chest_CTRL_visibility_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:chest_CTRL_visibility_AnimLayer1.wb"
+		;
+connectAttr "chest_CTRL_visibility_AnimLayer1_inputB.o" "duck_police_officer_RIG_textured:chest_CTRL_visibility_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.oram" "duck_police_officer_RIG_textured:chest_CTRL_rotate_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:chest_CTRL_rotate_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:chest_CTRL_rotate_AnimLayer1.wb"
+		;
+connectAttr "chest_CTRL_rotate_AnimLayer1_inputBX.o" "duck_police_officer_RIG_textured:chest_CTRL_rotate_AnimLayer1.ibx"
+		;
+connectAttr "chest_CTRL_rotate_AnimLayer1_inputBY.o" "duck_police_officer_RIG_textured:chest_CTRL_rotate_AnimLayer1.iby"
+		;
+connectAttr "chest_CTRL_rotate_AnimLayer1_inputBZ.o" "duck_police_officer_RIG_textured:chest_CTRL_rotate_AnimLayer1.ibz"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:bot_neck_CTRL_visibility_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:bot_neck_CTRL_visibility_AnimLayer1.wb"
+		;
+connectAttr "bot_neck_CTRL_visibility_AnimLayer1_inputB.o" "duck_police_officer_RIG_textured:bot_neck_CTRL_visibility_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.oram" "duck_police_officer_RIG_textured:bot_neck_CTRL_rotate_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured:bot_neck_CTRL_rotate_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured:bot_neck_CTRL_rotate_AnimLayer1.wb"
+		;
+connectAttr "bot_neck_CTRL_rotate_AnimLayer1_inputBX.o" "duck_police_officer_RIG_textured:bot_neck_CTRL_rotate_AnimLayer1.ibx"
+		;
+connectAttr "bot_neck_CTRL_rotate_AnimLayer1_inputBY.o" "duck_police_officer_RIG_textured:bot_neck_CTRL_rotate_AnimLayer1.iby"
+		;
+connectAttr "bot_neck_CTRL_rotate_AnimLayer1_inputBZ.o" "duck_police_officer_RIG_textured:bot_neck_CTRL_rotate_AnimLayer1.ibz"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_visibility_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_visibility_AnimLayer1.wb"
+		;
+connectAttr "whole_body_sansFeet_CTRL_visibility_AnimLayer1_inputB1.o" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_visibility_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_translateX_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_translateX_AnimLayer1.wb"
+		;
+connectAttr "whole_body_sansFeet_CTRL_translateX_AnimLayer1_inputB1.o" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_translateX_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_translateY_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_translateY_AnimLayer1.wb"
+		;
+connectAttr "whole_body_sansFeet_CTRL_translateY_AnimLayer1_inputB1.o" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_translateY_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_translateZ_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_translateZ_AnimLayer1.wb"
+		;
+connectAttr "whole_body_sansFeet_CTRL_translateZ_AnimLayer1_inputB1.o" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_translateZ_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.oram" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_rotate_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_rotate_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_rotate_AnimLayer1.wb"
+		;
+connectAttr "whole_body_sansFeet_CTRL_rotate_AnimLayer1_inputBX1.o" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_rotate_AnimLayer1.ibx"
+		;
+connectAttr "whole_body_sansFeet_CTRL_rotate_AnimLayer1_inputBY1.o" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_rotate_AnimLayer1.iby"
+		;
+connectAttr "whole_body_sansFeet_CTRL_rotate_AnimLayer1_inputBZ1.o" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_rotate_AnimLayer1.ibz"
+		;
+connectAttr "AnimLayer1.sam" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleX_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleX_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleX_AnimLayer1.wb"
+		;
+connectAttr "whole_body_sansFeet_CTRL_scaleX_AnimLayer1_inputB1.o" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleX_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.sam" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleY_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleY_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleY_AnimLayer1.wb"
+		;
+connectAttr "whole_body_sansFeet_CTRL_scaleY_AnimLayer1_inputB1.o" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleY_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.sam" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleZ_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleZ_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleZ_AnimLayer1.wb"
+		;
+connectAttr "whole_body_sansFeet_CTRL_scaleZ_AnimLayer1_inputB1.o" "duck_police_officer_RIG_textured2:whole_body_sansFeet_CTRL_scaleZ_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured2:bot_neck_CTRL_visibility_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured2:bot_neck_CTRL_visibility_AnimLayer1.wb"
+		;
+connectAttr "bot_neck_CTRL_visibility_AnimLayer1_inputB1.o" "duck_police_officer_RIG_textured2:bot_neck_CTRL_visibility_AnimLayer1.ib"
+		;
+connectAttr "AnimLayer1.oram" "duck_police_officer_RIG_textured2:bot_neck_CTRL_rotate_AnimLayer1.acm"
+		;
+connectAttr "AnimLayer1.bgwt" "duck_police_officer_RIG_textured2:bot_neck_CTRL_rotate_AnimLayer1.wa"
+		;
+connectAttr "AnimLayer1.fgwt" "duck_police_officer_RIG_textured2:bot_neck_CTRL_rotate_AnimLayer1.wb"
+		;
+connectAttr "bot_neck_CTRL_rotate_AnimLayer1_inputBX1.o" "duck_police_officer_RIG_textured2:bot_neck_CTRL_rotate_AnimLayer1.ibx"
+		;
+connectAttr "bot_neck_CTRL_rotate_AnimLayer1_inputBY1.o" "duck_police_officer_RIG_textured2:bot_neck_CTRL_rotate_AnimLayer1.iby"
+		;
+connectAttr "bot_neck_CTRL_rotate_AnimLayer1_inputBZ1.o" "duck_police_officer_RIG_textured2:bot_neck_CTRL_rotate_AnimLayer1.ibz"
 		;
 connectAttr "Crumb_Explode:fluidShape1SG.pa" ":renderPartition.st" -na;
 connectAttr "Crumb_Explode:nParticlePointsSE.pa" ":renderPartition.st" -na;
